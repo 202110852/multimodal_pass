@@ -1,0 +1,20 @@
+{
+  "fetched_at": "2026-09-26T18:37:07",
+  "header": {
+    "resultCode": "00",
+    "resultMsg": "NORMAL SERVICE."
+  },
+  "totalCount": 2,
+  "items": [
+    {
+      "citycode": "12",
+      "cityname": "세종특별시",
+      "providername": "ALPACA"
+    },
+    {
+      "citycode": "12",
+      "cityname": "세종특별시",
+      "providername": "GBIKE"
+    }
+  ]
+}

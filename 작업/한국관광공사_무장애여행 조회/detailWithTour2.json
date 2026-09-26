@@ -1,0 +1,1106 @@
+{
+  "126460": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "126460",
+              "parking": "장애인 주차장 있음(2대,관덕정 서측 공영주차장)",
+              "publictransport": "",
+              "route": "출입구까지 단차가 없어 휠체어 접근 가능함(일부구간 단차 있음)",
+              "ticketoffice": "",
+              "promotion": "",
+              "wheelchair": "대여가능(매표소,사전구비문의)",
+              "exit": "주출입구는 경사로가 설치되어 있음",
+              "elevator": "",
+              "restroom": "장애인 전용 화장실 있음",
+              "auditorium": "",
+              "room": "",
+              "handicapetc": "",
+              "braileblock": "",
+              "helpdog": "",
+              "guidehuman": "",
+              "audioguide": "",
+              "bigprint": "",
+              "brailepromotion": "",
+              "guidesystem": "",
+              "blindhandicapetc": "",
+              "signguide": "",
+              "videoguide": "",
+              "hearingroom": "",
+              "hearinghandicapetc": "",
+              "stroller": "",
+              "lactationroom": "",
+              "babysparechair": "",
+              "infantsfamilyetc": ""
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "127744": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "127744",
+              "parking": "장애인 전용 주차구역 있음 (1면)",
+              "publictransport": "",
+              "route": "출입구까지 평지로 되어 있으나 흙(돌) 구간 있음",
+              "ticketoffice": "",
+              "promotion": "",
+              "wheelchair": "대여가능(2대)",
+              "exit": "경사로가 설치되어 있음 , 단차가 없고 경사가 매우 완만함",
+              "elevator": "",
+              "restroom": "장애인용 화장실 있음(2군데, 유아용 보조의자 있음)",
+              "auditorium": "",
+              "room": "",
+              "handicapetc": "",
+              "braileblock": "",
+              "helpdog": "",
+              "guidehuman": "",
+              "audioguide": "",
+              "bigprint": "",
+              "brailepromotion": "",
+              "guidesystem": "",
+              "blindhandicapetc": "점자 지도 있음 (입구 쪽)",
+              "signguide": "",
+              "videoguide": "",
+              "hearingroom": "",
+              "hearinghandicapetc": "",
+              "stroller": "",
+              "lactationroom": "",
+              "babysparechair": "",
+              "infantsfamilyetc": ""
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "128641": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "128641",
+              "parking": "",
+              "publictransport": "",
+              "route": "출입구까지 경사로가 설치되어 있음",
+              "ticketoffice": "",
+              "promotion": "",
+              "wheelchair": "대여가능 (1대)",
+              "exit": "주출입구는 경사로가 있어 휠체어 접근 가능함(흙길 구간 있음)",
+              "elevator": "",
+              "restroom": "장애인 화장실 있음",
+              "auditorium": "",
+              "room": "",
+              "handicapetc": "",
+              "braileblock": "",
+              "helpdog": "",
+              "guidehuman": "",
+              "audioguide": "",
+              "bigprint": "",
+              "brailepromotion": "",
+              "guidesystem": "",
+              "blindhandicapetc": "",
+              "signguide": "",
+              "videoguide": "",
+              "hearingroom": "",
+              "hearinghandicapetc": "",
+              "stroller": "",
+              "lactationroom": "",
+              "babysparechair": "",
+              "infantsfamilyetc": ""
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "129894": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "129894",
+              "parking": "장애인 주차장 있음(2대)_무장애 편의시설",
+              "publictransport": "",
+              "route": "출입구까지 경사로가 설치되어 있음",
+              "ticketoffice": "",
+              "promotion": "",
+              "wheelchair": "대여가능(매표실, 신분증지참)",
+              "exit": "주출입구는 경사로가 있어 휠체어 접근 가능함",
+              "elevator": "엘리베이터 있음",
+              "restroom": "장애인 화장실 있음",
+              "auditorium": "",
+              "room": "",
+              "handicapetc": "",
+              "braileblock": "",
+              "helpdog": "",
+              "guidehuman": "",
+              "audioguide": "",
+              "bigprint": "",
+              "brailepromotion": "점자안내판 있음",
+              "guidesystem": "",
+              "blindhandicapetc": "",
+              "signguide": "",
+              "videoguide": "",
+              "hearingroom": "",
+              "hearinghandicapetc": "",
+              "stroller": "대여가능(매표실, 신분증지참)",
+              "lactationroom": "수유실 있음(특별전시실, 제주체험관)",
+              "babysparechair": "",
+              "infantsfamilyetc": ""
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "129895": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "129895",
+              "parking": "장애인 전용 주차구역 있음(2대)_무장애 편의시설",
+              "publictransport": "",
+              "route": "출입구까지 경사로가 설치되어 있음",
+              "ticketoffice": "",
+              "promotion": "",
+              "wheelchair": "휠체어 대여 가능",
+              "exit": "주 출입구는 단차가 없어 휠체어 접근 가능함",
+              "elevator": "",
+              "restroom": "장애인 전용 화장실 있음(공연장 건물 내)",
+              "auditorium": "",
+              "room": "",
+              "handicapetc": "",
+              "braileblock": "",
+              "helpdog": "안내견 동반 가능",
+              "guidehuman": "",
+              "audioguide": "",
+              "bigprint": "",
+              "brailepromotion": "",
+              "guidesystem": "",
+              "blindhandicapetc": "",
+              "signguide": "",
+              "videoguide": "",
+              "hearingroom": "",
+              "hearinghandicapetc": "",
+              "stroller": "",
+              "lactationroom": "수유실 있음",
+              "babysparechair": "",
+              "infantsfamilyetc": ""
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "130036": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "130036",
+              "parking": "장애인 주차장 있음(1대)_무장애 편의시설",
+              "publictransport": "",
+              "route": "출입구까지 경사로가 설치되어 있음",
+              "ticketoffice": "",
+              "promotion": "",
+              "wheelchair": "",
+              "exit": "주출입구는 경사로가 있어 휠체어 접근 가능함",
+              "elevator": "",
+              "restroom": "장애인 화장실 있음",
+              "auditorium": "",
+              "room": "",
+              "handicapetc": "",
+              "braileblock": "",
+              "helpdog": "",
+              "guidehuman": "",
+              "audioguide": "",
+              "bigprint": "",
+              "brailepromotion": "",
+              "guidesystem": "",
+              "blindhandicapetc": "",
+              "signguide": "",
+              "videoguide": "",
+              "hearingroom": "",
+              "hearinghandicapetc": "",
+              "stroller": "",
+              "lactationroom": "",
+              "babysparechair": "",
+              "infantsfamilyetc": ""
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "130745": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "130745",
+              "parking": "장애인 전용 주차구역 있음(1대)_무장애 편의시설",
+              "publictransport": "",
+              "route": "출입구까지 경사로가 설치되어 있음",
+              "ticketoffice": "",
+              "promotion": "",
+              "wheelchair": "",
+              "exit": "주출입구는 경사로가 있어 휠체어 접근 가능함",
+              "elevator": "",
+              "restroom": "",
+              "auditorium": "",
+              "room": "",
+              "handicapetc": "",
+              "braileblock": "점자블록 있음(주출입구)_시각장애인 편의시설",
+              "helpdog": "보조견동반 가능함",
+              "guidehuman": "안내요원 있음",
+              "audioguide": "",
+              "bigprint": "",
+              "brailepromotion": "",
+              "guidesystem": "",
+              "blindhandicapetc": "",
+              "signguide": "",
+              "videoguide": "",
+              "hearingroom": "",
+              "hearinghandicapetc": "",
+              "stroller": "",
+              "lactationroom": "",
+              "babysparechair": "",
+              "infantsfamilyetc": ""
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "142943": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "142943",
+              "parking": "장애인 주차장 10칸 있음_무장애 편의시설",
+              "publictransport": "",
+              "route": "출입구까지 턱이 없어 휠체어 접근 가능함",
+              "ticketoffice": "",
+              "promotion": "",
+              "wheelchair": "",
+              "exit": "주출입구는 턱이 없어 휠체어 접근 가능함",
+              "elevator": "엘리베이터 있음",
+              "restroom": "",
+              "auditorium": "",
+              "room": "",
+              "handicapetc": "",
+              "braileblock": "",
+              "helpdog": "",
+              "guidehuman": "",
+              "audioguide": "",
+              "bigprint": "",
+              "brailepromotion": "",
+              "guidesystem": "",
+              "blindhandicapetc": "",
+              "signguide": "",
+              "videoguide": "",
+              "hearingroom": "",
+              "hearinghandicapetc": "",
+              "stroller": "",
+              "lactationroom": "",
+              "babysparechair": "",
+              "infantsfamilyetc": ""
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "142972": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "142972",
+              "parking": "장애인 전용 주차구역 있음_무장애 편의시설",
+              "publictransport": "",
+              "route": "",
+              "ticketoffice": "",
+              "promotion": "",
+              "wheelchair": "",
+              "exit": "무단차로 휠체어로 출입가능",
+              "elevator": "있음",
+              "restroom": "1층 로비에 장애인 전용 화장실 있음",
+              "auditorium": "",
+              "room": "",
+              "handicapetc": "",
+              "braileblock": "",
+              "helpdog": "",
+              "guidehuman": "",
+              "audioguide": "",
+              "bigprint": "",
+              "brailepromotion": "",
+              "guidesystem": "",
+              "blindhandicapetc": "",
+              "signguide": "",
+              "videoguide": "",
+              "hearingroom": "",
+              "hearinghandicapetc": "",
+              "stroller": "유모차 대여 가능함",
+              "lactationroom": "",
+              "babysparechair": "",
+              "infantsfamilyetc": ""
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "143036": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "143036",
+              "parking": "장애인 전용 주차구역 있음_무장애 편의시설",
+              "publictransport": "",
+              "route": "출입구까지 단차가 없어 휠체어 접근 가능함",
+              "ticketoffice": "",
+              "promotion": "",
+              "wheelchair": "",
+              "exit": "",
+              "elevator": "엘리베이터 있음",
+              "restroom": "장애인 전용 화장실 있음",
+              "auditorium": "",
+              "room": "",
+              "handicapetc": "",
+              "braileblock": "",
+              "helpdog": "",
+              "guidehuman": "",
+              "audioguide": "",
+              "bigprint": "",
+              "brailepromotion": "",
+              "guidesystem": "",
+              "blindhandicapetc": "",
+              "signguide": "",
+              "videoguide": "",
+              "hearingroom": "",
+              "hearinghandicapetc": "",
+              "stroller": "",
+              "lactationroom": "",
+              "babysparechair": "",
+              "infantsfamilyetc": ""
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "993261": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "993261",
+              "parking": "",
+              "publictransport": "",
+              "route": "출입구까지 턱이 없어 휠체어 접근 가능함",
+              "ticketoffice": "",
+              "promotion": "",
+              "wheelchair": "",
+              "exit": "주출입구는 턱이 없어 휠체어 접근 가능함_무장애 편의시설",
+              "elevator": "",
+              "restroom": "",
+              "auditorium": "",
+              "room": "",
+              "handicapetc": "",
+              "braileblock": "",
+              "helpdog": "동반가능_시각장애인 편의시설",
+              "guidehuman": "",
+              "audioguide": "",
+              "bigprint": "",
+              "brailepromotion": "",
+              "guidesystem": "",
+              "blindhandicapetc": "",
+              "signguide": "",
+              "videoguide": "",
+              "hearingroom": "",
+              "hearinghandicapetc": "",
+              "stroller": "",
+              "lactationroom": "",
+              "babysparechair": "",
+              "infantsfamilyetc": ""
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "1013246": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "1013246",
+              "parking": "장애인 주차장 있음(6대)_무장애 편의시설",
+              "publictransport": "",
+              "route": "출입구까지 경사로가 설치되어 있음(완만함)",
+              "ticketoffice": "",
+              "promotion": "",
+              "wheelchair": "대여 가능(1대/고객지원센터)",
+              "exit": "주출입구는 턱이 없어 휠체어 접근 가능함",
+              "elevator": "",
+              "restroom": "장애인 화장실 있음",
+              "auditorium": "",
+              "room": "",
+              "handicapetc": "",
+              "braileblock": "",
+              "helpdog": "동반 가능_시각장애인 편의시설",
+              "guidehuman": "",
+              "audioguide": "",
+              "bigprint": "",
+              "brailepromotion": "",
+              "guidesystem": "",
+              "blindhandicapetc": "",
+              "signguide": "",
+              "videoguide": "",
+              "hearingroom": "",
+              "hearinghandicapetc": "",
+              "stroller": "대여 가능(1대/고객지원센터)",
+              "lactationroom": "",
+              "babysparechair": "",
+              "infantsfamilyetc": "장애인 화장실 내 유아용 보호의자 있음"
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "1014672": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "1014672",
+              "parking": "장애인 전용 주차구역 있음(지하상가 입구,장애인표지판)_무장애 편의시설",
+              "publictransport": "",
+              "route": "출입구까지 턱이 없어 휠체어 접근 가능함",
+              "ticketoffice": "",
+              "promotion": "",
+              "wheelchair": "",
+              "exit": "",
+              "elevator": "엘리베이터 있음",
+              "restroom": "장애인 전용 화장실 있음",
+              "auditorium": "",
+              "room": "",
+              "handicapetc": "",
+              "braileblock": "",
+              "helpdog": "",
+              "guidehuman": "",
+              "audioguide": "",
+              "bigprint": "",
+              "brailepromotion": "",
+              "guidesystem": "",
+              "blindhandicapetc": "",
+              "signguide": "",
+              "videoguide": "",
+              "hearingroom": "",
+              "hearinghandicapetc": "",
+              "stroller": "",
+              "lactationroom": "수유실 있음(2,3차 상가)",
+              "babysparechair": "",
+              "infantsfamilyetc": "유아놀이방 있음"
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "1403482": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "1403482",
+              "parking": "장애인 주차장 있음(5대)_무장애 편의시설",
+              "publictransport": "",
+              "route": "출입구까지 턱이 없어 휠체어 접근 가능함",
+              "ticketoffice": "",
+              "promotion": "",
+              "wheelchair": "대여가능",
+              "exit": "주출입구는 턱이 없어 휠체어 접근 가능함",
+              "elevator": "엘리베이터 있음",
+              "restroom": "장애인 화장실 있음(로비)",
+              "auditorium": "",
+              "room": "장애인 객실 있음(3실)",
+              "handicapetc": "",
+              "braileblock": "",
+              "helpdog": "",
+              "guidehuman": "",
+              "audioguide": "",
+              "bigprint": "",
+              "brailepromotion": "",
+              "guidesystem": "",
+              "blindhandicapetc": "",
+              "signguide": "",
+              "videoguide": "",
+              "hearingroom": "",
+              "hearinghandicapetc": "",
+              "stroller": "",
+              "lactationroom": "",
+              "babysparechair": "",
+              "infantsfamilyetc": ""
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "1871024": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "1871024",
+              "parking": "장애인 주차장 있음(칠성골 공영주차장)_무장애 편의시설",
+              "publictransport": "",
+              "route": "출입구까지 턱이 없어 휠체어 접근 가능함",
+              "ticketoffice": "",
+              "promotion": "",
+              "wheelchair": "",
+              "exit": "주출입구는 턱이 없어 휠체어 접근 가능함",
+              "elevator": "",
+              "restroom": "장애인 화장실 있음(칠성로 상점가 고객센터)",
+              "auditorium": "",
+              "room": "",
+              "handicapetc": "",
+              "braileblock": "",
+              "helpdog": "동반가능_시각장애인 편의시설",
+              "guidehuman": "",
+              "audioguide": "",
+              "bigprint": "",
+              "brailepromotion": "",
+              "guidesystem": "",
+              "blindhandicapetc": "",
+              "signguide": "",
+              "videoguide": "",
+              "hearingroom": "",
+              "hearinghandicapetc": "",
+              "stroller": "대여가능(칠성로 상점가 고객센터)",
+              "lactationroom": "수유실 있음(칠성로 상점가 고객센터)",
+              "babysparechair": "",
+              "infantsfamilyetc": ""
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "2031663": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "2031663",
+              "parking": "장애인 전용 주차구역 주차 대수 : 1대주변 휠체어 이용자 등이 이용할 수 있는 여유공간 있음.문화시설까지의 거리 : 바로 앞.",
+              "publictransport": "대중교통 이용 가능 : 한우물근린공원 정류장저상버스 없음.",
+              "route": "문화시설 부지 넓음. 이동경로 폭 넓음문화시설 특성상 휠체어, 전동 스쿠터 사용자 이용 쉬움.내부 턱 없음.",
+              "ticketoffice": "",
+              "promotion": "",
+              "wheelchair": "휠체어대여 가능 (2대구비)",
+              "exit": "출입통로 형태 : 여닫이문.출입통로가 넓어 휠체어, 전동 스쿠터 사용자 진입 쉬움.경사로 있음.",
+              "elevator": "엘리베이터 있음",
+              "restroom": "장애인 전용 화장실 있음(1,2층)",
+              "auditorium": "",
+              "room": "",
+              "handicapetc": "",
+              "braileblock": "",
+              "helpdog": "",
+              "guidehuman": "",
+              "audioguide": "",
+              "bigprint": "",
+              "brailepromotion": "",
+              "guidesystem": "",
+              "blindhandicapetc": "",
+              "signguide": "",
+              "videoguide": "",
+              "hearingroom": "",
+              "hearinghandicapetc": "",
+              "stroller": "유모차대여 가능",
+              "lactationroom": "",
+              "babysparechair": "",
+              "infantsfamilyetc": ""
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "2411625": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "2411625",
+              "parking": "장애인 전용 주차구역 있음(2대)_무장애 편의시설",
+              "publictransport": "",
+              "route": "출입구까지 단차가 없어 휠체어 접근 가능함",
+              "ticketoffice": "",
+              "promotion": "",
+              "wheelchair": "",
+              "exit": "",
+              "elevator": "엘리베이터 있음",
+              "restroom": "장애인 전용 화장실 있음",
+              "auditorium": "",
+              "room": "장애인 전용 객실 있음(2개.더블객실 3층)",
+              "handicapetc": "",
+              "braileblock": "",
+              "helpdog": "",
+              "guidehuman": "",
+              "audioguide": "",
+              "bigprint": "",
+              "brailepromotion": "",
+              "guidesystem": "",
+              "blindhandicapetc": "",
+              "signguide": "",
+              "videoguide": "",
+              "hearingroom": "",
+              "hearinghandicapetc": "",
+              "stroller": "",
+              "lactationroom": "",
+              "babysparechair": "",
+              "infantsfamilyetc": ""
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "2414812": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "2414812",
+              "parking": "장애인 전용 주차구역 있음(매표소 앞 1대,총연맹앞 2대,미디어센터 앞 3대)_무장애 편의시설",
+              "publictransport": "",
+              "route": "출입구까지 단차가 없어 휠체어 접근 가능함(돌길있음)",
+              "ticketoffice": "",
+              "promotion": "",
+              "wheelchair": "",
+              "exit": "주출입구까지 단차가 없어 휠체어 접근 가능함",
+              "elevator": "",
+              "restroom": "장애인 전용 화장실 있음(공원 내 공중화장실)",
+              "auditorium": "",
+              "room": "",
+              "handicapetc": "",
+              "braileblock": "점자블록 있음(공중화장실 앞)_점자블록 있음",
+              "helpdog": "",
+              "guidehuman": "",
+              "audioguide": "",
+              "bigprint": "",
+              "brailepromotion": "",
+              "guidesystem": "",
+              "blindhandicapetc": "",
+              "signguide": "",
+              "videoguide": "",
+              "hearingroom": "",
+              "hearinghandicapetc": "",
+              "stroller": "",
+              "lactationroom": "",
+              "babysparechair": "",
+              "infantsfamilyetc": ""
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "2737330": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "2737330",
+              "parking": "장애인 주차장 있음_무장애 편의시설",
+              "publictransport": "",
+              "route": "출입구까지 턱이 없어 휠체어 접근 가능함",
+              "ticketoffice": "",
+              "promotion": "",
+              "wheelchair": "",
+              "exit": "주출입구는 턱이 없어 휠체어 접근 가능함",
+              "elevator": "",
+              "restroom": "",
+              "auditorium": "",
+              "room": "",
+              "handicapetc": "",
+              "braileblock": "",
+              "helpdog": "",
+              "guidehuman": "",
+              "audioguide": "",
+              "bigprint": "",
+              "brailepromotion": "",
+              "guidesystem": "",
+              "blindhandicapetc": "",
+              "signguide": "",
+              "videoguide": "",
+              "hearingroom": "",
+              "hearinghandicapetc": "",
+              "stroller": "",
+              "lactationroom": "",
+              "babysparechair": "",
+              "infantsfamilyetc": ""
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "2788436": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "2788436",
+              "parking": "장애인 주차장 있음_무장애 편의시설",
+              "publictransport": "",
+              "route": "출입구까지 턱이 없어 휠체어 접근 가능함",
+              "ticketoffice": "",
+              "promotion": "",
+              "wheelchair": "",
+              "exit": "주출입구는 턱이 없어 휠체어 접근 가능함",
+              "elevator": "",
+              "restroom": "장애인 화장실 있음",
+              "auditorium": "",
+              "room": "",
+              "handicapetc": "",
+              "braileblock": "",
+              "helpdog": "",
+              "guidehuman": "",
+              "audioguide": "",
+              "bigprint": "",
+              "brailepromotion": "점자 안내판 있음",
+              "guidesystem": "",
+              "blindhandicapetc": "",
+              "signguide": "",
+              "videoguide": "",
+              "hearingroom": "",
+              "hearinghandicapetc": "",
+              "stroller": "",
+              "lactationroom": "",
+              "babysparechair": "",
+              "infantsfamilyetc": ""
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "2852695": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "2852695",
+              "parking": "",
+              "publictransport": "",
+              "route": "출입구까지 경사로가 설치되어 있음",
+              "ticketoffice": "",
+              "promotion": "",
+              "wheelchair": "",
+              "exit": "주출입구는 경사로가 있어 휠체어 접근 가능함(수동문)",
+              "elevator": "앨리베이터 있음",
+              "restroom": "",
+              "auditorium": "",
+              "room": "",
+              "handicapetc": "",
+              "braileblock": "",
+              "helpdog": "",
+              "guidehuman": "",
+              "audioguide": "",
+              "bigprint": "",
+              "brailepromotion": "점자안내판 있음",
+              "guidesystem": "",
+              "blindhandicapetc": "",
+              "signguide": "",
+              "videoguide": "",
+              "hearingroom": "",
+              "hearinghandicapetc": "",
+              "stroller": "",
+              "lactationroom": "",
+              "babysparechair": "",
+              "infantsfamilyetc": ""
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "2860687": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "2860687",
+              "parking": "장애인 주차장 있음(공영주차장)_무장애 편의시설",
+              "publictransport": "",
+              "route": "출입구까지 턱이 없어 휠체어 접근 가능함",
+              "ticketoffice": "",
+              "promotion": "",
+              "wheelchair": "",
+              "exit": "주출입구는 턱이 없어 휠체어 접근 가능함",
+              "elevator": "",
+              "restroom": "",
+              "auditorium": "",
+              "room": "",
+              "handicapetc": "",
+              "braileblock": "",
+              "helpdog": "",
+              "guidehuman": "",
+              "audioguide": "",
+              "bigprint": "",
+              "brailepromotion": "",
+              "guidesystem": "",
+              "blindhandicapetc": "",
+              "signguide": "",
+              "videoguide": "",
+              "hearingroom": "",
+              "hearinghandicapetc": "",
+              "stroller": "",
+              "lactationroom": "",
+              "babysparechair": "",
+              "infantsfamilyetc": ""
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "2912717": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "2912717",
+              "parking": "",
+              "publictransport": "",
+              "route": "",
+              "ticketoffice": "",
+              "promotion": "",
+              "wheelchair": "",
+              "exit": "",
+              "elevator": "",
+              "restroom": "",
+              "auditorium": "",
+              "room": "",
+              "handicapetc": "",
+              "braileblock": "",
+              "helpdog": "",
+              "guidehuman": "",
+              "audioguide": "",
+              "bigprint": "",
+              "brailepromotion": "",
+              "guidesystem": "",
+              "blindhandicapetc": "",
+              "signguide": "",
+              "videoguide": "",
+              "hearingroom": "",
+              "hearinghandicapetc": "",
+              "stroller": "",
+              "lactationroom": "",
+              "babysparechair": "",
+              "infantsfamilyetc": ""
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  }
+}

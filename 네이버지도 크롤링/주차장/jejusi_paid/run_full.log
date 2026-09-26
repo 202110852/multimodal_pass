@@ -1,0 +1,308 @@
+제주시 유료 110 / 스킵 10 / 이번 100 (modu→naver)
+
+[1/100] 동광
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 일도2동 82-8
+
+[2/100] 일도이동 55-8
+  → success / modu / modu_search_address:exact_or_contains / 운영= / 요금= / 주소=제주특별자치도 제주시 일도이동 55-8
+
+[3/100] 광양
+  → success / modu / modu_search_address:exact_or_contains / 운영=08:30 ~ 18:00 / 요금=1시간 기준 2,000원 / 주소=제주특별자치도 제주시 동광로1길 18
+
+[4/100] 동문재래
+  → success / modu / modu_search_address:exact_or_contains / 운영=09:00 ~ 22:00 / 요금=1시간 기준 2,000원 / 주소=제주특별자치도 제주시 중앙로13길 16-8
+
+[5/100] 동문수산시장
+  → success / modu / modu_search_coord / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 오현길 81
+
+[6/100] 중앙로상점가
+  → success / modu / modu_search_coord / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 오현길 81
+
+[7/100] 이도일동 1696-9
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 이도1동 1696-9
+
+[8/100] 도남
+  → success / modu / modu_pins:coord / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 도남동 574-3
+
+[9/100] 도남로 15길
+  → success / modu / modu_pins:coord / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 도남동 65-3
+
+[10/100] 도남동 664-6
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 도남동 664-6
+
+[11/100] 신성로 10길
+  → success / modu / modu_search_address:exact_or_contains / 운영=09:00 ~ 18:00 / 요금=1시간 기준 2,000원 / 주소=제주특별자치도 제주시 도남동 92
+
+[12/100] 고산동산
+  → success / modu / modu_search_address:exact_or_contains / 운영=09:00 ~ 18:00 / 요금=1시간 기준 1,500원 / 주소=제주특별자치도 제주시 이도이동 1012-10
+
+[13/100] 오복1길
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 이도2동 1035-4
+
+[14/100] 이도2동 공영
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=1시간 기준 4,000원 / 주소=제주특별자치도 제주시 중앙로 213
+
+[15/100] 법원 북측
+  → success / modu / modu_search_address:exact_or_contains / 운영=09:00 ~ 18:00 / 요금=1시간 기준 2,000원 / 주소=제주특별자치도 제주시 남광북1길 8
+
+[16/100] 이도2동 중앙
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 이도2동 1982-15
+
+[17/100] 이도이동 1992-7
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 이도2동 1992-7
+
+[18/100] 이도이동 1999-1
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 이도2동 1999-1
+
+[19/100] 이도이동 2008-1
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 이도2동 2008-1
+
+[20/100] 이도이동 2017-1
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 이도2동 2017-1
+
+[21/100] 이도이동 2021-12
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 이도2동 2021-12
+
+[22/100] 이도이동 2026-9
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 이도2동 2026-9
+
+[23/100] 이도이동 2035-10
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 이도2동 2035-10
+
+[24/100] 이도이동 417-4
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 이도2동 417-4
+
+[25/100] 정든로
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 이도2동 429-7
+
+[26/100] 시청 앞
+  → needs_confirm / modu / modu_pins:name+coord / 운영=00:00 ~ 09:00 / 요금=1시간 기준 1,500원 / 주소=제주특별자치도 제주시 광양9길 3
+
+[27/100] 삼도일동 500-14
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 삼도1동 500-14
+
+[28/100] 삼도일동 560-2
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 삼도1동 560-2
+
+[29/100] 삼도일동 796-8
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 용담1동 220-10
+
+[30/100] 관덕정 서측
+  → success / modu / modu_search_address:exact_or_contains / 운영=09:00 ~ 18:00 / 요금=1시간 기준 2,000원 / 주소=제주특별자치도 제주시 삼도이동 1222-2
+
+[31/100] 칠성골
+  → success / modu / modu_search_address:exact_or_contains / 운영=12:00 ~ 21:00 / 요금=1시간 기준 2,000원 / 주소=제주특별자치도 제주시 임항로 8
+
+[32/100] 병문천
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 삼도2동 807-3
+
+[33/100] 탑동 제2
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=1시간 기준 2,000원 / 주소=제주특별자치도 제주시 삼도2동 1257
+
+[34/100] 탑동 제1
+  → success / modu / modu_search_address:exact_or_contains / 운영=09:00 ~ 18:00 / 요금=1시간 기준 2,000원 / 주소=제주 제주시 탑동로2길 4
+
+[35/100] 성내
+  → success / modu / modu_search_address:exact_or_contains / 운영=09:00 ~ 18:00 / 요금=1시간 기준 2,000원 / 주소=제주특별자치도 제주시 관덕로 4-5
+
+[36/100] 제주중앙지하상가
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=1시간 기준 2,000원 / 주소=제주특별자치도 제주시 삼도2동 1257
+
+[37/100] 용담로18길
+  → success / modu / modu_pins:coord / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 용담1동244-1
+
+[38/100] 공항입구
+  → needs_confirm / modu / modu_search_coord_near / 운영=00:00 ~ 익일 24:00 / 요금=1시간 기준 1,200원 / 주소=제주특별자치도 제주시 공항로 2
+
+[39/100] 용두암
+  → success / modu / modu_search_address:exact_or_contains / 운영=09:00 ~ 18:00 / 요금=1시간 기준 2,000원 / 주소=제주 제주시 용두암길 15
+
+[40/100] 용화마을
+  → success / modu / modu_search_coord / 운영= / 요금= / 주소=제주특별자치도 제주시 용담2동 655-2
+
+[41/100] 용담이동 774-5
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 용담이동 774-2
+
+[42/100] 화북일동 11-7
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 화북1동 11-7
+
+[43/100] 화북일동
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 화북1동 2130-6
+
+[44/100] 거로
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 화북2동 3378-4
+
+[45/100] 도련
+  → modu 실패, 네이버 시도…
+  → success / naver / modu_fail→naver:2_address_match / 운영= / 요금= / 주소=제주 제주시 도련일동 1642
+
+[46/100] 아라일동 6083-3
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 아라1동6083-3
+
+[47/100] 아라일동 6084-7
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 아라1동6083-3
+
+[48/100] 아란길
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 아라1동6093-4
+
+[49/100] 아라동주민센터
+  → success / modu / modu_search_coord / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 아라1동6103-6
+
+[50/100] 아라일동 6106-3
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 아라일동 6173
+
+[51/100] 아라일동 6111
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 아라일동 6111
+
+[52/100] 아라일동 6114-5
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 아라1동6114-5
+
+[53/100] 아라일동 6123
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 아라일동 6123
+
+[54/100] 아라신설로4길제1
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 아라2동 3002-1
+
+[55/100] 아라신설로4길제2
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 아라2동 3002-9
+
+[56/100] 아라이동 3008-1
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 아라2동 3008-1
+
+[57/100] 오라일동 2440-12
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=1시간 기준 2,000원 / 주소=제주특별자치도 제주시 서광로 174
+
+[58/100] 사평 제1
+  → success / modu / modu_search_address:exact_or_contains / 운영=해당항목없음 / 요금=정보 없음 / 주소=제주특별자치도 제주시 연삼로 171
+
+[59/100] 연동 1458-2
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 연동 1458-2
+
+[60/100] 연동 국기로제1
+  → success / modu / modu_search_address:exact_or_contains / 운영=09:00 ~ 18:00 / 요금=1시간 기준 1,500원 / 주소=제주특별자치도 제주시 연동 1517
+
+[61/100] 연동 국기로제2
+  → success / modu / modu_search_coord / 운영=09:00 ~ 18:00 / 요금=1시간 기준 1,500원 / 주소=제주특별자치도 제주시 연동 1499
+
+[62/100] 연화로
+  → success / modu / modu_search_address:exact_or_contains / 운영=09:00 ~ 18:00 / 요금=1시간 기준 2,000원 / 주소=제주특별자치도 제주시 연동 1519-2
+
+[63/100] 연동 도령북길
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 연동 2305-7
+
+[64/100] 성신로
+  → success / modu / modu_search_address:exact_or_contains / 운영=09:00 ~ 18:00 / 요금=1시간 기준 2,000원 / 주소=제주특별자치도 제주시 연동 2322-7
+
+[65/100] 신제주
+  → success / modu / modu_search_address:exact_or_contains / 운영=12:00 ~ 22:00 / 요금=1시간 기준 2,000원 / 주소=제주특별자치도 제주시 신대로12길 52
+
+[66/100] 연동 1373-2
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=1시간 기준 3,000원 / 주소=제주특별자치도 제주시 연북로 106
+
+[67/100] 연동 291-19, 291-23
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 연동 291-21
+
+[68/100] 노형 제3
+  → success / modu / modu_search_address:exact_or_contains / 운영=09:00 ~ 18:00 / 요금=1시간 기준 2,000원 / 주소=제주특별자치도 제주시 노형동 1043-1
+
+[69/100] 월랑마을 제1
+  → needs_confirm / modu / modu_search_coord_near / 운영=09:00 ~ 18:00 / 요금=1시간 기준 2,000원 / 주소=제주특별자치도 제주시 노형동 1280-4
+
+[70/100] 노형 제1
+  → success / modu / modu_search_address:exact_or_contains / 운영=09:00 ~ 18:00 / 요금=1시간 기준 2,000원 / 주소=제주특별자치도 제주시 노형동 1282-1
+
+[71/100] 월랑마을 제2
+  → success / modu / modu_search_coord / 운영=09:00 ~ 18:00 / 요금=1시간 기준 2,000원 / 주소=제주특별자치도 제주시 노형동 1280-4
+
+[72/100] 노형 제2
+  → success / modu / modu_search_address:exact_or_contains / 운영=09:00 ~ 18:00 / 요금=1시간 기준 2,000원 / 주소=제주특별자치도 제주시 월랑로2길 1
+
+[73/100] 노형동 1293-2
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 노형동 1293-2
+
+[74/100] 종남
+  → success / modu / modu_pins:name+coord / 운영=09:00 ~ 18:00 / 요금=1시간 기준 2,000원 / 주소=제주특별자치도 제주시 노형동 2512-1
+
+[75/100] 웅전
+  → needs_confirm / modu / modu_search_coord_near / 운영=09:00 ~ 18:00 / 요금=1시간 기준 2,000원 / 주소=제주특별자치도 제주시 노형동 2517-1
+
+[76/100] 수덕
+  → success / modu / modu_search_address:exact_or_contains / 운영=09:00 ~ 18:00 / 요금=1시간 기준 2,000원 / 주소=제주특별자치도 제주시 노형동 2534-3
+
+[77/100] 서가름
+  → success / modu / modu_pins:name+coord / 운영=09:00 ~ 18:00 / 요금=1시간 기준 2,000원 / 주소=제주특별자치도 제주시 노형동 2575-1
+
+[78/100] 노형 제4
+  → success / modu / modu_search_address:exact_or_contains / 운영=09:00 ~ 18:00 / 요금=1시간 기준 2,000원 / 주소=제주특별자치도 제주시 노형동 2580-1
+
+[79/100] 노형동 2589-1
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 노형동 2589-1
+
+[80/100] 노형동 2595-7
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 노형동 2595-7
+
+[81/100] 정존
+  → success / modu / modu_search_address:exact_or_contains / 운영=09:00 ~ 18:00 / 요금=1시간 기준 2,000원 / 주소=제주특별자치도 제주시 수덕5길 34
+
+[82/100] 노형로
+  → success / modu / modu_search_address:exact_or_contains / 운영=09:00 ~ 18:00 / 요금=1시간 기준 2,000원 / 주소=제주특별자치도 제주시 노형동 3816
+
+[83/100] 초남
+  → success / modu / modu_search_address:exact_or_contains / 운영=09:00 ~ 18:00 / 요금=1시간 기준 2,000원 / 주소=제주특별자치도 제주시 노형11길 5-4
+
+[84/100] 노형동 3792
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=1시간 기준 3,000원 / 주소=제주특별자치도 제주시 노형동 3792-2
+
+[85/100] 노형 제5
+  → success / modu / modu_search_address:exact_or_contains / 운영=09:00 ~ 18:00 / 요금=1시간 기준 2,000원 / 주소=제주특별자치도 제주시 노형9길 9-4
+
+[86/100] 노형동 3812-3
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 노형동3812-3
+
+[87/100] 노형동 710-4
+  → success / modu / modu_search_address:exact_or_contains / 운영=09:00 ~ 18:00 / 요금=1시간 기준 2,000원 / 주소=제주특별자치도 제주시 노형동 710-4
+
+[88/100] 노형동 726-3
+  → success / modu / modu_search_address:exact_or_contains / 운영=08:00 ~ 20:30 / 요금=1시간 기준 3,000원 / 주소=제주특별자치도 제주시 과원북4길 31
+
+[89/100] 원노형푸른 제5
+  → success / modu / modu_search_address:exact_or_contains / 운영=09:00 ~ 18:00 / 요금=1시간 기준 2,000원 / 주소=제주특별자치도 제주시 노형동 736
+
+[90/100] 원노형푸른 제3
+  → success / modu / modu_search_address:exact_or_contains / 운영=09:00 ~ 18:00 / 요금=1시간 기준 2,000원 / 주소=제주특별자치도 제주시 노형동 740-2
+
+[91/100] 원노형푸른 제4
+  → success / modu / modu_search_address:exact_or_contains / 운영=09:00 ~ 18:00 / 요금=1시간 기준 2,000원 / 주소=제주특별자치도 제주시 진군3길 10
+
+[92/100] 947 북측
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=1시간 기준 5,000원 / 주소=제주특별자치도 제주시 연동4길 8
+
+[93/100] 노형오거리
+  → success / modu / modu_search_address:exact_or_contains / 운영=09:00 ~ 18:00 / 요금=1시간 기준 2,000원 / 주소=제주특별자치도 제주시 노형동 1297-5
+
+[94/100] 런던물류
+  → needs_confirm / modu / modu_pins:coord / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 연동 1957-1
+
+[95/100] 947 남측
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=1시간 기준 5,000원 / 주소=제주특별자치도 제주시 연동4길 8
+
+[96/100] 원노형 10길
+  → success / modu / modu_search_coord / 운영=09:00 ~ 18:00 / 요금=1시간 기준 2,000원 / 주소=제주특별자치도 제주시 노형동 710-4
+
+[97/100] 외도일동 440-7
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 외도1동 440-7
+
+[98/100] 외도일동 448-3
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 외도1동 448-3
+
+[99/100] 외도동 제1
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 외도1동 559-1
+
+[100/100] 도두일동 2630
+  → success / modu / modu_search_address:exact_or_contains / 운영=00:00 ~ 익일 24:00 / 요금=정보 없음 / 주소=제주특별자치도 제주시 도두1동 2630
+
+=== 요약 ===
+  ('success', 'modu'): 104
+  ('needs_confirm', 'modu'): 5
+  ('success', 'naver'): 1
+CSV: /Users/jpark/project/api_visitkorea/네이버지도 크롤링/주차장/jejusi_paid/enriched_paid.csv

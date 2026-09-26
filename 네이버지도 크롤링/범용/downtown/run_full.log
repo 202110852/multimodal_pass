@@ -1,0 +1,4983 @@
+대상 448 / 스킵 1 / 이번 447 → /Users/jpark/project/api_visitkorea/네이버지도 크롤링/범용/downtown
+
+[1/447] 아디다스제주 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1744237175
+place_id: 1744237175
+url: https://map.naver.com/p/entry/place/1744237175
+hours: 10:30에 영업 시작 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[2/447] 아디다스키즈 제주점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1993975066
+place_id: 1993975066
+url: https://map.naver.com/p/entry/place/1993975066
+hours: 10:30에 영업 시작 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[3/447] 노스페이스 제주중앙 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=13425146
+place_id: 13425146
+url: https://map.naver.com/p/entry/place/13425146
+hours: 11:00에 영업 시작 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[4/447] 하이드로겐 제주점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1173218865
+place_id: 1173218865
+url: https://map.naver.com/p/entry/place/1173218865
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[5/447] K2 제주MS link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=13393329
+place_id: 13393329
+url: https://map.naver.com/p/entry/place/13393329
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[6/447] 노르디스크 제주점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1073797039
+place_id: 1073797039
+url: https://map.naver.com/p/entry/place/1073797039
+hours: 목 휴무 | status=오늘 휴무
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[7/447] MLB 제주점 link=N
+  nmap:// 는 place id 없음 → 매장명 검색
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 35m ≤ 80m
+place_id: 31015451
+url: https://map.naver.com/p/entry/place/31015451
+hours: 10:00에 영업 시작 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[8/447] 아식스 구제주점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=2023598297
+place_id: 2023598297
+url: https://map.naver.com/p/entry/place/2023598297
+hours: 10:00에 영업 시작 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[9/447] 다이나핏 구제주점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=938362017
+place_id: 938362017
+url: https://map.naver.com/p/entry/place/938362017
+hours: 11:00에 영업 시작 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[10/447] 가넷옴므 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1721424685
+place_id: 1721424685
+url: https://map.naver.com/p/entry/place/1721424685
+hours: 10:30에 영업 시작 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[11/447] 게스 제주점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=16687217
+place_id: 16687217
+url: https://map.naver.com/p/entry/place/16687217
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[12/447] 나이키칠성로점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=32150460
+place_id: 32150460
+url: https://map.naver.com/p/entry/place/32150460
+hours: 10:00에 영업 시작 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[13/447] 내셔널지오그래픽 제주점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=97720184
+place_id: 97720184
+url: https://map.naver.com/p/entry/place/97720184
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[14/447] 내셔널지오그래픽키즈 제주점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1636818959
+place_id: 1636818959
+url: https://map.naver.com/p/entry/place/1636818959
+hours: 10:30에 영업 시작 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[15/447] 뉴발란스 제주점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=13393126
+place_id: 13393126
+url: https://map.naver.com/p/entry/place/13393126
+hours: 10:00에 영업 시작 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[16/447] 뉴발란스키즈 제주점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=2067800271
+place_id: 2067800271
+url: https://map.naver.com/p/entry/place/2067800271
+hours: 10:30에 영업 시작 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[17/447] 뉴에라제주점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=387173338
+place_id: 387173338
+url: https://map.naver.com/p/entry/place/387173338
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[18/447] 다몰문화 협동조합 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1271035395
+place_id: 1271035395
+url: https://map.naver.com/p/entry/place/1271035395
+hours: 10:00 - 22:00 | status=운영 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[19/447] 레노마 골프 제주 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1832553740
+place_id: 1832553740
+url: https://map.naver.com/p/entry/place/1832553740
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[20/447] 더제이드호텔앤카페 link=Y
+  휠 1회(1200) insights=False AI브리핑=True
+  휠 2회(1200) insights=False AI브리핑=True
+  휠 3회(1200) insights=False AI브리핑=True
+  휠 4회(1200) insights=False AI브리핑=True
+→ success / 1_naver_link / naver_link place_id=1492287245
+place_id: 1492287245
+url: https://map.naver.com/p/entry/place/1492287245
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / 예약 탭
+
+[21/447] 데무 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=16686979
+place_id: 16686979
+url: https://map.naver.com/p/entry/place/16686979
+hours: 휴무 | status=휴무
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[22/447] 데미안 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1293100199
+place_id: 1293100199
+url: https://map.naver.com/p/entry/place/1293100199
+hours: 10:00 - 20:00 | status=운영 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[23/447] 데코 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1211201084
+place_id: 1211201084
+url: https://map.naver.com/p/entry/place/1211201084
+hours: 11:00에 영업 시작 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[24/447] 디스커버리 제주점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1866934836
+place_id: 1866934836
+url: https://map.naver.com/p/entry/place/1866934836
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[25/447] 아이더 제주점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1627607895
+place_id: 1627607895
+url: https://map.naver.com/p/entry/place/1627607895
+hours: 10:30에 영업 시작 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 예약 탭
+
+[26/447] 루스트플레이스 칠성로점 link=Y
+  휠 1회(1200) insights=False AI브리핑=True
+  휠 2회(1200) insights=False AI브리핑=True
+  휠 3회(1200) insights=False AI브리핑=True
+  휠 4회(1200) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=True
+  휠 2회(700) insights=False AI브리핑=True
+  휠 3회(700) insights=False AI브리핑=True
+  휠 4회(700) insights=False AI브리핑=True
+  휠 5회(700) insights=False AI브리핑=True
+  휠 6회(700) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=38232952
+place_id: 38232952
+url: https://map.naver.com/p/entry/place/38232952
+hours: 월 11:00 - 21:00 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / 소식(탭 없음) / 예약 탭
+
+[27/447] 르꼬끄스포르티브 칠성로점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1327505807
+place_id: 1327505807
+url: https://map.naver.com/p/entry/place/1327505807
+hours: 10:30에 영업 시작 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[28/447] 리바이스 구제주점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1149546965
+place_id: 1149546965
+url: https://map.naver.com/p/entry/place/1149546965
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[29/447] 리복 제주점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1011823031
+place_id: 1011823031
+url: https://map.naver.com/p/entry/place/1011823031
+hours: 월 11:00 - 21:00 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[30/447] 명동의류제주점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=527022341
+place_id: 527022341
+url: https://map.naver.com/p/entry/place/527022341
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[31/447] 모라도 제주대리점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1798215278
+place_id: 1798215278
+url: https://map.naver.com/p/entry/place/1798215278
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[32/447] 탑동치킨호프 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=False
+  휠 2회(700) insights=False AI브리핑=False
+  휠 3회(700) insights=False AI브리핑=False
+  휠 4회(700) insights=False AI브리핑=False
+  휠 5회(700) insights=False AI브리핑=False
+  휠 6회(700) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=1129607971
+place_id: 1129607971
+url: https://map.naver.com/p/entry/place/1129607971
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[33/447] 무크 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=16685815
+place_id: 16685815
+url: https://map.naver.com/p/entry/place/16685815
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[34/447] 베네통 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=16687020
+place_id: 16687020
+url: https://map.naver.com/p/entry/place/16687020
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[35/447] 베스띠벨리 구제주점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=38486282
+place_id: 38486282
+url: https://map.naver.com/p/entry/place/38486282
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[36/447] 봉쥬르 무슈 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=646006536
+place_id: 646006536
+url: https://map.naver.com/p/entry/place/646006536
+hours: 12:00에 영업 시작 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[37/447] 블랙야크 제주점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=13393096
+place_id: 13393096
+url: https://map.naver.com/p/entry/place/13393096
+hours: 10:00에 영업 시작 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[38/447] vivid link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1726706743
+place_id: 1726706743
+url: https://map.naver.com/p/entry/place/1726706743
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[39/447] 빈폴 제주점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=11771748
+place_id: 11771748
+url: https://map.naver.com/p/entry/place/11771748
+hours: 10:00 - 21:00 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[40/447] 나들가게 코사마트 제일편의점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=30991654
+place_id: 30991654
+url: https://map.naver.com/p/entry/place/30991654
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[41/447] 제이엔제이 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=2029801684
+place_id: 2029801684
+url: https://map.naver.com/p/entry/place/2029801684
+hours: 11:00 - 20:00 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[42/447] 쉐르담 제주점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1489588357
+place_id: 1489588357
+url: https://map.naver.com/p/entry/place/1489588357
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[43/447] 슈마커 제주칠성점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1195950657
+place_id: 1195950657
+url: https://map.naver.com/p/entry/place/1195950657
+hours: 11:00에 영업 시작 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[44/447] 신마라본색칠성점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=False
+  휠 2회(700) insights=False AI브리핑=False
+  휠 3회(700) insights=False AI브리핑=False
+  휠 4회(700) insights=False AI브리핑=False
+  휠 5회(700) insights=False AI브리핑=False
+  휠 6회(700) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=1145971386
+place_id: 1145971386
+url: https://map.naver.com/p/entry/place/1145971386
+hours: 10:30 - 22:00 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[45/447] 신상마켓 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1205075333
+place_id: 1205075333
+url: https://map.naver.com/p/entry/place/1205075333
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[46/447] 싱싱과일 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1973921512
+place_id: 1973921512
+url: https://map.naver.com/p/entry/place/1973921512
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[47/447] 아르무아루즈 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=2142169804
+place_id: 2142169804
+url: https://map.naver.com/p/entry/place/2142169804
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[48/447] 아주반점 link=Y
+  휠 1회(1200) insights=False AI브리핑=True
+  휠 2회(1200) insights=False AI브리핑=True
+  휠 3회(1200) insights=False AI브리핑=True
+  휠 4회(1200) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=True
+  휠 2회(700) insights=False AI브리핑=True
+  휠 3회(700) insights=False AI브리핑=True
+  휠 4회(700) insights=False AI브리핑=True
+  휠 5회(700) insights=False AI브리핑=True
+  휠 6회(700) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=11858994
+place_id: 11858994
+url: https://map.naver.com/p/entry/place/11858994
+hours: 10:30 - 20:30 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / 소식(탭 없음) / 예약 탭
+
+[49/447] 아하복장사 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1122616277
+place_id: 1122616277
+url: https://map.naver.com/p/entry/place/1122616277
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[50/447] 양씨네 제주전복칼국수 본점 link=Y
+  휠 1회(1200) insights=False AI브리핑=True
+  휠 2회(1200) insights=False AI브리핑=True
+  휠 3회(1200) insights=False AI브리핑=True
+  휠 4회(1200) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=True
+  휠 2회(700) insights=False AI브리핑=True
+  휠 3회(700) insights=False AI브리핑=True
+  휠 4회(700) insights=False AI브리핑=True
+  휠 5회(700) insights=False AI브리핑=True
+  휠 6회(700) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=1497347671
+place_id: 1497347671
+url: https://map.naver.com/p/entry/place/1497347671
+hours: 08:00 - 21:00 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / 예약 탭
+
+[51/447] 양지여인숙 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=32030366
+place_id: 32030366
+url: https://map.naver.com/p/entry/place/32030366
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[52/447] 엄브로 제주점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1724567668
+place_id: 1724567668
+url: https://map.naver.com/p/entry/place/1724567668
+hours: 10:00에 영업 시작 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[53/447] 에스마켓 제주칠성점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=36667883
+place_id: 36667883
+url: https://map.naver.com/p/entry/place/36667883
+hours: 10:30에 영업 시작 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 예약 탭
+
+[54/447] NBA 제주점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=2057165392
+place_id: 2057165392
+url: https://map.naver.com/p/entry/place/2057165392
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[55/447] 엔클라인뉴욕 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=36997398
+place_id: 36997398
+url: https://map.naver.com/p/entry/place/36997398
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[56/447] 엘칸토 제주점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=32795002
+place_id: 32795002
+url: https://map.naver.com/p/entry/place/32795002
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[57/447] 영미사 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=16685835
+place_id: 16685835
+url: https://map.naver.com/p/entry/place/16685835
+hours: 월 10:00 - 20:00 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[58/447] 아레나 제주점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=2061225466
+place_id: 2061225466
+url: https://map.naver.com/p/entry/place/2061225466
+hours: 10:30에 영업 시작 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[59/447] 웨스트우드 구제주점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=37548919
+place_id: 37548919
+url: https://map.naver.com/p/entry/place/37548919
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[60/447] 이레밥상 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=False
+  휠 2회(700) insights=False AI브리핑=False
+  휠 3회(700) insights=False AI브리핑=False
+  휠 4회(700) insights=False AI브리핑=False
+  휠 5회(700) insights=False AI브리핑=False
+  휠 6회(700) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=1797746125
+place_id: 1797746125
+url: https://map.naver.com/p/entry/place/1797746125
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[61/447] 삼성패션아울렛 제주점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=17002849
+place_id: 17002849
+url: https://map.naver.com/p/entry/place/17002849
+hours: 10:00에 영업 시작 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 예약 탭
+
+[62/447] 정금사 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=16686080
+place_id: 16686080
+url: https://map.naver.com/p/entry/place/16686080
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[63/447] 제주커피배움 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1433978314
+place_id: 1433978314
+url: https://map.naver.com/p/entry/place/1433978314
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[64/447] 로가디스 제주점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=38558177
+place_id: 38558177
+url: https://map.naver.com/p/entry/place/38558177
+hours: 10:00 - 20:00 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[65/447] 조일약국 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=19520481
+place_id: 19520481
+url: https://map.naver.com/p/entry/place/19520481
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[66/447] 라코스테 제주점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1291982667
+place_id: 1291982667
+url: https://map.naver.com/p/entry/place/1291982667
+hours: 11:00에 영업 시작 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[67/447] 컬럼비아 제주점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=808733485
+place_id: 808733485
+url: https://map.naver.com/p/entry/place/808733485
+hours: 10:30에 영업 시작 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 예약 탭
+
+[68/447] 탐라인터내쇼날 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=288114396
+place_id: 288114396
+url: https://map.naver.com/p/entry/place/288114396
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[69/447] 준플라워 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1066696679
+place_id: 1066696679
+url: https://map.naver.com/p/entry/place/1066696679
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[70/447] 지중해식당 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=False
+  휠 2회(700) insights=False AI브리핑=False
+  휠 3회(700) insights=False AI브리핑=False
+  휠 4회(700) insights=False AI브리핑=False
+  휠 5회(700) insights=False AI브리핑=False
+  휠 6회(700) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=16980379
+place_id: 16980379
+url: https://map.naver.com/p/entry/place/16980379
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[71/447] 진금당 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=16686069
+place_id: 16686069
+url: https://map.naver.com/p/entry/place/16686069
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[72/447] 채우다정식 link=Y
+  휠 1회(1200) insights=False AI브리핑=True
+  휠 2회(1200) insights=False AI브리핑=True
+  휠 3회(1200) insights=False AI브리핑=True
+  휠 4회(1200) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=True
+  휠 2회(700) insights=False AI브리핑=True
+  휠 3회(700) insights=False AI브리핑=True
+  휠 4회(700) insights=False AI브리핑=True
+  휠 5회(700) insights=False AI브리핑=True
+  휠 6회(700) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=1378122176
+place_id: 1378122176
+url: https://map.naver.com/p/entry/place/1378122176
+hours: 월 정기휴무 (매주 월요일) | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / 예약 탭
+
+[73/447] 칠성뷔페 link=Y
+  휠 1회(1200) insights=False AI브리핑=True
+  휠 2회(1200) insights=False AI브리핑=True
+  휠 3회(1200) insights=False AI브리핑=True
+  휠 4회(1200) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=True
+  휠 2회(700) insights=False AI브리핑=True
+  휠 3회(700) insights=False AI브리핑=True
+  휠 4회(700) insights=False AI브리핑=True
+  휠 5회(700) insights=False AI브리핑=True
+  휠 6회(700) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=37567417
+place_id: 37567417
+url: https://map.naver.com/p/entry/place/37567417
+hours: 월 12:00 - 21:30 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈)
+
+[74/447] 캘빈클라인 구제주대리점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=45035807
+place_id: 45035807
+url: https://map.naver.com/p/entry/place/45035807
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[75/447] 커버낫 제주점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1997707617
+place_id: 1997707617
+url: https://map.naver.com/p/entry/place/1997707617
+hours: 10:00에 영업 시작 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[76/447] 마뗑킴 하고하우스 제주점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1525252166
+place_id: 1525252166
+url: https://map.naver.com/p/entry/place/1525252166
+hours: 10:00에 영업 시작 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[77/447] 코닥 제주점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1249999901
+place_id: 1249999901
+url: https://map.naver.com/p/entry/place/1249999901
+hours: 10:30에 영업 시작 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[78/447] 코데즈컴바인 제주칠성점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1778278793
+place_id: 1778278793
+url: https://map.naver.com/p/entry/place/1778278793
+hours: 10:00에 영업 시작 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[79/447] 코오롱스포츠 제주점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=13393220
+place_id: 13393220
+url: https://map.naver.com/p/entry/place/13393220
+hours: 10:30에 영업 시작 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[80/447] 쿵떡 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1890664775
+place_id: 1890664775
+url: https://map.naver.com/p/entry/place/1890664775
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[81/447] 크록스 제주점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=19841326
+place_id: 19841326
+url: https://map.naver.com/p/entry/place/19841326
+hours: 10:00에 영업 시작 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 예약 탭
+
+[82/447] 탑볼링장 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=False
+  휠 2회(700) insights=False AI브리핑=False
+  휠 3회(700) insights=False AI브리핑=False
+  휠 4회(700) insights=False AI브리핑=False
+  휠 5회(700) insights=False AI브리핑=False
+  휠 6회(700) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=1420840192
+place_id: 1420840192
+url: https://map.naver.com/p/entry/place/1420840192
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[83/447] 파렌하이트 제주점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=20087210
+place_id: 20087210
+url: https://map.naver.com/p/entry/place/20087210
+hours: 11:00에 영업 시작 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 예약 탭
+
+[84/447] 파크랜드 제주점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=13425999
+place_id: 13425999
+url: https://map.naver.com/p/entry/place/13425999
+hours: 10:00에 영업 시작 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[85/447] 팜스프링스 골프 제주칠성점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1163086673
+place_id: 1163086673
+url: https://map.naver.com/p/entry/place/1163086673
+hours: 10:30에 영업 시작 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[86/447] 포라리제주점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=33171903
+place_id: 33171903
+url: https://map.naver.com/p/entry/place/33171903
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[87/447] 도토리캐리커쳐 제주2호점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=2073920620
+place_id: 2073920620
+url: https://map.naver.com/p/entry/place/2073920620
+hours: 11:30 - 22:00 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[88/447] 효선떡방 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=False
+  휠 2회(700) insights=False AI브리핑=False
+  휠 3회(700) insights=False AI브리핑=False
+  휠 4회(700) insights=False AI브리핑=False
+  휠 5회(700) insights=False AI브리핑=False
+  휠 6회(700) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=1730462315
+place_id: 1730462315
+url: https://map.naver.com/p/entry/place/1730462315
+hours: 월 10:00 - 18:00 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[89/447] 휠라키즈 제주칠성로점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=2047731800
+place_id: 2047731800
+url: https://map.naver.com/p/entry/place/2047731800
+hours: 10:30 - 21:00 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[90/447] 지오지아 제주점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=11774161
+place_id: 11774161
+url: https://map.naver.com/p/entry/place/11774161
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[91/447] 마운트 에베레스트 레스토랑 제주 link=Y
+  플레이스 플러스 → 인기메뉴 카드 필수 검수
+  휠 1회(1200) insights=True AI브리핑=True
+→ success / 1_naver_link / naver_link place_id=1421116382
+place_id: 1421116382
+url: https://map.naver.com/p/entry/place/1421116382
+hours: 11:00 - 23:00 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 예약 탭
+
+[92/447] 지나가다봄 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=False
+  휠 2회(700) insights=False AI브리핑=False
+  휠 3회(700) insights=False AI브리핑=False
+  휠 4회(700) insights=False AI브리핑=False
+  휠 5회(700) insights=False AI브리핑=False
+  휠 6회(700) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=1415339639
+place_id: 1415339639
+url: https://map.naver.com/p/entry/place/1415339639
+hours: 월 10:00 - 19:00 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[93/447] 칠성로포차 link=Y
+  플레이스 플러스 → 인기메뉴 카드 필수 검수
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=False
+  휠 2회(700) insights=False AI브리핑=False
+  휠 3회(700) insights=False AI브리핑=False
+  휠 4회(700) insights=False AI브리핑=False
+  휠 5회(700) insights=False AI브리핑=False
+  휠 6회(700) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=1347948355
+place_id: 1347948355
+url: https://map.naver.com/p/entry/place/1347948355
+hours: 영업 전 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴(플레이스 플러스인데 스크롤 검수 실패) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[94/447] CU 제주칠성로점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=38758626
+place_id: 38758626
+url: https://map.naver.com/p/entry/place/38758626
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[95/447] 황금무지개뜨는곳 link=Y
+  휠 1회(1200) insights=False AI브리핑=True
+  휠 2회(1200) insights=False AI브리핑=True
+  휠 3회(1200) insights=False AI브리핑=True
+  휠 4회(1200) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=True
+  휠 2회(700) insights=False AI브리핑=True
+  휠 3회(700) insights=False AI브리핑=True
+  휠 4회(700) insights=False AI브리핑=True
+  휠 5회(700) insights=False AI브리핑=True
+  휠 6회(700) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=1405559887
+place_id: 1405559887
+url: https://map.naver.com/p/entry/place/1405559887
+hours: 월 11:30 - 21:00 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / 소식(탭 없음) / 예약 탭
+
+[96/447] 제주돼지빵 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=False
+  휠 2회(700) insights=False AI브리핑=False
+  휠 3회(700) insights=False AI브리핑=False
+  휠 4회(700) insights=False AI브리핑=False
+  휠 5회(700) insights=False AI브리핑=False
+  휠 6회(700) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=1268894597
+place_id: 1268894597
+url: https://map.naver.com/p/entry/place/1268894597
+hours: 월 10:00 - 22:00 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[97/447] 리틀걸 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=2071792344
+place_id: 2071792344
+url: https://map.naver.com/p/entry/place/2071792344
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[98/447] 쿠미 제주동문시장점 link=Y
+  휠 1회(1200) insights=False AI브리핑=True
+  휠 2회(1200) insights=False AI브리핑=True
+  휠 3회(1200) insights=False AI브리핑=True
+  휠 4회(1200) insights=False AI브리핑=True
+→ success / 1_naver_link / naver_link place_id=1728742925
+place_id: 1728742925
+url: https://map.naver.com/p/entry/place/1728742925
+hours: 월 정기휴무 (매주 월요일) | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / 예약 탭
+
+[99/447] HABIT link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=37746379
+place_id: 37746379
+url: https://map.naver.com/p/entry/place/37746379
+hours: 12:00에 영업 시작 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[100/447] 한림칼국수 제주동문시장점 link=Y
+  휠 1회(1200) insights=False AI브리핑=True
+  휠 2회(1200) insights=False AI브리핑=True
+  휠 3회(1200) insights=False AI브리핑=True
+  휠 4회(1200) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=True
+  휠 2회(700) insights=False AI브리핑=True
+  휠 3회(700) insights=False AI브리핑=True
+  휠 4회(700) insights=False AI브리핑=True
+  휠 5회(700) insights=False AI브리핑=True
+  휠 6회(700) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=37267700
+place_id: 37267700
+url: https://map.naver.com/p/entry/place/37267700
+hours: 월 09:00 - 17:00 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / 예약 탭
+
+[101/447] 브라운브레스 제주칠성점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1275720786
+place_id: 1275720786
+url: https://map.naver.com/p/entry/place/1275720786
+hours: 12:00에 영업 시작 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[102/447] 제주특별자치도 마을만들기종합지원센터 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1237246022
+place_id: 1237246022
+url: https://map.naver.com/p/entry/place/1237246022
+hours: 월 09:00 - 18:00 | status=운영 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[103/447] 똘이네 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=False
+  휠 2회(700) insights=False AI브리핑=False
+  휠 3회(700) insights=False AI브리핑=False
+  휠 4회(700) insights=False AI브리핑=False
+  휠 5회(700) insights=False AI브리핑=False
+  휠 6회(700) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=1743946135
+place_id: 1743946135
+url: https://map.naver.com/p/entry/place/1743946135
+hours: 월 정기휴무 (매주 월요일) | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 예약 탭
+
+[104/447] 아크페프 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1000744797
+place_id: 1000744797
+url: https://map.naver.com/p/entry/place/1000744797
+hours: 12:00 - 21:00 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[105/447] 푸시오프 스케이트보드샵 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1403060081
+place_id: 1403060081
+url: https://map.naver.com/p/entry/place/1403060081
+hours: 월 11:00 - 20:00 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 예약 탭
+
+[106/447] 탠저비 칠성로점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1234268290
+place_id: 1234268290
+url: https://map.naver.com/p/entry/place/1234268290
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[107/447] 에이브이 씨네마 link=Y
+  naver_link에서 place id를 못 뽑음 → 매장명 검색
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 2_address_match / 주소일치(exact_or_contains) query=에이브이 씨네마
+place_id: 1983470585
+url: https://map.naver.com/p/entry/place/1983470585
+hours: 11:00에 영업 시작 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[108/447] 아름다운동행마실 link=Y
+  플레이스 플러스 → 인기메뉴 카드 필수 검수
+  휠 1회(1200) insights=True AI브리핑=True
+→ success / 1_naver_link / naver_link place_id=1688943323
+place_id: 1688943323
+url: https://map.naver.com/p/entry/place/1688943323
+hours: 월 09:00 - 22:00 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 소식(탭 없음) / 예약 탭
+
+[109/447] 어딕션 link=Y
+  naver_link에서 place id를 못 뽑음 → 매장명 검색
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 2_address_match / 주소일치(exact_or_contains) query=제주시 어딕션
+place_id: 2003091483
+url: https://map.naver.com/p/entry/place/2003091483
+hours: 12:00에 영업 시작 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[110/447] 제주메밀막국수함흥냉면 link=Y
+  휠 1회(1200) insights=False AI브리핑=True
+  휠 2회(1200) insights=False AI브리핑=True
+  휠 3회(1200) insights=False AI브리핑=True
+  휠 4회(1200) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=True
+  휠 2회(700) insights=False AI브리핑=True
+  휠 3회(700) insights=False AI브리핑=True
+  휠 4회(700) insights=False AI브리핑=True
+  휠 5회(700) insights=False AI브리핑=True
+  휠 6회(700) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=1934968084
+place_id: 1934968084
+url: https://map.naver.com/p/entry/place/1934968084
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / 소식(탭 없음) / 예약 탭
+
+[111/447] 이삭토스트 제주칠성로점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=False
+  휠 2회(700) insights=False AI브리핑=False
+  휠 3회(700) insights=False AI브리핑=False
+  휠 4회(700) insights=False AI브리핑=False
+  휠 5회(700) insights=False AI브리핑=False
+  휠 6회(700) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=38227529
+place_id: 38227529
+url: https://map.naver.com/p/entry/place/38227529
+hours: 월 09:00 - 20:00 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 예약 탭
+
+[112/447] 라이프워크 제주탑동직영점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1446600490
+place_id: 1446600490
+url: https://map.naver.com/p/entry/place/1446600490
+hours: 11:00에 영업 시작 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[113/447] 양씨네제주전복김밥전문점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=False
+  휠 2회(700) insights=False AI브리핑=False
+  휠 3회(700) insights=False AI브리핑=False
+  휠 4회(700) insights=False AI브리핑=False
+  휠 5회(700) insights=False AI브리핑=False
+  휠 6회(700) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=1241568638
+place_id: 1241568638
+url: https://map.naver.com/p/entry/place/1241568638
+hours: 10:00 - 15:00 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[114/447] 마음에온 link=Y
+  휠 1회(1200) insights=False AI브리핑=True
+  휠 2회(1200) insights=False AI브리핑=True
+  휠 3회(1200) insights=False AI브리핑=True
+  휠 4회(1200) insights=False AI브리핑=True
+→ success / 1_naver_link / naver_link place_id=1137456161
+place_id: 1137456161
+url: https://map.naver.com/p/entry/place/1137456161
+hours: 월 10:00 - 20:00 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / 예약 탭
+
+[115/447] 카페관덕 link=Y
+  휠 1회(1200) insights=False AI브리핑=True
+  휠 2회(1200) insights=False AI브리핑=True
+  휠 3회(1200) insights=False AI브리핑=True
+  휠 4회(1200) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=True
+  휠 2회(700) insights=False AI브리핑=True
+  휠 3회(700) insights=False AI브리핑=True
+  휠 4회(700) insights=False AI브리핑=True
+  휠 5회(700) insights=False AI브리핑=True
+  휠 6회(700) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=1831647719
+place_id: 1831647719
+url: https://map.naver.com/p/entry/place/1831647719
+hours: 09:00 - 23:00 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / 예약 탭
+
+[116/447] 맛짱 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=20362056
+place_id: 20362056
+url: https://map.naver.com/p/entry/place/20362056
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 예약 탭
+
+[117/447] 빠쑌삼춘 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=2093975837
+place_id: 2093975837
+url: https://map.naver.com/p/entry/place/2093975837
+hours: 10:00 - 22:00 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[118/447] 유행통신 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1403040254
+place_id: 1403040254
+url: https://map.naver.com/p/entry/place/1403040254
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[119/447] 제주조개칼국수 link=Y
+  휠 1회(1200) insights=False AI브리핑=True
+  휠 2회(1200) insights=False AI브리핑=True
+  휠 3회(1200) insights=False AI브리핑=True
+  휠 4회(1200) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=True
+  휠 2회(700) insights=False AI브리핑=True
+  휠 3회(700) insights=False AI브리핑=True
+  휠 4회(700) insights=False AI브리핑=True
+  휠 5회(700) insights=False AI브리핑=True
+  휠 6회(700) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=1355582216
+place_id: 1355582216
+url: https://map.naver.com/p/entry/place/1355582216
+hours: 월 11:00 - 22:00 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / 예약 탭
+
+[120/447] 플라네하우스 제주소품샵 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1607070799
+place_id: 1607070799
+url: https://map.naver.com/p/entry/place/1607070799
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 예약 탭
+
+[121/447] 클림트 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=2027503936
+place_id: 2027503936
+url: https://map.naver.com/p/entry/place/2027503936
+hours: 월 11:00 - 19:00 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[122/447] 메밀밭에가시리 일도점 link=Y
+  휠 1회(1200) insights=False AI브리핑=True
+  휠 2회(1200) insights=False AI브리핑=True
+  휠 3회(1200) insights=False AI브리핑=True
+  휠 4회(1200) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=True
+  휠 2회(700) insights=False AI브리핑=True
+  휠 3회(700) insights=False AI브리핑=True
+  휠 4회(700) insights=False AI브리핑=True
+  휠 5회(700) insights=False AI브리핑=True
+  휠 6회(700) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=2074042714
+place_id: 2074042714
+url: https://map.naver.com/p/entry/place/2074042714
+hours: 월 11:00 - 21:00 | status=오늘 휴무
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / 예약 탭
+
+[123/447] 코코 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=2039233634
+place_id: 2039233634
+url: https://map.naver.com/p/entry/place/2039233634
+hours: 11:00 - 19:00 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[124/447] 제주아비아 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=2001305194
+place_id: 2001305194
+url: https://map.naver.com/p/entry/place/2001305194
+hours: 월 11:00 - 19:00 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 예약 탭
+
+[125/447] 제주 자작 제주혼술바 탑동 4호점 link=Y
+  휠 1회(1200) insights=False AI브리핑=True
+  휠 2회(1200) insights=False AI브리핑=True
+  휠 3회(1200) insights=False AI브리핑=True
+  휠 4회(1200) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=True
+  휠 2회(700) insights=False AI브리핑=True
+  휠 3회(700) insights=False AI브리핑=True
+  휠 4회(700) insights=False AI브리핑=True
+  휠 5회(700) insights=False AI브리핑=True
+  휠 6회(700) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=2094911675
+place_id: 2094911675
+url: https://map.naver.com/p/entry/place/2094911675
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / 예약 탭
+
+[126/447] 233빈티지 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=2059910506
+place_id: 2059910506
+url: https://map.naver.com/p/entry/place/2059910506
+hours: 13:00에 영업 시작 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[127/447] 코디-신 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1012453510
+place_id: 1012453510
+url: https://map.naver.com/p/entry/place/1012453510
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[128/447] 해바라기본점 link=Y
+  휠 1회(1200) insights=False AI브리핑=True
+  휠 2회(1200) insights=False AI브리핑=True
+  휠 3회(1200) insights=False AI브리핑=True
+  휠 4회(1200) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=True
+  휠 2회(700) insights=False AI브리핑=True
+  휠 3회(700) insights=False AI브리핑=True
+  휠 4회(700) insights=False AI브리핑=True
+  휠 5회(700) insights=False AI브리핑=True
+  휠 6회(700) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=20507945
+place_id: 20507945
+url: https://map.naver.com/p/entry/place/20507945
+hours: 10:00 - 21:00 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / 소식(탭 없음) / 예약 탭
+
+[129/447] 만만한복 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1083930111
+place_id: 1083930111
+url: https://map.naver.com/p/entry/place/1083930111
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 예약 탭
+
+[130/447] 어라운드 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1484691157
+place_id: 1484691157
+url: https://map.naver.com/p/entry/place/1484691157
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[131/447] 뉴스페이스커피 link=Y
+  휠 1회(1200) insights=False AI브리핑=True
+  휠 2회(1200) insights=False AI브리핑=True
+  휠 3회(1200) insights=False AI브리핑=True
+  휠 4회(1200) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=True
+  휠 2회(700) insights=False AI브리핑=True
+  휠 3회(700) insights=False AI브리핑=True
+  휠 4회(700) insights=False AI브리핑=True
+  휠 5회(700) insights=False AI브리핑=True
+  휠 6회(700) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=2009105788
+place_id: 2009105788
+url: https://map.naver.com/p/entry/place/2009105788
+hours: 월 정기휴무 (매주 월요일) | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / 예약 탭
+
+[132/447] 문화공간 휴 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=35418130
+place_id: 35418130
+url: https://map.naver.com/p/entry/place/35418130
+hours: 10:00 - 18:00 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[133/447] 아꼬미상점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=2028659653
+place_id: 2028659653
+url: https://map.naver.com/p/entry/place/2028659653
+hours: 오늘 휴무 | status=오늘 휴무
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 예약 탭
+
+[134/447] 제주복이당 link=Y
+  휠 1회(1200) insights=False AI브리핑=True
+  휠 2회(1200) insights=False AI브리핑=True
+  휠 3회(1200) insights=False AI브리핑=True
+  휠 4회(1200) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=True
+  휠 2회(700) insights=False AI브리핑=True
+  휠 3회(700) insights=False AI브리핑=True
+  휠 4회(700) insights=False AI브리핑=True
+  휠 5회(700) insights=False AI브리핑=True
+  휠 6회(700) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=2093052488
+place_id: 2093052488
+url: https://map.naver.com/p/entry/place/2093052488
+hours: 10:00 - 21:00 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / 예약 탭
+
+[135/447] 카페봄봄 제주칠성점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=2096510262
+place_id: 2096510262
+url: https://map.naver.com/p/entry/place/2096510262
+hours: 09:30 - 21:20 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[136/447] 탑부평 본점 link=Y
+  플레이스 플러스 → 인기메뉴 카드 필수 검수
+  휠 1회(1200) insights=True AI브리핑=True
+→ success / 1_naver_link / naver_link place_id=16735897
+place_id: 16735897
+url: https://map.naver.com/p/entry/place/16735897
+hours: 11:00 - 23:00 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 예약 탭
+
+[137/447] 오조 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=2000662564
+place_id: 2000662564
+url: https://map.naver.com/p/entry/place/2000662564
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[138/447] 야커피 link=Y
+  휠 1회(1200) insights=False AI브리핑=True
+  휠 2회(1200) insights=False AI브리핑=True
+  휠 3회(1200) insights=False AI브리핑=True
+  휠 4회(1200) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=True
+  휠 2회(700) insights=False AI브리핑=True
+  휠 3회(700) insights=False AI브리핑=True
+  휠 4회(700) insights=False AI브리핑=True
+  휠 5회(700) insights=False AI브리핑=True
+  휠 6회(700) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=1667552947
+place_id: 1667552947
+url: https://map.naver.com/p/entry/place/1667552947
+hours: 월 08:00 - 19:00 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / 예약 탭
+
+[139/447] 웰컴버거 link=Y
+  휠 1회(1200) insights=False AI브리핑=True
+  휠 2회(1200) insights=False AI브리핑=True
+  휠 3회(1200) insights=False AI브리핑=True
+  휠 4회(1200) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=True
+  휠 2회(700) insights=False AI브리핑=True
+  휠 3회(700) insights=False AI브리핑=True
+  휠 4회(700) insights=False AI브리핑=True
+  휠 5회(700) insights=False AI브리핑=True
+  휠 6회(700) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=1622751515
+place_id: 1622751515
+url: https://map.naver.com/p/entry/place/1622751515
+hours: 월 11:30 - 21:00 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / 예약 탭
+
+[140/447] 스튜디오춘우 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=2040077319
+place_id: 2040077319
+url: https://map.naver.com/p/entry/place/2040077319
+hours: 15:00 - 22:00 | status=영업 전
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 예약 탭
+
+[141/447] 제주하람스튜디오 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=2095882357
+place_id: 2095882357
+url: https://map.naver.com/p/entry/place/2095882357
+hours: 09:00 - 18:00 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[142/447] ABC마트 GS 제주칠성점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=19774166
+place_id: 19774166
+url: https://map.naver.com/p/entry/place/19774166
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[143/447] ABC마트 ST 제주칠성점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1817133560
+place_id: 1817133560
+url: https://map.naver.com/p/entry/place/1817133560
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[144/447] 아트박스 제주칠성점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=36994368
+place_id: 36994368
+url: https://map.naver.com/p/entry/place/36994368
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[145/447] 폴더 제주점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=37426707
+place_id: 37426707
+url: https://map.naver.com/p/entry/place/37426707
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[146/447] 백억커피 제주동문점 link=Y
+  플레이스 플러스 → 인기메뉴 카드 필수 검수
+  휠 1회(1200) insights=True AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=2059061563
+place_id: 2059061563
+url: https://map.naver.com/p/entry/place/2059061563
+hours: 월 11:00 - 21:00 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[147/447] 녹다(NOKDA) link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1899730009
+place_id: 1899730009
+url: https://map.naver.com/p/entry/place/1899730009
+hours: 09:00 - 18:00 | status=운영 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[148/447] 농업회사법인주식회사 이시보 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1899730009
+place_id: 1899730009
+url: https://map.naver.com/p/entry/place/1899730009
+hours: 09:00 - 18:00 | status=운영 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[149/447] 오효 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1899730009
+place_id: 1899730009
+url: https://map.naver.com/p/entry/place/1899730009
+hours: 09:00 - 18:00 | status=운영 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[150/447] 블레스크 link=Y
+  휠 1회(1200) insights=False AI브리핑=True
+  휠 2회(1200) insights=False AI브리핑=True
+  휠 3회(1200) insights=False AI브리핑=True
+  휠 4회(1200) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=True
+  휠 2회(700) insights=False AI브리핑=True
+  휠 3회(700) insights=False AI브리핑=True
+  휠 4회(700) insights=False AI브리핑=True
+  휠 5회(700) insights=False AI브리핑=True
+  휠 6회(700) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=2056181850
+place_id: 2056181850
+url: https://map.naver.com/p/entry/place/2056181850
+hours: 월 11:30 - 17:00 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / 소식(탭 없음) / 예약 탭
+
+[151/447] 샌드데이 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=False
+  휠 2회(700) insights=False AI브리핑=False
+  휠 3회(700) insights=False AI브리핑=False
+  휠 4회(700) insights=False AI브리핑=False
+  휠 5회(700) insights=False AI브리핑=False
+  휠 6회(700) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=31315546
+place_id: 31315546
+url: https://map.naver.com/p/entry/place/31315546
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[152/447] 머쉬 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 2_address_match / 주소일치(exact_or_contains) query=제주 머쉬
+place_id: 1148534788
+url: https://map.naver.com/p/entry/place/1148534788
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[153/447] 빠레트 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 1566134608
+url: https://map.naver.com/p/entry/place/1566134608
+hours: 월 10:00 - 22:00 | status=영업 중
+못 가져온 항목: 없음
+
+[154/447] 지하상가슈퍼 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 17m ≤ 80m
+place_id: 31269480
+url: https://map.naver.com/p/entry/place/31269480
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[155/447] 애플2 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 1308687290
+url: https://map.naver.com/p/entry/place/1308687290
+hours: 월 09:00 - 19:00 | status=진료 중
+못 가져온 항목: 없음
+
+[156/447] 양키즈 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 2_address_match / 주소일치(exact_or_contains) query=양키즈
+place_id: 1839621244
+url: https://map.naver.com/p/entry/place/1839621244
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[157/447] 그레이 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 2_address_match / 주소일치(exact_or_contains) query=그레이 쇼핑
+place_id: 1969388343
+url: https://map.naver.com/p/entry/place/1969388343
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[158/447] 페피트 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 1786398155
+url: https://map.naver.com/p/entry/place/1786398155
+hours:  | status=
+못 가져온 항목: 없음
+
+[159/447] 제인 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 0m ≤ 80m
+place_id: 31269435
+url: https://map.naver.com/p/entry/place/31269435
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[160/447] 핑크 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 2_address_match / 주소일치(exact_or_contains) query=핑크 쇼핑
+place_id: 1614367352
+url: https://map.naver.com/p/entry/place/1614367352
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[161/447] 데이지 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 1364240256
+url: https://map.naver.com/p/entry/place/1364240256
+hours: 06:30 - 22:00 | status=영업 중
+못 가져온 항목: 없음
+
+[162/447] 미 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 2053642222
+url: https://map.naver.com/p/entry/place/2053642222
+hours: 월 11:00 - 21:00 | status=오늘 휴무
+못 가져온 항목: 없음
+
+[163/447] 마인 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 1670275304
+url: https://map.naver.com/p/entry/place/1670275304
+hours: 월 11:00 - 20:00 | status=영업 중
+못 가져온 항목: 없음
+
+[164/447] 린다 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 0m ≤ 80m
+place_id: 12022063
+url: https://map.naver.com/p/entry/place/12022063
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[165/447] 수 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 32305117
+url: https://map.naver.com/p/entry/place/32305117
+hours: 09:00 - 20:00 | status=영업 중
+못 가져온 항목: 없음
+
+[166/447] 산도롱앤드또똣 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 
+url: 
+hours:  | status=
+못 가져온 항목: 없음
+
+[167/447] 인스타일 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 3m ≤ 80m
+place_id: 35841975
+url: https://map.naver.com/p/entry/place/35841975
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[168/447] 코봉고키즈 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 
+url: 
+hours:  | status=
+못 가져온 항목: 없음
+
+[169/447] 뿌뽕 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 2_address_match / 주소일치(exact_or_contains) query=뿌뽕
+place_id: 1788118500
+url: https://map.naver.com/p/entry/place/1788118500
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[170/447] 뽐뽐 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 1292775098
+url: https://map.naver.com/p/entry/place/1292775098
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 없음
+
+[171/447] 미선이네 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 0m ≤ 80m
+place_id: 31269464
+url: https://map.naver.com/p/entry/place/31269464
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[172/447] 봄날 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 13m ≤ 80m
+place_id: 1439201484
+url: https://map.naver.com/p/entry/place/1439201484
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[173/447] 영타운 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 0m ≤ 80m
+place_id: 31269486
+url: https://map.naver.com/p/entry/place/31269486
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[174/447] 빅토리아 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 0m ≤ 80m
+place_id: 31269505
+url: https://map.naver.com/p/entry/place/31269505
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[175/447] 앤의공방 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 2_address_match / 주소일치(exact_or_contains) query=앤의공방
+place_id: 2018995856
+url: https://map.naver.com/p/entry/place/2018995856
+hours: 월 13:00 - 19:00 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[176/447] 르피타 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 1976604370
+url: https://map.naver.com/p/entry/place/1976604370
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 없음
+
+[177/447] 금광 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 237367256
+url: https://map.naver.com/p/entry/place/237367256
+hours:  | status=
+못 가져온 항목: 없음
+
+[178/447] 사이버세대 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 0m ≤ 80m
+place_id: 31269507
+url: https://map.naver.com/p/entry/place/31269507
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[179/447] 샤인 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 11m ≤ 80m
+place_id: 1929004458
+url: https://map.naver.com/p/entry/place/1929004458
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[180/447] 더샘 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 0m ≤ 80m
+place_id: 31315972
+url: https://map.naver.com/p/entry/place/31315972
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[181/447] 우노꼬레 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=31269396
+place_id: 31269396
+url: https://map.naver.com/p/entry/place/31269396
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[182/447] 케이샵 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 1136523753
+url: https://map.naver.com/p/entry/place/1136523753
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 없음
+
+[183/447] 캐릭터 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 1994814050
+url: https://map.naver.com/p/entry/place/1994814050
+hours: 월 12:00 - 19:00 | status=영업 중
+못 가져온 항목: 없음
+
+[184/447] 소쿠리2 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 23m ≤ 80m
+place_id: 1804011797
+url: https://map.naver.com/p/entry/place/1804011797
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 예약 탭
+
+[185/447] 오투 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 18m ≤ 80m
+place_id: 1223843547
+url: https://map.naver.com/p/entry/place/1223843547
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[186/447] 미샤 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=21718679
+place_id: 21718679
+url: https://map.naver.com/p/entry/place/21718679
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[187/447] 토니모리 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 38m ≤ 80m
+place_id: 12803533
+url: https://map.naver.com/p/entry/place/12803533
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[188/447] 찐찐제주 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 8m ≤ 80m
+place_id: 2036936207
+url: https://map.naver.com/p/entry/place/2036936207
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[189/447] 링스 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 13m ≤ 80m
+place_id: 1524651515
+url: https://map.naver.com/p/entry/place/1524651515
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[190/447] 아리따움 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 52m ≤ 80m
+place_id: 31315993
+url: https://map.naver.com/p/entry/place/31315993
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(이 가게 /feed 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[191/447] 모다 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 51m ≤ 80m
+place_id: 31269517
+url: https://map.naver.com/p/entry/place/31269517
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[192/447] 마니 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 431877722
+url: https://map.naver.com/p/entry/place/431877722
+hours:  | status=
+못 가져온 항목: 없음
+
+[193/447] 제이디 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 74m ≤ 80m
+place_id: 31269529
+url: https://map.naver.com/p/entry/place/31269529
+hours: 10:00 - 21:00 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[194/447] 땅콩 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=31314899
+place_id: 31314899
+url: https://map.naver.com/p/entry/place/31314899
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[195/447] 나무자전거 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=31269428
+place_id: 31269428
+url: https://map.naver.com/p/entry/place/31269428
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[196/447] 피치 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 2028340908
+url: https://map.naver.com/p/entry/place/2028340908
+hours: 월 18:00 - 18:20 | status=오늘 휴무
+못 가져온 항목: 없음
+
+[197/447] 보보 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 0m ≤ 80m
+place_id: 20269423
+url: https://map.naver.com/p/entry/place/20269423
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[198/447] 까메오 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 13m ≤ 80m
+place_id: 31269388
+url: https://map.naver.com/p/entry/place/31269388
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[199/447] 앨리스 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 31100783
+url: https://map.naver.com/p/entry/place/31100783
+hours: 월 12:00 - 22:00 | status=오늘 휴무
+못 가져온 항목: 없음
+
+[200/447] 바이(by). 올리브 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=31269422
+place_id: 31269422
+url: https://map.naver.com/p/entry/place/31269422
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[201/447] 티나 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 2_address_match / 주소일치(exact_or_contains) query=제주 티나 쇼핑
+place_id: 1145171528
+url: https://map.naver.com/p/entry/place/1145171528
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[202/447] 쇼룸 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 0m ≤ 80m
+place_id: 31269389
+url: https://map.naver.com/p/entry/place/31269389
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[203/447] 보디가드,섹시쿠키 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 1002754048
+url: https://map.naver.com/p/entry/place/1002754048
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 없음
+
+[204/447] 상상 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 11m ≤ 80m
+place_id: 1552347095
+url: https://map.naver.com/p/entry/place/1552347095
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[205/447] 시크미 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 37577874
+url: https://map.naver.com/p/entry/place/37577874
+hours:  | status=
+못 가져온 항목: 없음
+
+[206/447] 여우꼬리 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 0m ≤ 80m
+place_id: 31313566
+url: https://map.naver.com/p/entry/place/31313566
+hours: 10:00 - 21:00 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[207/447] 제주신협 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ needs_confirm / 4_coord_near_confirm / 좌표 211m ≤ 250m → 확인 필요
+place_id: 11882652
+url: https://map.naver.com/p/entry/place/11882652
+hours: 월 09:00 - 17:00 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[208/447] 예스 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 1565615721
+url: https://map.naver.com/p/entry/place/1565615721
+hours: 월 10:00 - 19:00 | status=영업 중
+못 가져온 항목: 없음
+
+[209/447] 리틀밥독 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 2_address_match / 주소일치(exact_or_contains) query=리틀밥독
+place_id: 1274991121
+url: https://map.naver.com/p/entry/place/1274991121
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[210/447] 엘 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 51m ≤ 80m
+place_id: 38571833
+url: https://map.naver.com/p/entry/place/38571833
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[211/447] 시부야 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 19m ≤ 80m
+place_id: 31269490
+url: https://map.naver.com/p/entry/place/31269490
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[212/447] 그림같은 집 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 2_address_match / 주소일치(exact_or_contains) query=그림같은 집
+place_id: 1287133346
+url: https://map.naver.com/p/entry/place/1287133346
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[213/447] 그린조이 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=31269552
+place_id: 31269552
+url: https://map.naver.com/p/entry/place/31269552
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[214/447] 코디(다와수선) link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=31313950
+place_id: 31313950
+url: https://map.naver.com/p/entry/place/31313950
+hours: 10:00 - 21:00 | status=영업 중21:00에 영업 종료
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[215/447] 도니버거 link=N
+  nmap:// 는 place id 없음 → 매장명 검색
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 0m ≤ 80m
+place_id: 35869843
+url: https://map.naver.com/p/entry/place/35869843
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[216/447] 맘스터치 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 37280202
+url: https://map.naver.com/p/entry/place/37280202
+hours: 화 11:00 - 21:30 | status=영업 중21:30에 영업 종료
+못 가져온 항목: 없음
+
+[217/447] 에꼴리에 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 57m ≤ 80m
+place_id: 1014557833
+url: https://map.naver.com/p/entry/place/1014557833
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[218/447] 슈마 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 4m ≤ 80m
+place_id: 38627923
+url: https://map.naver.com/p/entry/place/38627923
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[219/447] 슈퍼마켓 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 11605060
+url: https://map.naver.com/p/entry/place/11605060
+hours: 월 10:00 - 23:00 | status=영업 중23:00에 영업 종료
+못 가져온 항목: 없음
+
+[220/447] 수(秀) link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 11544172
+url: https://map.naver.com/p/entry/place/11544172
+hours: 월 08:30 - 19:00 | status=진료 중19:00에 진료 종료
+못 가져온 항목: 없음
+
+[221/447] 꼴레르 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 0m ≤ 80m
+place_id: 31269403
+url: https://map.naver.com/p/entry/place/31269403
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[222/447] 이니스프리 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 61m ≤ 80m
+place_id: 11828379
+url: https://map.naver.com/p/entry/place/11828379
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[223/447] 스킨푸드 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 38520362
+url: https://map.naver.com/p/entry/place/38520362
+hours: 월 10:00 - 19:00 | status=영업 중19:00에 영업 종료
+못 가져온 항목: 없음
+
+[224/447] 은지네짱 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 0m ≤ 80m
+place_id: 31269394
+url: https://map.naver.com/p/entry/place/31269394
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[225/447] 카니스메이저 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 0m ≤ 80m
+place_id: 31313913
+url: https://map.naver.com/p/entry/place/31313913
+hours: 10:00 - 21:00 | status=영업 중21:00에 영업 종료
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[226/447] 샤베르 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=False
+  휠 2회(700) insights=False AI브리핑=False
+  휠 3회(700) insights=False AI브리핑=False
+  휠 4회(700) insights=False AI브리핑=False
+  휠 5회(700) insights=False AI브리핑=False
+  휠 6회(700) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 4_coord_close_auto / 좌표 0m ≤ 80m
+place_id: 31315543
+url: https://map.naver.com/p/entry/place/31315543
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[227/447] 엠할리데이제주점 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 2_address_match / 주소일치(exact_or_contains) query=엠할리데이제주점
+place_id: 1205319408
+url: https://map.naver.com/p/entry/place/1205319408
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[228/447] J# link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 24m ≤ 80m
+place_id: 1275230074
+url: https://map.naver.com/p/entry/place/1275230074
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[229/447] 고운양말 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 2_address_match / 주소일치(exact_or_contains) query=고운양말
+place_id: 1820899423
+url: https://map.naver.com/p/entry/place/1820899423
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[230/447] 보노레코드 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=31314995
+place_id: 31314995
+url: https://map.naver.com/p/entry/place/31314995
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[231/447] 야한여자 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 1876903611
+url: https://map.naver.com/p/entry/place/1876903611
+hours:  | status=
+못 가져온 항목: 없음
+
+[232/447] 진주귀고리 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 2_address_match / 주소일치(exact_or_contains) query=제주 진주귀고리
+place_id: 1863450272
+url: https://map.naver.com/p/entry/place/1863450272
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[233/447] 풀하우스 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 2032389150
+url: https://map.naver.com/p/entry/place/2032389150
+hours: 10:00 - 20:00 | status=영업 중20:00에 영업 종료
+못 가져온 항목: 없음
+
+[234/447] 미녀들의수다 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 32m ≤ 80m
+place_id: 31269535
+url: https://map.naver.com/p/entry/place/31269535
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[235/447] 디즈니골프웨어 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 
+url: 
+hours:  | status=
+못 가져온 항목: 없음
+
+[236/447] 휠라 언더웨어 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 69m ≤ 80m
+place_id: 1756144084
+url: https://map.naver.com/p/entry/place/1756144084
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[237/447] 댑코리아 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 1604007699
+url: https://map.naver.com/p/entry/place/1604007699
+hours:  | status=
+못 가져온 항목: 없음
+
+[238/447] 투 쿨 포 스쿨 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 38456977
+url: https://map.naver.com/p/entry/place/38456977
+hours: 10:00 - 19:00 | status=영업 중19:00에 영업 종료
+못 가져온 항목: 없음
+
+[239/447] 깜J link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 0m ≤ 80m
+place_id: 31269393
+url: https://map.naver.com/p/entry/place/31269393
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[240/447] 나나 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 0m ≤ 80m
+place_id: 31269462
+url: https://map.naver.com/p/entry/place/31269462
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[241/447] 카라 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 0m ≤ 80m
+place_id: 31269392
+url: https://map.naver.com/p/entry/place/31269392
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[242/447] 버커루 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 38m ≤ 80m
+place_id: 1277035964
+url: https://map.naver.com/p/entry/place/1277035964
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[243/447] 용우동 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=False
+  휠 2회(700) insights=False AI브리핑=False
+  휠 3회(700) insights=False AI브리핑=False
+  휠 4회(700) insights=False AI브리핑=False
+  휠 5회(700) insights=False AI브리핑=False
+  휠 6회(700) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=35841749
+place_id: 35841749
+url: https://map.naver.com/p/entry/place/35841749
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[244/447] 푸짐한밥상 link=Y
+  플레이스 플러스 → 인기메뉴 카드 필수 검수
+  휠 1회(1200) insights=True AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=35841748
+place_id: 35841748
+url: https://map.naver.com/p/entry/place/35841748
+hours: 월 09:00 - 19:00 | status=영업 중18:40에 라스트오더
+못 가져온 항목: 대기/테이블링(홈 상단) / AI 브리핑(홈) / 예약 탭
+
+[245/447] 보떼 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ needs_confirm / 4_coord_near_confirm / 좌표 126m ≤ 250m → 확인 필요
+place_id: 37215584
+url: https://map.naver.com/p/entry/place/37215584
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[246/447] 클라이드 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=31269536
+place_id: 31269536
+url: https://map.naver.com/p/entry/place/31269536
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[247/447] 에이스 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 1012442144
+url: https://map.naver.com/p/entry/place/1012442144
+hours:  | status=
+못 가져온 항목: 없음
+
+[248/447] 르블랑 제주지하점 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 66m ≤ 80m
+place_id: 1377422136
+url: https://map.naver.com/p/entry/place/1377422136
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[249/447] 로엠 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=31269395
+place_id: 31269395
+url: https://map.naver.com/p/entry/place/31269395
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[250/447] 잠뱅이 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ needs_confirm / 4_coord_near_confirm / 좌표 100m ≤ 250m → 확인 필요
+place_id: 31269446
+url: https://map.naver.com/p/entry/place/31269446
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[251/447] 더페이스샵 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=11766824
+place_id: 11766824
+url: https://map.naver.com/p/entry/place/11766824
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[252/447] 올리브+ link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 34555889
+url: https://map.naver.com/p/entry/place/34555889
+hours: 영업 전 | status=영업 전
+못 가져온 항목: 없음
+
+[253/447] 루비 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 1147090923
+url: https://map.naver.com/p/entry/place/1147090923
+hours:  | status=
+못 가져온 항목: 없음
+
+[254/447] 세일마켓 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ needs_confirm / 4_coord_near_confirm / 좌표 102m ≤ 250m → 확인 필요
+place_id: 1917923717
+url: https://map.naver.com/p/entry/place/1917923717
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[255/447] 퍼플 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ needs_confirm / 4_coord_near_confirm / 좌표 150m ≤ 250m → 확인 필요
+place_id: 1141527564
+url: https://map.naver.com/p/entry/place/1141527564
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[256/447] 베르사체 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=31269478
+place_id: 31269478
+url: https://map.naver.com/p/entry/place/31269478
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[257/447] 소이주니어 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ needs_confirm / 4_coord_near_confirm / 좌표 113m ≤ 250m → 확인 필요
+place_id: 1830401365
+url: https://map.naver.com/p/entry/place/1830401365
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[258/447] 393 핏 스트릿 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 2_address_match / 주소일치(exact_or_contains) query=393 핏 스트릿
+place_id: 1358320682
+url: https://map.naver.com/p/entry/place/1358320682
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[259/447] 드마르비 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 1704247328
+url: https://map.naver.com/p/entry/place/1704247328
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 없음
+
+[260/447] 제이블랑 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ needs_confirm / 4_coord_near_confirm / 좌표 120m ≤ 250m → 확인 필요
+place_id: 1231209900
+url: https://map.naver.com/p/entry/place/1231209900
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[261/447] 아가방 디어베이비 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ needs_confirm / 4_coord_near_confirm / 좌표 139m ≤ 250m → 확인 필요
+place_id: 37633372
+url: https://map.naver.com/p/entry/place/37633372
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[262/447] 압소바해피랜드 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 2_address_match / 주소일치(exact_or_contains) query=압소바해피랜드
+place_id: 1251108115
+url: https://map.naver.com/p/entry/place/1251108115
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[263/447] 미센스 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 2098572115
+url: https://map.naver.com/p/entry/place/2098572115
+hours: 10:00 - 21:00 | status=영업 중21:00에 영업 종료
+못 가져온 항목: 없음
+
+[264/447] 일라엘 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 2_address_match / 주소일치(exact_or_contains) query=제주 일라엘
+place_id: 1168495386
+url: https://map.naver.com/p/entry/place/1168495386
+hours: 10:00 - 21:00 | status=영업 중21:00에 영업 종료
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[265/447] 클리지제주중앙점 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ needs_confirm / 4_coord_near_confirm / 좌표 159m ≤ 250m → 확인 필요
+place_id: 2065685053
+url: https://map.naver.com/p/entry/place/2065685053
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[266/447] 행텐제주점 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 22m ≤ 80m
+place_id: 31312981
+url: https://map.naver.com/p/entry/place/31312981
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[267/447] 정은이네 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 0m ≤ 80m
+place_id: 16685652
+url: https://map.naver.com/p/entry/place/16685652
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[268/447] 에스핏 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=31312945
+place_id: 31312945
+url: https://map.naver.com/p/entry/place/31312945
+hours: 10:00 - 21:00 | status=영업 중21:00에 영업 종료
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[269/447] 체이스컬트 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1500952688
+place_id: 1500952688
+url: https://map.naver.com/p/entry/place/1500952688
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[270/447] 오즈키즈제주점 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 
+url: 
+hours:  | status=
+못 가져온 항목: 없음
+
+[271/447] 제이씨비/애플핑크 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 13429851
+url: https://map.naver.com/p/entry/place/13429851
+hours:  | status=
+못 가져온 항목: 없음
+
+[272/447] 미스칸트 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 2_address_match / 주소일치(exact_or_contains) query=미스칸트
+place_id: 1475964894
+url: https://map.naver.com/p/entry/place/1475964894
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[273/447] 올포유제주지하점 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ needs_confirm / 4_coord_near_confirm / 좌표 175m ≤ 250m → 확인 필요
+place_id: 38559205
+url: https://map.naver.com/p/entry/place/38559205
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[274/447] 감귤도령 동백아씨 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 
+url: 
+hours:  | status=
+못 가져온 항목: 없음
+
+[275/447] 은영이네 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 0m ≤ 80m
+place_id: 31269525
+url: https://map.naver.com/p/entry/place/31269525
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[276/447] 프레이 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ needs_confirm / 4_coord_near_confirm / 좌표 164m ≤ 250m → 확인 필요
+place_id: 1014324999
+url: https://map.naver.com/p/entry/place/1014324999
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 예약 탭
+
+[277/447] 무자크 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 2_address_match / 주소일치(exact_or_contains) query=제주 무자크
+place_id: 1533155948
+url: https://map.naver.com/p/entry/place/1533155948
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[278/447] 토틀엔키들 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 
+url: 
+hours:  | status=
+못 가져온 항목: 없음
+
+[279/447] 치크 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=31312960
+place_id: 31312960
+url: https://map.naver.com/p/entry/place/31312960
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[280/447] 지센 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=31269386
+place_id: 31269386
+url: https://map.naver.com/p/entry/place/31269386
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[281/447] 모이몰른 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ needs_confirm / 4_coord_near_confirm / 좌표 147m ≤ 250m → 확인 필요
+place_id: 1263966003
+url: https://map.naver.com/p/entry/place/1263966003
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[282/447] 수아팜 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 2_address_match / 주소일치(exact_or_contains) query=수아팜
+place_id: 1707413569
+url: https://map.naver.com/p/entry/place/1707413569
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[283/447] 데스틸 제주중앙점 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 
+url: 
+hours:  | status=
+못 가져온 항목: 없음
+
+[284/447] 수스 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=31269487
+place_id: 31269487
+url: https://map.naver.com/p/entry/place/31269487
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[285/447] 오션스카이 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 2055414279
+url: https://map.naver.com/p/entry/place/2055414279
+hours:  | status=
+못 가져온 항목: 없음
+
+[286/447] 행텐주니어 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=31312981
+place_id: 31312981
+url: https://map.naver.com/p/entry/place/31312981
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[287/447] 라망 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=31314754
+place_id: 31314754
+url: https://map.naver.com/p/entry/place/31314754
+hours: 10:00 - 21:00 | status=영업 중21:00에 영업 종료
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[288/447] 블랙홀앤네일 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 
+url: 
+hours:  | status=
+못 가져온 항목: 없음
+
+[289/447] 누네띠네 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ needs_confirm / 4_coord_near_confirm / 좌표 185m ≤ 250m → 확인 필요
+place_id: 1623767002
+url: https://map.naver.com/p/entry/place/1623767002
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[290/447] 마나 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 431877722
+url: https://map.naver.com/p/entry/place/431877722
+hours:  | status=
+못 가져온 항목: 없음
+
+[291/447] 더데이걸 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 0m ≤ 80m
+place_id: 31313636
+url: https://map.naver.com/p/entry/place/31313636
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[292/447] 인터크루 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ needs_confirm / 4_coord_near_confirm / 좌표 96m ≤ 250m → 확인 필요
+place_id: 1545558146
+url: https://map.naver.com/p/entry/place/1545558146
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[293/447] 에뛰드하우스 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 0m ≤ 80m
+place_id: 31313217
+url: https://map.naver.com/p/entry/place/31313217
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[294/447] 네이처리퍼블릭 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 0m ≤ 80m
+place_id: 31269491
+url: https://map.naver.com/p/entry/place/31269491
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[295/447] 마인드브릿지 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ needs_confirm / 4_coord_near_confirm / 좌표 94m ≤ 250m → 확인 필요
+place_id: 1825723867
+url: https://map.naver.com/p/entry/place/1825723867
+hours: 10:30 - 20:00 | status=영업 중20:00에 영업 종료
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[296/447] 비너스와코루 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 7m ≤ 80m
+place_id: 11826987
+url: https://map.naver.com/p/entry/place/11826987
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[297/447] ㈜정성 엘르언더웨어 제주점 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 
+url: 
+hours:  | status=
+못 가져온 항목: 없음
+
+[298/447] ㈜정성 게스언더웨어 제주점 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 
+url: 
+hours:  | status=
+못 가져온 항목: 없음
+
+[299/447] 코데즈 이너웨어 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 0m ≤ 80m
+place_id: 31269387
+url: https://map.naver.com/p/entry/place/31269387
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[300/447] 모노로그 제주점 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ needs_confirm / 4_coord_near_confirm / 좌표 195m ≤ 250m → 확인 필요
+place_id: 1325584254
+url: https://map.naver.com/p/entry/place/1325584254
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[301/447] 다온 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 16980708
+url: https://map.naver.com/p/entry/place/16980708
+hours:  | status=
+못 가져온 항목: 없음
+
+[302/447] 유니끄 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 2_address_match / 주소일치(exact_or_contains) query=유니끄
+place_id: 1153369572
+url: https://map.naver.com/p/entry/place/1153369572
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[303/447] 소쿠리 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 38m ≤ 80m
+place_id: 1804011797
+url: https://map.naver.com/p/entry/place/1804011797
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 예약 탭
+
+[304/447] 까사노블 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 47m ≤ 80m
+place_id: 1112046646
+url: https://map.naver.com/p/entry/place/1112046646
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[305/447] 신상마켓 link=N
+  nmap:// 는 place id 없음 → 매장명 검색
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 52m ≤ 80m
+place_id: 1205075333
+url: https://map.naver.com/p/entry/place/1205075333
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[306/447] 이디 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 1144186065
+url: https://map.naver.com/p/entry/place/1144186065
+hours: 월 08:00 - 19:00 | status=영업 중19:00에 영업 종료
+못 가져온 항목: 없음
+
+[307/447] 더인 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 2_address_match / 주소일치(exact_or_contains) query=더인
+place_id: 1070303568
+url: https://map.naver.com/p/entry/place/1070303568
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[308/447] 예쁜걸 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 1592340717
+url: https://map.naver.com/p/entry/place/1592340717
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 없음
+
+[309/447] 오로라 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 1942571551
+url: https://map.naver.com/p/entry/place/1942571551
+hours: 월 10:00 - 22:00 | status=영업 중22:00에 영업 종료
+못 가져온 항목: 없음
+
+[310/447] 여시 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 0m ≤ 80m
+place_id: 31269468
+url: https://map.naver.com/p/entry/place/31269468
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[311/447] 홍조 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 1130969553
+url: https://map.naver.com/p/entry/place/1130969553
+hours: 월 12:00 - 19:00 | status=운영 중19:00에 운영 종료
+못 가져온 항목: 없음
+
+[312/447] 쨈아저씨 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=31269471
+place_id: 31269471
+url: https://map.naver.com/p/entry/place/31269471
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[313/447] 토토 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 0m ≤ 80m
+place_id: 16687083
+url: https://map.naver.com/p/entry/place/16687083
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[314/447] 오월의신부 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=31269426
+place_id: 31269426
+url: https://map.naver.com/p/entry/place/31269426
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[315/447] 게스트 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 2_address_match / 주소일치(exact_or_contains) query=게스트 쇼핑
+place_id: 1214255153
+url: https://map.naver.com/p/entry/place/1214255153
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[316/447] 쟝피엘 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 37956718
+url: https://map.naver.com/p/entry/place/37956718
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 없음
+
+[317/447] 윔 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 0m ≤ 80m
+place_id: 31269407
+url: https://map.naver.com/p/entry/place/31269407
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[318/447] 의류학과 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 0m ≤ 80m
+place_id: 31269437
+url: https://map.naver.com/p/entry/place/31269437
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[319/447] 넘버원 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=31269455
+place_id: 31269455
+url: https://map.naver.com/p/entry/place/31269455
+hours: 월 13:30 - 18:30 | status=영업 중18:30에 영업 종료
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[320/447] 꽃길 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 1332919352
+url: https://map.naver.com/p/entry/place/1332919352
+hours:  | status=
+못 가져온 항목: 없음
+
+[321/447] 쏨씨2 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 
+url: 
+hours:  | status=
+못 가져온 항목: 없음
+
+[322/447] 루키버드 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 56m ≤ 80m
+place_id: 16687044
+url: https://map.naver.com/p/entry/place/16687044
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[323/447] 폰앤펀 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=31269408
+place_id: 31269408
+url: https://map.naver.com/p/entry/place/31269408
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[324/447] 밀(MILL) link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 2_address_match / 주소일치(exact_or_contains) query=밀(MILL) 쇼핑
+place_id: 1805612383
+url: https://map.naver.com/p/entry/place/1805612383
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[325/447] 망고스틴2 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 37046533
+url: https://map.naver.com/p/entry/place/37046533
+hours: 00:00 - 24:00 | status=24시간 영업연중무휴
+못 가져온 항목: 없음
+
+[326/447] 아스피린 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 0m ≤ 80m
+place_id: 31269440
+url: https://map.naver.com/p/entry/place/31269440
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[327/447] 브이아이피 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 2_address_match / 주소일치(exact_or_contains) query=제주 브이아이피
+place_id: 1895532609
+url: https://map.naver.com/p/entry/place/1895532609
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[328/447] 마니주 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 2_address_match / 주소일치(exact_or_contains) query=마니주
+place_id: 1513919505
+url: https://map.naver.com/p/entry/place/1513919505
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[329/447] 가디너 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 0m ≤ 80m
+place_id: 16689290
+url: https://map.naver.com/p/entry/place/16689290
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[330/447] 스타 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=31269383
+place_id: 31269383
+url: https://map.naver.com/p/entry/place/31269383
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[331/447] 엘리 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 1550232796
+url: https://map.naver.com/p/entry/place/1550232796
+hours: 월 18:00 - 24:00 | status=영업 중24:00에 영업 종료
+못 가져온 항목: 없음
+
+[332/447] 케이 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 36919618
+url: https://map.naver.com/p/entry/place/36919618
+hours: 월 09:00 - 19:00 | status=영업 중19:00에 영업 종료
+못 가져온 항목: 없음
+
+[333/447] 아이리스 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 16843553
+url: https://map.naver.com/p/entry/place/16843553
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 없음
+
+[334/447] 딸기딸기 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=31269477
+place_id: 31269477
+url: https://map.naver.com/p/entry/place/31269477
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[335/447] 스타일 도도 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 21793226
+url: https://map.naver.com/p/entry/place/21793226
+hours:  | status=
+못 가져온 항목: 없음
+
+[336/447] 럭셔리우먼 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 15189821
+url: https://map.naver.com/p/entry/place/15189821
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 없음
+
+[337/447] 톡톡톡 바르고 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 1292775098
+url: https://map.naver.com/p/entry/place/1292775098
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 없음
+
+[338/447] 바글바글 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 1742606757
+url: https://map.naver.com/p/entry/place/1742606757
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 없음
+
+[339/447] 마당발 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 2_address_match / 주소일치(exact_or_contains) query=마당발
+place_id: 37883545
+url: https://map.naver.com/p/entry/place/37883545
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[340/447] 슈즈마당발 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ needs_confirm / 4_coord_near_confirm / 좌표 166m ≤ 250m → 확인 필요
+place_id: 37883545
+url: https://map.naver.com/p/entry/place/37883545
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[341/447] 샤샤코리아 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=31269498
+place_id: 31269498
+url: https://map.naver.com/p/entry/place/31269498
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[342/447] 악센트 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 37537231
+url: https://map.naver.com/p/entry/place/37537231
+hours: 00:00 - 24:00 | status=24시간 영업연중무휴
+못 가져온 항목: 없음
+
+[343/447] 감귤당 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 
+url: 
+hours:  | status=
+못 가져온 항목: 없음
+
+[344/447] 그루터기 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 0m ≤ 80m
+place_id: 31269502
+url: https://map.naver.com/p/entry/place/31269502
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[345/447] 포칼라 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 0m ≤ 80m
+place_id: 31269503
+url: https://map.naver.com/p/entry/place/31269503
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[346/447] 트렌디2 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 0m ≤ 80m
+place_id: 31269514
+url: https://map.naver.com/p/entry/place/31269514
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[347/447] 블링블링2 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ needs_confirm / 4_coord_near_confirm / 좌표 153m ≤ 250m → 확인 필요
+place_id: 1974843796
+url: https://map.naver.com/p/entry/place/1974843796
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[348/447] 망고 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 1184503705
+url: https://map.naver.com/p/entry/place/1184503705
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 없음
+
+[349/447] 도토리 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 223026237
+url: https://map.naver.com/p/entry/place/223026237
+hours: 월 11:00 - 17:00 | status=영업 종료11:00에 영업 시작
+못 가져온 항목: 없음
+
+[350/447] 마니주 블루밍 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 
+url: 
+hours:  | status=
+못 가져온 항목: 없음
+
+[351/447] 레드가모패션 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ needs_confirm / 4_coord_near_confirm / 좌표 143m ≤ 250m → 확인 필요
+place_id: 1712074667
+url: https://map.naver.com/p/entry/place/1712074667
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[352/447] 바이리미 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 2_address_match / 주소일치(exact_or_contains) query=바이리미
+place_id: 1778660009
+url: https://map.naver.com/p/entry/place/1778660009
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[353/447] 실과바늘 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=31313961
+place_id: 31313961
+url: https://map.naver.com/p/entry/place/31313961
+hours: 10:00 - 21:00 | status=영업 중21:00에 영업 종료
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[354/447] 망고스틴3 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 38419131
+url: https://map.naver.com/p/entry/place/38419131
+hours:  | status=
+못 가져온 항목: 없음
+
+[355/447] 비비안 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ needs_confirm / 4_coord_near_confirm / 좌표 124m ≤ 250m → 확인 필요
+place_id: 31269531
+url: https://map.naver.com/p/entry/place/31269531
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[356/447] 솔브 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 2_address_match / 주소일치(exact_or_contains) query=솔브
+place_id: 36343466
+url: https://map.naver.com/p/entry/place/36343466
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[357/447] 늘푸른옷 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 0m ≤ 80m
+place_id: 31269415
+url: https://map.naver.com/p/entry/place/31269415
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[358/447] 삼칠일 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 265144987
+url: https://map.naver.com/p/entry/place/265144987
+hours: 월 08:00 - 15:00 | status=영업 종료08:00에 영업 시작
+못 가져온 항목: 없음
+
+[359/447] 씨밀레 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 0m ≤ 80m
+place_id: 31269416
+url: https://map.naver.com/p/entry/place/31269416
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(이 가게 /feed 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[360/447] 영희네 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 1720474818
+url: https://map.naver.com/p/entry/place/1720474818
+hours:  | status=
+못 가져온 항목: 없음
+
+[361/447] 아꼬미 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ needs_confirm / 4_coord_near_confirm / 좌표 86m ≤ 250m → 확인 필요
+place_id: 1459424018
+url: https://map.naver.com/p/entry/place/1459424018
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[362/447] 수브르 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 74m ≤ 80m
+place_id: 38627922
+url: https://map.naver.com/p/entry/place/38627922
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[363/447] 퀸즈 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 2_address_match / 주소일치(exact_or_contains) query=퀸즈
+place_id: 1696900675
+url: https://map.naver.com/p/entry/place/1696900675
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[364/447] 레드 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 1622751515
+url: https://map.naver.com/p/entry/place/1622751515
+hours: 월 11:30 - 21:00 | status=영업 중20:30에 라스트오더
+못 가져온 항목: 없음
+
+[365/447] 미쉘 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 0m ≤ 80m
+place_id: 31269549
+url: https://map.naver.com/p/entry/place/31269549
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[366/447] PAT link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ needs_confirm / 4_coord_near_confirm / 좌표 97m ≤ 250m → 확인 필요
+place_id: 2147352857
+url: https://map.naver.com/p/entry/place/2147352857
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[367/447] 지니타로 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 2_address_match / 주소일치(exact_or_contains) query=지니타로
+place_id: 2016294173
+url: https://map.naver.com/p/entry/place/2016294173
+hours: 월 14:00 - 19:00 | status=곧 영업 종료19:00에 영업 종료
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[368/447] 아이꼬 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 4_coord_close_auto / 좌표 0m ≤ 80m
+place_id: 31269405
+url: https://map.naver.com/p/entry/place/31269405
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[369/447] 우생당 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=16684613
+place_id: 16684613
+url: https://map.naver.com/p/entry/place/16684613
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[370/447] 늘봄꽃집 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1458161281
+place_id: 1458161281
+url: https://map.naver.com/p/entry/place/1458161281
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[371/447] 이태리안경 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=16701039
+place_id: 16701039
+url: https://map.naver.com/p/entry/place/16701039
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[372/447] 팬텀 제주중앙점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1587618877
+place_id: 1587618877
+url: https://map.naver.com/p/entry/place/1587618877
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[373/447] 퀸주얼리(Queen) link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=32151995
+place_id: 32151995
+url: https://map.naver.com/p/entry/place/32151995
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[374/447] 오여사네 밥상 link=Y
+  휠 1회(1200) insights=False AI브리핑=True
+  휠 2회(1200) insights=False AI브리핑=True
+  휠 3회(1200) insights=False AI브리핑=True
+  휠 4회(1200) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=True
+  휠 2회(700) insights=False AI브리핑=True
+  휠 3회(700) insights=False AI브리핑=True
+  휠 4회(700) insights=False AI브리핑=True
+  휠 5회(700) insights=False AI브리핑=True
+  휠 6회(700) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=1178223647
+place_id: 1178223647
+url: https://map.naver.com/p/entry/place/1178223647
+hours: 월 10:00 - 22:00 | status=영업 중21:00에 라스트오더
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / 소식(탭 없음) / 예약 탭
+
+[375/447] 마트21 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1845348128
+place_id: 1845348128
+url: https://map.naver.com/p/entry/place/1845348128
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[376/447] 중앙BYC link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1315017461
+place_id: 1315017461
+url: https://map.naver.com/p/entry/place/1315017461
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[377/447] 열이네청과 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1949574429
+place_id: 1949574429
+url: https://map.naver.com/p/entry/place/1949574429
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[378/447] 다모아 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1383280833
+place_id: 1383280833
+url: https://map.naver.com/p/entry/place/1383280833
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[379/447] 슈올즈 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1822588169
+place_id: 1822588169
+url: https://map.naver.com/p/entry/place/1822588169
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[380/447] 태승식품 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 1668190602
+url: https://map.naver.com/p/entry/place/1668190602
+hours:  | status=
+못 가져온 항목: 없음
+
+[381/447] 미도신발 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ needs_confirm / 4_coord_near_confirm / 좌표 115m ≤ 250m → 확인 필요
+place_id: 1735787254
+url: https://map.naver.com/p/entry/place/1735787254
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[382/447] 자연몸국 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=False
+  휠 2회(700) insights=False AI브리핑=False
+  휠 3회(700) insights=False AI브리핑=False
+  휠 4회(700) insights=False AI브리핑=False
+  휠 5회(700) insights=False AI브리핑=False
+  휠 6회(700) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=21861058
+place_id: 21861058
+url: https://map.naver.com/p/entry/place/21861058
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[383/447] 삼다청정식품 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 16812897
+url: https://map.naver.com/p/entry/place/16812897
+hours: 월 06:00 - 18:00 | status=영업 종료06:00에 영업 시작
+못 가져온 항목: 없음
+
+[384/447] 영심이네 농산 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1896133106
+place_id: 1896133106
+url: https://map.naver.com/p/entry/place/1896133106
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[385/447] 항아리야채 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=21763530
+place_id: 21763530
+url: https://map.naver.com/p/entry/place/21763530
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[386/447] 대원유통 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1974554441
+place_id: 1974554441
+url: https://map.naver.com/p/entry/place/1974554441
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[387/447] 비티알 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1459738838
+place_id: 1459738838
+url: https://map.naver.com/p/entry/place/1459738838
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[388/447] 청실옥돔 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=16699854
+place_id: 16699854
+url: https://map.naver.com/p/entry/place/16699854
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[389/447] 럭키분식 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=False
+  휠 2회(700) insights=False AI브리핑=False
+  휠 3회(700) insights=False AI브리핑=False
+  휠 4회(700) insights=False AI브리핑=False
+  휠 5회(700) insights=False AI브리핑=False
+  휠 6회(700) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=651888986
+place_id: 651888986
+url: https://map.naver.com/p/entry/place/651888986
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[390/447] 풍정포차 link=Y
+  휠 1회(1200) insights=False AI브리핑=True
+  휠 2회(1200) insights=False AI브리핑=True
+  휠 3회(1200) insights=False AI브리핑=True
+  휠 4회(1200) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=True
+  휠 2회(700) insights=False AI브리핑=True
+  휠 3회(700) insights=False AI브리핑=True
+  휠 4회(700) insights=False AI브리핑=True
+  휠 5회(700) insights=False AI브리핑=True
+  휠 6회(700) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=1492014499
+place_id: 1492014499
+url: https://map.naver.com/p/entry/place/1492014499
+hours: 월 정기휴무 (매주 월요일) | status=영업 중20:15에 라스트오더
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / 소식(탭 없음) / 예약 탭
+
+[391/447] 삼다 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1284546810
+place_id: 1284546810
+url: https://map.naver.com/p/entry/place/1284546810
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[392/447] 해바라기 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 31672664
+url: https://map.naver.com/p/entry/place/31672664
+hours: 월 08:00 - 20:00 | status=영업 중20:00에 영업 종료
+못 가져온 항목: 없음
+
+[393/447] 파리바게뜨중앙점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=False
+  휠 2회(700) insights=False AI브리핑=False
+  휠 3회(700) insights=False AI브리핑=False
+  휠 4회(700) insights=False AI브리핑=False
+  휠 5회(700) insights=False AI브리핑=False
+  휠 6회(700) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=16701803
+place_id: 16701803
+url: https://map.naver.com/p/entry/place/16701803
+hours: 07:00 - 23:00 | status=영업 중23:00에 영업 종료
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 예약 탭
+
+[394/447] 벧엘가방 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=32152029
+place_id: 32152029
+url: https://map.naver.com/p/entry/place/32152029
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[395/447] 산옥이네제주빙떡 link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 
+url: 
+hours:  | status=
+못 가져온 항목: 없음
+
+[396/447] 베사모복지장학회 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=13507206
+place_id: 13507206
+url: https://map.naver.com/p/entry/place/13507206
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[397/447] 에브리바디빈티지패밀리 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1902148391
+place_id: 1902148391
+url: https://map.naver.com/p/entry/place/1902148391
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 예약 탭
+
+[398/447] 양인철헤어 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=False
+  휠 2회(700) insights=False AI브리핑=False
+  휠 3회(700) insights=False AI브리핑=False
+  휠 4회(700) insights=False AI브리핑=False
+  휠 5회(700) insights=False AI브리핑=False
+  휠 6회(700) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=19932687
+place_id: 19932687
+url: https://map.naver.com/p/entry/place/19932687
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[399/447] 현대약국 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=13200860
+place_id: 13200860
+url: https://map.naver.com/p/entry/place/13200860
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[400/447] 해담유통(종합화장품) link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1697565965
+place_id: 1697565965
+url: https://map.naver.com/p/entry/place/1697565965
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[401/447] 시온상회 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1309016382
+place_id: 1309016382
+url: https://map.naver.com/p/entry/place/1309016382
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[402/447] 한라미디어 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=11384253
+place_id: 11384253
+url: https://map.naver.com/p/entry/place/11384253
+hours: 월 12:00 - 21:00 | status=영업 중21:00에 영업 종료
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[403/447] 현이네야채 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1906817246
+place_id: 1906817246
+url: https://map.naver.com/p/entry/place/1906817246
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[404/447] 동문#(일우모빌리티) link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1746854377
+place_id: 1746854377
+url: https://map.naver.com/p/entry/place/1746854377
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[405/447] 예뻐 예뻐 채희모 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1529366606
+place_id: 1529366606
+url: https://map.naver.com/p/entry/place/1529366606
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(이 가게 /feed 없음) / 예약 탭
+
+[406/447] 천원분식 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=False
+  휠 2회(700) insights=False AI브리핑=False
+  휠 3회(700) insights=False AI브리핑=False
+  휠 4회(700) insights=False AI브리핑=False
+  휠 5회(700) insights=False AI브리핑=False
+  휠 6회(700) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=16735807
+place_id: 16735807
+url: https://map.naver.com/p/entry/place/16735807
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[407/447] 미풍해장국 link=Y
+  휠 1회(1200) insights=False AI브리핑=True
+  휠 2회(1200) insights=False AI브리핑=True
+  휠 3회(1200) insights=False AI브리핑=True
+  휠 4회(1200) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=True
+  휠 2회(700) insights=False AI브리핑=True
+  휠 3회(700) insights=False AI브리핑=True
+  휠 4회(700) insights=False AI브리핑=True
+  휠 5회(700) insights=False AI브리핑=True
+  휠 6회(700) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=10977589
+place_id: 10977589
+url: https://map.naver.com/p/entry/place/10977589
+hours: 05:00 - 15:00 | status=영업 종료05:00에 영업 시작
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / 소식(탭 없음) / 예약 탭
+
+[408/447] 미풍정식당 link=Y
+  휠 1회(1200) insights=False AI브리핑=True
+  휠 2회(1200) insights=False AI브리핑=True
+  휠 3회(1200) insights=False AI브리핑=True
+  휠 4회(1200) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=True
+  휠 2회(700) insights=False AI브리핑=True
+  휠 3회(700) insights=False AI브리핑=True
+  휠 4회(700) insights=False AI브리핑=True
+  휠 5회(700) insights=False AI브리핑=True
+  휠 6회(700) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=31222392
+place_id: 31222392
+url: https://map.naver.com/p/entry/place/31222392
+hours: 월 09:00 - 21:00 | status=영업 중20:20에 라스트오더
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / 소식(탭 없음) / 예약 탭
+
+[409/447] 중앙안과 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=19519187
+place_id: 19519187
+url: https://map.naver.com/p/entry/place/19519187
+hours: 월 09:00 - 18:00 | status=진료 종료09:00에 진료 시작
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[410/447] 호반식당 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=False
+  휠 2회(700) insights=False AI브리핑=False
+  휠 3회(700) insights=False AI브리핑=False
+  휠 4회(700) insights=False AI브리핑=False
+  휠 5회(700) insights=False AI브리핑=False
+  휠 6회(700) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=20496120
+place_id: 20496120
+url: https://map.naver.com/p/entry/place/20496120
+hours: 10:00 - 22:00 | status=영업 중22:00에 영업 종료
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[411/447] 마코 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1127543634
+place_id: 1127543634
+url: https://map.naver.com/p/entry/place/1127543634
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[412/447] 먼슬리제주 link=Y
+  휠 1회(1200) insights=False AI브리핑=True
+  휠 2회(1200) insights=False AI브리핑=True
+  휠 3회(1200) insights=False AI브리핑=True
+  휠 4회(1200) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=True
+  휠 2회(700) insights=False AI브리핑=True
+  휠 3회(700) insights=False AI브리핑=True
+  휠 4회(700) insights=False AI브리핑=True
+  휠 5회(700) insights=False AI브리핑=True
+  휠 6회(700) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=2084473017
+place_id: 2084473017
+url: https://map.naver.com/p/entry/place/2084473017
+hours: 월 12:00 - 다음 날 03:00 | status=영업 중다음 날 03:00에 영업 종료
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / 소식(탭 없음) / 예약 탭
+
+[413/447] 제주전야 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=False
+  휠 2회(700) insights=False AI브리핑=False
+  휠 3회(700) insights=False AI브리핑=False
+  휠 4회(700) insights=False AI브리핑=False
+  휠 5회(700) insights=False AI브리핑=False
+  휠 6회(700) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 2_address_match / 주소일치(exact_or_contains) query=제주전야
+place_id: 2021485563
+url: https://map.naver.com/p/entry/place/2021485563
+hours: 월 16:00 - 23:50 | status=영업 중22:50에 라스트오더
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[414/447] 동하화덕 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=False
+  휠 2회(700) insights=False AI브리핑=False
+  휠 3회(700) insights=False AI브리핑=False
+  휠 4회(700) insights=False AI브리핑=False
+  휠 5회(700) insights=False AI브리핑=False
+  휠 6회(700) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 2_address_match / 주소일치(exact_or_contains) query=동하화덕
+place_id: 2017350630
+url: https://map.naver.com/p/entry/place/2017350630
+hours: 월 16:00 - 22:00 | status=영업 중22:00에 영업 종료
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈)
+
+[415/447] 럭키박스 link=N
+  플레이스 플러스 → 인기메뉴 카드 필수 검수
+  휠 1회(1200) insights=True AI브리핑=False
+→ success / 2_address_match / 주소일치(exact_or_contains) query=제주시 럭키박스
+place_id: 2099341610
+url: https://map.naver.com/p/entry/place/2099341610
+hours: 월 12:00 - 22:00 | status=영업 중21:55에 라스트오더
+못 가져온 항목: 대기/테이블링(홈 상단) / AI 브리핑(홈) / 예약 탭
+
+[416/447] 중심더무브먼트 link=N
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 2_address_match / 주소일치(exact_or_contains) query=중심더무브먼트
+place_id: 2015858613
+url: https://map.naver.com/p/entry/place/2015858613
+hours: 월 09:30 - 21:30 | status=영업 중21:30에 영업 종료
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[417/447] GS25제주문화점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1121718019
+place_id: 1121718019
+url: https://map.naver.com/p/entry/place/1121718019
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[418/447] 김민교악세사리 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1447050570
+place_id: 1447050570
+url: https://map.naver.com/p/entry/place/1447050570
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[419/447] 레드페이스제주중앙점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1722417279
+place_id: 1722417279
+url: https://map.naver.com/p/entry/place/1722417279
+hours: 10:00 - 20:00 | status=운영 중20:00에 운영 종료
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[420/447] 목화이불 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1733339731
+place_id: 1733339731
+url: https://map.naver.com/p/entry/place/1733339731
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[421/447] 쌤소나이트 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=979752531
+place_id: 979752531
+url: https://map.naver.com/p/entry/place/979752531
+hours: 09:00 - 21:00 | status=영업 중21:00에 영업 종료
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 예약 탭
+
+[422/447] 제주여행자센터 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=2031464673
+place_id: 2031464673
+url: https://map.naver.com/p/entry/place/2031464673
+hours: 10:00 - 20:00 | status=운영 중20:00에 운영 종료
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[423/447] 와이드앵글 link=N
+  nmap:// 는 place id 없음 → 매장명 검색
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 2_address_match / 주소일치(exact_or_contains) query=와이드앵글
+place_id: 2049821997
+url: https://map.naver.com/p/entry/place/2049821997
+hours: 10:30 - 20:00 | status=영업 중20:00에 영업 종료
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[424/447] 더픽 칠성점 link=N
+  nmap:// 는 place id 없음 → 매장명 검색
+→ fail / 5_fail / 매칭 실패
+place_id: 
+url: 
+hours:  | status=
+못 가져온 항목: 없음
+
+[425/447] 착한구두 제주 칠성점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1938401353
+place_id: 1938401353
+url: https://map.naver.com/p/entry/place/1938401353
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[426/447] 슈마커플러스 제주칠성점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=2003719934
+place_id: 2003719934
+url: https://map.naver.com/p/entry/place/2003719934
+hours: 10:30 - 21:00 | status=영업 중21:00에 영업 종료
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[427/447] 칼하트WIP 제주점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1580490330
+place_id: 1580490330
+url: https://map.naver.com/p/entry/place/1580490330
+hours: 영업 중 | status=영업 중
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[428/447] 한복입은바리스타 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=2091663387
+place_id: 2091663387
+url: https://map.naver.com/p/entry/place/2091663387
+hours: 10:00 - 20:00 | status=영업 중20:00에 영업 종료
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[429/447] 이수 link=N
+  nmap:// 는 place id 없음 → 매장명 검색
+→ fail / 5_fail / 매칭 실패
+place_id: 17091105
+url: https://map.naver.com/p/entry/place/17091105
+hours:  | status=
+못 가져온 항목: 없음
+
+[430/447] 칸테일러 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1405659595
+place_id: 1405659595
+url: https://map.naver.com/p/entry/place/1405659595
+hours: 월 12:00 - 20:30 | status=영업 중20:30에 영업 종료
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 예약 탭
+
+[431/447] 쉴레 link=N
+  nmap:// 는 place id 없음 → 매장명 검색
+→ fail / 5_fail / 매칭 실패
+place_id: 
+url: 
+hours:  | status=
+못 가져온 항목: 없음
+
+[432/447] 디엔(DN) Foreign Mart link=N
+  nmap:// 는 place id 없음 → 매장명 검색
+→ fail / 5_fail / 매칭 실패
+place_id: 
+url: 
+hours:  | status=
+못 가져온 항목: 없음
+
+[433/447] 설레라인도네시아 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=False
+  휠 2회(700) insights=False AI브리핑=False
+  휠 3회(700) insights=False AI브리핑=False
+  휠 4회(700) insights=False AI브리핑=False
+  휠 5회(700) insights=False AI브리핑=False
+  휠 6회(700) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=2025375100
+place_id: 2025375100
+url: https://map.naver.com/p/entry/place/2025375100
+hours: 월 정기휴무 (매주 월요일) | status=영업 중20:30에 라스트오더
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[434/447] 제주상회아이스크림 link=N
+  nmap:// 는 place id 없음 → 매장명 검색
+→ fail / 5_fail / 매칭 실패
+place_id: 16031974
+url: https://map.naver.com/p/entry/place/16031974
+hours:  | status=
+못 가져온 항목: 없음
+
+[435/447] GS25 제주칠성점 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=1052599665
+place_id: 1052599665
+url: https://map.naver.com/p/entry/place/1052599665
+hours: 00:00 - 24:00 | status=24시간 영업연중무휴
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[436/447] 허브에스테틱 link=N
+  nmap:// 는 place id 없음 → 매장명 검색
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 2_address_match / 주소일치(exact_or_contains) query=허브에스테틱
+place_id: 4150088956
+url: https://map.naver.com/p/entry/place/4150088956
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[437/447] 목포세발낙지 link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=False
+  휠 2회(700) insights=False AI브리핑=False
+  휠 3회(700) insights=False AI브리핑=False
+  휠 4회(700) insights=False AI브리핑=False
+  휠 5회(700) insights=False AI브리핑=False
+  휠 6회(700) insights=False AI브리핑=False
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=16739442
+place_id: 16739442
+url: https://map.naver.com/p/entry/place/16739442
+hours:  | status=
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭
+
+[438/447] 핏플(FITPLE) link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 1029396750
+url: https://map.naver.com/p/entry/place/1029396750
+hours: 월 10:30 - 17:30 | status=영업 종료10:30에 영업 시작
+못 가져온 항목: 없음
+
+[439/447] 아일랜드토모라(ISLANDTOMORA) link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 
+url: 
+hours:  | status=
+못 가져온 항목: 없음
+
+[440/447] 미더(MITHE) link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 
+url: 
+hours:  | status=
+못 가져온 항목: 없음
+
+[441/447] 커스티(CURSTI) link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 
+url: 
+hours:  | status=
+못 가져온 항목: 없음
+
+[442/447] 마이콩(MyKong) link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 2015674427
+url: https://map.naver.com/p/entry/place/2015674427
+hours: 월 10:00 - 16:30 | status=오늘 휴무09/10 휴무
+못 가져온 항목: 없음
+
+[443/447] 하이벨라(HIVELLA) link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 
+url: 
+hours:  | status=
+못 가져온 항목: 없음
+
+[444/447] 헤미지(Hemiji) link=N
+→ fail / 5_fail / 매칭 실패
+place_id: 
+url: 
+hours:  | status=
+못 가져온 항목: 없음
+
+[445/447] 바라# link=Y
+  휠 1회(1200) insights=False AI브리핑=False
+  휠 2회(1200) insights=False AI브리핑=False
+  휠 3회(1200) insights=False AI브리핑=False
+  휠 4회(1200) insights=False AI브리핑=False
+→ success / 1_naver_link / naver_link place_id=2094904798
+place_id: 2094904798
+url: https://map.naver.com/p/entry/place/2094904798
+hours: 11:00 - 20:00 | status=영업 중20:00에 영업 종료
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / AI 브리핑(홈) / 소식(탭 없음) / 예약 탭 / 리뷰 방문자 키워드(이런 점이 좋았어요)
+
+[446/447] 한라봉캐리커처앤디저트 link=Y
+  휠 1회(1200) insights=False AI브리핑=True
+  휠 2회(1200) insights=False AI브리핑=True
+  휠 3회(1200) insights=False AI브리핑=True
+  휠 4회(1200) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=True
+  휠 2회(700) insights=False AI브리핑=True
+  휠 3회(700) insights=False AI브리핑=True
+  휠 4회(700) insights=False AI브리핑=True
+  휠 5회(700) insights=False AI브리핑=True
+  휠 6회(700) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=2050483303
+place_id: 2050483303
+url: https://map.naver.com/p/entry/place/2050483303
+hours: 월 11:00 - 20:30 | status=영업 중20:10에 라스트오더
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / 예약 탭
+
+[447/447] 카페오브제이 link=Y
+  휠 1회(1200) insights=False AI브리핑=True
+  휠 2회(1200) insights=False AI브리핑=True
+  휠 3회(1200) insights=False AI브리핑=True
+  휠 4회(1200) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도
+  휠 1회(700) insights=False AI브리핑=True
+  휠 2회(700) insights=False AI브리핑=True
+  휠 3회(700) insights=False AI브리핑=True
+  휠 4회(700) insights=False AI브리핑=True
+  휠 5회(700) insights=False AI브리핑=True
+  휠 6회(700) insights=False AI브리핑=True
+  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음
+→ success / 1_naver_link / naver_link place_id=2086814721
+place_id: 2086814721
+url: https://map.naver.com/p/entry/place/2086814721
+hours: 11:00 - 21:00 | status=영업 중21:00에 영업 종료
+못 가져온 항목: 대기/테이블링(홈 상단) / 인기메뉴/피크/평균결제(홈) / 예약 탭
+
+CSV: /Users/jpark/project/api_visitkorea/네이버지도 크롤링/범용/downtown/enriched.csv
+JSON: /Users/jpark/project/api_visitkorea/네이버지도 크롤링/범용/downtown/enriched.json
+LOG: /Users/jpark/project/api_visitkorea/네이버지도 크롤링/범용/downtown/match_log.jsonl

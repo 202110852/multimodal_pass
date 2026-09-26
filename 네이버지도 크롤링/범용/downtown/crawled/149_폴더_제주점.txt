@@ -1,0 +1,23 @@
+# 네이버지도 크롤링 검수
+
+원본_콘텐츠ID: 149
+
+원본_이름: 폴더 제주점
+
+원본_유형: 쇼핑
+
+원본_도로명: 제주 제주시 관덕로11길 5
+
+원본_위도: 33.513688
+
+원본_경도: 126.525202
+
+원본_전화: 064-759-9302
+
+원본_naver_link: https://naver.me/xQe4xrN7
+
+매칭상태: success / 1_naver_link / naver_link place_id=37426707
+
+네이버_place_id: 37426707
+
+네이버_지도URL: https://map.naver.com/p/entry/place/37426707

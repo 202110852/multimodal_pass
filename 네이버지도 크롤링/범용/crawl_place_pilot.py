@@ -1,0 +1,2373 @@
+#!/usr/bin/env python3
+"""CSV → 네이버지도 매칭 + 플레이스 공개정보 수집.
+
+downtown_stores.csv 처럼 `naver_link`가 있으면 링크를 우선하고,
+없으면 이전처럼 매장명 검색으로 매칭한다.
+"""
+
+from __future__ import annotations
+
+import argparse
+import csv
+import json
+import math
+import re
+import time
+import urllib.parse
+from collections import OrderedDict
+from dataclasses import dataclass, field, asdict
+from pathlib import Path
+from typing import Any, Optional
+
+from playwright.sync_api import sync_playwright, Page
+
+ROOT = Path(__file__).resolve().parent
+SRC_CSV = Path(
+    "/Users/jpark/project/api_visitkorea/작업/비짓제주_OPEN_API/contents_kr.csv"
+)
+OUT_DIR = ROOT / "pilot_1"
+LOG_PATH = OUT_DIR / "match_log.jsonl"
+RESULT_CSV = OUT_DIR / "enriched_1.csv"
+RESULT_JSON = OUT_DIR / "enriched_1.json"
+RESULT_TXT = OUT_DIR / "crawled.txt"
+DONE_IDS = OUT_DIR / "done_ids.txt"
+CRAWLED_DIR = OUT_DIR / "crawled"
+
+PLACE_ID_IN_URL_RE = re.compile(
+    r"(?:place/|entry/place/|restaurant/)(\d{6,})"
+)
+
+MATCH_DIST_M = 80
+NEAR_DIST_M = 250
+
+# 다른 가게 추천 — 수집하지 않음
+RELATED_SECTION_RE = re.compile(
+    r"^(주변|함께 가볼만한|이 장소와 비슷한|비슷한 맛집|근처 맛집|"
+    r"함께 방문|연관 장소|이런 곳도)"
+)
+
+
+def is_related_store_section(title: str) -> bool:
+    t = (title or "").strip().split("\n")[0].strip()
+    if not t:
+        return False
+    if t == "주변":
+        return True
+    return bool(RELATED_SECTION_RE.match(t))
+
+
+def _strip_related_from_raw(raw: str) -> str:
+    """정보 탭 원문에서 추천/주변 섹션 이후는 자른다."""
+    if not raw:
+        return raw
+    cuts = []
+    for pat in (
+        r"^주변\s*$",
+        r"^함께 가볼만한.+$",
+        r"^이 장소와 비슷한.+$",
+        r"^비슷한 맛집\s*$",
+        r"^근처 맛집\s*$",
+        r"^이런 곳도.+$",
+    ):
+        m = re.search(pat, raw, re.M)
+        if m:
+            cuts.append(m.start())
+    if not cuts:
+        return raw
+    return raw[: min(cuts)].rstrip()
+STOPWORDS = {
+    "제주",
+    "제주도",
+    "제주시",
+    "서귀포",
+    "서귀포시",
+    "맛집",
+    "여행",
+    "관광",
+    "정보",
+    "예약",
+    "문의",
+    "영업",
+    "영업중",
+    "영업전",
+    "리뷰",
+    "방문자",
+    "블로그",
+    "사진",
+    "지도",
+    "길찾기",
+    "저장",
+    "공유",
+    "홈",
+    "정보",
+    "메뉴",
+    "리뷰",
+    "주소",
+    "전화",
+    "네이버",
+    "플레이스",
+}
+
+
+@dataclass
+class Candidate:
+    place_id: str
+    name: str = ""
+    category: str = ""
+    road_address: str = ""
+    address: str = ""
+    lat: Optional[float] = None
+    lng: Optional[float] = None
+    query: str = ""
+
+
+@dataclass
+class MatchResult:
+    status: str
+    step: str
+    message: str
+    candidate: Optional[Candidate] = None
+    detail: dict[str, Any] = field(default_factory=dict)
+    tried_queries: list[str] = field(default_factory=list)
+    all_candidates: list[dict] = field(default_factory=list)
+
+
+def haversine_m(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
+    r = 6371000.0
+    p1, p2 = math.radians(lat1), math.radians(lat2)
+    dp = math.radians(lat2 - lat1)
+    dl = math.radians(lon2 - lon1)
+    a = math.sin(dp / 2) ** 2 + math.cos(p1) * math.cos(p2) * math.sin(dl / 2) ** 2
+    return 2 * r * math.asin(math.sqrt(a))
+
+
+def norm_addr(s: str) -> str:
+    if not s:
+        return ""
+    s = s.strip()
+    s = re.sub(r"\s+", "", s)
+    s = s.replace("제주특별자치도", "제주")
+    s = re.sub(r"\([^)]*\)", "", s)
+    return s
+
+
+def addr_tokens(s: str) -> set[str]:
+    s = norm_addr(s)
+    parts = re.findall(r"[가-힣0-9]+(?:동|읍|면|리|로|길)|[0-9\-]+|[가-힣]{2,}", s)
+    return {p for p in parts if p}
+
+
+def address_similar(
+    src_road: str, src_jibun: str, cand_road: str, cand_jibun: str
+) -> tuple[bool, str]:
+    srcs = [norm_addr(src_road), norm_addr(src_jibun)]
+    cands = [norm_addr(cand_road), norm_addr(cand_jibun)]
+    for a in srcs:
+        for b in cands:
+            if a and b and (a == b or a in b or b in a):
+                return True, "exact_or_contains"
+
+    src_set = addr_tokens(src_road) | addr_tokens(src_jibun)
+    cand_set = addr_tokens(cand_road) | addr_tokens(cand_jibun)
+    if not src_set or not cand_set:
+        return False, "empty"
+
+    area = {t for t in src_set if re.search(r"(동|읍|면|리)$", t)}
+    nums = {t for t in src_set if re.search(r"\d", t)}
+    area_hit = bool(area & cand_set)
+    num_hit = bool(nums & cand_set)
+    if area_hit and num_hit:
+        return True, "area_and_number"
+    if area_hit and len(src_set & cand_set) >= 3:
+        return True, "token_overlap"
+    return False, f"overlap={len(src_set & cand_set)}"
+
+
+def region_hint(row: dict) -> str:
+    for key in ("region1cd_label", "region2cd_label"):
+        v = (row.get(key) or "").strip()
+        if v:
+            return v
+    road = row.get("roadaddress") or row.get("address") or ""
+    m = re.search(r"(제주시|서귀포시)", road)
+    return m.group(1) if m else "제주"
+
+
+def build_queries(row: dict) -> list[str]:
+    name = (row.get("title") or "").strip()
+    road = (row.get("roadaddress") or "").strip()
+    jibun = (row.get("address") or "").strip()
+    typ = (row.get("contentscd_label") or "").strip()
+    region = region_hint(row)
+    qs: list[str] = []
+
+    def add(q: str) -> None:
+        q = re.sub(r"\s+", " ", q).strip()
+        # 층수 등 잡음 제거
+        q = re.sub(r"\s*\d+\s*층\s*", " ", q).strip()
+        if q and q not in qs:
+            qs.append(q)
+
+    add(name)
+    add(f"{region} {name}")
+    if typ:
+        add(f"{name} {typ}")
+        add(f"{region} {name} {typ}")
+    # "연동 본점" 같은 접미사 완화
+    base = re.sub(r"\s*(본점|지점|1호점|2호점)$", "", name).strip()
+    if base and base != name:
+        add(base)
+        add(f"{region} {base}")
+    for addr in (jibun, road):
+        if not addr:
+            continue
+        m = re.search(
+            r"((?:[가-힣]+(?:읍|면)\s+)?[가-힣0-9]+(?:동|리)\s*[0-9\-]+)", addr
+        )
+        if m:
+            add(f"{region} {m.group(1)} {base or name}")
+            add(f"{m.group(1)} {base or name}")
+    return qs
+
+
+def pick_row(title: Optional[str]) -> dict:
+    rows = load_source_rows(SRC_CSV, title=title)
+    if title:
+        return rows[0]
+    # 기본: 돌담흑돼지 연동 본점
+    for r in rows:
+        if (r.get("title") or "").strip() == "돌담흑돼지 연동 본점":
+            return r
+    raise SystemExit("기본 대상 행을 찾지 못함")
+
+
+def load_source_rows(
+    csv_path: Path,
+    *,
+    title: Optional[str] = None,
+    store_id: Optional[str] = None,
+) -> list[dict]:
+    with csv_path.open(encoding="utf-8-sig", newline="") as f:
+        rows = [normalize_source_row(r) for r in csv.DictReader(f)]
+    if store_id:
+        hit = [r for r in rows if str(r.get("id") or "").strip() == str(store_id)]
+        if not hit:
+            raise SystemExit(f"id 없음: {store_id}")
+        return hit
+    if title:
+        hit = [r for r in rows if (r.get("title") or "").strip() == title]
+        if not hit:
+            raise SystemExit(f"title 없음: {title}")
+        return hit
+    return rows
+
+
+def extract_place_ids_from_html(html: str) -> list[str]:
+    ids = PLACE_ID_IN_URL_RE.findall(html or "")
+    out: list[str] = []
+    for i in ids:
+        if i not in out:
+            out.append(i)
+    return out[:15]
+
+
+def extract_place_id_from_url(url: str) -> Optional[str]:
+    if not url:
+        return None
+    m = PLACE_ID_IN_URL_RE.search(url)
+    if m:
+        return m.group(1)
+    m = re.search(r"[?&](?:id|placeId|place_id|pinId)=(\d{6,})", url)
+    return m.group(1) if m else None
+
+
+def usable_naver_link(link: str) -> bool:
+    """place id를 뽑을 수 있는 링크만. nmap://(좌표만)은 검색 폴백."""
+    s = (link or "").strip()
+    if not s:
+        return False
+    if s.startswith("nmap://"):
+        return False
+    return True
+
+
+def normalize_source_row(row: dict) -> dict:
+    """비짓제주 / downtown_stores 컬럼을 내부 키로 맞춘다."""
+    r = dict(row)
+    if not (r.get("title") or "").strip():
+        r["title"] = (r.get("name") or "").strip()
+    if not (r.get("roadaddress") or "").strip():
+        r["roadaddress"] = (r.get("address") or "").strip()
+    if not (r.get("contentscd_label") or "").strip():
+        r["contentscd_label"] = (r.get("category") or "").strip()
+    if not (r.get("contentsid") or "").strip():
+        r["contentsid"] = str(r.get("id") or "").strip()
+    if not (r.get("phoneno") or "").strip():
+        r["phoneno"] = (r.get("phone") or "").strip()
+    return r
+
+
+def row_key(row: dict) -> str:
+    return str(row.get("contentsid") or row.get("id") or row.get("title") or "").strip()
+
+
+def row_latlng(row: dict) -> tuple[Optional[float], Optional[float]]:
+    try:
+        lat = float(row["latitude"])
+        lng = float(row["longitude"])
+    except (TypeError, ValueError, KeyError):
+        return None, None
+    return lat, lng
+
+
+def resolve_place_id_from_link(page: Page, link: str) -> Optional[str]:
+    """naver.me / map URL → place id. 단축 링크는 리다이렉트를 따른다."""
+    link = (link or "").strip()
+    if not usable_naver_link(link):
+        return None
+    pid = extract_place_id_from_url(link)
+    if pid:
+        return pid
+    try:
+        page.goto(link, wait_until="domcontentloaded", timeout=30000)
+        page.wait_for_timeout(1800)
+    except Exception:
+        return None
+    pid = extract_place_id_from_url(page.url or "")
+    if pid:
+        return pid
+    for fr in page.frames:
+        pid = extract_place_id_from_url(fr.url or "")
+        if pid:
+            return pid
+    ids = extract_place_ids_from_html(page.content())
+    return ids[0] if ids else None
+
+
+def search_naver_place_ids(page: Page, query: str) -> list[str]:
+    url = "https://search.naver.com/search.naver?query=" + urllib.parse.quote(query)
+    page.goto(url, wait_until="domcontentloaded", timeout=60000)
+    page.wait_for_timeout(1200)
+    return extract_place_ids_from_html(page.content())
+
+
+def search_naver_map_list(page: Page, query: str) -> list[str]:
+    q = urllib.parse.quote(query)
+    url = f"https://map.naver.com/p/search/{q}?c=15.00,0,0,0,dh"
+    page.goto(url, wait_until="domcontentloaded", timeout=60000)
+    page.wait_for_timeout(2500)
+    ids = extract_place_ids_from_html(page.content())
+    for fr in page.frames:
+        try:
+            src = fr.url or ""
+            ids.extend(extract_place_ids_from_html(src))
+            if "pcmap.place.naver.com" in src:
+                try:
+                    ids.extend(extract_place_ids_from_html(fr.content()))
+                except Exception:
+                    pass
+        except Exception:
+            pass
+    out: list[str] = []
+    for i in ids:
+        if i not in out:
+            out.append(i)
+    return out[:20]
+
+
+def _split_keyword_blob(text: str) -> list[str]:
+    if not text:
+        return []
+    # '/' 는 "남/녀"처럼 단어 안에 쓰이므로 구분자로 쓰지 않음
+    parts = re.split(r"[,|·•#\n\t]+|\s{2,}", text)
+    out: list[str] = []
+    for p in parts:
+        p = p.strip().lstrip("#").strip()
+        if not p:
+            continue
+        if len(p) < 2 or len(p) > 30:
+            continue
+        if p.isdigit():
+            continue
+        out.append(p)
+    return out
+
+
+def extract_keywords(detail: dict[str, Any]) -> tuple[list[str], dict[str, list[str]]]:
+    """우선순위 순으로 키워드 수집. (list, source_map)
+
+    상호·카테고리·주소·전화·영업시간·메뉴는 축약/불용어 필터를 타지 않고 원문 유지.
+    """
+    sources: OrderedDict[str, list[str]] = OrderedDict()
+
+    def add_keep(src: str, items: list[str]) -> None:
+        clean: list[str] = []
+        for it in items:
+            s = str(it).strip()
+            if not s:
+                continue
+            if s not in clean:
+                clean.append(s)
+        if clean:
+            sources[src] = clean
+
+    def add(src: str, items: list[str]) -> None:
+        clean: list[str] = []
+        for it in items:
+            for tok in _split_keyword_blob(str(it)):
+                if tok in STOPWORDS:
+                    continue
+                if tok not in clean:
+                    clean.append(tok)
+        if clean:
+            sources[src] = clean
+
+    add_keep("name", [detail.get("name") or ""])
+    add_keep("category", [detail.get("category") or ""])
+    add_keep(
+        "address",
+        [detail.get("road_address") or "", detail.get("address") or ""],
+    )
+    add_keep("phone", [detail.get("phone") or ""])
+    add_keep("hours", [detail.get("hours_text") or ""])
+    add_keep("menus", [str(m) for m in (detail.get("menus") or [])])
+    add_keep(
+        "popular_menus",
+        [
+            str(x.get("name"))
+            for x in (detail.get("popular_menus") or [])
+            if isinstance(x, dict) and x.get("name")
+        ],
+    )
+    add_keep("slogan", [str(s) for s in (detail.get("micro_reviews") or [])])
+
+    add("conveniences", [str(c) for c in (detail.get("conveniences") or [])])
+    add("visitor_keywords", [
+        str(k.get("keyword") if isinstance(k, dict) else k)
+        for k in (detail.get("visitor_keywords") or [])
+    ])
+    add("hashtags", [str(h) for h in (detail.get("hashtags") or [])])
+
+    body = detail.get("body_snippet") or ""
+    hashes = re.findall(r"#([^\s#]{2,20})", body)
+    add("body_hashtags", hashes)
+
+    ordered: list[str] = []
+    seen: set[str] = set()
+    for items in sources.values():
+        for t in items:
+            key = t.lower()
+            if key in seen:
+                continue
+            seen.add(key)
+            ordered.append(t)
+    return ordered, dict(sources)
+
+
+_TIME_RANGE_RE = re.compile(
+    r"(\d{1,2}:\d{2})\s*[-~–]\s*(다음\s*날\s*)?(\d{1,2}:\d{2}|24:00|익일\s*\d{1,2}:\d{2})"
+)
+
+
+def parse_hours_block(text: str) -> dict[str, Any]:
+    """네이버 플레이스 영업시간 펼침 텍스트 파싱.
+
+    주차장(유료/무료) + 일반 업소(요일별 open / 매일 / 라스트오더) 모두 대응.
+    주차장 crawl_parking_pilot.parse_hours_block 참고.
+    """
+    out: dict[str, Any] = {
+        "summary": "",
+        "status_line": "",
+        "note": "",
+        "days": {},  # 월..일 / 매일 / 평일… -> {open, paid, free, break}
+        "raw": "",
+    }
+    if not text:
+        return out
+
+    m = re.search(
+        r"영업시간\s*(.*?)(?:영업시간 수정 제안하기|전화번호|가격표|편의|소개|주소|방문자|블로그|메뉴|찾아가는)",
+        text,
+        re.S,
+    )
+    block = m.group(1).strip() if m else ""
+    if not block:
+        i = text.find("영업시간")
+        block = text[i : i + 1200] if i >= 0 else ""
+    out["raw"] = re.sub(r"\n{3,}", "\n\n", block).strip()
+
+    lines = [ln.strip() for ln in out["raw"].splitlines() if ln.strip()]
+    junk = {
+        "영업시간",
+        "펼쳐보기",
+        "접기",
+        "정보 수정",
+        "영업시간 수정 제안하기",
+        "수정 제안하기",
+    }
+    day_keys = ("월", "화", "수", "목", "금", "토", "일", "매일", "평일", "주말", "공휴일")
+
+    for ln in lines[:10]:
+        if ln in junk or ln.startswith("영업시간 수정") or ln in day_keys:
+            continue
+        if not out["status_line"]:
+            out["status_line"] = ln
+            continue
+        if not out["summary"]:
+            # 두 번째 의미 있는 줄: "11:00에 영업 시작", "24시간 영업", "라스트오더 …"
+            if (
+                "영업" in ln
+                or "24시간" in ln
+                or "라스트" in ln
+                or "유료" in ln
+                or "무료" in ln
+                or _TIME_RANGE_RE.search(ln)
+            ):
+                out["summary"] = ln
+                break
+
+    if not out["summary"]:
+        if any("24시간" in ln for ln in lines):
+            out["summary"] = "24시간 영업"
+        elif out["status_line"] and out["status_line"] not in junk:
+            out["summary"] = out["status_line"]
+
+    current: Optional[str] = None
+
+    def ensure_day(d: str) -> dict[str, str]:
+        out["days"].setdefault(d, {"open": "", "paid": "", "free": "", "break": ""})
+        return out["days"][d]
+
+    for ln in lines:
+        if ln in day_keys:
+            current = ln
+            ensure_day(current)
+            continue
+        if current is None:
+            # 요일 라벨 없이 "매일 11:00 - 22:00" 한 줄
+            for dk in day_keys:
+                if ln.startswith(dk):
+                    rest = ln[len(dk) :].strip(" \t:-")
+                    if rest and _TIME_RANGE_RE.search(rest):
+                        ensure_day(dk)["open"] = rest
+                    current = dk
+                    break
+            continue
+
+        slot = ensure_day(current)
+        if re.match(r"유료\s*-", ln) or re.match(r"무료\s*-", ln):
+            continue
+        pm = re.match(r"유료\s*[:\t ]*(.+)$", ln)
+        fm = re.match(r"무료\s*[:\t ]*(.+)$", ln)
+        bm = re.match(r"(?:브레이크(?:타임)?|휴게)\s*[:\t ]*(.+)$", ln)
+        if pm:
+            slot["paid"] = pm.group(1).strip()
+        elif fm:
+            slot["free"] = fm.group(1).strip()
+        elif bm:
+            slot["break"] = bm.group(1).strip()
+        elif _TIME_RANGE_RE.search(ln) and not slot["open"]:
+            # 일반 업소: "11:00 - 22:00"
+            slot["open"] = ln
+        elif re.search(r"라스트오더|라스트 오더", ln):
+            if not out["note"]:
+                out["note"] = ln
+            elif ln not in out["note"]:
+                out["note"] = f"{out['note']} | {ln}"
+        elif re.search(r"휴무|정기휴무|임시휴무|오늘 휴무", ln) and not slot["open"]:
+            slot["open"] = ln
+
+    # 노트: 라스트오더 / 공휴일 / 유·무료 안내
+    notes = []
+    for ln in lines:
+        if (
+            ln.startswith("무료 -")
+            or ln.startswith("유료 -")
+            or ln.startswith("- ")
+            or "라스트오더" in ln
+            or "라스트 오더" in ln
+            or ("공휴일" in ln and ("무료" in ln or "휴무" in ln or "영업" in ln))
+        ):
+            if "정보없음" in ln and "공휴일" not in ln:
+                continue
+            notes.append(ln.lstrip("- ").strip())
+    if notes:
+        out["note"] = " | ".join(dict.fromkeys(notes))
+
+    # 요일 open이 있으면 summary를 대표 구간으로 (상태 문구보다 우선)
+    if out["days"]:
+        for dname in ("매일", "월", "화", "수", "목", "금", "토", "일", "평일"):
+            day = out["days"].get(dname) or {}
+            open_h = day.get("open") or ""
+            paid = day.get("paid") or ""
+            if open_h and open_h != "정보없음":
+                out["summary"] = open_h if dname == "매일" else f"{dname} {open_h}"
+                break
+            if paid and paid != "정보없음":
+                out["summary"] = f"유료 {paid}"
+                break
+
+    # 빈 키 정리
+    cleaned: dict[str, dict[str, str]] = {}
+    for d, slot in out["days"].items():
+        slim = {k: v for k, v in slot.items() if v}
+        if slim:
+            cleaned[d] = slim
+    out["days"] = cleaned
+    return out
+
+
+def click_all_expanders(page: Page, rounds: int = 5) -> int:
+    """홈의 접힌 블록을 연다.
+
+    - 영업시간: `펼쳐보기`
+    - 주소/찾아가는길: `내용 더보기`
+    사진·메뉴의 그냥 `더보기`는 건드리지 않는다 (정보 블록이 밀려남).
+    """
+    clicked = 0
+    labels = ("내용 더보기", "펼쳐보기")
+    for _ in range(rounds):
+        did = False
+        for name in labels:
+            loc = page.get_by_text(name, exact=True)
+            try:
+                n = loc.count()
+            except Exception:
+                n = 0
+            for i in range(n):
+                el = loc.nth(i)
+                try:
+                    if not el.is_visible():
+                        continue
+                    el.click(timeout=2500)
+                    page.wait_for_timeout(500)
+                    clicked += 1
+                    did = True
+                except Exception:
+                    continue
+        if not did:
+            break
+    return clicked
+
+
+def parse_section(body: str, title: str, stops: tuple[str, ...]) -> str:
+    stop = "|".join(re.escape(s) for s in stops)
+    m = re.search(
+        rf"{re.escape(title)}\s*(.*?)(?:{stop})",
+        body,
+        re.S,
+    )
+    if not m:
+        return ""
+    text = m.group(1).strip()
+    text = re.sub(r"(내용 더보기|펼쳐보기|접기|더보기)", "", text)
+    text = re.sub(r"\n{3,}", "\n\n", text).strip()
+    return text
+
+
+def parse_phone_from_body(body: str) -> str:
+    m = re.search(r"전화번호\s*[\n\s]*((?:0\d{1,4}-)?\d{3,4}-\d{4})", body)
+    if m:
+        return m.group(1).strip()
+    m = re.search(r"(0\d{1,4}-\d{3,4}-\d{4})", body)
+    return m.group(1).strip() if m else ""
+
+
+def parse_homepage_from_body(body: str) -> str:
+    m = re.search(r"홈페이지\s*[\n\s]*(https?://[^\s]+)", body)
+    return m.group(1).strip() if m else ""
+
+
+def _is_place_home(page: Page, place_id: str) -> bool:
+    url = page.url or ""
+    return bool(place_id) and place_id in url and "/home" in url
+
+
+def _ensure_place_home(page: Page, place_id: str) -> None:
+    """이미 이 가게 홈이면 다시 열지 않는다."""
+    if _is_place_home(page, place_id):
+        try:
+            page.keyboard.press("Escape")
+        except Exception:
+            pass
+        return
+    page.goto(
+        f"https://pcmap.place.naver.com/place/{place_id}/home",
+        wait_until="domcontentloaded",
+        timeout=60000,
+    )
+    page.wait_for_timeout(1800)
+    try:
+        page.keyboard.press("Escape")
+    except Exception:
+        pass
+
+
+def fetch_place_detail(page: Page, place_id: str) -> dict[str, Any]:
+    """홈 탭에서 상세+영업시간 수집 (주차장과 같이 펼친 뒤 본문 파싱)."""
+    if not _is_place_home(page, place_id):
+        home_url = f"https://pcmap.place.naver.com/place/{place_id}/home"
+        page.goto(home_url, wait_until="domcontentloaded", timeout=60000)
+        page.wait_for_timeout(2200)
+
+    # Playwright 텍스트 클릭이 evaluate click보다 안정적 (음식점 상태칩)
+    for pattern in (
+        re.compile(r"영업\s*전.*영업\s*시작"),
+        re.compile(r"영업\s*중"),
+        re.compile(r"영업\s*전"),
+        re.compile(r"영업시간"),
+        re.compile(r"오늘\s*휴무"),
+    ):
+        try:
+            loc = page.get_by_text(pattern).first
+            if loc.count() and loc.is_visible():
+                loc.click(timeout=3000)
+                page.wait_for_timeout(1200)
+                break
+        except Exception:
+            continue
+
+    # 주소/찾아가는길 영역이 보이도록 스크롤 후 펼치기
+    for hint in ("찾아가는길", "찾아가는 길", "주소", "영업시간"):
+        try:
+            h = page.get_by_text(hint, exact=True).first
+            if h.count():
+                h.scroll_into_view_if_needed(timeout=2000)
+                page.wait_for_timeout(300)
+                break
+        except Exception:
+            continue
+
+    n_expand = click_all_expanders(page)
+    page.wait_for_timeout(500)
+
+    data = page.evaluate(
+        """() => {
+      const state = window.__APOLLO_STATE__ || {};
+      const baseKey = Object.keys(state).find(k => k.startsWith('PlaceDetailBase:'));
+      const base = baseKey ? state[baseKey] : null;
+      const menus = [];
+      const visitorKeywords = [];
+      for (const [k, v] of Object.entries(state)) {
+        if (!v || typeof v !== 'object') continue;
+        if (k.startsWith('Menu:') || k.includes('MenuItem') || k.startsWith('PlaceMenu')) {
+          const n = v.name || v.menuName || v.title;
+          if (n) menus.push(String(n));
+        }
+        const label = v.keyword || v.label || v.name || v.title || v.text;
+        if (
+          (k.includes('Keyword') || k.includes('Topic') || k.includes('VisitorReview')) &&
+          label && typeof label === 'string' && label.length < 40
+        ) {
+          visitorKeywords.push(label);
+        }
+      }
+      const body = (document.body && document.body.innerText) || '';
+      const uiKeywords = [];
+      const idx = body.indexOf('이런 점이 좋았어요');
+      if (idx >= 0) {
+        const chunk = body.slice(idx, idx + 800);
+        for (const ln of chunk.split(/\\n+/)) {
+          const s = ln.trim();
+          if (!s || s === '이런 점이 좋았어요') continue;
+          if (/^\\d+$/.test(s) || s.length > 25) continue;
+          if (/더보기|접기|리뷰|사진/.test(s)) continue;
+          uiKeywords.push(s);
+          if (uiKeywords.length >= 20) break;
+        }
+      }
+      const slogans = [];
+      const sloganEls = document.querySelectorAll(
+        'div.wt9L1 > span.oPmH_, span.oPmH_'
+      );
+      for (const el of sloganEls) {
+        const s = (el.innerText || '').trim();
+        if (s && s.length >= 2 && s.length <= 80 && !slogans.includes(s)) slogans.push(s);
+      }
+      const micro = base && base.microReviews;
+      if (Array.isArray(micro)) {
+        for (const m of micro) {
+          const s = typeof m === 'string' ? m : (m && (m.text || m.label || m.name));
+          if (s && !slogans.includes(String(s))) slogans.push(String(s));
+        }
+      }
+      return {
+        base,
+        menus,
+        visitorKeywords,
+        uiKeywords,
+        slogans,
+        body,
+        openingHours: base && base.openingHours,
+        stateKeys: Object.keys(state).slice(0, 80),
+      };
+    }"""
+    )
+
+    base = data.get("base") or {}
+    body = data.get("body") or ""
+    hours = parse_hours_block(body)
+
+    if not hours.get("status_line"):
+        compact = re.search(
+            r"(영업\s*전|영업\s*중|오늘\s*휴무|휴무일?)"
+            r"(?:\s*)(\d{1,2}:\d{2}에\s*영업\s*시작|24시간\s*영업)?",
+            body,
+        )
+        if compact:
+            status = re.sub(r"\s+", " ", compact.group(1)).strip()
+            rest = (compact.group(2) or "").strip()
+            hours["status_line"] = status
+            if rest and not hours.get("summary"):
+                hours["summary"] = rest
+            if not hours.get("raw"):
+                hours["raw"] = compact.group(0).strip()
+
+    bh = None
+    for key in ("openingHours", "businessHours"):
+        val = base.get(key)
+        if isinstance(val, dict):
+            bh = val
+            break
+    if isinstance(data.get("openingHours"), dict):
+        bh = data["openingHours"]
+    if bh:
+        if not hours.get("status_line"):
+            hours["status_line"] = str(
+                bh.get("statusDescription") or bh.get("status") or ""
+            ).strip()
+        if not hours.get("summary"):
+            hours["summary"] = str(
+                bh.get("description")
+                or bh.get("statusDescription")
+                or hours.get("status_line")
+                or ""
+            ).strip()
+
+    lat = lng = None
+    coord = base.get("coordinate") or {}
+    try:
+        lng = float(coord.get("x")) if coord.get("x") is not None else None
+        lat = float(coord.get("y")) if coord.get("y") is not None else None
+    except (TypeError, ValueError):
+        pass
+
+    desc = parse_section(
+        body,
+        "소개",
+        ("찾아가는", "영업시간", "전화번호", "홈페이지", "편의", "주소", "방문자", "블로그", "메뉴", "정보"),
+    )
+    if not desc:
+        m2 = re.search(r"소개\s*\n([^\n]+)", body)
+        if m2:
+            desc = m2.group(1).strip()
+    if not desc:
+        desc = base.get("description") if isinstance(base.get("description"), str) else ""
+
+    directions = parse_section(
+        body,
+        "찾아가는길",
+        ("영업시간", "전화번호", "홈페이지", "편의", "소개", "주소", "방문자", "블로그", "메뉴"),
+    )
+    if not directions:
+        directions = parse_section(
+            body,
+            "찾아가는 길",
+            ("영업시간", "전화번호", "홈페이지", "편의", "소개", "주소", "방문자", "블로그", "메뉴"),
+        )
+
+    phone = (base.get("phone") or "").strip() or parse_phone_from_body(body)
+    homepage = parse_homepage_from_body(body)
+
+    menus = list(dict.fromkeys(data.get("menus") or []))
+    visitor_kw = list(
+        dict.fromkeys(
+            (data.get("visitorKeywords") or []) + (data.get("uiKeywords") or [])
+        )
+    )
+    hashtags = re.findall(r"#([^\s#]{2,20})", body)
+
+    detail = {
+        "place_id": place_id,
+        "name": base.get("name") or "",
+        "category": base.get("category") or "",
+        "road_address": base.get("roadAddress") or "",
+        "address": base.get("address") or "",
+        "phone": phone,
+        "homepage": homepage,
+        "directions": directions,
+        "lat": lat,
+        "lng": lng,
+        "conveniences": base.get("conveniences") or [],
+        "menus": menus[:40],
+        "visitor_keywords": visitor_kw[:40],
+        "hashtags": list(dict.fromkeys(hashtags))[:40],
+        "micro_reviews": list(dict.fromkeys(data.get("slogans") or []))[:10],
+        "hours_text": hours.get("summary") or hours.get("status_line") or "",
+        "hours_status": hours.get("status_line") or "",
+        "hours_note": hours.get("note") or "",
+        "hours_days": hours.get("days") or {},
+        "hours_raw": hours.get("raw") or "",
+        "description": desc,
+        "expand_clicks": n_expand,
+        "body_snippet": body[:8000],
+        "apollo_keys_sample": data.get("stateKeys") or [],
+        "raw_base_keys": list(base.keys()) if base else [],
+    }
+    kws, src = extract_keywords(detail)
+    detail["keywords"] = kws
+    detail["keywords_source"] = src
+    return detail
+
+
+def tab_bar_has(page: Page, name: str) -> bool:
+    """홈 탭바에 해당 탭이 보이는지. 없으면 URL을 두드리지 않는다."""
+    try:
+        names = page.evaluate(
+            """() => {
+          const out = [];
+          document.querySelectorAll('[role=tab], a._tab-menu').forEach(el => {
+            const t = (el.innerText || '').trim().split('\\n')[0].trim();
+            if (t) out.push(t);
+          });
+          return out;
+        }"""
+        ) or []
+    except Exception:
+        names = []
+    return name in {str(x).strip() for x in names}
+
+
+def click_tab(page: Page, name: str) -> bool:
+    try:
+        tab = page.get_by_role("tab", name=re.compile(rf"^{name}$"))
+        if tab.count():
+            tab.first.click(timeout=4000)
+            page.wait_for_timeout(1800)
+            return True
+    except Exception:
+        pass
+    try:
+        loc = page.locator("a._tab-menu").filter(has_text=name)
+        if loc.count():
+            loc.first.click(timeout=4000)
+            page.wait_for_timeout(1800)
+            return True
+    except Exception:
+        pass
+    try:
+        loc = page.get_by_text(name, exact=True)
+        n = min(loc.count(), 6)
+        for i in range(n):
+            el = loc.nth(i)
+            try:
+                if el.is_visible() and (el.inner_text() or "").strip() == name:
+                    el.click(timeout=2500)
+                    page.wait_for_timeout(1800)
+                    return True
+            except Exception:
+                continue
+    except Exception:
+        pass
+    return False
+
+
+def _clean_block(text: str) -> str:
+    text = re.sub(r"(이전 페이지|페이지 닫기|플레이스 플러스|저장\n|홈\n소식\n메뉴\n예약\n리뷰\n사진\n정보)", "", text)
+    text = re.sub(r"\n{3,}", "\n\n", text).strip()
+    return text
+
+
+def collect_wait_status(page: Page) -> str:
+    data = page.evaluate(
+        """() => {
+      const el = document.querySelector('.zgXvm, [class*="zgXvm"]');
+      if (el && el.innerText) return el.innerText.replace(/\\s+/g, ' ').trim();
+      const body = document.body.innerText || '';
+      const m = body.match(/현장대기[^\\n]{0,30}|테이블링[^\\n]{0,20}/);
+      return m ? m[0].trim() : '';
+    }"""
+    )
+    t = (data or "").strip()
+    t = re.sub(r"\s+", " ", t)
+    if t in ("안내", "새로고침"):
+        return ""
+    return t
+
+
+def is_place_plus(page: Page) -> bool:
+    """홈 헤더 `플레이스 플러스` 뱃지. 실측 힌트 `span.uMM13`."""
+    hit = page.evaluate(
+        """() => {
+      const els = Array.from(document.querySelectorAll('span.uMM13, span'));
+      return els.some(el => (el.innerText || '').trim() === '플레이스 플러스');
+    }"""
+    )
+    return bool(hit)
+
+
+def _home_has_insights(page: Page) -> bool:
+    return bool(
+        page.evaluate(
+            """() => {
+      const t = document.body.innerText || '';
+      return t.includes('인기 많은 메뉴') || t.includes('1회 결제 시 평균')
+        || t.includes('매장에서 결제된');
+    }"""
+        )
+    )
+
+
+def _scroll_home_lazy(page: Page, *, delta: int = 1200, max_n: int = 4) -> bool:
+    """홈 하단 지연 섹션이 붙도록 휠. 인기메뉴가 보이면 중단. 있으면 True."""
+    try:
+        page.locator("#app-root").hover(timeout=2000)
+    except Exception:
+        try:
+            page.mouse.move(240, 400)
+        except Exception:
+            pass
+    found = False
+    for n in range(1, max_n + 1):
+        try:
+            page.mouse.wheel(0, delta)
+        except Exception:
+            page.evaluate(f"() => window.scrollBy(0, {int(delta)})")
+        page.wait_for_timeout(250)
+        briefing = page.evaluate(
+            "() => (document.body.innerText || '').includes('AI 브리핑')"
+        )
+        found = _home_has_insights(page)
+        print(
+            f"  휠 {n}회({delta}) insights={found} AI브리핑={bool(briefing)}",
+            flush=True,
+        )
+        if found:
+            break
+    return found
+
+
+def collect_ai_briefing(page: Page, *, scrolled: bool = False) -> str:
+    """홈의 `place_section_header_title` = AI 브리핑 본문.
+
+    주소/영업시간보다 아래라 스크롤해야 지연 로드된다. 정보 탭에는 없음.
+    """
+    if not scrolled:
+        _scroll_home_lazy(page)
+
+    try:
+        loc = page.get_by_text("AI 브리핑", exact=True)
+        n = min(loc.count(), 4)
+        for i in range(n):
+            el = loc.nth(i)
+            try:
+                if el.is_visible():
+                    el.scroll_into_view_if_needed(timeout=2000)
+                    page.wait_for_timeout(400)
+                    break
+            except Exception:
+                continue
+    except Exception:
+        pass
+
+    page.evaluate(
+        """() => {
+      const sectionWrap = (el) => {
+        let p = el;
+        while (p) {
+          const tokens = String(p.className || '').split(/\\s+/);
+          if (tokens.includes('place_section')) return p;
+          p = p.parentElement;
+        }
+        return null;
+      };
+      const headers = Array.from(document.querySelectorAll(
+        '.place_section_header_title, h2.place_section_header, .place_section_header'
+      ));
+      const h = headers.find(el => (el.innerText || '').trim().split('\\n')[0] === 'AI 브리핑');
+      if (!h) return false;
+      const wrap = sectionWrap(h);
+      if (!wrap) return false;
+      const btns = Array.from(wrap.querySelectorAll('a, button, [role=button], span'));
+      for (const el of btns) {
+        const t = (el.innerText || '').replace(/\\s+/g, ' ').trim();
+        if (/출처\\s*\\d+\\s*건|전체보기/.test(t)) continue;
+        if (t === '더보기' || t === '펼쳐보기' || t === '내용 더보기') {
+          try { el.click(); return true; } catch (e) {}
+        }
+      }
+      return false;
+    }"""
+    )
+    page.wait_for_timeout(500)
+
+    text = page.evaluate(
+        """() => {
+      const sectionWrap = (el) => {
+        let p = el;
+        while (p) {
+          const tokens = String(p.className || '').split(/\\s+/);
+          if (tokens.includes('place_section')) return p;
+          p = p.parentElement;
+        }
+        return null;
+      };
+      const headers = Array.from(document.querySelectorAll(
+        '.place_section_header_title, h2.place_section_header, .place_section_header'
+      ));
+      const h = headers.find(el => (el.innerText || '').trim().split('\\n')[0] === 'AI 브리핑');
+      if (!h) return '';
+      const wrap = sectionWrap(h);
+      if (!wrap) return '';
+      const content = wrap.querySelector(':scope > .place_section_content')
+        || wrap.querySelector('.place_section_content');
+      return ((content && content.innerText) || wrap.innerText || '').trim();
+    }"""
+    ) or ""
+    text = str(text).strip()
+    text = re.sub(r"^AI 브리핑\s*", "", text).strip()
+    text = re.split(r"출처\s*\d+\s*건\s*전체보기", text, maxsplit=1)[0].strip()
+    text = re.sub(
+        r"\n?AI 답변으로 정확하지 않은 정보가 포함될 수 있어요\.?\s*(안내)?\s*$",
+        "",
+        text,
+    ).strip()
+    text = re.sub(r"\n{3,}", "\n\n", text)
+    if len(text) < 20:
+        return ""
+    return text
+
+
+def parse_home_insights(raw: str) -> dict[str, Any]:
+    """주간 인기메뉴 · 피크 시간 · 시간대 방문자 · 평균 결제."""
+    out: dict[str, Any] = {
+        "insights_raw": (raw or "").strip(),
+        "popular_menus": [],
+        "peak_hours": "",
+        "visitor_hours": [],
+        "avg_pay": "",
+    }
+    if not raw:
+        return out
+    compact = re.sub(r"\s+", " ", raw).strip()
+
+    for m in re.finditer(
+        r"(\d)\s*순위\s*(상승|하락|유지)?\s*(.+?)"
+        r"(?=\s*\d\s*순위|\s*(?:월|화|수|목|금|토|일)요일|\s*1회 결제|$)",
+        compact,
+    ):
+        name = re.sub(r"\s+", " ", (m.group(3) or "")).strip()
+        name = re.split(r"\s+\d{1,2}\s*시\s*방문자", name)[0].strip()
+        if name:
+            out["popular_menus"].append(
+                {
+                    "rank": int(m.group(1)),
+                    "trend": (m.group(2) or "").strip(),
+                    "name": name,
+                }
+            )
+
+    pm = re.search(
+        r"((?:월|화|수|목|금|토|일)요일.{0,40}가장 인기[^\n!]*)",
+        compact,
+    )
+    if pm:
+        out["peak_hours"] = pm.group(1).strip(" .")
+
+    out["visitor_hours"] = [
+        {"hour": int(h), "pct": int(p)}
+        for h, p in re.findall(r"(\d{1,2})\s*시\s*방문자\s*(\d+)\s*%", compact)
+    ]
+
+    pay = re.search(r"1회 결제.{0,40}?(?:지불해요\.?|\d+만원대)", compact)
+    if pay:
+        out["avg_pay"] = pay.group(0).strip()
+    return out
+
+
+def collect_home_insights(page: Page, *, scrolled: bool = False) -> dict[str, Any]:
+    """홈 `place_section_content`의 인기메뉴/피크/평균결제 카드.
+
+    헤더가 없는 섹션이라 본문 문구로 찾는다. 클래스명(`agO5z`)은 힌트만.
+    """
+    if not scrolled:
+        _scroll_home_lazy(page)
+
+    try:
+        for hint in ("인기 많은 메뉴", "1회 결제 시 평균", "가장 인기에요"):
+            loc = page.get_by_text(re.compile(hint))
+            if loc.count():
+                loc.first.scroll_into_view_if_needed(timeout=2000)
+                page.wait_for_timeout(400)
+                break
+    except Exception:
+        pass
+
+    raw = page.evaluate(
+        """() => {
+      const skipRe = /^(주변|함께 가볼만한|이 장소와 비슷한|비슷한 맛집|근처 맛집)/;
+      const sections = Array.from(document.querySelectorAll('div.place_section'));
+      const hit = sections.find(el => {
+        const tokens = String(el.className || '').split(/\\s+/);
+        if (!tokens.includes('place_section')) return false;
+        const t = el.innerText || '';
+        if (skipRe.test(t.trim().split('\\n')[0] || '')) return false;
+        return (
+          t.includes('인기 많은 메뉴') ||
+          t.includes('1회 결제 시 평균') ||
+          t.includes('가장 인기에요') ||
+          t.includes('매장에서 결제된')
+        );
+      });
+      if (!hit) return '';
+      const content = hit.querySelector(':scope > .place_section_content')
+        || hit.querySelector('.place_section_content') || hit;
+      return (content.innerText || '').trim();
+    }"""
+    ) or ""
+    raw = re.sub(r"\n{3,}", "\n\n", str(raw).strip())
+    parsed = parse_home_insights(raw)
+    if not parsed.get("insights_raw") and not parsed.get("popular_menus"):
+        return {}
+    return parsed
+
+
+def verify_place_plus_insights(page: Page, already: dict[str, Any]) -> dict[str, Any]:
+    """플레이스 플러스면 인기메뉴 카드가 있어야 한다. 스크롤로 놓쳤으면 재시도."""
+    if already.get("insights_raw") or already.get("popular_menus"):
+        return already
+    plus = is_place_plus(page)
+    if not plus:
+        return already
+    print(
+        "  검수: 플레이스 플러스인데 인기메뉴 없음 → 맨 위부터 휠 재시도",
+        flush=True,
+    )
+    try:
+        page.evaluate("() => window.scrollTo(0, 0)")
+        page.wait_for_timeout(400)
+    except Exception:
+        pass
+    _scroll_home_lazy(page, delta=700, max_n=6)
+    try:
+        loc = page.get_by_text(
+            re.compile(r"인기 많은 메뉴|1회 결제 시 평균|매장에서 결제된")
+        )
+        if loc.count():
+            loc.first.scroll_into_view_if_needed(timeout=2000)
+            page.wait_for_timeout(400)
+    except Exception:
+        pass
+    retry = collect_home_insights(page, scrolled=True)
+    if retry.get("insights_raw") or retry.get("popular_menus"):
+        print("  검수: 인기메뉴 카드 재수집 성공", flush=True)
+        return retry
+    print("  검수: 플레이스 플러스인데도 인기메뉴를 못 찾음", flush=True)
+    return already
+
+
+def _norm_place_name(s: str) -> str:
+    return re.sub(r"\s+", "", (s or "")).lower()
+
+
+def _news_author_is_this_place(first_line: str, place_name: str) -> bool:
+    """카드 첫 줄(작성 상호)이 이 가게인지. 아니면 추천/타매장."""
+    a = _norm_place_name(first_line)
+    b = _norm_place_name(place_name)
+    if not a or not b:
+        return False
+    return a == b or a.startswith(b) or b in a
+
+
+def collect_news(page: Page, place_id: str, place_name: str = "") -> list[str]:
+    """이 가게 소식함(`/feed`)만 연다. 홈·탭클릭·추천 카드는 시도하지 않음.
+
+    홈의 `li.place_apply_pui`는 비슷한 맛집 카드와 클래스가 같다.
+    URL이 `/feed`이고 place id가 맞고, 카드 작성 상호가 이 가게일 때만 저장.
+    """
+    if not place_id or not place_name:
+        return []
+
+    opened = False
+    for url in (
+        f"https://pcmap.place.naver.com/restaurant/{place_id}/feed",
+        f"https://pcmap.place.naver.com/place/{place_id}/feed",
+    ):
+        try:
+            page.goto(url, wait_until="domcontentloaded", timeout=45000)
+            page.wait_for_timeout(2200)
+        except Exception:
+            continue
+        cur = page.url or ""
+        if place_id in cur and "/feed" in cur:
+            opened = True
+            break
+    if not opened:
+        return []
+
+    try:
+        page.wait_for_selector(
+            "div.place_section_content ul li.place_apply_pui, "
+            "div.place_section_content ul li[class*='sjRRS']",
+            timeout=8000,
+        )
+    except Exception:
+        return []
+
+    rows = page.evaluate(
+        """() => {
+      const skipRe = /^(주변|함께 가볼만한|이 장소와 비슷한|비슷한 맛집|근처 맛집|함께 방문|연관 장소|이런 곳도)/;
+      const lis = Array.from(document.querySelectorAll(
+        'div.place_section_content ul > li.place_apply_pui, div.place_section_content ul > li[class*="sjRRS"]'
+      ));
+      const out = [];
+      for (const li of lis) {
+        const wrap = li.closest('.place_section, [class*="place_section"]');
+        const h = wrap && wrap.querySelector('h2.place_section_header, .place_section_header');
+        const sec = (h && h.innerText || '').trim().split('\\n')[0];
+        if (sec === '주변' || skipRe.test(sec)) continue;
+        const t = (li.innerText || '').trim();
+        if (!t) continue;
+        const firstLine = t.split('\\n')[0].trim();
+        out.push({text: t, firstLine});
+      }
+      return out;
+    }"""
+    )
+
+    mine: list[str] = []
+    for row in rows or []:
+        text = re.sub(r"\n{2,}", "\n", str(row.get("text") or "")).strip()
+        first = str(row.get("firstLine") or "").strip()
+        if not text:
+            continue
+        if place_name and not _news_author_is_this_place(first, place_name):
+            continue
+        if text not in mine:
+            mine.append(text)
+        if len(mine) >= 3:
+            break
+    return mine
+
+
+def collect_booking(page: Page, place_id: str) -> str:
+    opened = click_tab(page, "예약")
+    if not opened:
+        for path in (
+            f"https://pcmap.place.naver.com/restaurant/{place_id}/ticket",
+            f"https://pcmap.place.naver.com/place/{place_id}/booking",
+        ):
+            try:
+                page.goto(path, wait_until="domcontentloaded", timeout=45000)
+                page.wait_for_timeout(1800)
+                opened = True
+                break
+            except Exception:
+                continue
+    if not opened:
+        return ""
+    body = page.evaluate("() => (document.body && document.body.innerText) || ''") or ""
+    text = _clean_block(body)
+    if "방문예약" in text:
+        m = re.search(
+            r"방문예약\s*(.*?)(?:리뷰|사진|정보|홈\n|이용약관)",
+            text,
+            re.S,
+        )
+        block = ("방문예약\n" + (m.group(1).strip() if m else ""))[:4000]
+        return block.strip()
+    m = re.search(
+        r"N예약혜택\s*(.*?)(?:주소|찾아가는|영업시간|전화번호)",
+        text,
+        re.S,
+    )
+    if m:
+        return ("N예약혜택\n" + m.group(1).strip())[:2000]
+    return ""
+
+
+def collect_visitor_keywords(page: Page, place_id: str) -> list[dict[str, Any]]:
+    opened = click_tab(page, "리뷰")
+    if not opened:
+        try:
+            page.goto(
+                f"https://pcmap.place.naver.com/restaurant/{place_id}/review/visitor",
+                wait_until="domcontentloaded",
+                timeout=45000,
+            )
+            page.wait_for_timeout(2000)
+        except Exception:
+            return []
+
+    try:
+        hint = page.get_by_text("이런 점이 좋았어요").first
+        if hint.count():
+            hint.scroll_into_view_if_needed(timeout=2000)
+            page.wait_for_timeout(400)
+    except Exception:
+        pass
+
+    clicked_more = False
+    try:
+        box = page.locator("div.wvfSn, [class*='wvfSn']").first
+        if box.count():
+            box.scroll_into_view_if_needed(timeout=2000)
+            page.wait_for_timeout(400)
+            more = box.locator("a, button, span.YqDZw").filter(
+                has_text=re.compile(r"^더보기$|^펼쳐보기$")
+            )
+            if more.count():
+                more.first.click(timeout=1500)
+                page.wait_for_timeout(400)
+                clicked_more = True
+    except Exception:
+        pass
+    if not clicked_more:
+        page.evaluate(
+            """() => {
+      const root = (() => {
+        const t = Array.from(document.querySelectorAll('*')).find(
+          el => (el.innerText || '').includes('이런 점이 좋았어요') && (el.innerText || '').length < 80
+        );
+        return t ? (t.closest('div.place_section') || t.parentElement) : document.body;
+      })();
+      const cands = Array.from((root || document).querySelectorAll('a,button,[role=button]'));
+      for (const el of cands) {
+        const t = (el.innerText || '').replace(/\\s+/g, ' ').trim();
+        if (/^더보기$|^펼쳐보기$/.test(t) || (t === '' && el.querySelector('svg,path,span'))) {
+          const box = el.getBoundingClientRect();
+          if (box.width > 8 && box.width < 80 && box.height > 8 && box.height < 80) {
+            try { el.click(); return true; } catch (e) {}
+          }
+        }
+      }
+      return false;
+    }"""
+        )
+        page.wait_for_timeout(400)
+
+    items = page.evaluate(
+        """() => {
+      const out = [];
+      const lis = Array.from(document.querySelectorAll('li.MHaAm, ul.K4J9r > li'));
+      for (const li of lis) {
+        const kwEl = li.querySelector('span.sP19k, span.P19k, .vfTO3 span');
+        let kw = (kwEl && kwEl.innerText) || '';
+        kw = kw.replace(/^[\"“]|[\"”]$/g, '').trim();
+        if (!kw || kw.length > 40) continue;
+        const num = (li.innerText.match(/(\\d[\\d,]*)/) || [])[1] || '';
+        out.push({keyword: kw, count: num});
+      }
+      if (out.length) return out;
+      const body = document.body.innerText || '';
+      const idx = body.indexOf('이런 점이 좋았어요');
+      if (idx < 0) return out;
+      const chunk = body.slice(idx, idx + 2500);
+      const re = /[\"“]([^\"”]{2,30})[\"”]/g;
+      let m;
+      while ((m = re.exec(chunk))) {
+        out.push({keyword: m[1], count: ''});
+      }
+      return out;
+    }"""
+    )
+    seen = []
+    names = set()
+    for it in items or []:
+        kw = str(it.get("keyword") or "").strip().strip('"“”')
+        if not kw or kw in names:
+            continue
+        if kw in ("더보기", "접기", "이런 점이 좋았어요"):
+            continue
+        names.add(kw)
+        seen.append({"keyword": kw, "count": str(it.get("count") or "")})
+    return seen
+
+
+def collect_information(page: Page, place_id: str) -> dict[str, Any]:
+    try:
+        page.goto(
+            f"https://pcmap.place.naver.com/place/{place_id}/information",
+            wait_until="domcontentloaded",
+            timeout=60000,
+        )
+        page.wait_for_timeout(2000)
+    except Exception:
+        if not click_tab(page, "정보"):
+            return {}
+
+    # 소개 화살표·더보기·펼쳐보기
+    for _ in range(8):
+        click_all_expanders(page, rounds=2)
+        more = page.evaluate(
+            """() => {
+      const as = Array.from(document.querySelectorAll('a.S5TNd, button, a, [role=button]'));
+      for (const el of as) {
+        const t = (el.innerText || '').trim();
+        if (t && !/^(더보기|펼쳐보기|내용 더보기)$/.test(t) && t.length > 2) continue;
+        if (el.querySelector('svg') || t === '더보기' || t === '펼쳐보기' || t === '내용 더보기') {
+          try {
+            const box = el.getBoundingClientRect();
+            if (box.width < 1) continue;
+            el.click();
+            return true;
+          } catch (e) {}
+        }
+      }
+      const scrollables = Array.from(document.querySelectorAll('*')).filter(el => {
+        try {
+          const st = getComputedStyle(el);
+          return el.scrollHeight > el.clientHeight + 80 && /(auto|scroll)/.test(st.overflowY || '');
+        } catch (e) { return false; }
+      });
+      for (const el of scrollables) {
+        const before = el.scrollTop;
+        el.scrollTop = el.scrollHeight;
+        if (el.scrollTop !== before) return true;
+      }
+      window.scrollTo(0, document.body.scrollHeight);
+      return false;
+    }"""
+        )
+        page.wait_for_timeout(500)
+        if not more:
+            break
+
+    data = page.evaluate(
+        """() => {
+      const sections = [];
+      const headers = Array.from(document.querySelectorAll(
+        'h2.place_section_header, .place_section_header'
+      ));
+      for (const h of headers) {
+        const title = (h.innerText || '').trim().split('\\n')[0].trim();
+        if (!title || title.length > 40) continue;
+        if (title === '주변' || /^(함께 가볼만한|이 장소와 비슷한|비슷한 맛집|근처 맛집|이런 곳도)/.test(title)) continue;
+        const wrap = h.closest('.place_section, [class*="place_section"]') || h.parentElement;
+        const content = wrap ? wrap.querySelector('.place_section_content, [class*="section_content"]') : null;
+        let body = (content && content.innerText) || '';
+        body = body.trim();
+        if (title === body) body = body;
+        sections.push({title, body});
+      }
+      const conv = Array.from(document.querySelectorAll('ul.Uva5I li, ul.Uva5I'))
+        .map(el => (el.innerText || '').trim())
+        .filter(Boolean);
+      return {
+        sections,
+        conveniences_ul: conv,
+        raw: (document.body && document.body.innerText) || '',
+      };
+    }"""
+    )
+    sections = []
+    for s in (data or {}).get("sections") or []:
+        title = str(s.get("title") or "").strip()
+        body = str(s.get("body") or "").strip()
+        if not title:
+            continue
+        if title in ("홈", "소식", "메뉴", "예약", "리뷰", "사진", "정보"):
+            continue
+        if is_related_store_section(title):
+            continue
+        sections.append({"title": title, "body": body})
+    raw = _clean_block((data or {}).get("raw") or "")
+    raw = _strip_related_from_raw(raw)
+    titles = [s["title"] for s in sections]
+    if raw:
+        filled = _split_info_raw(raw, titles)
+        if filled:
+            sections = filled
+        intro = _section_body(sections, "소개")
+    else:
+        intro = ""
+    return {
+        "info_sections": sections,
+        "information_raw": raw[:12000] if raw else "",
+        "info_conveniences_ul": (data or {}).get("conveniences_ul") or [],
+        "description": intro,
+    }
+
+
+def _split_info_raw(raw: str, titles: list[str]) -> list[dict[str, str]]:
+    found: list[tuple[int, str]] = []
+    for t in titles:
+        if not t:
+            continue
+        m = re.search(rf"^{re.escape(t)}\s*$", raw, re.M)
+        if m:
+            found.append((m.start(), t))
+    if not found:
+        for t in (
+            "소개",
+            "위생 정보",
+            "편의시설 및 서비스",
+            "반려동물 동반",
+            "주차",
+            "좌석·공간",
+            "결제수단",
+            "SNS",
+        ):
+            m = re.search(rf"^{re.escape(t)}\s*$", raw, re.M)
+            if m:
+                found.append((m.start(), t))
+    found = sorted(set(found), key=lambda x: x[0])
+    found = [(p, t) for p, t in found if not is_related_store_section(t)]
+    out: list[dict[str, str]] = []
+    for i, (pos, title) in enumerate(found):
+        end = found[i + 1][0] if i + 1 < len(found) else len(raw)
+        body = raw[pos + len(title) : end].strip()
+        body = re.sub(r"^(접기|더보기|펼쳐보기)\s*", "", body).strip()
+        out.append({"title": title, "body": body})
+    return out
+
+
+def _section_body(sections: list[dict], title: str) -> str:
+    for s in sections:
+        if s.get("title") == title and (s.get("body") or "").strip():
+            return str(s["body"]).strip()
+    return ""
+
+
+def enrich_extra_tabs(
+    page: Page, place_id: str, home_body: str, place_name: str = ""
+) -> tuple[dict[str, Any], list[str]]:
+    """소식/예약/리뷰키워드/정보. 없는 것은 extra에 넣지 않고 missing 목록으로."""
+    extra: dict[str, Any] = {}
+    missing: list[str] = []
+
+    # 매칭 때 연 홈을 재사용. 다른 후보로 넘어간 뒤에만 다시 연다.
+    try:
+        _ensure_place_home(page, place_id)
+    except Exception:
+        pass
+
+    wait = collect_wait_status(page)
+    if not wait:
+        blob = home_body or page.evaluate("() => (document.body && document.body.innerText) || ''") or ""
+        if "현장대기" in blob or "테이블링" in blob:
+            bits = []
+            if "현장대기" in blob:
+                m = re.search(r"현장대기[^\n]{0,20}", blob)
+                if m:
+                    bits.append(m.group(0).strip())
+            if "테이블링" in blob:
+                bits.append("테이블링")
+            wait = " ".join(dict.fromkeys(bits))
+    if wait:
+        extra["wait_status"] = wait
+    else:
+        missing.append("대기/테이블링(홈 상단)")
+
+    plus = is_place_plus(page)
+    extra["place_plus"] = plus
+    if plus:
+        print("  플레이스 플러스 → 인기메뉴 카드 필수 검수", flush=True)
+
+    tabs = {
+        n
+        for n in ("홈", "소식", "메뉴", "예약", "리뷰", "사진", "정보")
+        if tab_bar_has(page, n)
+    }
+
+    _scroll_home_lazy(page)
+    insights = collect_home_insights(page, scrolled=True)
+    insights = verify_place_plus_insights(page, insights)
+    if insights.get("insights_raw") or insights.get("popular_menus"):
+        extra["insights_raw"] = insights.get("insights_raw") or ""
+        extra["popular_menus"] = insights.get("popular_menus") or []
+        extra["peak_hours"] = insights.get("peak_hours") or ""
+        extra["visitor_hours"] = insights.get("visitor_hours") or []
+        extra["avg_pay"] = insights.get("avg_pay") or ""
+    elif plus:
+        missing.append("인기메뉴(플레이스 플러스인데 스크롤 검수 실패)")
+    else:
+        missing.append("인기메뉴/피크/평균결제(홈)")
+
+    briefing = collect_ai_briefing(page, scrolled=True)
+    if briefing:
+        extra["ai_briefing"] = briefing
+    else:
+        missing.append("AI 브리핑(홈)")
+
+    news = []
+    if "소식" in tabs:
+        news = collect_news(page, place_id, place_name=place_name)
+        if news:
+            extra["news"] = news
+        else:
+            missing.append("소식(이 가게 /feed 없음)")
+    else:
+        missing.append("소식(탭 없음)")
+
+    booking = ""
+    if "예약" in tabs:
+        booking = collect_booking(page, place_id)
+        if booking:
+            extra["booking"] = booking
+        else:
+            missing.append("예약 탭")
+    else:
+        missing.append("예약 탭")
+
+    vkw = collect_visitor_keywords(page, place_id)
+    if vkw:
+        extra["visitor_keywords"] = vkw
+    else:
+        missing.append("리뷰 방문자 키워드(이런 점이 좋았어요)")
+
+    info = collect_information(page, place_id)
+    if info.get("info_sections") or info.get("information_raw"):
+        extra.update({k: v for k, v in info.items() if v})
+        sections = list(info.get("info_sections") or [])
+        for s in sections:
+            if (s.get("title") or "").strip() == "AI 브리핑" and not extra.get("ai_briefing"):
+                extra["ai_briefing"] = (s.get("body") or "").strip()
+        extra["info_sections"] = [
+            s for s in sections if (s.get("title") or "").strip() != "AI 브리핑"
+        ]
+        for s in extra.get("info_sections") or []:
+            title = (s.get("title") or "").strip()
+            if title in ("AI 브리핑",) or title.startswith("메뉴"):
+                continue
+            if s.get("title") in ("소개", "설명") or (
+                len(s.get("body") or "") > 80 and not extra.get("description")
+            ):
+                extra["description"] = s.get("body") or extra.get("description") or ""
+                if s.get("title") in ("소개", "설명"):
+                    break
+        if extra.get("ai_briefing") and "AI 브리핑(홈)" in missing:
+            missing.remove("AI 브리핑(홈)")
+    else:
+        missing.append("정보 탭")
+
+    _ = home_body
+    return extra, missing
+
+
+def match_one(page: Page, row: dict) -> MatchResult:
+    row = normalize_source_row(row)
+    name = (row.get("title") or "").strip()
+    src_road = row.get("roadaddress") or ""
+    src_jibun = row.get("address") or ""
+    src_lat, src_lng = row_latlng(row)
+    link = (row.get("naver_link") or "").strip()
+
+    def finish_from_place_id(pid: str, step: str, message: str, tried: list[str]) -> MatchResult:
+        detail = fetch_place_detail(page, pid)
+        cand = Candidate(
+            place_id=pid,
+            name=detail.get("name") or "",
+            category=detail.get("category") or "",
+            road_address=detail.get("road_address") or "",
+            address=detail.get("address") or "",
+            lat=detail.get("lat"),
+            lng=detail.get("lng"),
+            query=tried[0] if tried else link or name,
+        )
+        setattr(cand, "detail", detail)
+        return MatchResult(
+            status="success",
+            step=step,
+            message=message,
+            candidate=cand,
+            detail=detail,
+            tried_queries=tried,
+            all_candidates=[asdict(cand)],
+        )
+
+    if usable_naver_link(link):
+        pid = extract_place_id_from_url(link)
+        if not pid:
+            pid = resolve_place_id_from_link(page, link)
+        if pid:
+            try:
+                return finish_from_place_id(
+                    pid,
+                    "1_naver_link",
+                    f"naver_link place_id={pid}",
+                    [link],
+                )
+            except Exception as e:
+                print(f"  naver_link 해석 실패({e}) → 매장명 검색", flush=True)
+        else:
+            print("  naver_link에서 place id를 못 뽑음 → 매장명 검색", flush=True)
+    elif link.startswith("nmap://"):
+        print("  nmap:// 는 place id 없음 → 매장명 검색", flush=True)
+
+    queries = build_queries(row)
+    seen_ids: set[str] = set()
+    candidates: list[Candidate] = []
+    tried: list[str] = []
+
+    def add_ids(ids: list[str], query: str) -> None:
+        for pid in ids:
+            if pid in seen_ids:
+                continue
+            seen_ids.add(pid)
+            try:
+                detail = fetch_place_detail(page, pid)
+                time.sleep(0.8)
+            except Exception as e:
+                candidates.append(
+                    Candidate(place_id=pid, name=f"(fetch_fail:{e})", query=query)
+                )
+                continue
+            cand = Candidate(
+                place_id=pid,
+                name=detail.get("name") or "",
+                category=detail.get("category") or "",
+                road_address=detail.get("road_address") or "",
+                address=detail.get("address") or "",
+                lat=detail.get("lat"),
+                lng=detail.get("lng"),
+                query=query,
+            )
+            setattr(cand, "detail", detail)
+            candidates.append(cand)
+
+    for q in queries:
+        tried.append(q)
+        try:
+            ids = search_naver_place_ids(page, q)
+            if not ids:
+                ids = search_naver_map_list(page, q)
+        except Exception:
+            continue
+        before = len(candidates)
+        add_ids(ids[:8], q)
+        for c in candidates[before:]:
+            ok, reason = address_similar(src_road, src_jibun, c.road_address, c.address)
+            if ok:
+                return MatchResult(
+                    status="success",
+                    step="2_address_match",
+                    message=f"주소일치({reason}) query={q}",
+                    candidate=c,
+                    detail=getattr(c, "detail", {}),
+                    tried_queries=tried,
+                    all_candidates=[asdict(x) for x in candidates],
+                )
+        if len(candidates) >= 10:
+            break
+
+    # 좌표 근접
+    near: list[tuple[float, Candidate]] = []
+    if src_lat is not None and src_lng is not None:
+        for c in candidates:
+            if c.lat is None or c.lng is None:
+                continue
+            d = haversine_m(src_lat, src_lng, c.lat, c.lng)
+            near.append((d, c))
+        near.sort(key=lambda x: x[0])
+
+    if near and near[0][0] <= MATCH_DIST_M:
+        d, c = near[0]
+        return MatchResult(
+            status="success",
+            step="4_coord_close_auto",
+            message=f"좌표 {d:.0f}m ≤ {MATCH_DIST_M}m",
+            candidate=c,
+            detail=getattr(c, "detail", {}),
+            tried_queries=tried,
+            all_candidates=[asdict(x) for x in candidates],
+        )
+    if near and near[0][0] <= NEAR_DIST_M:
+        d, c = near[0]
+        return MatchResult(
+            status="needs_confirm",
+            step="4_coord_near_confirm",
+            message=f"좌표 {d:.0f}m ≤ {NEAR_DIST_M}m → 확인 필요",
+            candidate=c,
+            detail=getattr(c, "detail", {}),
+            tried_queries=tried,
+            all_candidates=[asdict(x) for x in candidates],
+        )
+
+    return MatchResult(
+        status="fail",
+        step="5_fail",
+        message="매칭 실패",
+        candidate=near[0][1] if near else None,
+        detail=getattr(near[0][1], "detail", {}) if near else {},
+        tried_queries=tried,
+        all_candidates=[asdict(x) for x in candidates],
+    )
+
+
+def place_urls(place_id: str) -> dict[str, str]:
+    if not place_id:
+        return {
+            "matched_site": "",
+            "matched_site_url": "",
+            "naver_map_url": "",
+            "naver_place_home_url": "",
+        }
+    map_url = f"https://map.naver.com/p/entry/place/{place_id}"
+    home_url = f"https://pcmap.place.naver.com/place/{place_id}/home"
+    return {
+        "matched_site": "naver_place",
+        "matched_site_url": map_url,
+        "naver_map_url": map_url,
+        "naver_place_home_url": home_url,
+    }
+
+
+def flatten_row(row: dict, mr: MatchResult) -> dict:
+    row = normalize_source_row(row)
+    d = mr.detail or {}
+    dist = ""
+    src_lat, src_lng = row_latlng(row)
+    if (
+        mr.candidate
+        and mr.candidate.lat is not None
+        and mr.candidate.lng is not None
+        and src_lat is not None
+        and src_lng is not None
+    ):
+        dist = f"{haversine_m(src_lat, src_lng, mr.candidate.lat, mr.candidate.lng):.1f}"
+
+    place_id = d.get("place_id") or (mr.candidate.place_id if mr.candidate else "")
+    urls = place_urls(str(place_id) if place_id else "")
+    keywords = d.get("keywords") or []
+
+    out = {
+        "contentsid": row.get("contentsid"),
+        "원본_id": row.get("id") or row.get("contentsid"),
+        "원본_title": row.get("title"),
+        "원본_유형": row.get("contentscd_label"),
+        "원본_도로명": row.get("roadaddress"),
+        "원본_지번": row.get("address") if row.get("address") != row.get("roadaddress") else "",
+        "원본_위도": row.get("latitude"),
+        "원본_경도": row.get("longitude"),
+        "원본_전화": row.get("phoneno") or row.get("phone"),
+        "원본_tag": row.get("tag"),
+        "원본_naver_link": row.get("naver_link") or "",
+        "원본_사업자번호": row.get("biz_number") or "",
+        "원본_상권": row.get("store_type") or "",
+        "match_status": mr.status,
+        "match_step": mr.step,
+        "match_message": mr.message,
+        "match_distance_m": dist,
+        "matched_site": urls["matched_site"],
+        "matched_site_url": urls["matched_site_url"],
+        "naver_map_url": urls["naver_map_url"],
+        "naver_place_home_url": urls["naver_place_home_url"],
+        "naver_place_id": place_id,
+        "naver_name": d.get("name") or (mr.candidate.name if mr.candidate else ""),
+        "naver_category": d.get("category") or "",
+        "naver_place_plus": "Y" if d.get("place_plus") else "",
+        "naver_micro_reviews": "|".join(d.get("micro_reviews") or []),
+        "naver_road_address": d.get("road_address") or "",
+        "naver_jibun_address": d.get("address") or "",
+        "naver_directions": (d.get("directions") or "").replace("\n", " | "),
+        "naver_phone": d.get("phone") or "",
+        "naver_homepage": d.get("homepage") or "",
+        "naver_lat": d.get("lat") if d.get("lat") is not None else "",
+        "naver_lng": d.get("lng") if d.get("lng") is not None else "",
+        "naver_hours": d.get("hours_text") or "",
+        "naver_hours_status": d.get("hours_status") or "",
+        "naver_hours_note": d.get("hours_note") or "",
+        "naver_hours_days_json": json.dumps(
+            d.get("hours_days") or {}, ensure_ascii=False
+        ),
+        "naver_hours_raw": (d.get("hours_raw") or "").replace("\n", " | "),
+        "naver_conveniences": "|".join(d.get("conveniences") or []),
+        "naver_description": d.get("description") or "",
+        "naver_ai_briefing": (d.get("ai_briefing") or "").replace("\n", " | "),
+        "naver_insights_raw": (d.get("insights_raw") or "").replace("\n", " | "),
+        "naver_popular_menus": json.dumps(
+            d.get("popular_menus") or [], ensure_ascii=False
+        )
+        if d.get("popular_menus")
+        else "",
+        "naver_peak_hours": d.get("peak_hours") or "",
+        "naver_visitor_hours": json.dumps(
+            d.get("visitor_hours") or [], ensure_ascii=False
+        )
+        if d.get("visitor_hours")
+        else "",
+        "naver_avg_pay": d.get("avg_pay") or "",
+        "naver_menus": "|".join(d.get("menus") or []),
+        "keywords": "|".join(keywords),
+        "keywords_json": json.dumps(keywords, ensure_ascii=False),
+        "keywords_source_json": json.dumps(
+            d.get("keywords_source") or {}, ensure_ascii=False
+        ),
+        "tried_queries": " | ".join(mr.tried_queries),
+    }
+    extra_map = {
+        "naver_wait_status": d.get("wait_status") or "",
+        "naver_news": json.dumps(d.get("news") or [], ensure_ascii=False)
+        if d.get("news")
+        else "",
+        "naver_booking": (d.get("booking") or "").replace("\n", " | "),
+        "naver_visitor_keywords": json.dumps(
+            d.get("visitor_keywords") or [], ensure_ascii=False
+        )
+        if d.get("visitor_keywords")
+        else "",
+        "naver_info_sections": json.dumps(
+            d.get("info_sections") or [], ensure_ascii=False
+        )
+        if d.get("info_sections")
+        else "",
+    }
+    out.update(extra_map)
+    return out
+
+
+def _fmt_val(v: Any) -> str:
+    if v is None:
+        return "(없음)"
+    if isinstance(v, (list, tuple)):
+        if not v:
+            return "(없음)"
+        if len(v) == 1 and "\n" not in str(v[0]):
+            return str(v[0]).strip()
+        return "\n".join(f"  - {x}" for x in v)
+    if isinstance(v, dict):
+        if not v:
+            return "(없음)"
+        return json.dumps(v, ensure_ascii=False, indent=2)
+    s = str(v).strip()
+    return s if s else "(없음)"
+
+
+def format_crawled_text(row: dict, mr: MatchResult, flat: dict) -> str:
+    """검수용: 항목: 내용. 비어 있으면 넣지 않음."""
+    d = mr.detail or {}
+    vkw = d.get("visitor_keywords") or []
+    vkw_txt = ""
+    if vkw and isinstance(vkw[0], dict):
+        vkw_txt = "\n".join(
+            f"  - {x.get('keyword')}"
+            + (f" ({x.get('count')})" if x.get("count") else "")
+            for x in vkw
+        )
+    elif vkw:
+        vkw_txt = vkw
+
+    info_txt = ""
+    if d.get("info_sections"):
+        parts_info = []
+        for s in d["info_sections"]:
+            title = (s.get("title") or "").strip()
+            body = (s.get("body") or "").strip()
+            if not title and not body:
+                continue
+            if body and body != title:
+                parts_info.append(f"  [{title}]\n{body}")
+            else:
+                parts_info.append(f"  [{title}] {body or title}")
+        info_txt = "\n\n".join(parts_info)
+
+    lines: list[tuple[str, Any]] = [
+        ("원본_콘텐츠ID", row.get("contentsid")),
+        ("원본_이름", row.get("title")),
+        ("원본_유형", row.get("contentscd_label")),
+        ("원본_도로명", row.get("roadaddress")),
+        ("원본_지번", row.get("address") if row.get("address") != row.get("roadaddress") else ""),
+        ("원본_위도", row.get("latitude")),
+        ("원본_경도", row.get("longitude")),
+        ("원본_전화", row.get("phoneno")),
+        ("원본_태그", row.get("tag")),
+        ("원본_naver_link", row.get("naver_link")),
+        ("매칭상태", f"{mr.status} / {mr.step} / {mr.message}"),
+        ("매칭거리_m", flat.get("match_distance_m")),
+        ("네이버_place_id", d.get("place_id") or flat.get("naver_place_id")),
+        ("네이버_지도URL", flat.get("naver_map_url")),
+        ("상호", d.get("name") or flat.get("naver_name")),
+        ("카테고리", d.get("category")),
+        ("플레이스플러스", "예" if d.get("place_plus") else ""),
+        ("슬로건", d.get("micro_reviews")),
+        ("도로명주소", d.get("road_address")),
+        ("지번주소", d.get("address")),
+        ("찾아가는길", d.get("directions")),
+        ("전화", d.get("phone")),
+        ("홈페이지", d.get("homepage")),
+        ("위도", d.get("lat")),
+        ("경도", d.get("lng")),
+        ("대기", d.get("wait_status")),
+        ("영업상태", d.get("hours_status")),
+        ("영업시간", d.get("hours_text")),
+        ("영업시간_부가", d.get("hours_note")),
+        ("영업시간_요일", d.get("hours_days")),
+        ("영업시간_원문", d.get("hours_raw")),
+        ("편의", d.get("conveniences")),
+        ("소개", d.get("description")),
+        ("AI 브리핑", d.get("ai_briefing")),
+        ("인기메뉴", [
+            f"{x.get('rank')} {x.get('trend') or ''} {x.get('name')}".strip()
+            for x in (d.get("popular_menus") or [])
+            if isinstance(x, dict)
+        ]),
+        ("피크시간", d.get("peak_hours")),
+        ("시간대방문자", [
+            f"{x.get('hour')}시 {x.get('pct')}%"
+            for x in (d.get("visitor_hours") or [])
+            if isinstance(x, dict)
+        ]),
+        ("평균결제", d.get("avg_pay")),
+        ("데이터인사이트_원문", d.get("insights_raw")),
+        ("메뉴", d.get("menus")),
+        ("소식", d.get("news")),
+        ("예약", d.get("booking")),
+        ("방문자키워드", vkw_txt),
+        ("정보", info_txt),
+        ("키워드", d.get("keywords")),
+    ]
+    parts = ["# 네이버지도 크롤링 검수", ""]
+    for k, v in lines:
+        val = _fmt_val(v)
+        if val == "(없음)":
+            continue
+        if "\n" in val:
+            parts.append(f"{k}:")
+            parts.append(val)
+        else:
+            parts.append(f"{k}: {val}")
+        parts.append("")
+    return "\n".join(parts).rstrip() + "\n"
+
+
+def apply_extra(mr: MatchResult, extra: dict[str, Any]) -> None:
+    d = mr.detail or {}
+    if extra.get("description") and not d.get("description"):
+        d["description"] = extra["description"]
+    if extra.get("visitor_keywords"):
+        d["visitor_keywords"] = extra["visitor_keywords"]
+    for k, v in extra.items():
+        if k in ("description", "visitor_keywords"):
+            continue
+        if v:
+            d[k] = v
+    kws, src = extract_keywords(d)
+    d["keywords"] = kws
+    d["keywords_source"] = src
+    mr.detail = d
+
+
+def crawl_one(page: Page, row: dict) -> MatchResult:
+    row = normalize_source_row(row)
+    mr = match_one(page, row)
+    pid = ""
+    if mr.detail:
+        pid = str(mr.detail.get("place_id") or "")
+    if not pid and mr.candidate:
+        pid = str(mr.candidate.place_id or "")
+    missing: list[str] = []
+    if pid and mr.status in ("success", "needs_confirm"):
+        extra, missing = enrich_extra_tabs(
+            page,
+            pid,
+            (mr.detail or {}).get("body_snippet") or "",
+            str((mr.detail or {}).get("name") or ""),
+        )
+        apply_extra(mr, extra)
+    setattr(mr, "missing_report", missing)
+    return mr
+
+
+def log_dict(row: dict, mr: MatchResult, flat: dict) -> dict:
+    return {
+        "id": row_key(row),
+        "title": row.get("title"),
+        "status": mr.status,
+        "step": mr.step,
+        "message": mr.message,
+        "tried_queries": mr.tried_queries,
+        "place_id": flat.get("naver_place_id"),
+        "naver_link": row.get("naver_link") or "",
+        "keywords": (mr.detail or {}).get("keywords"),
+        "missing": getattr(mr, "missing_report", None) or [],
+        "candidate": asdict(mr.candidate) if mr.candidate else None,
+    }
+
+
+def load_done() -> set[str]:
+    if not DONE_IDS.exists():
+        return set()
+    return {
+        ln.strip()
+        for ln in DONE_IDS.read_text(encoding="utf-8").splitlines()
+        if ln.strip()
+    }
+
+
+def append_done(rid: str) -> None:
+    with DONE_IDS.open("a", encoding="utf-8") as f:
+        f.write(rid + "\n")
+
+
+def rewrite_csv(rows: list[dict]) -> None:
+    if not rows:
+        return
+    fields: list[str] = []
+    seen: set[str] = set()
+    for r in rows:
+        for k in r:
+            if k not in seen:
+                seen.add(k)
+                fields.append(k)
+    with RESULT_CSV.open("w", encoding="utf-8-sig", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=fields, extrasaction="ignore")
+        w.writeheader()
+        for r in rows:
+            w.writerow({k: r.get(k, "") for k in fields})
+
+
+def write_crawled_file(row: dict, mr: MatchResult, flat: dict, *, batch: bool) -> Path:
+    text = format_crawled_text(row, mr, flat)
+    if not batch:
+        RESULT_TXT.write_text(text, encoding="utf-8")
+        return RESULT_TXT
+    CRAWLED_DIR.mkdir(parents=True, exist_ok=True)
+    rid = row_key(row) or "unknown"
+    safe = re.sub(r"[^\w가-힣\-]+", "_", (row.get("title") or "")[:40]).strip("_")
+    path = CRAWLED_DIR / (f"{rid}_{safe}.txt" if safe else f"{rid}.txt")
+    path.write_text(text, encoding="utf-8")
+    return path
+
+
+def print_one(row: dict, mr: MatchResult, flat: dict) -> None:
+    print(f"→ {mr.status} / {mr.step} / {mr.message}", flush=True)
+    print(f"place_id: {flat.get('naver_place_id')}", flush=True)
+    print(f"url: {flat.get('naver_map_url')}", flush=True)
+    print(
+        f"hours: {flat.get('naver_hours')} | status={flat.get('naver_hours_status')}",
+        flush=True,
+    )
+    missing = getattr(mr, "missing_report", None) or []
+    if missing:
+        print("못 가져온 항목:", " / ".join(missing), flush=True)
+    else:
+        print("못 가져온 항목: 없음", flush=True)
+
+
+def configure_out_dir(out_dir: Optional[str], *, batch: bool) -> None:
+    global OUT_DIR, LOG_PATH, RESULT_CSV, RESULT_JSON, RESULT_TXT, DONE_IDS, CRAWLED_DIR
+    if out_dir:
+        p = Path(out_dir)
+        OUT_DIR = p if p.is_absolute() else ROOT / p
+    elif batch:
+        OUT_DIR = ROOT / "downtown"
+    LOG_PATH = OUT_DIR / "match_log.jsonl"
+    RESULT_CSV = OUT_DIR / ("enriched.csv" if batch else "enriched_1.csv")
+    RESULT_JSON = OUT_DIR / ("enriched.json" if batch else "enriched_1.json")
+    RESULT_TXT = OUT_DIR / "crawled.txt"
+    DONE_IDS = OUT_DIR / "done_ids.txt"
+    CRAWLED_DIR = OUT_DIR / "crawled"
+    if batch and out_dir:
+        RESULT_CSV = OUT_DIR / "enriched.csv"
+        RESULT_JSON = OUT_DIR / "enriched.json"
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--title", type=str, default=None, help="이름 정확 일치 1건")
+    ap.add_argument("--id", type=str, default=None, help="downtown id 1건")
+    ap.add_argument("--csv", type=str, default=None, help="입력 CSV (downtown_stores 등)")
+    ap.add_argument("--out-dir", type=str, default=None, help="출력 폴더")
+    ap.add_argument("--limit", type=int, default=None)
+    ap.add_argument("--offset", type=int, default=0)
+    ap.add_argument("--headed", action="store_true")
+    ap.add_argument("--no-resume", action="store_true")
+    args = ap.parse_args()
+
+    csv_path = Path(args.csv).expanduser().resolve() if args.csv else None
+    batch = bool(csv_path) and not args.title and not args.id
+    if csv_path and not csv_path.exists():
+        raise SystemExit(f"CSV 없음: {csv_path}")
+
+    configure_out_dir(args.out_dir, batch=batch or bool(csv_path))
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+
+    if csv_path:
+        rows = load_source_rows(csv_path, title=args.title, store_id=args.id)
+    elif args.title or args.id:
+        rows = load_source_rows(SRC_CSV, title=args.title, store_id=args.id)
+    else:
+        rows = [pick_row(None)]
+
+    rows = rows[args.offset :]
+    if args.limit is not None:
+        rows = rows[: args.limit]
+
+    if args.no_resume:
+        for p in (RESULT_CSV, RESULT_JSON, LOG_PATH, DONE_IDS):
+            if p.exists():
+                p.unlink()
+
+    results: list[dict] = []
+    done = set() if args.no_resume else load_done()
+    if RESULT_CSV.exists() and not args.no_resume:
+        with RESULT_CSV.open(encoding="utf-8-sig", newline="") as f:
+            results = list(csv.DictReader(f))
+        for r in results:
+            k = (r.get("contentsid") or r.get("원본_id") or "").strip()
+            if k:
+                done.add(k)
+
+    todo = [r for r in rows if row_key(r) not in done]
+    print(
+        f"대상 {len(rows)} / 스킵 {len(rows) - len(todo)} / 이번 {len(todo)} → {OUT_DIR}",
+        flush=True,
+    )
+    if not todo:
+        print("할 일 없음", flush=True)
+        return
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=not args.headed)
+        context = browser.new_context(
+            locale="ko-KR",
+            user_agent=(
+                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/120.0.0.0 Safari/537.36"
+            ),
+        )
+        page = context.new_page()
+        try:
+            for i, row in enumerate(todo, 1):
+                rid = row_key(row)
+                print(
+                    f"\n[{i}/{len(todo)}] {row.get('title')} "
+                    f"link={('Y' if usable_naver_link(row.get('naver_link') or '') else 'N')}",
+                    flush=True,
+                )
+                try:
+                    mr = crawl_one(page, row)
+                except Exception as e:
+                    mr = MatchResult(
+                        status="fail",
+                        step="exception",
+                        message=str(e),
+                        tried_queries=[],
+                    )
+                    setattr(mr, "missing_report", [])
+                flat = flatten_row(row, mr)
+                results.append(flat)
+                with LOG_PATH.open("a", encoding="utf-8") as lf:
+                    lf.write(json.dumps(log_dict(row, mr, flat), ensure_ascii=False) + "\n")
+                if rid:
+                    append_done(rid)
+                rewrite_csv(results)
+                write_crawled_file(row, mr, flat, batch=bool(csv_path) or len(todo) > 1)
+                print_one(row, mr, flat)
+                time.sleep(0.4)
+        finally:
+            browser.close()
+
+    RESULT_JSON.write_text(
+        json.dumps(results, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    print(f"\nCSV: {RESULT_CSV}", flush=True)
+    print(f"JSON: {RESULT_JSON}", flush=True)
+    print(f"LOG: {LOG_PATH}", flush=True)
+
+
+if __name__ == "__main__":
+    main()

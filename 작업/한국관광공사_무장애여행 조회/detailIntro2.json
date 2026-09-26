@@ -1,0 +1,878 @@
+{
+  "126460": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "126460",
+              "contenttypeid": "12",
+              "heritage1": "0",
+              "heritage2": "0",
+              "heritage3": "0",
+              "infocenter": "064-710-6718",
+              "opendate": "",
+              "restdate": "연중무휴",
+              "expguide": "",
+              "expagerange": "",
+              "accomcount": "",
+              "useseason": "",
+              "usetime": "09:00~18:00",
+              "parking": "",
+              "chkbabycarriage": "",
+              "chkpet": "",
+              "chkcreditcard": ""
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "127744": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "127744",
+              "contenttypeid": "12",
+              "heritage1": "0",
+              "heritage2": "0",
+              "heritage3": "0",
+              "infocenter": "064-722-3315",
+              "opendate": "",
+              "restdate": "연중무휴",
+              "expguide": "",
+              "expagerange": "",
+              "accomcount": "",
+              "useseason": "",
+              "usetime": "09:00~18:00※ 1월 1일 / 설·추석 10:00 개장",
+              "parking": "가능",
+              "chkbabycarriage": "",
+              "chkpet": "",
+              "chkcreditcard": ""
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "128641": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "128641",
+              "contenttypeid": "12",
+              "heritage1": "0",
+              "heritage2": "0",
+              "heritage3": "0",
+              "infocenter": "064-710-6717",
+              "opendate": "",
+              "restdate": "연중무휴",
+              "expguide": "",
+              "expagerange": "",
+              "accomcount": "",
+              "useseason": "",
+              "usetime": "[일반 개장] - 09:00~18:00 [야간 개장]  - 수요일~일요일 18:00~21:00",
+              "parking": "가능",
+              "chkbabycarriage": "",
+              "chkpet": "",
+              "chkcreditcard": ""
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "129894": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "129894",
+              "contenttypeid": "14",
+              "scale": "",
+              "usefee": "[개인]- 어른 2,000원- 청소년, 군인 1,000원[단체(10인 이상)]- 어른 1,600원- 청소년, 군인 800원※ 자세한 사항은 홈페이지 참조",
+              "discountinfo": "",
+              "spendtime": "",
+              "parkingfee": "",
+              "infocenterculture": "064-710-7708",
+              "accomcountculture": "",
+              "usetimeculture": "09:00~18:00 (입장 마감 17:30)",
+              "restdateculture": "매주 월요일 (단, 월요일이 공휴일인 경우 그 다음 첫 번째 비공휴일) / 1월 1일 / 설·추석 / 훈증 소독기간",
+              "parkingculture": "",
+              "chkbabycarriageculture": "가능",
+              "chkpetculture": "",
+              "chkcreditcardculture": ""
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "129895": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "129895",
+              "contenttypeid": "14",
+              "scale": "대지 10,200㎡, 건물 1,995.65㎡(지상3층)",
+              "usefee": "",
+              "discountinfo": "",
+              "spendtime": "",
+              "parkingfee": "",
+              "infocenterculture": "064-728-3453",
+              "accomcountculture": "",
+              "usetimeculture": "상시 개방",
+              "restdateculture": "연중무휴",
+              "parkingculture": "가능",
+              "chkbabycarriageculture": "",
+              "chkpetculture": "",
+              "chkcreditcardculture": ""
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "130036": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "130036",
+              "contenttypeid": "14",
+              "scale": "",
+              "usefee": "",
+              "discountinfo": "",
+              "spendtime": "",
+              "parkingfee": "",
+              "infocenterculture": "064-722-0203",
+              "accomcountculture": "",
+              "usetimeculture": "- 09:00~18:00- 휴게시간 11:40~13:20※ 강좌시간에 따라 변동 가능",
+              "restdateculture": "매주 토요일~일요일 / 공휴일",
+              "parkingculture": "",
+              "chkbabycarriageculture": "없음",
+              "chkpetculture": "",
+              "chkcreditcardculture": ""
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "130745": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "130745",
+              "contenttypeid": "14",
+              "scale": "",
+              "usefee": "무료",
+              "discountinfo": "",
+              "spendtime": "",
+              "parkingfee": "무료",
+              "infocenterculture": "제주통일관 064-751-0191",
+              "accomcountculture": "",
+              "usetimeculture": "- 하절기(3월~10월) 10:00~17:00 <br>\n- 동절기(11월~2월) 10:00~16:00",
+              "restdateculture": "매주 일요일 /  설·추석 연휴",
+              "parkingculture": "가능",
+              "chkbabycarriageculture": "",
+              "chkpetculture": "",
+              "chkcreditcardculture": ""
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "142943": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "142943",
+              "contenttypeid": "32",
+              "roomcount": "177실",
+              "roomtype": "",
+              "refundregulation": "",
+              "checkintime": "14:00",
+              "checkouttime": "12:00",
+              "chkcooking": "불가",
+              "seminar": "1",
+              "sports": "0",
+              "sauna": "0",
+              "beauty": "0",
+              "beverage": "0",
+              "karaoke": "0",
+              "barbecue": "0",
+              "campfire": "0",
+              "bicycle": "0",
+              "fitness": "1",
+              "publicpc": "0",
+              "publicbath": "0",
+              "subfacility": "",
+              "foodplace": "",
+              "reservationurl": "",
+              "pickup": "",
+              "infocenterlodging": "064-758-2500",
+              "parkinglodging": "가능",
+              "reservationlodging": "",
+              "scalelodging": "지상 11층 / 지하 2층",
+              "accomcountlodging": ""
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "142972": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "142972",
+              "contenttypeid": "32",
+              "roomcount": "321실",
+              "roomtype": "스탠다드 / 디럭스 / 스위트 등",
+              "refundregulation": "",
+              "checkintime": "15:00",
+              "checkouttime": "11:00",
+              "chkcooking": "불가",
+              "seminar": "1",
+              "sports": "0",
+              "sauna": "1",
+              "beauty": "0",
+              "beverage": "1",
+              "karaoke": "0",
+              "barbecue": "0",
+              "campfire": "0",
+              "bicycle": "0",
+              "fitness": "1",
+              "publicpc": "0",
+              "publicbath": "0",
+              "subfacility": "세미나실 / 휘트니스센터 / 사우나실",
+              "foodplace": "",
+              "reservationurl": "",
+              "pickup": "",
+              "infocenterlodging": "064-752-8222",
+              "parkinglodging": "가능",
+              "reservationlodging": "",
+              "scalelodging": "",
+              "accomcountlodging": ""
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "143036": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "143036",
+              "contenttypeid": "32",
+              "roomcount": "138실",
+              "roomtype": "헤리티지 스마트 싱글 / 헤리티지 에센셜 더블 / 헤리티지 에센셜 트윈 등",
+              "refundregulation": "",
+              "checkintime": "15:00",
+              "checkouttime": "11:00",
+              "chkcooking": "불가능",
+              "seminar": "0",
+              "sports": "0",
+              "sauna": "0",
+              "beauty": "0",
+              "beverage": "0",
+              "karaoke": "0",
+              "barbecue": "0",
+              "campfire": "0",
+              "bicycle": "0",
+              "fitness": "0",
+              "publicpc": "0",
+              "publicbath": "0",
+              "subfacility": "세미나실",
+              "foodplace": "",
+              "reservationurl": "",
+              "pickup": "",
+              "infocenterlodging": "064-757-7111",
+              "parkinglodging": "가능",
+              "reservationlodging": "",
+              "scalelodging": "",
+              "accomcountlodging": ""
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "993261": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "993261",
+              "contenttypeid": "38",
+              "saleitem": "축산물 / 건어물 / 과일 / 야채 / 잡화 등",
+              "saleitemcost": "",
+              "fairday": "",
+              "opendateshopping": "",
+              "shopguide": "",
+              "culturecenter": "",
+              "restroom": "있음",
+              "infocentershopping": "064-758-8387",
+              "scaleshopping": "",
+              "restdateshopping": "매주 토요일, 일요일<br>※ 점포별 상이함",
+              "parkingshopping": "가능",
+              "chkbabycarriageshopping": "없음",
+              "chkpetshopping": "",
+              "chkcreditcardshopping": "없음",
+              "opentime": "09:00~20:00<br>※ 점포별 상이함"
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "1013246": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "1013246",
+              "contenttypeid": "38",
+              "saleitem": "농축수산물 / 과일 / 의류 / 잡화 등",
+              "saleitemcost": "",
+              "fairday": "",
+              "opendateshopping": "1945년",
+              "shopguide": "",
+              "culturecenter": "",
+              "restroom": "있음",
+              "infocentershopping": "064-752-3001",
+              "scaleshopping": "",
+              "restdateshopping": "연중무휴",
+              "parkingshopping": "가능",
+              "chkbabycarriageshopping": "",
+              "chkpetshopping": "",
+              "chkcreditcardshopping": "",
+              "opentime": "08:00~21:00"
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "1014672": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "1014672",
+              "contenttypeid": "38",
+              "saleitem": "의류 / 화장품 / 신발 / 악세사리 / 잡화 등",
+              "saleitemcost": "",
+              "fairday": "",
+              "opendateshopping": "1983-12-01",
+              "shopguide": "",
+              "culturecenter": "",
+              "restroom": "있음",
+              "infocentershopping": "064-752-8776",
+              "scaleshopping": "",
+              "restdateshopping": "점포 별로 상이함",
+              "parkingshopping": "가능",
+              "chkbabycarriageshopping": "",
+              "chkpetshopping": "",
+              "chkcreditcardshopping": "",
+              "opentime": "점포 별로 상이함"
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "1403482": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "1403482",
+              "contenttypeid": "32",
+              "roomcount": "350실",
+              "roomtype": "스탠다드 / 투룸패밀리 / 캐릭터룸 등",
+              "refundregulation": "",
+              "checkintime": "15:00",
+              "checkouttime": "12:00",
+              "chkcooking": "",
+              "seminar": "0",
+              "sports": "0",
+              "sauna": "0",
+              "beauty": "0",
+              "beverage": "0",
+              "karaoke": "0",
+              "barbecue": "0",
+              "campfire": "0",
+              "bicycle": "0",
+              "fitness": "0",
+              "publicpc": "0",
+              "publicbath": "0",
+              "subfacility": "피트니스 센터 / 테라피 / 연회장 등",
+              "foodplace": "",
+              "reservationurl": "",
+              "pickup": "유료(사전에 미리 전화로 예약)",
+              "infocenterlodging": "064-720-6000",
+              "parkinglodging": "가능",
+              "reservationlodging": "",
+              "scalelodging": "",
+              "accomcountlodging": ""
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "1871024": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "1871024",
+              "contenttypeid": "38",
+              "saleitem": "스포츠의류, 신발, 잡화, 가방, 의류 등",
+              "saleitemcost": "모든 매장별, 품목별 상이",
+              "fairday": "",
+              "opendateshopping": "",
+              "shopguide": "",
+              "culturecenter": "",
+              "restroom": "있음",
+              "infocentershopping": "064-723-1510",
+              "scaleshopping": "약  450개 점포",
+              "restdateshopping": "연중무휴 (매장마다 상이)",
+              "parkingshopping": "가능",
+              "chkbabycarriageshopping": "가능",
+              "chkpetshopping": "",
+              "chkcreditcardshopping": "가능",
+              "opentime": "06:00~22:00"
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "2031663": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "2031663",
+              "contenttypeid": "14",
+              "scale": "",
+              "usefee": "무료",
+              "discountinfo": "",
+              "spendtime": "",
+              "parkingfee": "무료",
+              "infocenterculture": "064-759-6090",
+              "accomcountculture": "",
+              "usetimeculture": "09:00~18:00",
+              "restdateculture": "매주 월요일 (단, 월요일이 공휴일일 경우 그 다음 평일 휴관) / 1월 1일 / 설·추석 당일",
+              "parkingculture": "",
+              "chkbabycarriageculture": "없음",
+              "chkpetculture": "",
+              "chkcreditcardculture": ""
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "2411625": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "2411625",
+              "contenttypeid": "32",
+              "roomcount": "327실",
+              "roomtype": "스탠다드 패밀리더블 / 슈페리어 더블 / 슈페리어 트윈 등",
+              "refundregulation": "",
+              "checkintime": "15:00",
+              "checkouttime": "12:00",
+              "chkcooking": "불가능",
+              "seminar": "0",
+              "sports": "0",
+              "sauna": "0",
+              "beauty": "0",
+              "beverage": "0",
+              "karaoke": "0",
+              "barbecue": "0",
+              "campfire": "0",
+              "bicycle": "0",
+              "fitness": "0",
+              "publicpc": "0",
+              "publicbath": "0",
+              "subfacility": "세미나실 / 비즈니스센터 / 휘트니스센터 / 야외수영장",
+              "foodplace": "",
+              "reservationurl": "",
+              "pickup": "",
+              "infocenterlodging": "02-777-5080",
+              "parkinglodging": "가능",
+              "reservationlodging": "",
+              "scalelodging": "",
+              "accomcountlodging": ""
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "2414812": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "2414812",
+              "contenttypeid": "12",
+              "heritage1": "0",
+              "heritage2": "0",
+              "heritage3": "0",
+              "infocenter": "제주시 공원녹지과 064-728-3601~4",
+              "opendate": "",
+              "restdate": "연중무휴",
+              "expguide": "",
+              "expagerange": "",
+              "accomcount": "",
+              "useseason": "",
+              "usetime": "상시 개방",
+              "parking": "가능",
+              "chkbabycarriage": "",
+              "chkpet": "",
+              "chkcreditcard": ""
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "2737330": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "2737330",
+              "contenttypeid": "38",
+              "saleitem": "생선회 / 옥돔 / 갈치 / 젓갈 / 건어물 등",
+              "saleitemcost": "",
+              "fairday": "",
+              "opendateshopping": "연중무휴",
+              "shopguide": "",
+              "culturecenter": "",
+              "restroom": "있음",
+              "infocentershopping": "064-752-8959",
+              "scaleshopping": "",
+              "restdateshopping": "점포별로 상이함",
+              "parkingshopping": "가능요금 (최초 30분 무료 / 이후 15분당 추가 요금 500원 씩 발생)",
+              "chkbabycarriageshopping": "없음",
+              "chkpetshopping": "",
+              "chkcreditcardshopping": "가능",
+              "opentime": "점포별로 상이함"
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "2788436": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "2788436",
+              "contenttypeid": "12",
+              "heritage1": "0",
+              "heritage2": "0",
+              "heritage3": "0",
+              "infocenter": "제주관광정보센터 064-740-6000",
+              "opendate": "",
+              "restdate": "연중무휴",
+              "expguide": "",
+              "expagerange": "",
+              "accomcount": "",
+              "useseason": "",
+              "usetime": "상시 개방",
+              "parking": "가능",
+              "chkbabycarriage": "없음",
+              "chkpet": "",
+              "chkcreditcard": ""
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "2852695": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "2852695",
+              "contenttypeid": "14",
+              "scale": "",
+              "usefee": "무료",
+              "discountinfo": "",
+              "spendtime": "",
+              "parkingfee": "무료",
+              "infocenterculture": "064-800-9331",
+              "accomcountculture": "",
+              "usetimeculture": "[전시실]10:00~18:00 (입장 마감 17:30)[3층/4층]09:30~18:00",
+              "restdateculture": "매주 월요일 / 법정공휴일 / 노동절(5월 1일)",
+              "parkingculture": "",
+              "chkbabycarriageculture": "",
+              "chkpetculture": "",
+              "chkcreditcardculture": ""
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "2860687": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "2860687",
+              "contenttypeid": "38",
+              "saleitem": "제주특산물 / 수산물 / 농산물 / 잡화 등",
+              "saleitemcost": "",
+              "fairday": "",
+              "opendateshopping": "",
+              "shopguide": "",
+              "culturecenter": "",
+              "restroom": "있음",
+              "infocentershopping": "064-722-5109",
+              "scaleshopping": "",
+              "restdateshopping": "점포별로 상이함",
+              "parkingshopping": "가능요금 (최초 30분 무료 / 이후 15분당 추가 요금 500원 씩 발생)",
+              "chkbabycarriageshopping": "",
+              "chkpetshopping": "",
+              "chkcreditcardshopping": "",
+              "opentime": "점포별로 상이함"
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "2912717": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "2912717",
+              "contenttypeid": "38",
+              "saleitem": "의류",
+              "saleitemcost": "",
+              "fairday": "월-일요일",
+              "opendateshopping": "",
+              "shopguide": "",
+              "culturecenter": "",
+              "restroom": "있음",
+              "infocentershopping": "064-757-1583",
+              "scaleshopping": "",
+              "restdateshopping": "명절",
+              "parkingshopping": "가능",
+              "chkbabycarriageshopping": "",
+              "chkpetshopping": "",
+              "chkcreditcardshopping": "가능",
+              "opentime": "10:30-21:30"
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  }
+}

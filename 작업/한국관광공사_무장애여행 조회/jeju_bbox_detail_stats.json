@@ -1,0 +1,52 @@
+{
+  "service": "KorWithService2",
+  "bbox": {
+    "lng_min": 126.5135625,
+    "lng_max": 126.5363125,
+    "lat_min": 33.5040625,
+    "lat_max": 33.5213125
+  },
+  "counts": {
+    "list_jeju": 199,
+    "bbox": 23,
+    "tour_content": 23,
+    "tour_detailInfo2_repeat_rows": 18,
+    "tour_detailInfo2_room_rows": 20,
+    "tour_detailImage2_rows": 164,
+    "by_type": {
+      "관광지": 5,
+      "문화시설": 6,
+      "쇼핑": 7,
+      "숙박": 5
+    },
+    "intro_by_type": {
+      "관광지": 5,
+      "문화시설": 6,
+      "행사/공연/축제": 0,
+      "레포츠": 0,
+      "숙박": 5,
+      "쇼핑": 7,
+      "음식점": 0
+    },
+    "note": "detailWithTour2→with_*. 이미지·여행코스 CSV 미생성(국문과 동일)."
+  },
+  "apis": {
+    "detailCommon2": {
+      "ok": 23
+    },
+    "detailIntro2": {
+      "ok": 23
+    },
+    "detailInfo2": {
+      "ok": 14,
+      "empty": 9
+    },
+    "detailImage2": {
+      "ok": 20,
+      "empty": 3
+    },
+    "detailWithTour2": {
+      "ok": 23
+    }
+  }
+}

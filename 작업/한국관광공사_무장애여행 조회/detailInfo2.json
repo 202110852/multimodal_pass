@@ -1,0 +1,1410 @@
+{
+  "126460": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "126460",
+              "contenttypeid": "12",
+              "serialnum": "1",
+              "infoname": "입장료",
+              "infotext": "무료",
+              "fldgubun": "1"
+            },
+            {
+              "contentid": "126460",
+              "contenttypeid": "12",
+              "serialnum": "5",
+              "infoname": "화장실",
+              "infotext": "있음",
+              "fldgubun": "2"
+            }
+          ]
+        },
+        "numOfRows": 2,
+        "pageNo": 1,
+        "totalCount": 2
+      }
+    }
+  },
+  "127744": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "127744",
+              "contenttypeid": "12",
+              "serialnum": "1",
+              "infoname": "입장료",
+              "infotext": "[개인]\n- 성인 4,000원\n- 청소년/군인 2,500원\n- 어린이/경로/장애인/국가유공자 1,500원\n[단체 (10인 이상)]\n- 성인 3,000원\n- 청소년/군인 2,000원\n- 어린이/경로/장애인/국가유공자 1,000원",
+              "fldgubun": "1"
+            },
+            {
+              "contentid": "127744",
+              "contenttypeid": "12",
+              "serialnum": "4",
+              "infoname": "주차요금",
+              "infotext": "[주간 (09:00~18:00)]- 최초 5분 : 무료- 5분~30분 이내 1,000원- 15분 초과 500원- 1일 장기 주차 10,000원[야간 (18:00~09:00)]- 최초 5분 : 무료- 5분~30분 이내 500원- 15분 초과 250원- 1일 장기 주차 10,000원※ 관람객은 1시간 30분 무료",
+              "fldgubun": "1"
+            },
+            {
+              "contentid": "127744",
+              "contenttypeid": "12",
+              "serialnum": "5",
+              "infoname": "화장실",
+              "infotext": "있음",
+              "fldgubun": "2"
+            },
+            {
+              "contentid": "127744",
+              "contenttypeid": "12",
+              "serialnum": "9",
+              "infoname": "외국어안내서비스",
+              "infotext": "애니메이션 영상, 팜플렛 (영어, 일어, 중국어)",
+              "fldgubun": "3"
+            }
+          ]
+        },
+        "numOfRows": 4,
+        "pageNo": 1,
+        "totalCount": 4
+      }
+    }
+  },
+  "128641": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "128641",
+              "contenttypeid": "12",
+              "serialnum": "1",
+              "infoname": "입장료",
+              "infotext": "[개인]- 일반 1,500원- 청소년 및 군인 800원- 어린이 400원[단체(10인 이상)]- 어른 1,000원- 청소년 및 군인 600원- 어린이 300원※ 야간 개장 무료 입장 (5월~10월)",
+              "fldgubun": "1"
+            },
+            {
+              "contentid": "128641",
+              "contenttypeid": "12",
+              "serialnum": "4",
+              "infoname": "주차요금",
+              "infotext": "무료",
+              "fldgubun": "1"
+            },
+            {
+              "contentid": "128641",
+              "contenttypeid": "12",
+              "serialnum": "5",
+              "infoname": "화장실",
+              "infotext": "있음",
+              "fldgubun": "2"
+            },
+            {
+              "contentid": "128641",
+              "contenttypeid": "12",
+              "serialnum": "8",
+              "infoname": "한국어안내서비스",
+              "infotext": "사전예약시 문화해설사 안내 가능",
+              "fldgubun": "3"
+            }
+          ]
+        },
+        "numOfRows": 4,
+        "pageNo": 1,
+        "totalCount": 4
+      }
+    }
+  },
+  "129894": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": "",
+        "numOfRows": 0,
+        "pageNo": 1,
+        "totalCount": 0
+      }
+    }
+  },
+  "129895": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": "",
+        "numOfRows": 0,
+        "pageNo": 1,
+        "totalCount": 0
+      }
+    }
+  },
+  "130036": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": "",
+        "numOfRows": 0,
+        "pageNo": 1,
+        "totalCount": 0
+      }
+    }
+  },
+  "130745": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "130745",
+              "contenttypeid": "14",
+              "serialnum": "0",
+              "infoname": "소장품현황",
+              "infotext": "북한 특수자료 / 북한물품",
+              "fldgubun": "1"
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "142943": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "142943",
+              "contenttypeid": "32",
+              "roomcode": "",
+              "roomtitle": "스탠다드",
+              "roomsize1": "9",
+              "roomcount": "4",
+              "roombasecount": "2",
+              "roommaxcount": "0",
+              "roomoffseasonminfee1": "0",
+              "roomoffseasonminfee2": "0",
+              "roompeakseasonminfee1": "0",
+              "roompeakseasonminfee2": "0",
+              "roomintro": "※ 객실 가격 전화문의 요망",
+              "roombathfacility": "Y",
+              "roombath": "",
+              "roomhometheater": "",
+              "roomaircondition": "Y",
+              "roomtv": "Y",
+              "roompc": "",
+              "roomcable": "Y",
+              "roominternet": "Y",
+              "roomrefrigerator": "Y",
+              "roomtoiletries": "Y",
+              "roomsofa": "",
+              "roomcook": "",
+              "roomtable": "",
+              "roomhairdryer": "Y",
+              "roomsize2": "29",
+              "roomimg1": "",
+              "roomimg1alt": "",
+              "cpyrhtDivCd1": "",
+              "roomimg2": "",
+              "roomimg2alt": "",
+              "cpyrhtDivCd2": "",
+              "roomimg3": "",
+              "roomimg3alt": "",
+              "cpyrhtDivCd3": "",
+              "roomimg4": "",
+              "roomimg4alt": "",
+              "cpyrhtDivCd4": "",
+              "roomimg5": "",
+              "roomimg5alt": "",
+              "cpyrhtDivCd5": ""
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "142972": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "142972",
+              "contenttypeid": "32",
+              "roomcode": "",
+              "roomtitle": "슈피리어 트윈",
+              "roomsize1": "0",
+              "roomcount": "0",
+              "roombasecount": "2",
+              "roommaxcount": "2",
+              "roomoffseasonminfee1": "84000",
+              "roomoffseasonminfee2": "84000",
+              "roompeakseasonminfee1": "100000",
+              "roompeakseasonminfee2": "100000",
+              "roomintro": "※ 객실 요금은 홈페이지 참조 또는 전화 문의 요망<br>※ 위 정보는 2026년 03월에 작성된 정보로 해당 숙박시설 이용 요금이 수시로 변동됨에 따라 이용요금 및 기타 자세한 사항은 홈페이지 참조 요망",
+              "roombathfacility": "Y",
+              "roombath": "Y",
+              "roomhometheater": "",
+              "roomaircondition": "Y",
+              "roomtv": "Y",
+              "roompc": "",
+              "roomcable": "",
+              "roominternet": "Y",
+              "roomrefrigerator": "Y",
+              "roomtoiletries": "",
+              "roomsofa": "",
+              "roomcook": "",
+              "roomtable": "Y",
+              "roomhairdryer": "Y",
+              "roomsize2": "26",
+              "roomimg1": "http://tong.visitkorea.or.kr/cms/resource/18/3522918_1.jpg",
+              "roomimg1alt": "제주 오리엔탈 호텔_슈피리어 트윈 (1)",
+              "cpyrhtDivCd1": "Type3",
+              "roomimg2": "http://tong.visitkorea.or.kr/cms/resource/19/3522919_1.jpg",
+              "roomimg2alt": "제주 오리엔탈 호텔_슈피리어 트윈 (2)",
+              "cpyrhtDivCd2": "Type3",
+              "roomimg3": "",
+              "roomimg3alt": "",
+              "cpyrhtDivCd3": "",
+              "roomimg4": "",
+              "roomimg4alt": "",
+              "cpyrhtDivCd4": "",
+              "roomimg5": "",
+              "roomimg5alt": "",
+              "cpyrhtDivCd5": ""
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "143036": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "143036",
+              "contenttypeid": "32",
+              "roomcode": "",
+              "roomtitle": "헤리티지 스마트 싱글",
+              "roomsize1": "0",
+              "roomcount": "0",
+              "roombasecount": "1",
+              "roommaxcount": "1",
+              "roomoffseasonminfee1": "0",
+              "roomoffseasonminfee2": "0",
+              "roompeakseasonminfee1": "0",
+              "roompeakseasonminfee2": "0",
+              "roomintro": "※ 객실요금은 홈페이지 참조 또는 전화 문의 요망",
+              "roombathfacility": "Y",
+              "roombath": "",
+              "roomhometheater": "",
+              "roomaircondition": "Y",
+              "roomtv": "Y",
+              "roompc": "",
+              "roomcable": "Y",
+              "roominternet": "Y",
+              "roomrefrigerator": "Y",
+              "roomtoiletries": "",
+              "roomsofa": "Y",
+              "roomcook": "",
+              "roomtable": "Y",
+              "roomhairdryer": "Y",
+              "roomsize2": "18",
+              "roomimg1": "http://tong.visitkorea.or.kr/cms/resource/70/4077870_1.png",
+              "roomimg1alt": "제주_스타즈호텔 헤리티지_헤리티지 스마트 싱글 (1).png",
+              "cpyrhtDivCd1": "Type3",
+              "roomimg2": "http://tong.visitkorea.or.kr/cms/resource/71/4077871_1.png",
+              "roomimg2alt": "제주_스타즈호텔 헤리티지_헤리티지 스마트 싱글 (2).png",
+              "cpyrhtDivCd2": "Type3",
+              "roomimg3": "http://tong.visitkorea.or.kr/cms/resource/72/4077872_1.png",
+              "roomimg3alt": "제주_스타즈호텔 헤리티지_헤리티지 스마트 싱글 (3).png",
+              "cpyrhtDivCd3": "Type3",
+              "roomimg4": "",
+              "roomimg4alt": "",
+              "cpyrhtDivCd4": "",
+              "roomimg5": "",
+              "roomimg5alt": "",
+              "cpyrhtDivCd5": ""
+            },
+            {
+              "contentid": "143036",
+              "contenttypeid": "32",
+              "roomcode": "",
+              "roomtitle": "헤리티지 에센셜 더블",
+              "roomsize1": "0",
+              "roomcount": "21",
+              "roombasecount": "2",
+              "roommaxcount": "2",
+              "roomoffseasonminfee1": "80000",
+              "roomoffseasonminfee2": "80000",
+              "roompeakseasonminfee1": "120000",
+              "roompeakseasonminfee2": "120000",
+              "roomintro": "※ 위 정보는 2026년 06월에 작성된 정보로 해당 숙박시설 이용 요금이 수시로 변동됨에 따라 이용요금 및 기타 자세한 사항은 홈페이지 참조 요망",
+              "roombathfacility": "Y",
+              "roombath": "",
+              "roomhometheater": "",
+              "roomaircondition": "Y",
+              "roomtv": "Y",
+              "roompc": "",
+              "roomcable": "Y",
+              "roominternet": "Y",
+              "roomrefrigerator": "Y",
+              "roomtoiletries": "",
+              "roomsofa": "Y",
+              "roomcook": "",
+              "roomtable": "Y",
+              "roomhairdryer": "Y",
+              "roomsize2": "22",
+              "roomimg1": "http://tong.visitkorea.or.kr/cms/resource/83/4077883_1.png",
+              "roomimg1alt": "제주_스타즈호텔 헤리티지_헤리티지 에센셜 더블 (1).png",
+              "cpyrhtDivCd1": "Type3",
+              "roomimg2": "http://tong.visitkorea.or.kr/cms/resource/84/4077884_1.png",
+              "roomimg2alt": "제주_스타즈호텔 헤리티지_헤리티지 에센셜 더블 (2).png",
+              "cpyrhtDivCd2": "Type3",
+              "roomimg3": "",
+              "roomimg3alt": "",
+              "cpyrhtDivCd3": "",
+              "roomimg4": "",
+              "roomimg4alt": "",
+              "cpyrhtDivCd4": "",
+              "roomimg5": "",
+              "roomimg5alt": "",
+              "cpyrhtDivCd5": ""
+            },
+            {
+              "contentid": "143036",
+              "contenttypeid": "32",
+              "roomcode": "",
+              "roomtitle": "헤리티지 에센셜 트윈",
+              "roomsize1": "0",
+              "roomcount": "50",
+              "roombasecount": "2",
+              "roommaxcount": "2",
+              "roomoffseasonminfee1": "80000",
+              "roomoffseasonminfee2": "80000",
+              "roompeakseasonminfee1": "120000",
+              "roompeakseasonminfee2": "120000",
+              "roomintro": "※ 객실 가격 전화문의 요망",
+              "roombathfacility": "Y",
+              "roombath": "",
+              "roomhometheater": "",
+              "roomaircondition": "Y",
+              "roomtv": "Y",
+              "roompc": "",
+              "roomcable": "Y",
+              "roominternet": "Y",
+              "roomrefrigerator": "Y",
+              "roomtoiletries": "",
+              "roomsofa": "Y",
+              "roomcook": "",
+              "roomtable": "Y",
+              "roomhairdryer": "Y",
+              "roomsize2": "22",
+              "roomimg1": "http://tong.visitkorea.or.kr/cms/resource/81/4077881_1.png",
+              "roomimg1alt": "제주_스타즈호텔 헤리티지_헤리티지 에센셜 트윈 (1).png",
+              "cpyrhtDivCd1": "Type3",
+              "roomimg2": "http://tong.visitkorea.or.kr/cms/resource/82/4077882_1.png",
+              "roomimg2alt": "제주_스타즈호텔 헤리티지_헤리티지 에센셜 트윈 (2).png",
+              "cpyrhtDivCd2": "Type3",
+              "roomimg3": "",
+              "roomimg3alt": "",
+              "cpyrhtDivCd3": "",
+              "roomimg4": "",
+              "roomimg4alt": "",
+              "cpyrhtDivCd4": "",
+              "roomimg5": "",
+              "roomimg5alt": "",
+              "cpyrhtDivCd5": ""
+            },
+            {
+              "contentid": "143036",
+              "contenttypeid": "32",
+              "roomcode": "",
+              "roomtitle": "헤리티지 에센셜 온돌",
+              "roomsize1": "0",
+              "roomcount": "14",
+              "roombasecount": "2",
+              "roommaxcount": "2",
+              "roomoffseasonminfee1": "80000",
+              "roomoffseasonminfee2": "80000",
+              "roompeakseasonminfee1": "120000",
+              "roompeakseasonminfee2": "120000",
+              "roomintro": "※ 위 정보는 2026년 06월에 작성된 정보로 해당 숙박시설 이용 요금이 수시로 변동됨에 따라 이용요금 및 기타 자세한 사항은 홈페이지 참조 요망",
+              "roombathfacility": "Y",
+              "roombath": "",
+              "roomhometheater": "",
+              "roomaircondition": "Y",
+              "roomtv": "Y",
+              "roompc": "",
+              "roomcable": "Y",
+              "roominternet": "Y",
+              "roomrefrigerator": "Y",
+              "roomtoiletries": "",
+              "roomsofa": "",
+              "roomcook": "",
+              "roomtable": "",
+              "roomhairdryer": "Y",
+              "roomsize2": "22",
+              "roomimg1": "http://tong.visitkorea.or.kr/cms/resource/79/4077879_1.png",
+              "roomimg1alt": "제주_스타즈호텔 헤리티지_헤리티지 온돌 (2).png",
+              "cpyrhtDivCd1": "Type3",
+              "roomimg2": "http://tong.visitkorea.or.kr/cms/resource/78/4077878_1.png",
+              "roomimg2alt": "제주_스타즈호텔 헤리티지_헤리티지 온돌 (1).png",
+              "cpyrhtDivCd2": "Type3",
+              "roomimg3": "http://tong.visitkorea.or.kr/cms/resource/80/4077880_1.png",
+              "roomimg3alt": "제주_스타즈호텔 헤리티지_헤리티지 온돌 (3).png",
+              "cpyrhtDivCd3": "Type3",
+              "roomimg4": "",
+              "roomimg4alt": "",
+              "cpyrhtDivCd4": "",
+              "roomimg5": "",
+              "roomimg5alt": "",
+              "cpyrhtDivCd5": ""
+            },
+            {
+              "contentid": "143036",
+              "contenttypeid": "32",
+              "roomcode": "",
+              "roomtitle": "프레스티지 노블 트윈",
+              "roomsize1": "0",
+              "roomcount": "12",
+              "roombasecount": "3",
+              "roommaxcount": "3",
+              "roomoffseasonminfee1": "95000",
+              "roomoffseasonminfee2": "95000",
+              "roompeakseasonminfee1": "140000",
+              "roompeakseasonminfee2": "140000",
+              "roomintro": "※ 위 정보는 2026년 06월에 작성된 정보로 해당 숙박시설 이용 요금이 수시로 변동됨에 따라 이용요금 및 기타 자세한 사항은 홈페이지 참조 요망",
+              "roombathfacility": "Y",
+              "roombath": "",
+              "roomhometheater": "",
+              "roomaircondition": "Y",
+              "roomtv": "Y",
+              "roompc": "",
+              "roomcable": "Y",
+              "roominternet": "Y",
+              "roomrefrigerator": "Y",
+              "roomtoiletries": "",
+              "roomsofa": "Y",
+              "roomcook": "",
+              "roomtable": "Y",
+              "roomhairdryer": "Y",
+              "roomsize2": "24",
+              "roomimg1": "http://tong.visitkorea.or.kr/cms/resource/64/4077864_1.png",
+              "roomimg1alt": "제주_스타즈호텔 헤리티지_프레스티지 노블 트윈 (3).png",
+              "cpyrhtDivCd1": "Type3",
+              "roomimg2": "http://tong.visitkorea.or.kr/cms/resource/62/4077862_1.png",
+              "roomimg2alt": "제주_스타즈호텔 헤리티지_프레스티지 노블 트윈 (1).png",
+              "cpyrhtDivCd2": "Type3",
+              "roomimg3": "http://tong.visitkorea.or.kr/cms/resource/63/4077863_1.png",
+              "roomimg3alt": "제주_스타즈호텔 헤리티지_프레스티지 노블 트윈 (2).png",
+              "cpyrhtDivCd3": "Type3",
+              "roomimg4": "",
+              "roomimg4alt": "",
+              "cpyrhtDivCd4": "",
+              "roomimg5": "",
+              "roomimg5alt": "",
+              "cpyrhtDivCd5": ""
+            },
+            {
+              "contentid": "143036",
+              "contenttypeid": "32",
+              "roomcode": "",
+              "roomtitle": "프레스티지 모먼트 트리플",
+              "roomsize1": "0",
+              "roomcount": "5",
+              "roombasecount": "3",
+              "roommaxcount": "3",
+              "roomoffseasonminfee1": "120000",
+              "roomoffseasonminfee2": "120000",
+              "roompeakseasonminfee1": "160000",
+              "roompeakseasonminfee2": "160000",
+              "roomintro": "※ 위 정보는 2026년 06월에 작성된 정보로 해당 숙박시설 이용 요금이 수시로 변동됨에 따라 이용요금 및 기타 자세한 사항은 홈페이지 참조 요망",
+              "roombathfacility": "Y",
+              "roombath": "",
+              "roomhometheater": "",
+              "roomaircondition": "Y",
+              "roomtv": "Y",
+              "roompc": "",
+              "roomcable": "Y",
+              "roominternet": "Y",
+              "roomrefrigerator": "Y",
+              "roomtoiletries": "",
+              "roomsofa": "Y",
+              "roomcook": "",
+              "roomtable": "Y",
+              "roomhairdryer": "Y",
+              "roomsize2": "27",
+              "roomimg1": "http://tong.visitkorea.or.kr/cms/resource/59/4077859_1.png",
+              "roomimg1alt": "제주_스타즈호텔 헤리티지_프레스티지 모먼트 트리플 (1).png",
+              "cpyrhtDivCd1": "Type3",
+              "roomimg2": "http://tong.visitkorea.or.kr/cms/resource/61/4077861_1.png",
+              "roomimg2alt": "제주_스타즈호텔 헤리티지_프레스티지 모먼트 트리플 (3).png",
+              "cpyrhtDivCd2": "Type3",
+              "roomimg3": "http://tong.visitkorea.or.kr/cms/resource/60/4077860_1.png",
+              "roomimg3alt": "제주_스타즈호텔 헤리티지_프레스티지 모먼트 트리플 (2).png",
+              "cpyrhtDivCd3": "Type3",
+              "roomimg4": "",
+              "roomimg4alt": "",
+              "cpyrhtDivCd4": "",
+              "roomimg5": "",
+              "roomimg5alt": "",
+              "cpyrhtDivCd5": ""
+            },
+            {
+              "contentid": "143036",
+              "contenttypeid": "32",
+              "roomcode": "",
+              "roomtitle": "프리빌리지 시그니처 패밀리",
+              "roomsize1": "0",
+              "roomcount": "0",
+              "roombasecount": "4",
+              "roommaxcount": "4",
+              "roomoffseasonminfee1": "0",
+              "roomoffseasonminfee2": "0",
+              "roompeakseasonminfee1": "0",
+              "roompeakseasonminfee2": "0",
+              "roomintro": "※ 객실요금은 홈페이지 참조 또는 전화 문의 요망",
+              "roombathfacility": "Y",
+              "roombath": "",
+              "roomhometheater": "",
+              "roomaircondition": "Y",
+              "roomtv": "Y",
+              "roompc": "",
+              "roomcable": "Y",
+              "roominternet": "Y",
+              "roomrefrigerator": "Y",
+              "roomtoiletries": "",
+              "roomsofa": "Y",
+              "roomcook": "",
+              "roomtable": "Y",
+              "roomhairdryer": "Y",
+              "roomsize2": "44",
+              "roomimg1": "http://tong.visitkorea.or.kr/cms/resource/75/4077875_1.png",
+              "roomimg1alt": "제주_스타즈호텔 헤리티지_프리빌리지 시그니처 패밀리 (3).png",
+              "cpyrhtDivCd1": "Type3",
+              "roomimg2": "http://tong.visitkorea.or.kr/cms/resource/74/4077874_1.png",
+              "roomimg2alt": "제주_스타즈호텔 헤리티지_프리빌리지 시그니처 패밀리 (2).png",
+              "cpyrhtDivCd2": "Type3",
+              "roomimg3": "http://tong.visitkorea.or.kr/cms/resource/77/4077877_1.png",
+              "roomimg3alt": "제주_스타즈호텔 헤리티지_프리빌리지 시그니처 패밀리 (5).png",
+              "cpyrhtDivCd3": "Type3",
+              "roomimg4": "http://tong.visitkorea.or.kr/cms/resource/76/4077876_1.png",
+              "roomimg4alt": "제주_스타즈호텔 헤리티지_프리빌리지 시그니처 패밀리 (4).png",
+              "cpyrhtDivCd4": "Type3",
+              "roomimg5": "http://tong.visitkorea.or.kr/cms/resource/73/4077873_1.png",
+              "roomimg5alt": "제주_스타즈호텔 헤리티지_프리빌리지 시그니처 패밀리 (1).png",
+              "cpyrhtDivCd5": "Type3"
+            },
+            {
+              "contentid": "143036",
+              "contenttypeid": "32",
+              "roomcode": "",
+              "roomtitle": "프리빌리지 시그니처 프라임",
+              "roomsize1": "0",
+              "roomcount": "0",
+              "roombasecount": "3",
+              "roommaxcount": "3",
+              "roomoffseasonminfee1": "0",
+              "roomoffseasonminfee2": "0",
+              "roompeakseasonminfee1": "0",
+              "roompeakseasonminfee2": "0",
+              "roomintro": "※ 객실요금은 홈페이지 참조 또는 전화 문의 요망",
+              "roombathfacility": "Y",
+              "roombath": "",
+              "roomhometheater": "",
+              "roomaircondition": "Y",
+              "roomtv": "Y",
+              "roompc": "",
+              "roomcable": "Y",
+              "roominternet": "Y",
+              "roomrefrigerator": "Y",
+              "roomtoiletries": "",
+              "roomsofa": "Y",
+              "roomcook": "",
+              "roomtable": "Y",
+              "roomhairdryer": "Y",
+              "roomsize2": "43",
+              "roomimg1": "http://tong.visitkorea.or.kr/cms/resource/57/4077857_1.png",
+              "roomimg1alt": "제주_스타즈호텔 헤리티지_프리빌리지 시그니처 프라임 (2).png",
+              "cpyrhtDivCd1": "Type3",
+              "roomimg2": "http://tong.visitkorea.or.kr/cms/resource/58/4077858_1.png",
+              "roomimg2alt": "제주_스타즈호텔 헤리티지_프리빌리지 시그니처 프라임 (3).png",
+              "cpyrhtDivCd2": "Type3",
+              "roomimg3": "http://tong.visitkorea.or.kr/cms/resource/56/4077856_1.png",
+              "roomimg3alt": "제주_스타즈호텔 헤리티지_프리빌리지 시그니처 프라임 (1).png",
+              "cpyrhtDivCd3": "Type3",
+              "roomimg4": "",
+              "roomimg4alt": "",
+              "cpyrhtDivCd4": "",
+              "roomimg5": "",
+              "roomimg5alt": "",
+              "cpyrhtDivCd5": ""
+            }
+          ]
+        },
+        "numOfRows": 8,
+        "pageNo": 1,
+        "totalCount": 8
+      }
+    }
+  },
+  "993261": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": "",
+        "numOfRows": 0,
+        "pageNo": 1,
+        "totalCount": 0
+      }
+    }
+  },
+  "1013246": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": "",
+        "numOfRows": 0,
+        "pageNo": 1,
+        "totalCount": 0
+      }
+    }
+  },
+  "1014672": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": "",
+        "numOfRows": 0,
+        "pageNo": 1,
+        "totalCount": 0
+      }
+    }
+  },
+  "1403482": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "1403482",
+              "contenttypeid": "32",
+              "roomcode": "",
+              "roomtitle": "프레지덴셜 스위트",
+              "roomsize1": "44",
+              "roomcount": "1",
+              "roombasecount": "2",
+              "roommaxcount": "0",
+              "roomoffseasonminfee1": "0",
+              "roomoffseasonminfee2": "0",
+              "roompeakseasonminfee1": "0",
+              "roompeakseasonminfee2": "0",
+              "roomintro": "※ 객실 가격 전화문의 요망 ",
+              "roombathfacility": "Y",
+              "roombath": "Y",
+              "roomhometheater": "Y",
+              "roomaircondition": "Y",
+              "roomtv": "Y",
+              "roompc": "",
+              "roomcable": "Y",
+              "roominternet": "Y",
+              "roomrefrigerator": "Y",
+              "roomtoiletries": "Y",
+              "roomsofa": "Y",
+              "roomcook": "",
+              "roomtable": "Y",
+              "roomhairdryer": "Y",
+              "roomsize2": "147.5",
+              "roomimg1": "",
+              "roomimg1alt": "",
+              "cpyrhtDivCd1": "",
+              "roomimg2": "",
+              "roomimg2alt": "",
+              "cpyrhtDivCd2": "",
+              "roomimg3": "",
+              "roomimg3alt": "",
+              "cpyrhtDivCd3": "",
+              "roomimg4": "",
+              "roomimg4alt": "",
+              "cpyrhtDivCd4": "",
+              "roomimg5": "",
+              "roomimg5alt": "",
+              "cpyrhtDivCd5": ""
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "1871024": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "1871024",
+              "contenttypeid": "38",
+              "serialnum": "0",
+              "infoname": "제조자 이름",
+              "infotext": "",
+              "fldgubun": "1"
+            },
+            {
+              "contentid": "1871024",
+              "contenttypeid": "38",
+              "serialnum": "1",
+              "infoname": "입점브랜드",
+              "infotext": "",
+              "fldgubun": "2"
+            }
+          ]
+        },
+        "numOfRows": 2,
+        "pageNo": 1,
+        "totalCount": 2
+      }
+    }
+  },
+  "2031663": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "2031663",
+              "contenttypeid": "14",
+              "serialnum": "9",
+              "infoname": "주차요금",
+              "infotext": "무료",
+              "fldgubun": "3"
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "2411625": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "2411625",
+              "contenttypeid": "32",
+              "roomcode": "",
+              "roomtitle": "스탠다드 트윈",
+              "roomsize1": "0",
+              "roomcount": "185",
+              "roombasecount": "2",
+              "roommaxcount": "3",
+              "roomoffseasonminfee1": "242000",
+              "roomoffseasonminfee2": "242000",
+              "roompeakseasonminfee1": "242000",
+              "roompeakseasonminfee2": "242000",
+              "roomintro": "※ 위 정보는 2026년 05월에 작성된 정보로 해당 숙박시설 이용 요금이 수시로 변동됨에 따라 이용요금 및 기타 자세한 사항은 홈페이지 참조 요망",
+              "roombathfacility": "Y",
+              "roombath": "",
+              "roomhometheater": "",
+              "roomaircondition": "Y",
+              "roomtv": "Y",
+              "roompc": "",
+              "roomcable": "Y",
+              "roominternet": "Y",
+              "roomrefrigerator": "Y",
+              "roomtoiletries": "",
+              "roomsofa": "Y",
+              "roomcook": "",
+              "roomtable": "Y",
+              "roomhairdryer": "",
+              "roomsize2": "26",
+              "roomimg1": "http://tong.visitkorea.or.kr/cms/resource/94/4065694_1.jpg",
+              "roomimg1alt": "제주_호텔리젠트마린 제주_스탠다드 트윈 (2).jpg",
+              "cpyrhtDivCd1": "Type3",
+              "roomimg2": "http://tong.visitkorea.or.kr/cms/resource/93/4065693_1.jpg",
+              "roomimg2alt": "제주_호텔리젠트마린 제주_스탠다드 트윈 (1).jpg",
+              "cpyrhtDivCd2": "Type3",
+              "roomimg3": "",
+              "roomimg3alt": "",
+              "cpyrhtDivCd3": "",
+              "roomimg4": "",
+              "roomimg4alt": "",
+              "cpyrhtDivCd4": "",
+              "roomimg5": "",
+              "roomimg5alt": "",
+              "cpyrhtDivCd5": ""
+            },
+            {
+              "contentid": "2411625",
+              "contenttypeid": "32",
+              "roomcode": "",
+              "roomtitle": "스탠다드 패밀리 트윈",
+              "roomsize1": "0",
+              "roomcount": "185",
+              "roombasecount": "2",
+              "roommaxcount": "3",
+              "roomoffseasonminfee1": "242000",
+              "roomoffseasonminfee2": "242000",
+              "roompeakseasonminfee1": "242000",
+              "roompeakseasonminfee2": "242001",
+              "roomintro": "※ 위 정보는 2026년 05월에 작성된 정보로 해당 숙박시설 이용 요금이 수시로 변동됨에 따라 이용요금 및 기타 자세한 사항은 홈페이지 참조 요망",
+              "roombathfacility": "Y",
+              "roombath": "",
+              "roomhometheater": "",
+              "roomaircondition": "Y",
+              "roomtv": "Y",
+              "roompc": "",
+              "roomcable": "",
+              "roominternet": "Y",
+              "roomrefrigerator": "Y",
+              "roomtoiletries": "Y",
+              "roomsofa": "Y",
+              "roomcook": "",
+              "roomtable": "Y",
+              "roomhairdryer": "Y",
+              "roomsize2": "26",
+              "roomimg1": "http://tong.visitkorea.or.kr/cms/resource/99/4065699_1.jpg",
+              "roomimg1alt": "제주_호텔리젠트마린 제주_스탠다드 패밀리트윈 (2).jpg",
+              "cpyrhtDivCd1": "Type3",
+              "roomimg2": "http://tong.visitkorea.or.kr/cms/resource/98/4065698_1.jpg",
+              "roomimg2alt": "제주_호텔리젠트마린 제주_스탠다드 패밀리트윈 (1).jpg",
+              "cpyrhtDivCd2": "Type3",
+              "roomimg3": "",
+              "roomimg3alt": "",
+              "cpyrhtDivCd3": "",
+              "roomimg4": "",
+              "roomimg4alt": "",
+              "cpyrhtDivCd4": "",
+              "roomimg5": "",
+              "roomimg5alt": "",
+              "cpyrhtDivCd5": ""
+            },
+            {
+              "contentid": "2411625",
+              "contenttypeid": "32",
+              "roomcode": "",
+              "roomtitle": "슈페리어 더블",
+              "roomsize1": "0",
+              "roomcount": "110",
+              "roombasecount": "2",
+              "roommaxcount": "3",
+              "roomoffseasonminfee1": "275000",
+              "roomoffseasonminfee2": "275000",
+              "roompeakseasonminfee1": "275000",
+              "roompeakseasonminfee2": "275000",
+              "roomintro": "※ 위 정보는 2026년 05월에 작성된 정보로 해당 숙박시설 이용 요금이 수시로 변동됨에 따라 이용요금 및 기타 자세한 사항은 홈페이지 참조 요망",
+              "roombathfacility": "Y",
+              "roombath": "Y",
+              "roomhometheater": "",
+              "roomaircondition": "Y",
+              "roomtv": "Y",
+              "roompc": "",
+              "roomcable": "Y",
+              "roominternet": "Y",
+              "roomrefrigerator": "Y",
+              "roomtoiletries": "",
+              "roomsofa": "Y",
+              "roomcook": "",
+              "roomtable": "Y",
+              "roomhairdryer": "Y",
+              "roomsize2": "26",
+              "roomimg1": "http://tong.visitkorea.or.kr/cms/resource/85/4065685_1.jpg",
+              "roomimg1alt": "제주_호텔리젠트마린 제주_슈페리어 더블 (2).jpg",
+              "cpyrhtDivCd1": "Type3",
+              "roomimg2": "http://tong.visitkorea.or.kr/cms/resource/84/4065684_1.jpg",
+              "roomimg2alt": "제주_호텔리젠트마린 제주_슈페리어 더블 (1).jpg",
+              "cpyrhtDivCd2": "Type3",
+              "roomimg3": "",
+              "roomimg3alt": "",
+              "cpyrhtDivCd3": "",
+              "roomimg4": "",
+              "roomimg4alt": "",
+              "cpyrhtDivCd4": "",
+              "roomimg5": "",
+              "roomimg5alt": "",
+              "cpyrhtDivCd5": ""
+            },
+            {
+              "contentid": "2411625",
+              "contenttypeid": "32",
+              "roomcode": "",
+              "roomtitle": "슈페리어 트윈",
+              "roomsize1": "0",
+              "roomcount": "110",
+              "roombasecount": "2",
+              "roommaxcount": "3",
+              "roomoffseasonminfee1": "275000",
+              "roomoffseasonminfee2": "275000",
+              "roompeakseasonminfee1": "275000",
+              "roompeakseasonminfee2": "275000",
+              "roomintro": "※ 위 정보는 2026년 05월에 작성된 정보로 해당 숙박시설 이용 요금이 수시로 변동됨에 따라 이용요금 및 기타 자세한 사항은 홈페이지 참조 요망",
+              "roombathfacility": "Y",
+              "roombath": "Y",
+              "roomhometheater": "",
+              "roomaircondition": "Y",
+              "roomtv": "Y",
+              "roompc": "",
+              "roomcable": "Y",
+              "roominternet": "Y",
+              "roomrefrigerator": "Y",
+              "roomtoiletries": "",
+              "roomsofa": "Y",
+              "roomcook": "",
+              "roomtable": "Y",
+              "roomhairdryer": "Y",
+              "roomsize2": "26",
+              "roomimg1": "http://tong.visitkorea.or.kr/cms/resource/87/4065687_1.jpg",
+              "roomimg1alt": "제주_호텔리젠트마린 제주_슈페리어 트윈 (2).jpg",
+              "cpyrhtDivCd1": "Type3",
+              "roomimg2": "http://tong.visitkorea.or.kr/cms/resource/86/4065686_1.jpg",
+              "roomimg2alt": "제주_호텔리젠트마린 제주_슈페리어 트윈 (1).jpg",
+              "cpyrhtDivCd2": "Type3",
+              "roomimg3": "",
+              "roomimg3alt": "",
+              "cpyrhtDivCd3": "",
+              "roomimg4": "",
+              "roomimg4alt": "",
+              "cpyrhtDivCd4": "",
+              "roomimg5": "",
+              "roomimg5alt": "",
+              "cpyrhtDivCd5": ""
+            },
+            {
+              "contentid": "2411625",
+              "contenttypeid": "32",
+              "roomcode": "",
+              "roomtitle": "슈페리어 패밀리 트윈",
+              "roomsize1": "0",
+              "roomcount": "110",
+              "roombasecount": "2",
+              "roommaxcount": "3",
+              "roomoffseasonminfee1": "275000",
+              "roomoffseasonminfee2": "275000",
+              "roompeakseasonminfee1": "275000",
+              "roompeakseasonminfee2": "275000",
+              "roomintro": "※ 위 정보는 2026년 05월에 작성된 정보로 해당 숙박시설 이용 요금이 수시로 변동됨에 따라 이용요금 및 기타 자세한 사항은 홈페이지 참조 요망",
+              "roombathfacility": "Y",
+              "roombath": "Y",
+              "roomhometheater": "",
+              "roomaircondition": "Y",
+              "roomtv": "Y",
+              "roompc": "",
+              "roomcable": "Y",
+              "roominternet": "Y",
+              "roomrefrigerator": "Y",
+              "roomtoiletries": "",
+              "roomsofa": "Y",
+              "roomcook": "",
+              "roomtable": "Y",
+              "roomhairdryer": "Y",
+              "roomsize2": "26",
+              "roomimg1": "http://tong.visitkorea.or.kr/cms/resource/89/4065689_1.jpg",
+              "roomimg1alt": "제주_호텔리젠트마린 제주_슈페리어 패밀리트윈 (2).jpg",
+              "cpyrhtDivCd1": "Type3",
+              "roomimg2": "http://tong.visitkorea.or.kr/cms/resource/88/4065688_1.jpg",
+              "roomimg2alt": "제주_호텔리젠트마린 제주_슈페리어 패밀리트윈 (1).jpg",
+              "cpyrhtDivCd2": "Type3",
+              "roomimg3": "",
+              "roomimg3alt": "",
+              "cpyrhtDivCd3": "",
+              "roomimg4": "",
+              "roomimg4alt": "",
+              "cpyrhtDivCd4": "",
+              "roomimg5": "",
+              "roomimg5alt": "",
+              "cpyrhtDivCd5": ""
+            },
+            {
+              "contentid": "2411625",
+              "contenttypeid": "32",
+              "roomcode": "",
+              "roomtitle": "스탠다드 패밀리 더블",
+              "roomsize1": "0",
+              "roomcount": "185",
+              "roombasecount": "2",
+              "roommaxcount": "3",
+              "roomoffseasonminfee1": "242000",
+              "roomoffseasonminfee2": "242000",
+              "roompeakseasonminfee1": "242000",
+              "roompeakseasonminfee2": "242002",
+              "roomintro": "※ 위 정보는 2026년 05월에 작성된 정보로 해당 숙박시설 이용 요금이 수시로 변동됨에 따라 이용요금 및 기타 자세한 사항은 홈페이지 참조 요망",
+              "roombathfacility": "Y",
+              "roombath": "Y",
+              "roomhometheater": "",
+              "roomaircondition": "Y",
+              "roomtv": "Y",
+              "roompc": "",
+              "roomcable": "Y",
+              "roominternet": "Y",
+              "roomrefrigerator": "Y",
+              "roomtoiletries": "",
+              "roomsofa": "Y",
+              "roomcook": "",
+              "roomtable": "Y",
+              "roomhairdryer": "Y",
+              "roomsize2": "26",
+              "roomimg1": "http://tong.visitkorea.or.kr/cms/resource/96/4065696_1.jpg",
+              "roomimg1alt": "제주_호텔리젠트마린 제주_스탠다드 패밀리더블 (2).jpg",
+              "cpyrhtDivCd1": "Type3",
+              "roomimg2": "http://tong.visitkorea.or.kr/cms/resource/95/4065695_1.jpg",
+              "roomimg2alt": "제주_호텔리젠트마린 제주_스탠다드 패밀리더블 (1).jpg",
+              "cpyrhtDivCd2": "Type3",
+              "roomimg3": "http://tong.visitkorea.or.kr/cms/resource/97/4065697_1.jpg",
+              "roomimg3alt": "제주_호텔리젠트마린 제주_스탠다드 패밀리더블 (3).jpg",
+              "cpyrhtDivCd3": "Type3",
+              "roomimg4": "",
+              "roomimg4alt": "",
+              "cpyrhtDivCd4": "",
+              "roomimg5": "",
+              "roomimg5alt": "",
+              "cpyrhtDivCd5": ""
+            },
+            {
+              "contentid": "2411625",
+              "contenttypeid": "32",
+              "roomcode": "",
+              "roomtitle": "디럭스 더블",
+              "roomsize1": "0",
+              "roomcount": "30",
+              "roombasecount": "2",
+              "roommaxcount": "2",
+              "roomoffseasonminfee1": "315000",
+              "roomoffseasonminfee2": "315000",
+              "roompeakseasonminfee1": "315000",
+              "roompeakseasonminfee2": "315000",
+              "roomintro": "※ 위 정보는 2026년 05월에 작성된 정보로 해당 숙박시설 이용 요금이 수시로 변동됨에 따라 이용요금 및 기타 자세한 사항은 홈페이지 참조 요망",
+              "roombathfacility": "Y",
+              "roombath": "Y",
+              "roomhometheater": "",
+              "roomaircondition": "Y",
+              "roomtv": "Y",
+              "roompc": "",
+              "roomcable": "Y",
+              "roominternet": "Y",
+              "roomrefrigerator": "Y",
+              "roomtoiletries": "",
+              "roomsofa": "Y",
+              "roomcook": "",
+              "roomtable": "Y",
+              "roomhairdryer": "Y",
+              "roomsize2": "30",
+              "roomimg1": "http://tong.visitkorea.or.kr/cms/resource/83/4065683_1.jpg",
+              "roomimg1alt": "제주_호텔리젠트마린 제주_디럭스 더블 (2).jpg",
+              "cpyrhtDivCd1": "Type3",
+              "roomimg2": "http://tong.visitkorea.or.kr/cms/resource/82/4065682_1.jpg",
+              "roomimg2alt": "제주_호텔리젠트마린 제주_디럭스 더블 (1).jpg",
+              "cpyrhtDivCd2": "Type3",
+              "roomimg3": "",
+              "roomimg3alt": "",
+              "cpyrhtDivCd3": "",
+              "roomimg4": "",
+              "roomimg4alt": "",
+              "cpyrhtDivCd4": "",
+              "roomimg5": "",
+              "roomimg5alt": "",
+              "cpyrhtDivCd5": ""
+            },
+            {
+              "contentid": "2411625",
+              "contenttypeid": "32",
+              "roomcode": "",
+              "roomtitle": "스위트",
+              "roomsize1": "0",
+              "roomcount": "2",
+              "roombasecount": "2",
+              "roommaxcount": "2",
+              "roomoffseasonminfee1": "363000",
+              "roomoffseasonminfee2": "363000",
+              "roompeakseasonminfee1": "363000",
+              "roompeakseasonminfee2": "363000",
+              "roomintro": "※ 위 정보는 2026년 05월에 작성된 정보로 해당 숙박시설 이용 요금이 수시로 변동됨에 따라 이용요금 및 기타 자세한 사항은 홈페이지 참조 요망",
+              "roombathfacility": "Y",
+              "roombath": "Y",
+              "roomhometheater": "",
+              "roomaircondition": "Y",
+              "roomtv": "Y",
+              "roompc": "",
+              "roomcable": "Y",
+              "roominternet": "Y",
+              "roomrefrigerator": "Y",
+              "roomtoiletries": "",
+              "roomsofa": "Y",
+              "roomcook": "",
+              "roomtable": "Y",
+              "roomhairdryer": "Y",
+              "roomsize2": "52",
+              "roomimg1": "http://tong.visitkorea.or.kr/cms/resource/92/4065692_1.jpg",
+              "roomimg1alt": "제주_호텔리젠트마린 제주_스위트 (2).jpg",
+              "cpyrhtDivCd1": "Type3",
+              "roomimg2": "http://tong.visitkorea.or.kr/cms/resource/90/4065690_1.jpg",
+              "roomimg2alt": "제주_호텔리젠트마린 제주_스위트 (1).jpg",
+              "cpyrhtDivCd2": "Type3",
+              "roomimg3": "",
+              "roomimg3alt": "",
+              "cpyrhtDivCd3": "",
+              "roomimg4": "",
+              "roomimg4alt": "",
+              "cpyrhtDivCd4": "",
+              "roomimg5": "",
+              "roomimg5alt": "",
+              "cpyrhtDivCd5": ""
+            },
+            {
+              "contentid": "2411625",
+              "contenttypeid": "32",
+              "roomcode": "",
+              "roomtitle": "슈페리어 패밀리 더블",
+              "roomsize1": "8",
+              "roomcount": "8",
+              "roombasecount": "2",
+              "roommaxcount": "4",
+              "roomoffseasonminfee1": "94000",
+              "roomoffseasonminfee2": "94000",
+              "roompeakseasonminfee1": "0",
+              "roompeakseasonminfee2": "0",
+              "roomintro": "※ 위 정보는 2021년 12월에 수정된 정보로(정상요금), 해당 숙박시설 이용요금이 수시로 변동됨에 따라 이용요금 및 기타 자세한 사항은 홈페이지 참조 요망",
+              "roombathfacility": "Y",
+              "roombath": "",
+              "roomhometheater": "",
+              "roomaircondition": "Y",
+              "roomtv": "Y",
+              "roompc": "",
+              "roomcable": "",
+              "roominternet": "Y",
+              "roomrefrigerator": "Y",
+              "roomtoiletries": "Y",
+              "roomsofa": "Y",
+              "roomcook": "",
+              "roomtable": "Y",
+              "roomhairdryer": "Y",
+              "roomsize2": "26",
+              "roomimg1": "http://tong.visitkorea.or.kr/cms/resource/54/2535254_image2_1.jpg",
+              "roomimg1alt": "호텔리젠트마린_슈페리어패밀리더블",
+              "cpyrhtDivCd1": "Type3",
+              "roomimg2": "",
+              "roomimg2alt": "",
+              "cpyrhtDivCd2": "",
+              "roomimg3": "",
+              "roomimg3alt": "",
+              "cpyrhtDivCd3": "",
+              "roomimg4": "",
+              "roomimg4alt": "",
+              "cpyrhtDivCd4": "",
+              "roomimg5": "",
+              "roomimg5alt": "",
+              "cpyrhtDivCd5": ""
+            }
+          ]
+        },
+        "numOfRows": 9,
+        "pageNo": 1,
+        "totalCount": 9
+      }
+    }
+  },
+  "2414812": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "2414812",
+              "contenttypeid": "12",
+              "serialnum": "0",
+              "infoname": "화장실",
+              "infotext": "있음 ",
+              "fldgubun": "3"
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "2737330": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": "",
+        "numOfRows": 0,
+        "pageNo": 1,
+        "totalCount": 0
+      }
+    }
+  },
+  "2788436": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "2788436",
+              "contenttypeid": "12",
+              "serialnum": "1",
+              "infoname": "입장료",
+              "infotext": "무료",
+              "fldgubun": "1"
+            },
+            {
+              "contentid": "2788436",
+              "contenttypeid": "12",
+              "serialnum": "4",
+              "infoname": "주차요금",
+              "infotext": "무료",
+              "fldgubun": "1"
+            }
+          ]
+        },
+        "numOfRows": 2,
+        "pageNo": 1,
+        "totalCount": 2
+      }
+    }
+  },
+  "2852695": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": {
+          "item": [
+            {
+              "contentid": "2852695",
+              "contenttypeid": "14",
+              "serialnum": "9",
+              "infoname": "주차요금",
+              "infotext": "무료",
+              "fldgubun": "3"
+            }
+          ]
+        },
+        "numOfRows": 1,
+        "pageNo": 1,
+        "totalCount": 1
+      }
+    }
+  },
+  "2860687": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": "",
+        "numOfRows": 0,
+        "pageNo": 1,
+        "totalCount": 0
+      }
+    }
+  },
+  "2912717": {
+    "response": {
+      "header": {
+        "resultCode": "0000",
+        "resultMsg": "OK"
+      },
+      "body": {
+        "items": "",
+        "numOfRows": 0,
+        "pageNo": 1,
+        "totalCount": 0
+      }
+    }
+  }
+}

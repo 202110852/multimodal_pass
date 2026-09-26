@@ -1,0 +1,19 @@
+# 네이버지도 크롤링 검수
+
+원본_콘텐츠ID: 5
+
+원본_이름: 하이드로겐 제주점
+
+원본_유형: 쇼핑
+
+원본_위도: 33.5149916
+
+원본_경도: 126.5259067
+
+원본_naver_link: https://naver.me/G8sbKr3V
+
+매칭상태: success / 1_naver_link / naver_link place_id=1173218865
+
+네이버_place_id: 1173218865
+
+네이버_지도URL: https://map.naver.com/p/entry/place/1173218865

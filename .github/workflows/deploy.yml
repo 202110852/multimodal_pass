@@ -1,0 +1,46 @@
+name: Deploy production
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: stan-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    runs-on: [self-hosted, macOS, ARM64, stan-production]
+    timeout-minutes: 45
+    env:
+      DEPLOY_COMMIT: ${{ github.sha }}
+      PATH: /opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin
+      GIT_TERMINAL_PROMPT: '0'
+      PYTHONUNBUFFERED: '1'
+      # A launchd runner cannot rely on the interactive macOS login keychain.
+      # Use this job's read-only token without writing credentials to disk.
+      GITHUB_TOKEN: ${{ github.token }}
+      GIT_CONFIG_COUNT: '2'
+      GIT_CONFIG_KEY_0: credential.helper
+      GIT_CONFIG_VALUE_0: ''
+      GIT_CONFIG_KEY_1: credential.https://github.com.helper
+      GIT_CONFIG_VALUE_1: '!f() { printf "%s\n" "username=x-access-token" "password=$GITHUB_TOKEN"; }; f'
+    steps:
+      # Preserve the live checkout, its .env files and admin prompt edits.
+      # Execute the deployment script from this run's exact commit without checkout/clean.
+      - name: Build and deploy frontend and Mastra
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd /Users/lkim/stan_chat_api
+          git fetch --no-tags origin refs/heads/main:refs/remotes/origin/main
+          deploy_script=$(mktemp -t stan-deploy)
+          trap 'rm -f "$deploy_script"' EXIT
+          git show "${DEPLOY_COMMIT}:chat/scripts/deploy.py" > "$deploy_script"
+          /usr/bin/python3 "$deploy_script" --commit "$DEPLOY_COMMIT"
+          printf 'Deployed commit `%s`\n\nFrontend: https://stan.lkim.me\n\nAPI: https://api.stan.lkim.me/health\n' "$DEPLOY_COMMIT" >> "$GITHUB_STEP_SUMMARY"

@@ -1,0 +1,35 @@
+{
+  "name": "stan-jeju-chat",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "복합경로 안내 챗봇 — 로컬 Mastra + (추후 Supabase) DRT/도메인 DB",
+  "scripts": {
+    "dev": "mastra dev",
+    "build": "mastra build",
+    "start": "mastra start",
+    "typecheck": "tsc --noEmit",
+    "ask": "tsx scripts/ask.ts",
+    "smoke": "tsx scripts/smoke.ts",
+    "dev:all": "concurrently -n mastra,web -c green,cyan \"mastra dev\" \"MASTRA_URL=http://127.0.0.1:4111 npm --prefix web run dev\"",
+    "test:kakao": "node --import tsx --test scripts/kakao.test.ts",
+    "smoke:kakao": "tsx scripts/kakao-smoke.ts"
+  },
+  "dependencies": {
+    "@ai-sdk/openai-compatible": "^3.0.48",
+    "@mastra/core": "latest",
+    "@mastra/libsql": "^1.23.3",
+    "@mastra/memory": "^1.30.0",
+    "@mastra/pg": "latest",
+    "pg": "^8.13.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/pg": "^8.11.0",
+    "concurrently": "^9.1.0",
+    "mastra": "latest",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}

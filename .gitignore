@@ -1,0 +1,16 @@
+.env
+.env.local
+.env.*.local
+!.env.example
+datagrip-migration/.env
+!datagrip-migration/.env.example
+api-db-pipeline/.env
+!api-db-pipeline/.env.example
+api-db-pipeline/_staging/
+env-vault/
+.DS_Store
+.env.pg
+# 실제 키가 든 백업/빌드 환경파일
+.env.bak.*
+.env.*.bak
+*.env.production

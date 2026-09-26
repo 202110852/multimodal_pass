@@ -1,0 +1,257 @@
+{
+  "api_url": "https://parking.seogwipo.go.kr/api/parking/realtime/list",
+  "portal_count": 31,
+  "csv_count": 113,
+  "matched": 31,
+  "matches": [
+    {
+      "csv_id": "406-2-000002",
+      "csv_name": "보목 노외 1 공영주차장",
+      "sgp_id": 13,
+      "sgp_name": "보목 노외1 공영주차장",
+      "reason": "name_exact",
+      "distance_m": 30.3
+    },
+    {
+      "csv_id": "406-2-000005",
+      "csv_name": "아랑조을거리 공영주차장",
+      "sgp_id": 21,
+      "sgp_name": "아랑조을거리 공영주차빌딩",
+      "reason": "name_exact",
+      "distance_m": 18.0
+    },
+    {
+      "csv_id": "406-2-000006",
+      "csv_name": "동홍1공영주차빌딩",
+      "sgp_id": 9,
+      "sgp_name": "동홍1 공영주차빌딩",
+      "reason": "name_exact",
+      "distance_m": 19.9
+    },
+    {
+      "csv_id": "406-2-000014",
+      "csv_name": "매일올레시장 공영주차빌딩",
+      "sgp_id": 11,
+      "sgp_name": "매일올레시장 공영주차빌딩",
+      "reason": "name_exact",
+      "distance_m": 38.1
+    },
+    {
+      "csv_id": "406-2-000016",
+      "csv_name": "대정하모 공영노외2주차장",
+      "sgp_id": 3,
+      "sgp_name": "대정 하모 노외2 공영주차장",
+      "reason": "name_exact",
+      "distance_m": 3.8
+    },
+    {
+      "csv_id": "406-2-000020",
+      "csv_name": "대정하모 공영노외3주차장",
+      "sgp_id": 4,
+      "sgp_name": "대정 하모 노외3 공영주차장",
+      "reason": "name_exact",
+      "distance_m": 9.9
+    },
+    {
+      "csv_id": "406-2-000025",
+      "csv_name": "중앙로터리공영주차빌딩",
+      "sgp_id": 27,
+      "sgp_name": "중앙로터리 공영주차빌딩",
+      "reason": "name_exact",
+      "distance_m": 9.7
+    },
+    {
+      "csv_id": "406-2-000035",
+      "csv_name": "쇠소깍 공영주차장",
+      "sgp_id": 20,
+      "sgp_name": "쇠소깍 공영주차장",
+      "reason": "name_exact",
+      "distance_m": 20.6
+    },
+    {
+      "csv_id": "406-2-000037",
+      "csv_name": "천지공영주차빌딩(공작물)",
+      "sgp_id": 28,
+      "sgp_name": "천지 공영주차빌딩",
+      "reason": "name_exact",
+      "distance_m": 9.7
+    },
+    {
+      "csv_id": "406-2-000040",
+      "csv_name": "동광육거리 공영주차장",
+      "sgp_id": 35,
+      "sgp_name": "동광육거리 공영주차장",
+      "reason": "name_exact",
+      "distance_m": 12.7
+    },
+    {
+      "csv_id": "406-2-000042",
+      "csv_name": "중앙공영주차빌딩(공작물)",
+      "sgp_id": 26,
+      "sgp_name": "중앙 공영주차빌딩",
+      "reason": "name_exact",
+      "distance_m": 10.9
+    },
+    {
+      "csv_id": "406-2-000043",
+      "csv_name": "성산고성 공영노외1주차장",
+      "sgp_id": 18,
+      "sgp_name": "성산 고성 노외1 공영주차장",
+      "reason": "name_exact",
+      "distance_m": 24.7
+    },
+    {
+      "csv_id": "406-2-000045",
+      "csv_name": "동홍2공영주차빌딩",
+      "sgp_id": 10,
+      "sgp_name": "동홍2 공영주차빌딩",
+      "reason": "name_exact",
+      "distance_m": 21.6
+    },
+    {
+      "csv_id": "406-2-000051",
+      "csv_name": "국토교통인재개발원 동측 공영주차장",
+      "sgp_id": 14,
+      "sgp_name": "서호 노외1 공영주차장",
+      "reason": "coord_only",
+      "distance_m": 17.8
+    },
+    {
+      "csv_id": "406-2-000052",
+      "csv_name": "홍로공영주차빌딩",
+      "sgp_id": 31,
+      "sgp_name": "홍로 공영주차빌딩",
+      "reason": "name_exact",
+      "distance_m": 6.9
+    },
+    {
+      "csv_id": "406-2-000053",
+      "csv_name": "표선공영주차빌딩",
+      "sgp_id": 30,
+      "sgp_name": "표선 공영주차빌딩",
+      "reason": "name_exact",
+      "distance_m": 31.6
+    },
+    {
+      "csv_id": "406-2-000054",
+      "csv_name": "정방공영주차빌딩",
+      "sgp_id": 24,
+      "sgp_name": "정방 공영주차빌딩",
+      "reason": "name_exact",
+      "distance_m": 10.3
+    },
+    {
+      "csv_id": "406-2-000056",
+      "csv_name": "자구리 공영주차장",
+      "sgp_id": 22,
+      "sgp_name": "자구리 공영주차장",
+      "reason": "name_exact",
+      "distance_m": 13.6
+    },
+    {
+      "csv_id": "406-2-000058",
+      "csv_name": "서홍공영노외1주차장(서홍동주민센터 북서측)",
+      "sgp_id": 15,
+      "sgp_name": "서홍 노외1 공영주차장",
+      "reason": "name_exact",
+      "distance_m": 16.6
+    },
+    {
+      "csv_id": "406-2-000063",
+      "csv_name": "동홍 공영노외1주차장",
+      "sgp_id": 7,
+      "sgp_name": "동홍 노외1 공영주차장",
+      "reason": "name_exact",
+      "distance_m": 13.8
+    },
+    {
+      "csv_id": "406-2-000064",
+      "csv_name": "동홍 공영노외2주차장",
+      "sgp_id": 8,
+      "sgp_name": "동홍 노외2 공영주차장",
+      "reason": "name_exact",
+      "distance_m": 7.8
+    },
+    {
+      "csv_id": "406-2-000082",
+      "csv_name": "중앙 공영노외1주차장",
+      "sgp_id": 25,
+      "sgp_name": "중앙 노외1 공영주차장",
+      "reason": "name_exact",
+      "distance_m": 17.8
+    },
+    {
+      "csv_id": "406-2-000085",
+      "csv_name": "남원 비안동 공영주차장",
+      "sgp_id": 1,
+      "sgp_name": "남원 비안동 공영주차장",
+      "reason": "name_exact",
+      "distance_m": 2.2
+    },
+    {
+      "csv_id": "406-2-000090",
+      "csv_name": "대정하모 공영노외4주차장",
+      "sgp_id": 5,
+      "sgp_name": "대정 하모 노외4 공영주차장",
+      "reason": "name_exact",
+      "distance_m": 16.9
+    },
+    {
+      "csv_id": "406-2-000102",
+      "csv_name": "대정상모 공영노외1주차장",
+      "sgp_id": 36,
+      "sgp_name": "대정 상모노외1공영주차장",
+      "reason": "name_exact",
+      "distance_m": 29.4
+    },
+    {
+      "csv_id": "406-2-000105",
+      "csv_name": "호근동 공영주차장",
+      "sgp_id": 38,
+      "sgp_name": "호근동 공영주차장",
+      "reason": "name_exact",
+      "distance_m": 5.7
+    },
+    {
+      "csv_id": "406-2-000106",
+      "csv_name": "대평공영주차장",
+      "sgp_id": 6,
+      "sgp_name": "안덕 대평 공영주차장",
+      "reason": "name_contains",
+      "distance_m": 9.6
+    },
+    {
+      "csv_id": "406-2-000107",
+      "csv_name": "솔동산공영주차장",
+      "sgp_id": 19,
+      "sgp_name": "솔동산 공영주차장",
+      "reason": "name_exact",
+      "distance_m": 18.0
+    },
+    {
+      "csv_id": "406-2-000108",
+      "csv_name": "정방 노외공영주차장",
+      "sgp_id": 23,
+      "sgp_name": "정방 노외1 공영주차장",
+      "reason": "coord_only",
+      "distance_m": 22.5
+    },
+    {
+      "csv_id": "406-2-000111",
+      "csv_name": "서홍 공영주차장",
+      "sgp_id": 32,
+      "sgp_name": "서홍 공영주차장",
+      "reason": "name_exact",
+      "distance_m": 20.9
+    },
+    {
+      "csv_id": "406-2-000112",
+      "csv_name": "동홍 공영노외4 주차장",
+      "sgp_id": 37,
+      "sgp_name": "동홍노외4 공영주차장",
+      "reason": "name_exact",
+      "distance_m": 64.0
+    }
+  ],
+  "unmatched_portal": []
+}
