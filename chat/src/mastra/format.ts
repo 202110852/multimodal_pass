@@ -230,7 +230,7 @@ function transportRoutingBlock(p: Record<string, unknown>): string[] {
   if (has("car")) {
     lines.push(
       "- **차량(최우선)**: 다른 수단이 있어도 **기본 이동은 차량**으로 잡는다. " +
-        "다만 원도심 골목·짧은 이동·주차 곤란 구간 등은 택시·버스·도보를 **보조**로 섞을 수 있다.",
+        "다만 시내 골목·짧은 이동·주차 곤란 구간 등은 택시·버스·도보를 **보조**로 섞을 수 있다.",
       "- 차량 일정·코스에서는 주요 방문지마다 nearby-places(domain=parking)로 주변 주차장을 찾고, " +
         "distance_m·capacity(면수)·parking_fee·이용시간을 비교해 1~2곳을 고른다. " +
         "가능하면 check-metric(parking_avail)로 여석도 본다.",
