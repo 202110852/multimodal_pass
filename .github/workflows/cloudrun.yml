@@ -1,0 +1,55 @@
+name: Deploy backend to Cloud Run
+
+# main 에 백엔드(chat/) 변경이 push 되면 Cloud Run 에 다시 배포한다. 프론트(chat/web)만 바뀌면 건너뛴다.
+# 이미지만 새로 만든다 — 환경변수·버킷 마운트·인스턴스 제한은 서비스에 저장된 값을 그대로 쓴다.
+# 환경변수를 바꿀 때는 로컬에서 npm run deploy:cloudrun, OmniRoute 설정은 npm run omniroute:sync.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "chat/**"
+      - "!chat/web/**"
+      - ".github/workflows/cloudrun.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: cloudrun-deploy
+  cancel-in-progress: false
+
+env:
+  PROJECT: multimodal-pass-api
+  REGION: asia-northeast3
+  SERVICE: stan-chat-api
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      # 비밀 키 없이 GitHub OIDC 토큰으로 인증한다. 이 저장소의 main 브랜치만 허용된다.
+      - uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: projects/97870454047/locations/global/workloadIdentityPools/github/providers/github-oidc
+          service_account: github-deployer@multimodal-pass-api.iam.gserviceaccount.com
+
+      - uses: google-github-actions/setup-gcloud@v2
+
+      - name: Build and deploy
+        run: |
+          gcloud run deploy "$SERVICE" \
+            --project "$PROJECT" \
+            --region "$REGION" \
+            --source chat \
+            --quiet
+
+      - name: Health check
+        run: |
+          url=$(gcloud run services describe "$SERVICE" --project "$PROJECT" --region "$REGION" --format "value(status.url)")
+          curl --fail --silent --show-error --retry 5 --retry-delay 5 --retry-all-errors "$url/health"
+          printf 'Deployed `%s`\n\n%s\n' "$GITHUB_SHA" "$url" >> "$GITHUB_STEP_SUMMARY"
