@@ -43,6 +43,7 @@ import { applyProfileSuggestions } from "./profileSuggestions.js";
 /** 입력창·메시지에 붙는 경로 멘션 (화면에는 제목만). */
 export type RouteMention = { id: string; title: string; prompt: string };
 import { modeOf, toolLabel } from "./tools.js";
+import { TUNNEL_HEADERS } from "./tunnel.js";
 import { useVoiceInput, voiceSupported } from "./voice.js";
 
 const AGENT_ID = "jeju-agent";
@@ -64,7 +65,7 @@ function makeClient(abortSignal: AbortSignal): MastraClient {
   return new MastraClient({
     baseUrl: BASE_URL,
     abortSignal,
-    ...(API_KEY ? { headers: { "x-api-key": API_KEY } } : {}),
+    headers: { ...TUNNEL_HEADERS, ...(API_KEY ? { "x-api-key": API_KEY } : {}) },
   });
 }
 
@@ -82,7 +83,11 @@ const IMAGE_ONLY_TEXT = {
 async function postJson(path: string, body: unknown): Promise<Response> {
   return fetch(`${BASE_URL}${path}`, {
     method: "POST",
-    headers: { "Content-Type": "application/json", ...(API_KEY ? { "x-api-key": API_KEY } : {}) },
+    headers: {
+      "Content-Type": "application/json",
+      ...TUNNEL_HEADERS,
+      ...(API_KEY ? { "x-api-key": API_KEY } : {}),
+    },
     body: JSON.stringify(body),
   });
 }
@@ -190,7 +195,7 @@ export function App({ routeRequest = null, onShowRouteOnMap, savedRoutesRequest 
       try {
         const res = await fetch(
           `${BASE_URL}/chat/weather-suggestion?lang=${encodeURIComponent(lang)}`,
-          { headers: { ...(API_KEY ? { "x-api-key": API_KEY } : {}) } },
+          { headers: { ...TUNNEL_HEADERS, ...(API_KEY ? { "x-api-key": API_KEY } : {}) } },
         );
         if (!res.ok) return;
         const data = (await res.json()) as { text?: string; index?: number };

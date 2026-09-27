@@ -11,6 +11,7 @@
     "typecheck": "tsc --noEmit",
     "ask": "tsx scripts/ask.ts",
     "smoke": "tsx scripts/smoke.ts",
+    "public": "bash scripts/public.sh",
     "dev:all": "concurrently -n mastra,web -c green,cyan \"mastra dev\" \"MASTRA_URL=http://127.0.0.1:4111 npm --prefix web run dev\"",
     "test:kakao": "node --import tsx --test scripts/kakao.test.ts",
     "smoke:kakao": "tsx scripts/kakao-smoke.ts"

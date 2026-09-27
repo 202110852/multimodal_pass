@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { splitAnswer } from "./answer.js";
 import { registerState } from "./debug/collector.js";
 import { renderMarkdown } from "./markdown.js";
+import { TUNNEL_HEADERS } from "./tunnel.js";
 
 // 개발: 같은 오리진 + Vite 프록시(기본 배포 API api.stan.lkim.me).
 // 로컬 Mastra / 배포 번들은 MASTRA_URL · VITE_MASTRA_URL.
@@ -39,6 +40,7 @@ function useApi(token: string, onUnauthorized: () => void) {
         const res = await fetch(`${BASE}${path}`, {
           method,
           headers: {
+            ...TUNNEL_HEADERS,
             "x-admin-token": token,
             ...(body ? { "Content-Type": "application/json" } : {}),
           },
@@ -964,7 +966,7 @@ function Screenshot({ id, token, meta }: { id: number; token: string; meta: Capt
 
   useEffect(() => {
     let revoke: string | null = null;
-    fetch(`${BASE}/admin/bug-reports/${id}/screenshot`, { headers: { "x-admin-token": token } })
+    fetch(`${BASE}/admin/bug-reports/${id}/screenshot`, { headers: { ...TUNNEL_HEADERS, "x-admin-token": token } })
       .then((r) => (r.ok ? r.blob() : Promise.reject(new Error(String(r.status)))))
       .then((b) => {
         revoke = URL.createObjectURL(b);

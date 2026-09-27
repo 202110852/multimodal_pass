@@ -1,5 +1,6 @@
 import { domToJpeg } from "modern-screenshot";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { TUNNEL_HEADERS } from "../tunnel.js";
 import { collectContext, describeElement, type DebugContext } from "./collector.js";
 
 /**
@@ -149,7 +150,11 @@ export function BugReporter() {
     try {
       const res = await fetch(`${BASE}/chat/bug-reports`, {
         method: "POST",
-        headers: { "Content-Type": "application/json", ...(API_KEY ? { "x-api-key": API_KEY } : {}) },
+        headers: {
+          "Content-Type": "application/json",
+          ...TUNNEL_HEADERS,
+          ...(API_KEY ? { "x-api-key": API_KEY } : {}),
+        },
         body: JSON.stringify({
           note: note.trim() || null,
           pageUrl: location.href,

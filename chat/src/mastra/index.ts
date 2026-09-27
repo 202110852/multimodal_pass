@@ -97,7 +97,13 @@ export const mastra = new Mastra({
     cors: {
       origin: allowedOrigins(),
       credentials: true,
-      allowHeaders: ["Content-Type", "Authorization", "x-api-key", "x-admin-token"],
+      allowHeaders: [
+        "Content-Type",
+        "Authorization",
+        "x-api-key",
+        "x-admin-token",
+        "ngrok-skip-browser-warning",
+      ],
       allowMethods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     },
   },
