@@ -11,17 +11,9 @@ COPY tsconfig.json ./
 COPY src ./src
 RUN npx mastra build
 
-FROM node:24-slim
-
-# OmniRoute 는 이미지에서 가장 큰 층(압축 약 800MB)이다. 버전을 고정하고 맨 앞에 두어
-# 백엔드 코드만 바뀐 배포에서는 이 층을 다시 저장하지 않게 한다.
-# onnxruntime 의 윈도우·맥용 바이너리는 리눅스에서 쓰지 않으므로 지운다.
-ARG OMNIROUTE_VERSION=3.8.50
-RUN npm install -g "omniroute@${OMNIROUTE_VERSION}" \
-    && find /usr/local/lib/node_modules/omniroute -type d \
-       \( -path "*/onnxruntime-node/bin/*/darwin" -o -path "*/onnxruntime-node/bin/*/win32" \) \
-       -prune -exec rm -rf {} + \
-    && npm cache clean --force
+# OmniRoute 가 설치된 베이스 (docker/base/Dockerfile, npm run build:base-image 로 만든다).
+# 매 배포마다 OmniRoute 를 설치·업로드하지 않으므로 빌드가 코드 층만큼만 걸린다.
+FROM asia-northeast3-docker.pkg.dev/multimodal-pass-api/base-images/omniroute:3.8.50
 
 WORKDIR /app
 ENV NODE_ENV=production \
