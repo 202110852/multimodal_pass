@@ -4,7 +4,7 @@
 #   cd chat && npm run public
 #
 # 백엔드가 이미 켜져 있으면(npm run dev:all 등) 터널만 연다.
-# 필요한 값(chat/.env 또는 저장소 루트 .env): NGROK_DOMAIN, API_KEYS, ADMIN_TOKEN, CORS_ORIGINS
+# 필요한 값(chat/.env 또는 저장소 루트 .env): NGROK_AUTHTOKEN, NGROK_DOMAIN, API_KEYS, ADMIN_TOKEN, CORS_ORIGINS
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
@@ -33,6 +33,14 @@ fail() {
 }
 
 command -v ngrok >/dev/null || fail "ngrok 이 없습니다: brew install ngrok"
+
+# ngrok 은 NGROK_AUTHTOKEN 환경변수를 직접 읽는다. 비어 있으면 ngrok config add-authtoken 으로 저장한 값을 쓴다.
+NGROK_AUTHTOKEN=$(read_env NGROK_AUTHTOKEN)
+if [[ -n "$NGROK_AUTHTOKEN" ]]; then
+  export NGROK_AUTHTOKEN
+else
+  unset NGROK_AUTHTOKEN
+fi
 
 NGROK_DOMAIN=$(read_env NGROK_DOMAIN)
 [[ -n "$NGROK_DOMAIN" ]] ||
