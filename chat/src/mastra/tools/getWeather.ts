@@ -10,7 +10,7 @@ import { query } from "../db.js";
 export const getWeather = createTool({
   id: "get-weather",
   description:
-    "제주 원도심 날씨를 가져온다. 일정을 짜거나 실외 활동을 추천하기 전에 확인한다. " +
+    "제주시 날씨를 가져온다. 경로·일정을 짜거나 도보·자전거·킥보드 구간을 넣기 전에 확인한다. " +
     "kind=brief 는 요약, forecast 는 시각별 예보, warning 은 현재 기상특보.",
   inputSchema: z.object({
     kind: z.enum(["brief", "forecast", "warning"]).default("brief"),

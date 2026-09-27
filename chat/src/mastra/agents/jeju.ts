@@ -17,7 +17,7 @@ import { compareDirections } from "../tools/compareDirections.js";
 
 export const jejuAgent = new Agent({
   id: "jeju-agent",
-  name: "제주 AI 여행 비서",
+  name: "제주 복합경로 안내",
   // 프롬프트 본문은 prompts/system-prompt.txt — /admin 에서 수정한다. 매 요청마다 새로 읽는다.
   instructions: systemPrompt,
   model: chatModel,

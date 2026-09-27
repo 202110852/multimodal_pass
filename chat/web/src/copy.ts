@@ -182,11 +182,11 @@ const ko: UiCopy = {
       "VITE_API_KEY 가 설정되지 않았습니다.\nchat/web/.env.local.example 을 .env.local 로 복사하고 키를 채운 뒤\ndev 서버를 다시 시작하세요.",
   },
   suggestions: [
-    "주차가 편리한 여행 경로 추천해 줘",
-    "흑돼지 잘하는 집 알려줘",
+    "제주공항에서 동문시장 가는 방법 비교해 줘",
+    "버스랑 택시 섞어서 성산일출봉 가는 법",
     "내일 날씨에 맞는 일정",
-    "동문시장 근처 착한가격업소 알려줘",
-    "여행자소비쿠폰 어떻게 써요?",
+    "휠체어로 제주시청까지 가는 경로 알려줘",
+    "차 없이 협재해수욕장 가장 빨리 가는 법",
   ],
   weatherSuggestionIndex: 2,
   profile: {
@@ -424,11 +424,11 @@ const en: UiCopy = {
       "VITE_API_KEY is not set.\nCopy chat/web/.env.local.example to .env.local, add the key,\nand restart the dev server.",
   },
   suggestions: [
-    "Recommend a trip route with easy parking",
-    "Where's good black pork?",
+    "Compare ways from Jeju Airport to Dongmun Market",
+    "Bus + taxi route to Seongsan Ilchulbong",
     "A plan that fits tomorrow's weather",
-    "Budget-friendly spots near Dongmun Market",
-    "How do I use the tourist coupon?",
+    "Wheelchair-accessible route to Jeju City Hall",
+    "Fastest way to Hyeopjae Beach without a car",
   ],
   weatherSuggestionIndex: 2,
   profile: {
@@ -666,11 +666,11 @@ const zh: UiCopy = {
       "未设置 VITE_API_KEY。\n请将 chat/web/.env.local.example 复制为 .env.local 并填入密钥后\n重启开发服务器。",
   },
   suggestions: [
-    "停车方便的旅行路线推荐",
-    "有什么好吃的黑猪肉店？",
+    "比较从济州机场到东门市场的交通方式",
+    "公交加出租车去城山日出峰怎么走",
     "按明天天气安排行程",
-    "东门市场附近的平价好店",
-    "游客消费券怎么用？",
+    "坐轮椅去济州市厅的路线",
+    "不开车最快怎么去挟才海水浴场",
   ],
   weatherSuggestionIndex: 2,
   profile: {
@@ -908,11 +908,11 @@ const ja: UiCopy = {
       "VITE_API_KEY が設定されていません。\nchat/web/.env.local.example を .env.local にコピーしてキーを入れ、\ndev サーバーを再起動してください。",
   },
   suggestions: [
-    "駐車しやすい旅行ルートをすすめて",
-    "黒豚がおいしい店教えて",
+    "済州空港から東門市場への行き方を比べて",
+    "バスとタクシーで城山日出峰へ行く方法",
     "明日の天気に合うプラン",
-    "東門市場付近の良心価格店",
-    "旅行者消費クーポンの使い方は？",
+    "車いすで済州市庁へ行くルート",
+    "車なしで挟才海水浴場へ一番早く行く方法",
   ],
   weatherSuggestionIndex: 2,
   profile: {

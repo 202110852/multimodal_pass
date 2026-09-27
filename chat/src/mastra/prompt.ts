@@ -80,7 +80,7 @@ export function nowKstDirective(now = new Date()): string {
   const minute = parts.minute;
   return `# 현재 시각 (Asia/Seoul)
 지금은 ${y}-${m}-${d} ${weekday} ${hour}:${minute} 이다.
-장소 추천과 「지금 출발」일정(원도심·제주 전역·관광지·식당·카페 등 모두)은
+장소 추천과 「지금 출발」일정(제주 전역·관광지·식당·카페 등 모두)은
 이 시각(또는 사용자가 말한 출발·방문 시각)을 기준으로 영업·이용시간을 확인한다.
 이 시각에 문이 닫힌 곳은 추천하지 않는다.
 

@@ -9,7 +9,7 @@ import type {
 
 /**
  * 빈 화면 칩 중 프로필로 채우는 자리 (0, 1, 3).
- * 2=날씨, 4=여행자소비쿠폰(원도심) 은 고정.
+ * 2=날씨, 4=차 없이 가는 경로 는 고정.
  */
 export const PROFILE_CHIP_INDICES = [0, 1, 3] as const;
 
@@ -253,25 +253,25 @@ function placeChip(level: number | undefined, loc: L): string | null {
 export function defaultProfileChips(loc: L): [string, string, string] {
   if (loc === "en") {
     return [
-      "Recommend a trip route with easy parking",
-      "Where's good black pork?",
-      "Budget-friendly spots near Dongmun Market",
+      "Compare ways from Jeju Airport to Dongmun Market",
+      "Bus + taxi route to Seongsan Ilchulbong",
+      "Wheelchair-accessible route to Jeju City Hall",
     ];
   }
   if (loc === "zh") {
-    return ["停车方便的旅行路线推荐", "有什么好吃的黑猪肉店？", "东门市场附近的平价好店"];
+    return ["比较从济州机场到东门市场的交通方式", "公交加出租车去城山日出峰怎么走", "坐轮椅去济州市厅的路线"];
   }
   if (loc === "ja") {
     return [
-      "駐車しやすい旅行ルートをすすめて",
-      "黒豚がおいしい店教えて",
-      "東門市場付近の良心価格店",
+      "済州空港から東門市場への行き方を比べて",
+      "バスとタクシーで城山日出峰へ行く方法",
+      "車いすで済州市庁へ行くルート",
     ];
   }
   return [
-    "주차가 편리한 여행 경로 추천해 줘",
-    "흑돼지 잘하는 집 알려줘",
-    "동문시장 근처 착한가격업소 알려줘",
+    "제주공항에서 동문시장 가는 방법 비교해 줘",
+    "버스랑 택시 섞어서 성산일출봉 가는 법",
+    "휠체어로 제주시청까지 가는 경로 알려줘",
   ];
 }
 
