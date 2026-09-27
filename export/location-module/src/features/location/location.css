@@ -1,0 +1,18 @@
+.marquee-on-overflow {
+  display: inline-block;
+  max-width: none;
+  white-space: nowrap;
+  animation: location-marquee-x 3s linear infinite;
+  will-change: transform;
+}
+
+@keyframes location-marquee-x {
+  0%,
+  12% {
+    transform: translateX(0);
+  }
+  45%,
+  100% {
+    transform: translateX(calc(-1 * var(--marquee-distance, 0px)));
+  }
+}

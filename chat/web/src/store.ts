@@ -33,12 +33,15 @@ const TITLE_LEN = 40;
 
 export interface RouteStop {
   order: number;
-  poi_id: number;
+  /** 지도에서 직접 고른 곳은 장소 DB 에 없어 null — 대신 lat·lon 을 둔다 */
+  poi_id: number | null;
   name: string;
   addr: string | null;
   from_prev_m: number | null;
   walk_min_est: number | null;
   directions_url: string;
+  lat?: number;
+  lon?: number;
 }
 
 /** plan-visit-order 도구 결과에서 보관할 부분. */
@@ -119,10 +122,12 @@ export interface SavedRoute {
   id: string;
   title: string;
   savedAt: number;
-  /** 경로를 짠 대화와 답변 — "원래 대화 보기", 중복 저장 방지에 쓴다. */
+  /** 경로를 짠 대화와 답변 — "원래 대화 보기", 중복 저장 방지에 쓴다. 지도에서 정한 경로는 답변이 없어 msgId 가 null. */
   chatId: string;
-  msgId: string;
+  msgId: string | null;
   plan: RoutePlan;
+  /** 즐겨찾기 — 예전에 저장한 경로에는 없다 */
+  favorite?: boolean;
 }
 
 // ---------------------------------------------------------------- 저수준
@@ -415,11 +420,23 @@ export function listRoutes(): SavedRoute[] {
   return (Array.isArray(list) ? list : []).sort((a, b) => b.savedAt - a.savedAt);
 }
 
-/** 저장 실패(가득 참)면 null. */
-export function saveRoute(plan: RoutePlan, chatId: string, msgId: string): SavedRoute[] | null {
+/**
+ * 저장 실패(가득 참)면 null. 같은 답변의 경로나, 답변 없이 같은 경로를 다시 저장하면 그대로 둔다.
+ * title 을 안 주면 들를 곳 이름으로 짓는다.
+ */
+export function saveRoute(
+  plan: RoutePlan,
+  chatId: string,
+  msgId: string | null,
+  title: string = routeTitle(plan),
+): SavedRoute[] | null {
   const routes = listRoutes();
-  if (routes.some((r) => r.msgId === msgId)) return routes;
-  const route: SavedRoute = { id: uid("route"), title: routeTitle(plan), savedAt: Date.now(), chatId, msgId, plan };
+  const samePlan = JSON.stringify(plan);
+  const duplicate = msgId
+    ? routes.some((r) => r.msgId === msgId)
+    : routes.some((r) => r.msgId === null && JSON.stringify(r.plan) === samePlan);
+  if (duplicate) return routes;
+  const route: SavedRoute = { id: uid("route"), title, savedAt: Date.now(), chatId, msgId, plan };
   const next = [route, ...routes].slice(0, MAX_ROUTES);
   return write(ROUTES_KEY, next) ? next : null;
 }
@@ -431,17 +448,30 @@ export function renameRoute(id: string, title: string): SavedRoute[] {
   return next;
 }
 
+export function toggleRouteFavorite(id: string): SavedRoute[] {
+  const next = listRoutes().map((r) => (r.id === id ? { ...r, favorite: !r.favorite } : r));
+  write(ROUTES_KEY, next);
+  return next;
+}
+
 export function deleteRoute(id: string): SavedRoute[] {
   const next = listRoutes().filter((r) => r.id !== id);
   write(ROUTES_KEY, next);
   return next;
 }
 
+/** 장소 DB 에 있는 곳은 poi_id, 지도에서 고른 곳은 좌표·주소로 가리킨다 */
+function stopReference(stop: RouteStop): string {
+  if (stop.poi_id !== null) return `poi_id ${stop.poi_id}`;
+  const coords = stop.lat != null && stop.lon != null ? `${stop.lat.toFixed(6)}, ${stop.lon.toFixed(6)}` : "";
+  return [coords, stop.addr].filter(Boolean).join(", ");
+}
+
 /** 저장한 경로를 대화에 다시 가져갈 때 입력창에 넣는 글. poi_id 가 있어야 챗봇이 다시 짤 수 있다. */
 export function routePrompt(route: SavedRoute): string {
   const lines = [`저장해 둔 경로 "${route.title}"를 불러왔어요.`];
   if (route.plan.start) lines.push(`출발: ${route.plan.start.name}`);
-  for (const s of route.plan.stops) lines.push(`${s.order}. ${s.name} (poi_id ${s.poi_id})`);
+  for (const s of route.plan.stops) lines.push(`${s.order}. ${s.name} (${stopReference(s)})`);
   lines.push("이 경로를 바탕으로 도와주세요.");
   return lines.join("\n");
 }

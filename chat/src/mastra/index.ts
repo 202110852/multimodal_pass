@@ -1,3 +1,5 @@
+import { mkdirSync } from "node:fs";
+import { dirname, resolve } from "node:path";
 import { Mastra } from "@mastra/core";
 import { LibSQLStore } from "@mastra/libsql";
 import { PostgresStore } from "@mastra/pg";
@@ -10,7 +12,24 @@ import { isDbEnabled } from "./db.js";
 import { feedbackRoutes } from "./feedback.js";
 import { reportRoutes } from "./reports.js";
 import { weatherSuggestionRoutes } from "./weatherSuggestion.js";
-import { loadEnvFiles } from "./env.js";
+import { chatRootDir, loadEnvFiles } from "./env.js";
+
+const DEFAULT_LOCAL_MEMORY_PATH = ".mastra/local-memory.db";
+
+/**
+ * LibSQL 접속 URL.
+ * `file:` 상대 경로는 cwd 가 아니라 chat/ 기준으로 풀어야 `mastra dev` 에서도 열린다.
+ * 원격 URL(libsql://, http:// 등)은 그대로 쓴다.
+ */
+function localMemoryUrl(): string {
+  const configured = process.env.MASTRA_LIBSQL_URL?.trim();
+  if (configured && !configured.startsWith("file:")) return configured;
+
+  const rawPath = configured ? configured.slice("file:".length) : DEFAULT_LOCAL_MEMORY_PATH;
+  const absolutePath = resolve(chatRootDir(), rawPath);
+  mkdirSync(dirname(absolutePath), { recursive: true });
+  return `file:${absolutePath}`;
+}
 
 /**
  * 에이전트 메모리 저장소.
@@ -21,10 +40,9 @@ import { loadEnvFiles } from "./env.js";
 function createStorage() {
   loadEnvFiles();
   if (!isDbEnabled()) {
-    const url = process.env.MASTRA_LIBSQL_URL?.trim() || "file:./.mastra/local-memory.db";
     return new LibSQLStore({
       id: "local-memory-store",
-      url,
+      url: localMemoryUrl(),
     });
   }
 

@@ -115,6 +115,14 @@ export type UiCopy = {
     close: string;
     note: string;
     emptyRoutes: string;
+    emptyFavoriteRoutes: string;
+    /** 경로 목록 필터 */
+    allRoutes: string;
+    favoriteRoutes: string;
+    /** 경로 카드의 별 버튼 */
+    addFavorite: string;
+    removeFavorite: string;
+    showOnMap: string;
     emptyChats: string;
     search: string;
     delete: string;
@@ -133,7 +141,7 @@ export type UiCopy = {
 
 const ko: UiCopy = {
   app: {
-    title: "제주 AI 여행 비서",
+    title: "제주 복합경로 안내",
     subtitle: "관광지·맛집·주차장·충전소 12,368곳을 모아 두었습니다",
     chats: "대화 목록",
     routes: "저장한 경로",
@@ -182,7 +190,7 @@ const ko: UiCopy = {
   ],
   weatherSuggestionIndex: 2,
   profile: {
-    title: "여행 취향을 알려 주세요",
+    title: "내정보",
     desc1: "선택하신 내용은 이 브라우저에만 저장되며, 추천에 참고합니다. 비워 두셔도 됩니다.",
     desc2: "내정보에서 수정하실 수 있습니다.",
     later: "나중에",
@@ -324,6 +332,12 @@ const ko: UiCopy = {
     close: "닫기",
     note: "이 브라우저에만 보관됩니다. 사이트 데이터를 지우면 사라집니다.",
     emptyRoutes: "저장한 경로가 없습니다.",
+    emptyFavoriteRoutes: "즐겨찾기한 경로가 없습니다.",
+    allRoutes: "전체",
+    favoriteRoutes: "즐겨찾기",
+    addFavorite: "즐겨찾기에 추가",
+    removeFavorite: "즐겨찾기 해제",
+    showOnMap: "지도에서 보기",
     emptyChats: "대화가 없습니다.",
     search: "검색",
     delete: "삭제",
@@ -369,7 +383,7 @@ const ko: UiCopy = {
 
 const en: UiCopy = {
   app: {
-    title: "Jeju AI Travel Assistant",
+    title: "Jeju Multimodal Route Guide",
     subtitle: "12,368 spots — sights, food, parking, and EV chargers",
     chats: "Chats",
     routes: "Saved routes",
@@ -418,7 +432,7 @@ const en: UiCopy = {
   ],
   weatherSuggestionIndex: 2,
   profile: {
-    title: "Tell us your travel preferences",
+    title: "My info",
     desc1: "Saved only in this browser and used for recommendations. You can leave fields empty.",
     desc2: "You can change them later in My info.",
     later: "Later",
@@ -560,6 +574,12 @@ const en: UiCopy = {
     close: "Close",
     note: "Stored only in this browser. Clearing site data removes them.",
     emptyRoutes: "No saved routes.",
+    emptyFavoriteRoutes: "No favorite routes.",
+    allRoutes: "All",
+    favoriteRoutes: "Favorites",
+    addFavorite: "Add to favorites",
+    removeFavorite: "Remove from favorites",
+    showOnMap: "Show on map",
     emptyChats: "No chats yet.",
     search: "Search",
     delete: "Delete",
@@ -605,7 +625,7 @@ const en: UiCopy = {
 
 const zh: UiCopy = {
   app: {
-    title: "济州AI旅行助手",
+    title: "济州复合路线导航",
     subtitle: "已收录 12,368 处景点、美食、停车场与充电站",
     chats: "对话列表",
     routes: "已存路线",
@@ -654,7 +674,7 @@ const zh: UiCopy = {
   ],
   weatherSuggestionIndex: 2,
   profile: {
-    title: "告诉我们您的旅行偏好",
+    title: "我的信息",
     desc1: "仅保存在本浏览器，用于推荐。也可以留空。",
     desc2: "之后可在「我的信息」中修改。",
     later: "稍后再说",
@@ -796,6 +816,12 @@ const zh: UiCopy = {
     close: "关闭",
     note: "仅保存在本浏览器。清除网站数据后会消失。",
     emptyRoutes: "暂无已存路线。",
+    emptyFavoriteRoutes: "暂无收藏的路线。",
+    allRoutes: "全部",
+    favoriteRoutes: "收藏",
+    addFavorite: "加入收藏",
+    removeFavorite: "取消收藏",
+    showOnMap: "在地图上查看",
     emptyChats: "暂无对话。",
     search: "搜索",
     delete: "删除",
@@ -841,7 +867,7 @@ const zh: UiCopy = {
 
 const ja: UiCopy = {
   app: {
-    title: "済州AI旅行アシスタント",
+    title: "済州複合ルート案内",
     subtitle: "観光・グルメ・駐車場・充電器 12,368件を収録",
     chats: "会話一覧",
     routes: "保存したルート",
@@ -890,7 +916,7 @@ const ja: UiCopy = {
   ],
   weatherSuggestionIndex: 2,
   profile: {
-    title: "旅行の好みを教えてください",
+    title: "マイ情報",
     desc1: "このブラウザにのみ保存され、おすすめに使います。空欄でも構いません。",
     desc2: "あとからマイ情報で変更できます。",
     later: "あとで",
@@ -1032,6 +1058,12 @@ const ja: UiCopy = {
     close: "閉じる",
     note: "このブラウザにのみ保存されます。サイトデータを消すとなくなります。",
     emptyRoutes: "保存したルートはありません。",
+    emptyFavoriteRoutes: "お気に入りのルートはありません。",
+    allRoutes: "すべて",
+    favoriteRoutes: "お気に入り",
+    addFavorite: "お気に入りに追加",
+    removeFavorite: "お気に入りを解除",
+    showOnMap: "地図で見る",
     emptyChats: "会話はありません。",
     search: "検索",
     delete: "削除",

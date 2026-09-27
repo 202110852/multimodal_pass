@@ -17,7 +17,7 @@ const fmt = (d: Date) =>
   d.toLocaleString("ko-KR", { year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit" });
 
 export function chatMarkdown(title: string, msgs: Msg[]): string {
-  const lines = [`# ${title}`, "", `> 제주 AI 여행 비서 · 내보낸 시각 ${fmt(new Date())}`, ""];
+  const lines = [`# ${title}`, "", `> 제주 복합경로 안내 · 내보낸 시각 ${fmt(new Date())}`, ""];
   for (const m of msgs) {
     const at = sentAt(m);
     const who = m.role === "user" ? "나" : "도우미";

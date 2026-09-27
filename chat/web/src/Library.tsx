@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useAppLocale } from "./AppLocaleContext.js";
 import { splitAnswer } from "./answer.js";
 import { plainText } from "./markdown.js";
+import { routePointsFromPlan } from "./location/route.js";
 import { searchChats, type ChatMeta, type RoutePlan, type SavedRoute, type SearchHit } from "./store.js";
 
 export type Panel = "chats" | "routes";
@@ -33,8 +34,10 @@ export function Library({
   onExportChat,
   routes,
   onRenameRoute,
+  onToggleFavoriteRoute,
   onDeleteRoute,
   onUseRoute,
+  onShowRouteOnMap,
 }: {
   panel: Panel;
   onPanel: (p: Panel) => void;
@@ -47,11 +50,17 @@ export function Library({
   onExportChat: (id: string) => void;
   routes: SavedRoute[];
   onRenameRoute: (id: string, title: string) => void;
+  onToggleFavoriteRoute: (id: string) => void;
   onDeleteRoute: (id: string) => void;
   onUseRoute: (r: SavedRoute) => void;
+  /** 지도 화면에서 열렸을 때만 있다 */
+  onShowRouteOnMap?: (r: SavedRoute) => void;
 }) {
   const { t } = useAppLocale();
   const closeBtn = useRef<HTMLButtonElement>(null);
+  const [favoritesOnly, setFavoritesOnly] = useState(false);
+  const favoriteCount = routes.filter((r) => r.favorite).length;
+  const shownRoutes = favoritesOnly ? routes.filter((r) => r.favorite) : routes;
 
   useEffect(() => {
     closeBtn.current?.focus();
@@ -97,23 +106,38 @@ export function Library({
             onExportChat={onExportChat}
           />
         ) : (
-          <ul className="route-list">
-            {routes.length === 0 && (
-              <li className="empty-note">{t.library.emptyRoutes}</li>
-            )}
-            {routes.map((r) => (
-              <RouteItem
-                key={r.id}
-                route={r}
-                busy={busy}
-                chatExists={chatIds.has(r.chatId)}
-                onRename={(t) => onRenameRoute(r.id, t)}
-                onDelete={() => onDeleteRoute(r.id)}
-                onUse={() => onUseRoute(r)}
-                onOpenChat={() => onOpenChat(r.chatId, r.msgId)}
-              />
-            ))}
-          </ul>
+          <>
+            <div className="route-filter" role="group" aria-label={t.library.routes}>
+              <button type="button" aria-pressed={!favoritesOnly} onClick={() => setFavoritesOnly(false)}>
+                {t.library.allRoutes} <span className="count">{routes.length}</span>
+              </button>
+              <button type="button" aria-pressed={favoritesOnly} onClick={() => setFavoritesOnly(true)}>
+                <StarIcon filled={favoritesOnly} />
+                {t.library.favoriteRoutes} <span className="count">{favoriteCount}</span>
+              </button>
+            </div>
+            <ul className="route-list">
+              {shownRoutes.length === 0 && (
+                <li className="empty-note">{favoritesOnly ? t.library.emptyFavoriteRoutes : t.library.emptyRoutes}</li>
+              )}
+              {shownRoutes.map((r) => (
+                <RouteItem
+                  key={r.id}
+                  route={r}
+                  busy={busy}
+                  chatExists={chatIds.has(r.chatId)}
+                  onRename={(t) => onRenameRoute(r.id, t)}
+                  onToggleFavorite={() => onToggleFavoriteRoute(r.id)}
+                  onDelete={() => onDeleteRoute(r.id)}
+                  onUse={() => onUseRoute(r)}
+                  onShowOnMap={
+                    onShowRouteOnMap && routePointsFromPlan(r.plan) ? () => onShowRouteOnMap(r) : undefined
+                  }
+                  onOpenChat={() => onOpenChat(r.chatId, r.msgId ?? undefined)}
+                />
+              ))}
+            </ul>
+          </>
         )}
       </aside>
     </div>
@@ -259,18 +283,24 @@ function RouteItem({
   busy,
   chatExists,
   onRename,
+  onToggleFavorite,
   onDelete,
   onUse,
+  onShowOnMap,
   onOpenChat,
 }: {
   route: SavedRoute;
   busy: boolean;
   chatExists: boolean;
   onRename: (t: string) => void;
+  onToggleFavorite: () => void;
   onDelete: () => void;
   onUse: () => void;
+  /** 좌표가 다 있는 경로를 지도 화면에서 볼 때만 있다 */
+  onShowOnMap?: () => void;
   onOpenChat: () => void;
 }) {
+  const { t } = useAppLocale();
   const [open, setOpen] = useState(false);
   const [editing, setEditing] = useState(false);
   const [draft, setDraft] = useState(route.title);
@@ -283,39 +313,51 @@ function RouteItem({
 
   return (
     <li className="route-item">
-      {editing ? (
-        <form
-          className="rename"
-          onSubmit={(e) => {
-            e.preventDefault();
-            commit();
-          }}
-        >
-          <input
-            autoFocus
-            value={draft}
-            maxLength={60}
-            aria-label="경로 이름"
-            onChange={(e) => setDraft(e.target.value)}
-            onBlur={commit}
-            onKeyDown={(e) => {
-              if (e.key === "Escape") {
-                e.stopPropagation();
-                setDraft(route.title);
-                setEditing(false);
-              }
+      <div className="route-item-head">
+        {editing ? (
+          <form
+            className="rename"
+            onSubmit={(e) => {
+              e.preventDefault();
+              commit();
             }}
-          />
-        </form>
-      ) : (
-        <button type="button" className="route-open" aria-expanded={open} onClick={() => setOpen((o) => !o)}>
-          <span className="title">{route.title}</span>
-          <span className="meta">
-            {when(route.savedAt)} · {route.plan.stops.length}곳
-            {route.plan.total_m > 0 && ` · 직선 ${distance(route.plan.total_m)}`}
-          </span>
+          >
+            <input
+              autoFocus
+              value={draft}
+              maxLength={60}
+              aria-label="경로 이름"
+              onChange={(e) => setDraft(e.target.value)}
+              onBlur={commit}
+              onKeyDown={(e) => {
+                if (e.key === "Escape") {
+                  e.stopPropagation();
+                  setDraft(route.title);
+                  setEditing(false);
+                }
+              }}
+            />
+          </form>
+        ) : (
+          <button type="button" className="route-open" aria-expanded={open} onClick={() => setOpen((o) => !o)}>
+            <span className="title">{route.title}</span>
+            <span className="meta">
+              {when(route.savedAt)} · {route.plan.stops.length}곳
+              {route.plan.total_m > 0 && ` · 직선 ${distance(route.plan.total_m)}`}
+            </span>
+          </button>
+        )}
+        <button
+          type="button"
+          className={`route-favorite${route.favorite ? " on" : ""}`}
+          aria-pressed={Boolean(route.favorite)}
+          aria-label={route.favorite ? t.library.removeFavorite : t.library.addFavorite}
+          title={route.favorite ? t.library.removeFavorite : t.library.addFavorite}
+          onClick={onToggleFavorite}
+        >
+          <StarIcon filled={Boolean(route.favorite)} />
         </button>
-      )}
+      </div>
 
       {open && <RouteStops plan={route.plan} />}
 
@@ -323,6 +365,11 @@ function RouteItem({
         <button type="button" className="icon" disabled={busy} onClick={onUse}>
           대화에서 쓰기
         </button>
+        {onShowOnMap && (
+          <button type="button" className="icon" onClick={onShowOnMap}>
+            {t.library.showOnMap}
+          </button>
+        )}
         {chatExists && (
           <button type="button" className="icon" disabled={busy} onClick={onOpenChat}>
             원래 대화
@@ -347,6 +394,14 @@ function RouteItem({
         </button>
       </div>
     </li>
+  );
+}
+
+function StarIcon({ filled }: { filled: boolean }) {
+  return (
+    <svg viewBox="0 0 24 24" className="star-icon" aria-hidden="true" fill={filled ? "currentColor" : "none"}>
+      <path d="M12 3.5l2.6 5.3 5.9.9-4.25 4.1 1 5.8L12 16.9l-5.25 2.7 1-5.8L3.5 9.7l5.9-.9z" />
+    </svg>
   );
 }
 

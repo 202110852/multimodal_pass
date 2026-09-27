@@ -56,18 +56,37 @@ export const pool: pg.Pool | null = isDbEnabled()
     )
   : null;
 
+const UNDEFINED_TABLE = "42P01";
+const warnedMissingTables = new Set<string>();
+
+function isUndefinedTableError(err: unknown): err is { code: string; message: string } {
+  return typeof err === "object" && err !== null && (err as { code?: unknown }).code === UNDEFINED_TABLE;
+}
+
 /**
  * 읽기/쓰기 공용.
  * DB off 이면 빈 배열 — tool 은 "결과 없음"으로 통과한다.
  * INSERT … RETURNING 이 빈 배열이면 호출 측에서 쓰기 실패로 보면 된다.
+ *
+ * Supabase 에는 운영 테이블(supabase/schema.sql)만 있고 레거시 POI·FAQ·날씨 테이블은 없다.
+ * 없는 테이블 조회는 DB off 와 같게 빈 배열로 돌려준다 (테이블별로 한 번만 경고).
  */
 export async function query<T = Record<string, unknown>>(
   sql: string,
   params: unknown[] = [],
 ): Promise<T[]> {
   if (!pool) return [];
-  const res = await pool.query(sql, params);
-  return res.rows as T[];
+  try {
+    const res = await pool.query(sql, params);
+    return res.rows as T[];
+  } catch (err) {
+    if (!isUndefinedTableError(err)) throw err;
+    if (!warnedMissingTables.has(err.message)) {
+      warnedMissingTables.add(err.message);
+      console.warn(`[db] 없는 테이블 조회 → 빈 결과로 처리: ${err.message}`);
+    }
+    return [];
+  }
 }
 
 /** 도메인 목록 — tool 설명과 입력 검증에 쓴다. poi_domain 테이블과 같아야 한다. */

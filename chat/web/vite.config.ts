@@ -1,5 +1,6 @@
 import { execSync } from "node:child_process";
-import { defineConfig, type ProxyOptions } from "vite";
+import { fileURLToPath } from "node:url";
+import { defineConfig, loadEnv, type ProxyOptions } from "vite";
 import react from "@vitejs/plugin-react";
 
 /**
@@ -58,11 +59,28 @@ function buildInfo() {
   return { time: new Date().toISOString(), commit };
 }
 
-export default defineConfig({
+const WEB_ROOT = fileURLToPath(new URL(".", import.meta.url));
+const REPO_ROOT = fileURLToPath(new URL("../..", import.meta.url));
+
+/**
+ * 카카오맵 JavaScript 키. chat/web 의 env 파일에 있으면 그 값을, 없으면 저장소 루트 .env 값을 쓴다.
+ * 루트 .env 에는 서버 비밀도 있어 envDir 을 통째로 옮기지 않고 이 키 하나만 가져온다.
+ */
+function kakaoAppKey(mode: string): string {
+  const key = "VITE_KAKAO_APP_KEY";
+  return loadEnv(mode, WEB_ROOT, key)[key] || loadEnv(mode, REPO_ROOT, key)[key] || "";
+}
+
+export default defineConfig(({ mode }) => ({
   plugins: [react()],
-  define: { __BUILD__: JSON.stringify(buildInfo()) },
+  define: {
+    __BUILD__: JSON.stringify(buildInfo()),
+    "import.meta.env.VITE_KAKAO_APP_KEY": JSON.stringify(kakaoAppKey(mode)),
+  },
   server: {
     port: 5173,
+    // 같은 네트워크의 휴대폰에서도 접속할 수 있게 모든 인터페이스에서 받는다
+    host: true,
     proxy: {
       "/api": proxyOptions,
       // 관리자 API. 키는 앞부분 일치라 "/admin/" 로 두면 SPA 경로 /admin/ 까지 넘어간다.
@@ -77,4 +95,4 @@ export default defineConfig({
       "/admin/bug-reports": proxyOptions,
     },
   },
-});
+}));

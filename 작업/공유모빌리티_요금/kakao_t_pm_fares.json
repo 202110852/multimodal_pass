@@ -1,0 +1,109 @@
+{
+  "title": "공유 킥보드·전동 바이크 운행 요금",
+  "source": "카카오 T 앱 — 현위치 기준 운행 요금 화면",
+  "captured_at": "2026-09-26",
+  "timezone": "Asia/Seoul",
+  "currency": "KRW",
+  "fare_basis": "현위치",
+  "billing_note": "이용 시작하면 분당 요금을 바로 적용해요.",
+  "estimate_formula": "unlock_fee + per_minute_fee * ride_minutes",
+  "disclaimer": "(주)카카오모빌리티는 개인형 이동장치 공유서비스 중개자로 통신판매중개자이며 통신판매의 당사자가 아닙니다. 서비스에 관한 의무와 책임은 서비스 제공 당사자에게 있습니다.",
+  "intermediary": {
+    "name": "카카오모빌리티",
+    "name_en": "Kakao Mobility",
+    "legal_name": "(주)카카오모빌리티"
+  },
+  "services": [
+    {
+      "id": "g_kickboard",
+      "operator": "G",
+      "operator_label": "G",
+      "vehicle_type": "kickboard",
+      "vehicle_type_ko": "전동 킥보드",
+      "rates": [
+        {
+          "period": "day",
+          "period_ko": "주간",
+          "start": "05:00",
+          "end": "23:59",
+          "unlock_fee": 800,
+          "per_minute_fee": 180
+        },
+        {
+          "period": "night",
+          "period_ko": "심야",
+          "start": "00:00",
+          "end": "04:59",
+          "unlock_fee": 1200,
+          "per_minute_fee": 180
+        }
+      ]
+    },
+    {
+      "id": "g_ebike",
+      "operator": "G",
+      "operator_label": "G",
+      "vehicle_type": "ebike",
+      "vehicle_type_ko": "전동 바이크",
+      "rates": [
+        {
+          "period": "day",
+          "period_ko": "주간",
+          "start": "05:00",
+          "end": "23:59",
+          "unlock_fee": 800,
+          "per_minute_fee": 180
+        },
+        {
+          "period": "night",
+          "period_ko": "심야",
+          "start": "00:00",
+          "end": "04:59",
+          "unlock_fee": 1200,
+          "per_minute_fee": 180
+        }
+      ]
+    },
+    {
+      "id": "kakao_t_ebike",
+      "operator": "kakao_t",
+      "operator_label": "카카오 T",
+      "vehicle_type": "ebike",
+      "vehicle_type_ko": "전동 바이크",
+      "rates": [
+        {
+          "period": "day",
+          "period_ko": "주간",
+          "start": "06:00",
+          "end": "23:59",
+          "unlock_fee": 500,
+          "per_minute_fee": 140
+        },
+        {
+          "period": "night",
+          "period_ko": "심야",
+          "start": "00:00",
+          "end": "05:59",
+          "unlock_fee": 800,
+          "per_minute_fee": 140
+        }
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "service_id": "g_kickboard",
+      "period": "day",
+      "ride_minutes": 10,
+      "estimated_fare": 2600,
+      "note": "800 + 180×10"
+    },
+    {
+      "service_id": "kakao_t_ebike",
+      "period": "day",
+      "ride_minutes": 10,
+      "estimated_fare": 1900,
+      "note": "500 + 140×10"
+    }
+  ]
+}

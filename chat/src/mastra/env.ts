@@ -2,11 +2,30 @@ import { existsSync, readFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 
 /**
+ * chat/ 디렉터리 절대 경로 (package.json 과 src/mastra 가 함께 있는 곳).
+ *
+ * cwd 를 그대로 쓰면 안 된다 — `mastra dev` 는 chat/src/mastra/public/ 을
+ * cwd 로 실행하고, tsx 직접 실행은 chat/ 이 cwd 다. 상대 경로 파일은 이 값을 기준으로 잡는다.
+ */
+export function chatRootDir(): string {
+  let dir = process.cwd();
+  for (let depth = 0; depth < 6; depth++) {
+    if (existsSync(resolve(dir, "package.json")) && existsSync(resolve(dir, "src", "mastra"))) {
+      return dir;
+    }
+    const parent = dirname(dir);
+    if (parent === dir) break;
+    dir = parent;
+  }
+  return process.cwd();
+}
+
+/**
  * .env 를 현재 작업 디렉터리에서 위로 올라가며 찾는다.
  *
  * import.meta.url 기준으로 잡으면 안 된다 — `mastra dev` 는 코드를
- * chat/.mastra/output/ 으로 번들해서 실행하므로 상대 경로가 어긋난다.
- * cwd 는 두 경로(tsx 직접 실행, mastra dev) 모두에서 chat/ 이다.
+ * chat/.mastra/output/ 으로 번들하고 chat/src/mastra/public/ 을 cwd 로 실행한다.
+ * 위로 올라가며 찾으므로 cwd 가 어디든 chat/.env → 저장소 루트 .env 순으로 잡힌다.
  *
  * 가까운 파일이 우선한다 (chat/.env → 저장소 루트 .env).
  * 이미 설정된 process.env 는 덮지 않는다 (셸 값이 최우선).

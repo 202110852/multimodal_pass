@@ -41,6 +41,12 @@ import { isAppLocale } from "./locale.js";
 import { NationalitySelect } from "./NationalitySelect.js";
 import { hostedChat } from "./embed.js";
 
+/**
+ * 복합경로 안내에서 쓰지 않는 취향 항목(국적·나이대·여행 유형·소비유형·실내/실외·식이).
+ * 코드는 남겨 두고 화면에서만 숨긴다 — false 로 바꾸면 다시 보인다.
+ */
+const HIDE_UNUSED_SECTIONS = true;
+
 function toggleIn<T>(list: T[], id: T): T[] {
   return list.includes(id) ? list.filter((x) => x !== id) : [...list, id];
 }
@@ -138,7 +144,7 @@ export function ProfileSetup({
             {draft.language === "other" && <p className="hint">{p.otherLangHint}</p>}
           </section>}
 
-          <section className="profile-section">
+          <section className="profile-section" hidden={HIDE_UNUSED_SECTIONS}>
             <h3>{p.nationality}</h3>
             <NationalitySelect
               value={draft.nationality}
@@ -151,7 +157,7 @@ export function ProfileSetup({
             />
           </section>
 
-          <section className="profile-section">
+          <section className="profile-section" hidden={HIDE_UNUSED_SECTIONS}>
             <h3>{p.ageGroup}</h3>
             <div className="profile-chips">
               {AGE_GROUP_OPTS.map((o) => (
@@ -253,7 +259,7 @@ export function ProfileSetup({
             </>
           )}
 
-          <section className="profile-section">
+          <section className="profile-section" hidden={HIDE_UNUSED_SECTIONS}>
             <h3>{p.travelTypes}</h3>
             <p className="hint">{p.travelHint}</p>
             <div className="profile-chips">
@@ -268,7 +274,7 @@ export function ProfileSetup({
             </div>
           </section>
 
-          <section className="profile-section">
+          <section className="profile-section" hidden={HIDE_UNUSED_SECTIONS}>
             <h3>{p.valuePref}</h3>
             <div className="profile-slider">
               <input
@@ -289,7 +295,7 @@ export function ProfileSetup({
             </div>
           </section>
 
-          <section className="profile-section">
+          <section className="profile-section" hidden={HIDE_UNUSED_SECTIONS}>
             <h3>{p.placePref}</h3>
             <div className="profile-slider">
               <input
@@ -310,7 +316,7 @@ export function ProfileSetup({
             </div>
           </section>
 
-          <section className="profile-section">
+          <section className="profile-section" hidden={HIDE_UNUSED_SECTIONS}>
             <h3>{p.diet}</h3>
             <p className="hint">{p.dietHint}</p>
             <div className="profile-chips">

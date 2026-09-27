@@ -157,7 +157,8 @@ Anthropic 에 직접 붙지 않는다. 동국대 WISE 캠퍼스가 제공하는
 ## 에이전트 메모리
 
 도메인 DB off(로컬 기본)이면 **LibSQL**(`file:./.mastra/local-memory.db`)에 스레드·메시지를 저장한다.
-Postgres(추후 Supabase)를 켠 경우에는 `PostgresStore` + `mastra` 스키마를 쓴다.
+Postgres(Supabase)를 켠 경우에는 `PostgresStore` + `mastra` 스키마를 쓴다.
+Supabase 준비는 `supabase/schema.sql` 을 SQL Editor 에서 실행하고 `PG_URL` 을 채우면 된다 (`.env.example` 참고).
 `/api/memory/*` 는 남의 대화를 돌려주므로 `ADMIN_TOKEN` 으로만 열린다 (`auth.ts`).
 화면의 대화 기록은 브라우저 localStorage 에 따로 둔다.
 

@@ -56,22 +56,29 @@ body {
   overflow: hidden;
   background: var(--bg);
 }
-.embedded-chat .app {
+/* 메인 지도 화면의 챗봇 팝업도 제목·닫기 버튼을 팝업이 가지므로 같은 배치를 쓴다 */
+.embedded-chat .app,
+.chat-popup .app {
   height: 100%;
   min-height: 0;
   max-width: none;
   background: var(--bg);
 }
-.embedded-chat .app > header {
+.embedded-chat .app > header,
+.chat-popup .app > header {
   flex: none;
   padding: 10px 12px;
   background: var(--bg);
   backdrop-filter: none;
 }
-.embedded-chat .app > header > div:first-child { display: none; }
-.embedded-chat .app > header .actions { width: 100%; justify-content: flex-end; }
-.embedded-chat .app > main { min-height: 0; overflow-y: auto; overscroll-behavior: contain; }
-.embedded-chat .app > .composer {
+.embedded-chat .app > header > div:first-child,
+.chat-popup .app > header > div:first-child { display: none; }
+.embedded-chat .app > header .actions,
+.chat-popup .app > header .actions { width: 100%; justify-content: flex-end; }
+.embedded-chat .app > main,
+.chat-popup .app > main { min-height: 0; overflow-y: auto; overscroll-behavior: contain; }
+.embedded-chat .app > .composer,
+.chat-popup .app > .composer {
   flex: none;
   background: var(--bg);
   backdrop-filter: none;
@@ -91,6 +98,8 @@ header {
   background: color-mix(in srgb, var(--bg) 88%, transparent);
   backdrop-filter: blur(8px);
   z-index: 2;
+  user-select: none;
+  -webkit-user-select: none;
 }
 header h1 { font-size: 17px; margin: 0; letter-spacing: -0.01em; }
 header p { margin: 3px 0 0; font-size: 12.5px; color: var(--muted); }
@@ -179,7 +188,7 @@ main {
 }
 
 /* 답변 아래 도구줄 · 추천 질문 */
-.msg-tools { display: flex; align-items: center; gap: 10px; min-height: 22px; padding-left: 4px; }
+.msg-tools { display: flex; align-items: center; gap: 10px; min-height: 22px; padding-left: 4px; user-select: none; -webkit-user-select: none; }
 .msg-tools .stopped { font-size: 12px; color: var(--muted); }
 button.icon {
   background: none;
@@ -600,6 +609,51 @@ button.icon:disabled { opacity: 0.4; cursor: default; }
   flex-direction: column;
 }
 .route-open { padding-bottom: 4px; }
+.route-item-head { display: flex; align-items: flex-start; min-width: 0; }
+.route-item-head .rename { flex: 1; min-width: 0; }
+.route-favorite {
+  flex: none;
+  width: 34px;
+  height: 34px;
+  margin: 4px 4px 0 0;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  color: var(--muted);
+  background: none;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.route-favorite:hover { color: #f59e0b; background: var(--accent-soft); }
+.route-favorite.on { color: #f59e0b; }
+
+.star-icon {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linejoin: round;
+}
+
+.route-filter { display: flex; gap: 6px; }
+.route-filter button {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 30px;
+  padding: 0 11px;
+  font: inherit;
+  font-size: 13px;
+  color: var(--muted);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  cursor: pointer;
+}
+.route-filter button[aria-pressed="true"] { color: var(--ink); font-weight: 600; border-color: var(--accent); background: var(--accent-soft); }
+.route-filter .star-icon { width: 14px; height: 14px; color: #f59e0b; }
+.route-filter .count { font-variant-numeric: tabular-nums; color: var(--muted); font-weight: 400; }
 .route-actions { display: flex; flex-wrap: wrap; gap: 2px; padding: 0 8px 8px; }
 .rename { padding: 8px 10px 4px; display: flex; }
 .rename input {

@@ -1,5 +1,6 @@
 import { MastraClient, RequestContext } from "@mastra/client-js";
-import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useRef, useState, type ReactNode } from "react";
+import { createPortal } from "react-dom";
 import { splitAnswer } from "./answer.js";
 import { MAX_IMAGES, imagePart, prepareImage, type Attachment } from "./attach.js";
 import { downloadChat } from "./exportChat.js";
@@ -28,17 +29,19 @@ import {
   saveChat,
   saveRoute,
   setCurrentChatId,
+  toggleRouteFavorite,
   withRoutePrompt,
   type ChatRecord,
   type Msg,
   type PlaceHit,
+  type RoutePlan,
   type SavedRoute,
 } from "./store.js";
 import { ensureAnswerMapLinks, extractMapLinksFromTool, type MapLinkHit } from "./mapLink.js";
 import { applyProfileSuggestions } from "./profileSuggestions.js";
 
 /** 입력창·메시지에 붙는 경로 멘션 (화면에는 제목만). */
-type RouteMention = { id: string; title: string; prompt: string };
+export type RouteMention = { id: string; title: string; prompt: string };
 import { modeOf, toolLabel } from "./tools.js";
 import { useVoiceInput, voiceSupported } from "./voice.js";
 
@@ -93,8 +96,8 @@ function describeError(err: unknown): string {
     typeof err === "string" ? err : JSON.stringify(err ?? {}, null, 0);
   if (/402|크레딧|credit|Payment Required/i.test(raw)) {
     return (
-      "LLM 크레딧이 부족해 답변을 끝내지 못했습니다.\n" +
-      "FactChat 개인 크레딧을 확인해 주세요 (docs.mindlogic.ai)."
+      "LLM 크레딧·모델 권한 문제로 답변을 끝내지 못했습니다.\n" +
+      "FactChat 은 개인 크레딧을, OmniRoute 는 대시보드 Logs 와 LLM_MODEL 을 확인해 주세요."
     );
   }
   if (/429|rate.?limit/i.test(raw)) return "요청이 몰려 잠시 제한되었습니다. 잠시 후 다시 시도해 주세요.";
@@ -111,7 +114,24 @@ function describeError(err: unknown): string {
   return `응답 중 오류가 발생했습니다.\n${raw.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").slice(0, 200)}`;
 }
 
-export function App() {
+/** 지도에서 정한 경로 — 입력창에 붙일 멘션과 "저장한 경로" 에 넣을 계획 */
+export type MapRouteRequest = RouteMention & { plan: RoutePlan };
+
+type AppProps = {
+  /** 지도에서 "경로 저장하기" 를 누를 때마다 새 id 로 들어온다 — 경로를 저장하고, 새 대화를 열어 입력창에 붙인다 */
+  routeRequest?: MapRouteRequest | null;
+  /** 지도 화면 안에서 열렸을 때만 준다 — 저장한 경로의 "지도에서 보기" */
+  onShowRouteOnMap?: (route: SavedRoute) => void;
+  /** 지도의 "저장 목록" 을 누를 때마다 늘어난다 — 보관함의 "저장한 경로" 탭을 연다 (0 이면 요청 없음) */
+  savedRoutesRequest?: number;
+  /**
+   * 지도 화면에서만 준다 — 챗봇 창이 숨겨져 있어도 보관함을 띄울 수 있게 보관함을 창 밖(body)에 그리고,
+   * 보관함에서 대화가 필요한 동작(대화에서 쓰기 · 대화 열기)을 하면 이걸 불러 챗봇 창을 연다.
+   */
+  onRevealChat?: () => void;
+};
+
+export function App({ routeRequest = null, onShowRouteOnMap, savedRoutesRequest = 0, onRevealChat }: AppProps = {}) {
   const { t, locale } = useAppLocale();
   // 클론 직후에는 .env.local 이 없어 키가 비어 있다. 요청을 보내 401 을 받기 전에
   // 화면에서 먼저 알려 준다 — 그러지 않으면 원인을 짐작하기 어렵다.
@@ -696,9 +716,40 @@ export function App() {
     }
   };
 
+  // 답변을 받는 중이면 대화를 바꿀 수 없으므로, 끝난 뒤에 처리한다
+  const handledRouteRequest = useRef<string | null>(null);
+  useEffect(() => {
+    if (!routeRequest || busy || handledRouteRequest.current === routeRequest.id) return;
+    handledRouteRequest.current = routeRequest.id;
+    const targetChatId = messages.length > 0 ? newChatId() : chatId;
+    if (targetChatId !== chatId) openChat(targetChatId);
+
+    const { plan, ...mention } = routeRequest;
+    const saved = saveRoute(plan, targetChatId, null, mention.title);
+    if (saved) {
+      setRoutes(saved);
+      setNotice(t.app.routeSaved);
+    } else {
+      setNotice(t.app.routeSaveFail);
+    }
+
+    setInput("");
+    setAttachments([]);
+    setAttachedRoute(mention);
+    setTimeout(() => box.current?.focus(), 0);
+  }, [routeRequest, busy]);
+
+  useEffect(() => {
+    if (savedRoutesRequest > 0) setPanel("routes");
+  }, [savedRoutesRequest]);
+
+  const withLibraryPortal = (library: ReactNode) =>
+    onRevealChat ? createPortal(<div className="library-layer">{library}</div>, document.body) : library;
+
   const applyRoute = (r: SavedRoute) => {
     setAttachedRoute({ id: r.id, title: r.title, prompt: routePrompt(r) });
     setPanel(null);
+    onRevealChat?.();
     setTimeout(() => box.current?.focus(), 0);
   };
 
@@ -808,7 +859,7 @@ export function App() {
         </div>
       </header>
 
-      {panel && (
+      {panel && withLibraryPortal(
         <Library
           panel={panel}
           onPanel={setPanel}
@@ -816,14 +867,25 @@ export function App() {
           chats={chats}
           currentChat={chatId}
           busy={busy}
-          onOpenChat={openChat}
+          onOpenChat={(id, msgId) => {
+            openChat(id, msgId);
+            onRevealChat?.();
+          }}
           onDeleteChat={removeChat}
           onExportChat={exportChat}
           routes={routes}
           onRenameRoute={(id, t) => setRoutes(renameRoute(id, t))}
+          onToggleFavoriteRoute={(id) => setRoutes(toggleRouteFavorite(id))}
           onDeleteRoute={(id) => setRoutes(deleteRoute(id))}
           onUseRoute={applyRoute}
-        />
+          onShowRouteOnMap={
+            onShowRouteOnMap &&
+            ((r) => {
+              setPanel(null);
+              onShowRouteOnMap(r);
+            })
+          }
+        />,
       )}
       {notice && (
         <div className="toast" role="status">
