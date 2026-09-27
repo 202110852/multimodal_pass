@@ -50,7 +50,15 @@ const cong = await run("check-metric 집중률 (있는 POI)", async () => {
 void cong;
 
 await run("get-weather brief", () => exec(getWeather, { kind: "brief", hours: 24 }));
-await run("get-weather forecast", () => exec(getWeather, { kind: "forecast", hours: 12 }));
+await run("get-weather forecast (경로 2지점)", () =>
+  exec(getWeather, {
+    kind: "forecast",
+    hours: 6,
+    points: [
+      { name: "제주공항", lat: 33.5066, lon: 126.4929 },
+      { name: "성산일출봉", lat: 33.4581, lon: 126.9425 },
+    ],
+  }));
 await run("naver-map-link", () => exec(naverMapLink, { poi_id: first.poi_id }));
 
 // 방문순서 — 관덕정·동문시장·사라봉. 서→동 순으로 이어져야 한다.

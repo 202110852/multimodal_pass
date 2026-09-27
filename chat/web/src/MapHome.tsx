@@ -398,6 +398,7 @@ export function MapHome() {
               onShowRouteOnMap={showSavedRoute}
               savedRoutesRequest={savedRoutesRequest}
               onRevealChat={openChat}
+              userLocation={location.coords}
             />
           </div>
         </section>

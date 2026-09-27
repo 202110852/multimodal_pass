@@ -1,77 +1,167 @@
 import { createTool } from "@mastra/core/tools";
 import { z } from "zod";
-import { query } from "../db.js";
+import {
+  JEJU_CITY_HALL,
+  fetchForecast,
+  fetchJejuWarnings,
+  type Coords,
+  type HourlyWeather,
+} from "../lib/weather.js";
 
 /**
- * 날씨. 격자 단위라 장소와 FK 가 없다 — 제주 원도심 단일 격자 기준이다.
- * ai_brief 는 수집 파이프라인이 만들어 둔 요약(JSONB)이고,
- * weather_forecast 는 시각·항목별 원값이다.
+ * 좌표 기반 날씨. 경로의 출발·경유·도착 좌표를 넘기면 지점마다 예보를 준다.
+ * 좌표를 안 주면 사용자 현재 위치(웹이 requestContext.userLocation 으로 보냄), 그것도 없으면 제주시청.
  */
+
+const MAX_POINTS = 6;
+
+const pointSchema = z.object({
+  name: z.string().optional().describe("지점 이름 (예: 출발 제주공항, 도착 성산일출봉)"),
+  lat: z.number().min(33).max(34).describe("위도"),
+  lon: z.number().min(126).max(127.1).describe("경도"),
+});
+
+const hourlySchema = z.object({
+  at: z.string(),
+  temp_c: z.number().nullable(),
+  precip_prob: z.number().nullable(),
+  precip_mm: z.number().nullable(),
+  wind_ms: z.number().nullable(),
+  sky: z.string(),
+});
+
+const locationSchema = z.object({
+  name: z.string(),
+  lat: z.number(),
+  lon: z.number(),
+  source: z.enum(["input", "user_location", "default"]),
+  current: z
+    .object({
+      at: z.string(),
+      temp_c: z.number().nullable(),
+      feels_like_c: z.number().nullable(),
+      precip_mm: z.number().nullable(),
+      wind_ms: z.number().nullable(),
+      sky: z.string(),
+    })
+    .nullable(),
+  summary: z
+    .object({
+      temp_min_c: z.number().nullable(),
+      temp_max_c: z.number().nullable(),
+      max_precip_prob: z.number().nullable(),
+      rainy_hours: z.array(z.string()).describe("강수확률 60% 이상이거나 비가 오는 시각"),
+      max_wind_ms: z.number().nullable(),
+    })
+    .nullable(),
+  hourly: z.array(hourlySchema),
+  error: z.string().nullable(),
+});
+
+const warningSchema = z.object({
+  region: z.string(),
+  kind: z.string(),
+  level: z.string(),
+  command: z.string(),
+  issued_at: z.string(),
+  effective_at: z.string(),
+});
+
+type Place = Coords & { name: string; source: "input" | "user_location" | "default" };
+
+function userLocationOf(raw: unknown): Coords | null {
+  if (!raw || typeof raw !== "object") return null;
+  const { lat, lon } = raw as { lat?: unknown; lon?: unknown };
+  if (typeof lat !== "number" || typeof lon !== "number") return null;
+  if (!Number.isFinite(lat) || !Number.isFinite(lon)) return null;
+  return { lat, lon };
+}
+
+function maxOf(values: (number | null)[]): number | null {
+  const nums = values.filter((v): v is number => v != null);
+  return nums.length ? Math.max(...nums) : null;
+}
+
+function minOf(values: (number | null)[]): number | null {
+  const nums = values.filter((v): v is number => v != null);
+  return nums.length ? Math.min(...nums) : null;
+}
+
+function summarize(hourly: HourlyWeather[]) {
+  return {
+    temp_min_c: minOf(hourly.map((h) => h.temp_c)),
+    temp_max_c: maxOf(hourly.map((h) => h.temp_c)),
+    max_precip_prob: maxOf(hourly.map((h) => h.precip_prob)),
+    rainy_hours: hourly
+      .filter((h) => (h.precip_prob ?? 0) >= 60 || (h.precip_mm ?? 0) > 0)
+      .map((h) => h.at.slice(11, 16)),
+    max_wind_ms: maxOf(hourly.map((h) => h.wind_ms)),
+  };
+}
+
 export const getWeather = createTool({
   id: "get-weather",
   description:
-    "제주시 날씨를 가져온다. 경로·일정을 짜거나 도보·자전거·킥보드 구간을 넣기 전에 확인한다. " +
-    "kind=brief 는 요약, forecast 는 시각별 예보, warning 은 현재 기상특보.",
+    "좌표 기준 실시간 날씨(현재·시간별 예보)와 제주 기상특보를 가져온다. " +
+    "경로를 안내할 때는 출발·경유·도착 좌표를 points 로 넘겨 구간별 날씨를 본다. " +
+    "points 를 비우면 사용자 현재 위치(없으면 제주시청) 기준이다. " +
+    "도보·자전거·킥보드 구간을 넣거나 실외 일정을 짜기 전에 확인한다. " +
+    "kind=brief 는 현재 + 요약, forecast 는 시간별 예보까지, warning 은 특보만.",
   inputSchema: z.object({
     kind: z.enum(["brief", "forecast", "warning"]).default("brief"),
-    hours: z.number().int().min(1).max(72).default(24).describe("forecast 일 때 앞으로 몇 시간"),
+    hours: z.number().int().min(1).max(48).default(12).describe("앞으로 몇 시간을 볼지"),
+    points: z
+      .array(pointSchema)
+      .max(MAX_POINTS)
+      .optional()
+      .describe("날씨를 볼 지점 좌표 (최대 6개). 좌표는 kakao-search-places·place-detail 결과를 쓴다"),
   }),
   outputSchema: z.object({
     kind: z.string(),
-    brief: z.unknown().nullable(),
-    forecast: z.array(z.object({ at: z.string(), category: z.string(), value: z.string() })),
-    warnings: z.array(
-      z.object({ wrn: z.string(), lvl: z.string(), reg: z.string().nullable(), ed_tm: z.string().nullable() }),
-    ),
-    stale_from: z.string().nullable().describe("현재 시각 창에 예보가 없어 과거분을 준 경우 그 기준 시각"),
+    locations: z.array(locationSchema),
+    warnings: z.array(warningSchema).nullable().describe("null 이면 특보를 조회하지 못한 것 (없음과 다르다)"),
     note: z.string().nullable(),
   }),
-  execute: async ({ kind, hours }) => {
-    let brief: unknown = null;
-    let forecast: unknown[] = [];
-    let warnings: unknown[] = [];
-    let stale: string | null = null;
+  execute: async ({ kind, hours, points }, context) => {
+    const places: Place[] = points?.length
+      ? points.map((p, i) => ({ lat: p.lat, lon: p.lon, name: p.name ?? `지점 ${i + 1}`, source: "input" }))
+      : (() => {
+          const user = userLocationOf(context?.requestContext?.get("userLocation"));
+          return user
+            ? [{ ...user, name: "현재 위치", source: "user_location" as const }]
+            : [{ ...JEJU_CITY_HALL, name: "제주시청", source: "default" as const }];
+        })();
 
-    if (kind === "brief") {
-      const [row] = await query<{ payload: unknown }>(
-        `SELECT payload FROM weather_ai_brief ORDER BY generated_at DESC LIMIT 1`,
-      );
-      brief = row?.payload ?? null;
-    } else if (kind === "forecast") {
-      const sql = `
-        SELECT DISTINCT ON (fcst_at, category)
-               to_char(fcst_at, 'YYYY-MM-DD HH24:MI') AS at, category, value
-        FROM weather_forecast
-        WHERE fcst_at BETWEEN $2::timestamptz AND $2::timestamptz + ($1 || ' hours')::interval
-          AND category IN ('TMP','T1H','SKY','PTY','POP','REH','WSD','PCP')
-        ORDER BY fcst_at, category, base_at DESC`;
-      forecast = await query(sql, [hours, new Date().toISOString()]);
-      if (forecast.length === 0) {
-        // 수집이 멈춰 있으면 현재 시각 창이 비어 있다. 데이터가 아예 없는 것과
-        // 오래된 것은 다르므로, 가장 최근 예보를 주고 언제 것인지 알려준다.
-        const [latest] = await query<{ at: string }>(
-          `SELECT to_char(min(fcst_at), 'YYYY-MM-DD"T"HH24:MI:SSOF') AS at
-             FROM weather_forecast WHERE fcst_at >= (SELECT max(base_at) FROM weather_forecast)`,
-        );
-        if (latest?.at) {
-          forecast = await query(sql, [hours, latest.at]);
-          stale = latest.at;
-        }
-      }
-    } else {
-      warnings = await query(
-        `SELECT wrn, lvl, reg_ko AS reg, ed_tm
-           FROM weather_warning
-          WHERE tm_ef IS NULL OR tm_ef <= now()
-          ORDER BY tm_fc DESC LIMIT 20`,
-      );
-    }
-    return {
-      kind, brief, forecast, warnings,
-      stale_from: stale,
-      note: stale
-        ? `수집이 최신이 아니다. ${stale} 기준 예보를 돌려준다 — 사용자에게 시점을 밝힐 것.`
-        : null,
-    } as never;
+    const warningsPromise = fetchJejuWarnings().catch(() => null);
+
+    const locations =
+      kind === "warning"
+        ? []
+        : await Promise.all(
+            places.map(async (place) => {
+              try {
+                const { current, hourly } = await fetchForecast(place, hours);
+                return {
+                  ...place,
+                  current,
+                  summary: summarize(hourly),
+                  hourly: kind === "forecast" ? hourly : [],
+                  error: null,
+                };
+              } catch (err) {
+                return { ...place, current: null, summary: null, hourly: [], error: String((err as Error).message ?? err) };
+              }
+            }),
+          );
+
+    const warnings = await warningsPromise;
+    const failed = locations.filter((l) => l.error).length;
+    const notes = [
+      places[0]?.source === "default" ? "사용자 위치를 모른다 — 제주시청 기준임을 밝힐 것." : null,
+      failed ? `${failed}개 지점의 예보를 불러오지 못했다.` : null,
+      warnings === null ? "기상특보를 조회하지 못했다." : null,
+    ].filter(Boolean);
+
+    return { kind, locations, warnings, note: notes.length ? notes.join(" ") : null };
   },
 });

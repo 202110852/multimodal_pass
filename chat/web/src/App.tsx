@@ -1,5 +1,6 @@
 import { MastraClient, RequestContext } from "@mastra/client-js";
 import { useCallback, useEffect, useLayoutEffect, useRef, useState, type ReactNode } from "react";
+import type { GeoCoords } from "./location/geolocation.js";
 import { createPortal } from "react-dom";
 import { splitAnswer } from "./answer.js";
 import { MAX_IMAGES, imagePart, prepareImage, type Attachment } from "./attach.js";
@@ -134,10 +135,21 @@ type AppProps = {
    * 보관함에서 대화가 필요한 동작(대화에서 쓰기 · 대화 열기)을 하면 이걸 불러 챗봇 창을 연다.
    */
   onRevealChat?: () => void;
+  /** 지도 화면이 아는 사용자 현재 위치 — 챗봇이 이 위치 기준으로 날씨를 본다 */
+  userLocation?: GeoCoords | null;
 };
 
-export function App({ routeRequest = null, onShowRouteOnMap, savedRoutesRequest = 0, onRevealChat }: AppProps = {}) {
+export function App({
+  routeRequest = null,
+  onShowRouteOnMap,
+  savedRoutesRequest = 0,
+  onRevealChat,
+  userLocation = null,
+}: AppProps = {}) {
   const { t, locale } = useAppLocale();
+  // send 는 useCallback 이라 최신 위치를 ref 로 읽는다 (위치가 바뀔 때마다 send 를 새로 만들지 않게)
+  const userLocationRef = useRef(userLocation);
+  userLocationRef.current = userLocation;
   // 클론 직후에는 .env.local 이 없어 키가 비어 있다. 요청을 보내 401 을 받기 전에
   // 화면에서 먼저 알려 준다 — 그러지 않으면 원인을 짐작하기 어렵다.
   const missingKey = !API_KEY;
@@ -517,6 +529,8 @@ export function App({ routeRequest = null, onShowRouteOnMap, savedRoutesRequest 
         const requestContext = new RequestContext();
         requestContext.set("replyLang", replyLang);
         if (agentProfile) requestContext.set("userProfile", agentProfile);
+        const here = userLocationRef.current;
+        if (here) requestContext.set("userLocation", { lat: here.latitude, lon: here.longitude });
         const res = await agent.stream(input as Parameters<typeof agent.stream>[0], {
           memory: { thread, resource: "web" },
           maxSteps: 15,
