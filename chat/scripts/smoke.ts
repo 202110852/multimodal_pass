@@ -5,7 +5,6 @@ import { placeDetail } from "../src/mastra/tools/placeDetail.js";
 import { checkMetric } from "../src/mastra/tools/checkMetric.js";
 import { getWeather } from "../src/mastra/tools/getWeather.js";
 import { naverMapLink } from "../src/mastra/tools/naverMapLink.js";
-import { searchFaq } from "../src/mastra/tools/searchFaq.js";
 import { reportIssue } from "../src/mastra/tools/reportIssue.js";
 import { planVisitOrder } from "../src/mastra/tools/planVisitOrder.js";
 import { isDbEnabled, pool } from "../src/mastra/db.js";
@@ -54,22 +53,6 @@ await run("get-weather brief", () => exec(getWeather, { kind: "brief", hours: 24
 await run("get-weather forecast", () => exec(getWeather, { kind: "forecast", hours: 12 }));
 await run("naver-map-link", () => exec(naverMapLink, { poi_id: first.poi_id }));
 
-// FAQ — 쿠폰은 '일반 안내', 상점가가 분명하면 그 상점가 문항이 1순위여야 한다.
-const expectFirst = async (q: string, category: string, menu: string) => {
-  const r = (await run(`search-faq '${q}'`, () => exec(searchFaq, { q, limit: 3 }))) as {
-    results: { category: string; menu_name: string }[];
-  };
-  const top = r.results[0];
-  if (top?.category !== category || top?.menu_name !== menu) {
-    throw new Error(`'${q}' 1순위가 ${category}/${menu} 가 아님: ${JSON.stringify(top)}`);
-  }
-};
-await expectFirst("쿠폰 어떻게 써요?", "일반 안내", "여행자소비쿠폰 사용");
-await expectFirst("칠성로상점가 화장실 어디 있어요?", "칠성로 상점가", "화장실");
-await expectFirst("지하상가 몇 시까지 해?", "중앙지하상가", "운영시간");
-const none = (await exec(searchFaq, { q: "흑돼지", limit: 3 })) as { results: unknown[]; topics: unknown[] | null };
-if (none.results.length || !none.topics) throw new Error("FAQ 에 없는 질문인데 결과가 나왔다");
-
 // 방문순서 — 관덕정·동문시장·사라봉. 서→동 순으로 이어져야 한다.
 const ids = await db.query<{ poi_id: number; name: string }>(
   `SELECT DISTINCT ON (name) poi_id, name FROM v_poi_merged
@@ -95,4 +78,4 @@ const rep = (await run("report-issue", () =>
 await db.query("DELETE FROM place_report WHERE report_id = $1", [rep.report_id]);
 
 await db.end();
-console.log("\n=== 9개 tool 전부 통과 ===");
+console.log("\n=== 8개 tool 전부 통과 ===");

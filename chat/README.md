@@ -40,7 +40,7 @@ src/mastra/
   agents/jeju.ts    에이전트
 prompts/
   system-prompt.txt 시스템 프롬프트 — 매 요청마다 읽는다. /admin 에서 수정
-  tools/            장소·FAQ·카카오 경로 등
+  tools/            장소·카카오 경로 등
 scripts/
   ask.ts            CLI 질문
   smoke.ts          tool SQL 검증 (도메인 DB 필요)
@@ -56,9 +56,8 @@ web/                채팅 UI (Vite + React) — web/README.md
 
 | 모드 | tool | 비고 |
 |------|------|------|
-| 후보 선택 | `search-downtown-stores` · `search-places` · … | 도메인 DB off 시 빈 결과 |
+| 후보 선택 | `search-places` · `nearby-places` · … | 도메인 DB off 시 빈 결과 |
 | 길찾기 | `plan-visit-order` · `kakao-directions` · `compare-directions` | 카카오 키 있으면 동작 |
-| FAQ | `search-faq` | DB off 시 빈 결과 |
 | 오류 제보 | `report-issue` | DB off 시 저장 skip |
 
 모드 규칙은 `prompts/system-prompt.txt` 에 있다 — `/admin` 에서 고친다.
@@ -110,14 +109,13 @@ DB 설계할 때 만든 뷰가 그대로 tool이 된다.
 |------|---------|-----------|
 | `kakao-search-places` | 카카오맵 Local API | 키워드·주변 업종 검색, 출발·도착 좌표 확인 |
 | `kakao-directions` | 카카오맵 / 카카오모빌리티 API | 도보·자전거·대중교통·자동차 경로, 거리·예상 시간·제공 요금 |
-| `search-downtown-stores` | `poi` (`source=downtown_store`, downtown_stores.csv) | 원도심 조합원·쿠폰·지역화폐·네이버 링크 |
+| `compare-directions` | 카카오 경로 API 여러 번 | 도보·택시·버스·차량 시간·요금 한 번에 비교 |
 | `search-places` | `v_poi_merged` + `poi_keyword` (pg_trgm) | 이름·키워드로 찾기 |
 | `nearby-places` | `earthdistance` + `v_poi_visible` | "근처 주차장", "가까운 화장실" |
 | `place-detail` | `v_poi_merged` + `v_poi_merged_i18n` + `v_poi_attr` | 상세. 소스가 달라도 항목 이름이 같다 |
 | `check-metric` | `poi_metric` | 혼잡도·주차 여석·충전기 가용 |
 | `get-weather` | `weather_ai_brief` · `weather_forecast` · `weather_warning` | 일정·실외활동 판단 |
 | `naver-map-link` | `v_poi_merged` 좌표 | 길안내 링크 |
-| `search-faq` | `faq` | 쿠폰·여행자센터·면세·상점가 안내 |
 | `report-issue` | `place_report` (쓰기) | 틀린 정보 제보 |
 | `plan-visit-order` | `v_poi_merged` 좌표 | 확정된 방문지의 순서 (최근접 이웃 + 2-opt, 직선거리) |
 
@@ -168,7 +166,7 @@ Supabase 준비는 `supabase/schema.sql` 을 SQL Editor 에서 실행하고 `PG_
 
 | 항목 | 결과 |
 |------|------|
-| `npm run smoke` | tool 9개 전부 통과 (FAQ 1순위·방문순서 방향까지 검사) |
+| `npm run smoke` | tool 8개 전부 통과 (방문순서 방향까지 검사) |
 | `npm run typecheck` | 통과 |
 | `npm run ask` (한국어) | "관덕정 근처 주차장" → tool 5단계, 요금·운영시간·길찾기 링크 |
 | `npm run ask` (일본어) | 흑돼지 맛집 → tool 6단계, 일본어 응답 |

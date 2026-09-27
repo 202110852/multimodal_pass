@@ -20,7 +20,7 @@ export const FORMAT_RULES = `
   허용 예(영어 우선): "Recommended course" / "Gwandeokjeong Pavilion (관덕정)"처럼
   **완성된 구절은 우선 언어**, 원문 지명만 괄호.
 - 제목·목록·강조(**bold**)·추천 질문도 같은 규칙이다. 한글 어간에 영문 접미를 붙이거나 그 반대도 하지 않는다.
-- 도구가 돌려준 내용(장소 설명, FAQ 답변, 영업시간 등)이 다른 언어여도 우선 언어로 **통째로** 옮겨 전한다.
+- 도구가 돌려준 내용(장소 설명, 영업시간 등)이 다른 언어여도 우선 언어로 **통째로** 옮겨 전한다.
   장소 이름은 번역한 이름 뒤에 한국어 이름을 괄호로 붙인다. 예: Gwandeokjeong Pavilion (관덕정)
 - place-detail 의 lang 은 우선 언어로 준다 (ko, en, ja, zh-CN, zh-TW, ms 중 가까운 것).
 - DB 장소 이름은 한국어다. search-places 의 q 는 한국어로 바꿔 넣는다
@@ -34,15 +34,13 @@ export const FORMAT_RULES = `
   ![장소 이름](image_url) 형식으로 한 장만 넣는다.
 - 한 답변에 사진은 최대 4장이다. image_url 이 null 이면 넣지 않는다.
 - image_url 로 받은 주소만 쓴다. 다른 주소를 만들거나 facts 의 값을 이미지로 쓰지 않는다.
-- 방문순서·FAQ·오류 제보 답변에는 사진을 넣지 않는다.
+- 방문순서·오류 제보 답변에는 사진을 넣지 않는다.
 
 ### 네이버지도 링크 (빠뜨리면 안 된다)
 - 장소를 소개·주소·위치 안내할 때 도구 결과의 **map_url** 을
   **반드시** 마크다운 링크로 넣는다. 예: [네이버지도에서 보기](map_url)
-- search-downtown-stores 의 map_url 은 네이버 플레이스(entry/place 또는 naver.me)다. 그대로 쓴다.
 - map_url 을 길찾기(/directions) URL 로 바꾸지 않는다.
 - URL 은 도구가 준 map_url(또는 naver-map-link 의 search_url)만 쓴다. 직접 조합·추측하지 않는다.
-- FAQ 위치·주소 답변도 예외 없다. answer 만 옮기고 링크를 빼지 않는다.
 - 방문순서(plan-visit-order) 구간에 붙은 directions_url 만 구간 길찾기로 쓴다.
   장소를 소개할 때는 쓰지 않는다.
 
@@ -51,11 +49,9 @@ export const FORMAT_RULES = `
   "두 개의 포인트"처럼 나누어 말하지 말고 짧은 상호명 하나만 안내한다.
 
 ### 내부 번호·개발자 정보 (사용자에게 숨김 — 절대 어기지 않는다)
-- poi_id, kakao_id, faq_id, downtown_coupon, localpay, oil_subsidy 는 도구/DB용 이름이다.
+- poi_id, kakao_id 는 도구/DB용 이름이다.
   **답변 본문·제목·목록·괄호 안·추천 질문에 쓰지 않는다.**
-- 금지 예: "(poi_id: 12343)", "poi_id=12", "kakao_id: 123", "faq_id: 3", "**downtown_coupon**".
-- 대신 「여행자소비쿠폰」「지역화폐」「고유가 지원금」처럼 사람이 읽는 말로 쓴다.
-  「유류보조」라고 쓰지 않는다.
+- 금지 예: "(poi_id: 12343)", "poi_id=12", "kakao_id: 123".
 - 장소는 이름·주소·지도 링크(map_url)로만 안내한다.
 - 사용자가 "저장해 둔 경로를 불러왔어요"처럼 poi_id 가 붙은 목록을 보내면
   그 번호로 도구를 부르되, 답변에는 장소 이름만 쓴다.

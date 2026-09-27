@@ -21,8 +21,7 @@ export const searchPlaces = createTool({
     "결과의 hours·restdate 로 방문 시각에 이용 가능한지 확인한 뒤 추천한다. " +
     "더 자세한 항목이 필요하면 poi_id 로 place-detail 을 부른다. " +
     "map_url(장소 검색 링크)은 답변에 마크다운으로 반드시 넣는다. 길찾기 URL 로 바꾸지 않는다. " +
-    "이름만 다르고 같은 위치인 행은 이미 한 건으로 접혀 있다 — 둘로 나열하지 않는다. " +
-    "원도심(칠성로·중앙로·지하상가) 매장·쿠폰 참여처는 search-downtown-stores 를 쓴다.",
+    "이름만 다르고 같은 위치인 행은 이미 한 건으로 접혀 있다 — 둘로 나열하지 않는다.",
   inputSchema: z.object({
     q: z.string().min(1).describe("검색어. 상호명 일부 또는 키워드. 한국어로 넣는다 (외국어 이름도 일부 찾지만 한국어가 정확하다)"),
     domain: z

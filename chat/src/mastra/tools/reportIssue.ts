@@ -14,7 +14,7 @@ export const reportIssue = createTool({
     "사용자가 장소 정보가 틀렸다고 알려 주거나, 현장에서 본 사실(예: '가보니 10시부터 연다')을 " +
     "말해 줄 때 제보를 저장한다 (영업시간·주소·폐업·전화·요금·위치 등). " +
     "DB 값으로 반박하지 말고, 장소와 내용이 분명하면 바로 한 번만 부른다. " +
-    "장소가 애매하면 먼저 search-places / search-downtown-stores 로 찾아 poi_id 를 넣는다.",
+    "장소가 애매하면 먼저 search-places 로 찾아 poi_id 를 넣는다.",
   inputSchema: z.object({
     poi_id: z.number().int().optional().describe("DB 장소면 넣는다. 이름·주소를 여기서 읽는다"),
     place_name: z.string().min(1).describe("장소 이름 (poi_id 가 없을 때 특히 중요)"),
