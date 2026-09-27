@@ -4,7 +4,7 @@ import { registerState } from "./debug/collector.js";
 import { renderMarkdown } from "./markdown.js";
 import { TUNNEL_HEADERS } from "./tunnel.js";
 
-// 개발: 같은 오리진 + Vite 프록시(기본 배포 API api.stan.lkim.me).
+// 개발: 같은 오리진 + Vite 프록시(기본 배포 API Cloud Run).
 // 로컬 Mastra / 배포 번들은 MASTRA_URL · VITE_MASTRA_URL.
 const BASE = import.meta.env.VITE_MASTRA_URL || window.location.origin;
 

@@ -52,7 +52,7 @@ const AGENT_ID = "jeju-agent";
 // 대화 목록·메시지·저장한 경로는 store.ts 가 localStorage 에 둔다.
 const PLAN_TOOLS = new Set(["plan-visit-order", "planVisitOrder"]);
 
-// 개발: 같은 오리진 + Vite 프록시(기본 배포 API api.stan.lkim.me).
+// 개발: 같은 오리진 + Vite 프록시(기본 배포 API Cloud Run).
 // 로컬 Mastra: MASTRA_URL=http://127.0.0.1:4111. 배포 번들: VITE_MASTRA_URL.
 // 이 키는 번들에 들어가므로 비밀이 아니다. 남의 사이트에서 우리 API 를 쓰는 것과
 // 무심한 스크래핑을 막는 용도이고, 비용 상한은 nginx 의 요청 수 제한이 잡는다.

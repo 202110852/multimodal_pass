@@ -6,17 +6,23 @@ import react from "@vitejs/plugin-react";
 /**
  * /api 를 Mastra 서버로 프록시한다. 브라우저에는 같은 오리진이라 CORS 가 필요 없다.
  *
- * 기본 대상은 **배포된 챗봇 API** (`https://api.stan.lkim.me`) 다.
+ * 기본 대상은 **배포된 챗봇 API** (Cloud Run) 다.
  * 시스템 프롬프트만 바꿔도 동작이 바뀌므로, 평소에는 원격 API 를 그대로 쓴다.
  *
- * 로컬 백엔드까지 띄울 때만 MASTRA_URL 로 가리킨다.
+ * 로컬 백엔드까지 띄울 때만 MASTRA_URL 로 가리킨다 (셸 → chat/web/.env* → 저장소 루트 .env 순).
  *   MASTRA_URL=http://127.0.0.1:4111 npm run dev   # 또는 npm run dev:all
- *   MASTRA_URL=http://127.0.0.1:4470 npm run dev   # launchd 배포본
  */
-const TARGET = process.env.MASTRA_URL ?? "https://api.stan.lkim.me";
+const DEFAULT_TARGET = "https://stan-chat-api-97870454047.asia-northeast3.run.app";
 
-const proxyOptions: ProxyOptions = {
-  target: TARGET,
+function proxyTarget(mode: string): string {
+  const key = "MASTRA_URL";
+  return (
+    process.env[key] || loadEnv(mode, WEB_ROOT, key)[key] || loadEnv(mode, REPO_ROOT, key)[key] || DEFAULT_TARGET
+  );
+}
+
+const createProxyOptions = (target: string): ProxyOptions => ({
+  target,
   changeOrigin: true,
   secure: true,
   configure(proxy) {
@@ -33,10 +39,10 @@ const proxyOptions: ProxyOptions = {
     proxy.on("error", (err, _req, res) => {
       const body = JSON.stringify({
         error: "proxy_unreachable",
-        target: TARGET,
+        target,
         detail: String((err as NodeJS.ErrnoException).code ?? err.message),
         hint:
-          "챗봇 API 에 닿지 못했습니다. 배포 API 기본은 api.stan.lkim.me 입니다. " +
+          `챗봇 API 에 닿지 못했습니다. 기본 대상은 ${DEFAULT_TARGET} 입니다. ` +
           "로컬 백엔드를 띄웠다면 MASTRA_URL=http://127.0.0.1:4111 을 지정하세요.",
       });
       const r = res as unknown as import("node:http").ServerResponse;
@@ -44,7 +50,7 @@ const proxyOptions: ProxyOptions = {
       r.end(body);
     });
   },
-};
+});
 
 /** 버그 리포트에 넣을 빌드 정보 */
 function buildInfo() {
@@ -71,28 +77,31 @@ function kakaoAppKey(mode: string): string {
   return loadEnv(mode, WEB_ROOT, key)[key] || loadEnv(mode, REPO_ROOT, key)[key] || "";
 }
 
-export default defineConfig(({ mode }) => ({
-  plugins: [react()],
-  define: {
-    __BUILD__: JSON.stringify(buildInfo()),
-    "import.meta.env.VITE_KAKAO_APP_KEY": JSON.stringify(kakaoAppKey(mode)),
-  },
-  server: {
-    port: 5173,
-    // 같은 네트워크의 휴대폰에서도 접속할 수 있게 모든 인터페이스에서 받는다
-    host: true,
-    proxy: {
-      "/api": proxyOptions,
-      // 관리자 API. 키는 앞부분 일치라 "/admin/" 로 두면 SPA 경로 /admin/ 까지 넘어간다.
-      "/admin/system-prompt": proxyOptions,
-      "/admin/reports": proxyOptions,
-      "/chat/threads": proxyOptions,
-      "/chat/feedback": proxyOptions,
-      "/chat/weather-suggestion": proxyOptions,
-      "/admin/feedback": proxyOptions,
-      "/admin/threads": proxyOptions,
-      "/chat/bug-reports": proxyOptions,
-      "/admin/bug-reports": proxyOptions,
+export default defineConfig(({ mode }) => {
+  const proxyOptions = createProxyOptions(proxyTarget(mode));
+  return {
+    plugins: [react()],
+    define: {
+      __BUILD__: JSON.stringify(buildInfo()),
+      "import.meta.env.VITE_KAKAO_APP_KEY": JSON.stringify(kakaoAppKey(mode)),
     },
-  },
-}));
+    server: {
+      port: 5173,
+      // 같은 네트워크의 휴대폰에서도 접속할 수 있게 모든 인터페이스에서 받는다
+      host: true,
+      proxy: {
+        "/api": proxyOptions,
+        // 관리자 API. 키는 앞부분 일치라 "/admin/" 로 두면 SPA 경로 /admin/ 까지 넘어간다.
+        "/admin/system-prompt": proxyOptions,
+        "/admin/reports": proxyOptions,
+        "/chat/threads": proxyOptions,
+        "/chat/feedback": proxyOptions,
+        "/chat/weather-suggestion": proxyOptions,
+        "/admin/feedback": proxyOptions,
+        "/admin/threads": proxyOptions,
+        "/chat/bug-reports": proxyOptions,
+        "/admin/bug-reports": proxyOptions,
+      },
+    },
+  };
+});
