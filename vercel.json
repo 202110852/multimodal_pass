@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "npm ci --prefix chat/web",
+  "buildCommand": "npm --prefix chat/web run build",
+  "outputDirectory": "chat/web/dist",
+  "rewrites": [
+    { "source": "/((?!assets/).*)", "destination": "/index.html" }
+  ]
+}
