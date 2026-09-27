@@ -4,12 +4,13 @@ import {
   JEJU_CITY_HALL,
   fetchForecast,
   fetchJejuWarnings,
+  isRainyHour,
   type Coords,
   type HourlyWeather,
 } from "../lib/weather.js";
 
 /**
- * 좌표 기반 날씨. 경로의 출발·경유·도착 좌표를 넘기면 지점마다 예보를 준다.
+ * 기상청 실시간 날씨. 경로의 출발·경유·도착 좌표를 넘기면 지점(격자)마다 예보를 준다.
  * 좌표를 안 주면 사용자 현재 위치(웹이 requestContext.userLocation 으로 보냄), 그것도 없으면 제주시청.
  */
 
@@ -25,8 +26,9 @@ const hourlySchema = z.object({
   at: z.string(),
   temp_c: z.number().nullable(),
   precip_prob: z.number().nullable(),
-  precip_mm: z.number().nullable(),
+  precip: z.string().nullable().describe("강수량 (예: '1mm 미만', '2.0mm'). 없으면 null"),
   wind_ms: z.number().nullable(),
+  humidity: z.number().nullable(),
   sky: z.string(),
 });
 
@@ -39,10 +41,10 @@ const locationSchema = z.object({
     .object({
       at: z.string(),
       temp_c: z.number().nullable(),
-      feels_like_c: z.number().nullable(),
-      precip_mm: z.number().nullable(),
+      precip_1h: z.string().nullable(),
       wind_ms: z.number().nullable(),
-      sky: z.string(),
+      humidity: z.number().nullable(),
+      precip_type: z.string(),
     })
     .nullable(),
   summary: z
@@ -50,7 +52,7 @@ const locationSchema = z.object({
       temp_min_c: z.number().nullable(),
       temp_max_c: z.number().nullable(),
       max_precip_prob: z.number().nullable(),
-      rainy_hours: z.array(z.string()).describe("강수확률 60% 이상이거나 비가 오는 시각"),
+      rainy_hours: z.array(z.string()).describe("비·눈이 오거나 강수확률 60% 이상인 시각"),
       max_wind_ms: z.number().nullable(),
     })
     .nullable(),
@@ -92,9 +94,7 @@ function summarize(hourly: HourlyWeather[]) {
     temp_min_c: minOf(hourly.map((h) => h.temp_c)),
     temp_max_c: maxOf(hourly.map((h) => h.temp_c)),
     max_precip_prob: maxOf(hourly.map((h) => h.precip_prob)),
-    rainy_hours: hourly
-      .filter((h) => (h.precip_prob ?? 0) >= 60 || (h.precip_mm ?? 0) > 0)
-      .map((h) => h.at.slice(11, 16)),
+    rainy_hours: hourly.filter(isRainyHour).map((h) => h.at.slice(5, 16).replace("T", " ")),
     max_wind_ms: maxOf(hourly.map((h) => h.wind_ms)),
   };
 }
@@ -102,14 +102,14 @@ function summarize(hourly: HourlyWeather[]) {
 export const getWeather = createTool({
   id: "get-weather",
   description:
-    "좌표 기준 실시간 날씨(현재·시간별 예보)와 제주 기상특보를 가져온다. " +
+    "기상청 실시간 날씨(현재 실황·시간별 예보)와 제주 기상특보를 가져온다. " +
     "경로를 안내할 때는 출발·경유·도착 좌표를 points 로 넘겨 구간별 날씨를 본다. " +
     "points 를 비우면 사용자 현재 위치(없으면 제주시청) 기준이다. " +
     "도보·자전거·킥보드 구간을 넣거나 실외 일정을 짜기 전에 확인한다. " +
     "kind=brief 는 현재 + 요약, forecast 는 시간별 예보까지, warning 은 특보만.",
   inputSchema: z.object({
     kind: z.enum(["brief", "forecast", "warning"]).default("brief"),
-    hours: z.number().int().min(1).max(48).default(12).describe("앞으로 몇 시간을 볼지"),
+    hours: z.number().int().min(1).max(72).default(12).describe("앞으로 몇 시간을 볼지 (최대 3일)"),
     points: z
       .array(pointSchema)
       .max(MAX_POINTS)

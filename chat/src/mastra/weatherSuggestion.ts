@@ -1,8 +1,8 @@
 import { registerApiRoute } from "@mastra/core/server";
-import { JEJU_CITY_HALL, fetchTomorrowDaytime, isRainCode, isSnowCode } from "./lib/weather.js";
+import { JEJU_CITY_HALL, fetchTomorrowDaytime, type HourlyWeather } from "./lib/weather.js";
 
 /**
- * 빈 채팅 화면의 날씨 칩 — 내일 낮(06~21시) 제주시 예보로 질문 문구를 고른다.
+ * 빈 채팅 화면의 날씨 칩 — 기상청 단기예보로 내일 낮(06~21시) 제주시 상황을 보고 질문 문구를 고른다.
  */
 
 export type WeatherKind = "rain" | "snow" | "hot" | "cold" | "clear" | "cloudy" | "fallback";
@@ -65,18 +65,17 @@ function langOf(raw: string | undefined): Lang {
   return "ko";
 }
 
-type TomorrowDaytime = { codes: number[]; temps: number[]; probs: number[] };
+function classify(hours: HourlyWeather[]): WeatherKind {
+  if (hours.length === 0) return "fallback";
 
-function classify({ codes, temps, probs }: TomorrowDaytime): WeatherKind {
-  if (codes.length === 0 && temps.length === 0) return "fallback";
-
-  const maxPop = probs.length ? Math.max(...probs) : 0;
+  const temps = hours.map((h) => h.temp_c).filter((t): t is number => t != null);
+  const maxPop = Math.max(0, ...hours.map((h) => h.precip_prob ?? 0));
   const maxTmp = temps.length ? Math.max(...temps) : null;
   const minTmp = temps.length ? Math.min(...temps) : null;
-  const clearish = codes.length > 0 && codes.filter((c) => c <= 1).length >= codes.length / 2;
+  const clearish = hours.filter((h) => h.sky === "맑음").length >= hours.length / 2;
 
-  if (codes.some(isSnowCode)) return "snow";
-  if (codes.some(isRainCode) || maxPop >= 60) return "rain";
+  if (hours.some((h) => /눈/.test(h.sky))) return "snow";
+  if (hours.some((h) => /비|소나기|빗방울/.test(h.sky)) || maxPop >= 60) return "rain";
   if (maxTmp != null && maxTmp >= 30) return "hot";
   if (minTmp != null && minTmp <= 5) return "cold";
   if (maxPop <= 30 && clearish) return "clear";
@@ -90,8 +89,8 @@ export async function buildWeatherSuggestion(langRaw?: string): Promise<{
   day: string | null;
 }> {
   const lang = langOf(langRaw);
-  const { day, ...daytime } = await fetchTomorrowDaytime(JEJU_CITY_HALL);
-  const kind = classify(daytime);
+  const { day, hours } = await fetchTomorrowDaytime(JEJU_CITY_HALL);
+  const kind = classify(hours);
   return { kind, text: CHIP[kind][lang], index: WEATHER_CHIP_INDEX, day };
 }
 

@@ -16,9 +16,11 @@ permissions:
   contents: read
   id-token: write
 
+# 연달아 push 하면 진행 중인 배포를 취소하고 최신 커밋 하나만 배포한다.
+# 취소된 실행의 Cloud Build 는 끝까지 돌 수 있지만, 리비전 생성은 gcloud 가 빌드 뒤에 하므로 배포되지 않는다.
 concurrency:
   group: cloudrun-deploy
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 env:
   PROJECT: multimodal-pass-api

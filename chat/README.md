@@ -114,7 +114,7 @@ DB 설계할 때 만든 뷰가 그대로 tool이 된다.
 | `nearby-places` | `earthdistance` + `v_poi_visible` | "근처 주차장", "가까운 화장실" |
 | `place-detail` | `v_poi_merged` + `v_poi_merged_i18n` + `v_poi_attr` | 상세. 소스가 달라도 항목 이름이 같다 |
 | `check-metric` | `poi_metric` | 혼잡도·주차 여석·충전기 가용 |
-| `get-weather` | Open-Meteo 예보 + 기상청 API허브 특보 | 경로 지점별·현재 위치 날씨, 실외 구간 판단 |
+| `get-weather` | 기상청 단기예보(실황·초단기·단기) + API허브 특보 | 경로 지점별·현재 위치 날씨, 실외 구간 판단 |
 | `naver-map-link` | `v_poi_merged` 좌표 | 길안내 링크 |
 | `report-issue` | `place_report` (쓰기) | 틀린 정보 제보 |
 | `plan-visit-order` | `v_poi_merged` 좌표 | 확정된 방문지의 순서 (최근접 이웃 + 2-opt, 직선거리) |
@@ -191,8 +191,9 @@ Supabase 준비는 `supabase/schema.sql` 을 SQL Editor 에서 실행하고 `PG_
 
 - **`naver-map-link` 는 공개 웹 URL 형식**을 쓴다. 프로젝트 todo 에 "네이버지도 링크를 만드는
   stan 내부 코드"가 있다고 되어 있으니, 그 코드가 있으면 URL 생성부를 교체할 것.
-- **날씨 예보는 Open-Meteo** 다 (키 없음, 좌표 단위). 기상청 단기예보 API 는 활용신청이 없어 쓰지 않는다.
-  특보만 기상청 API허브(`KMA_APIHUB_AUTH_KEY`)에서 가져온다.
+- **날씨는 요청마다 기상청을 직접 부른다.** 예전 수집 파이프라인(`api_visitkorea/api-db-pipeline/fetch/weather.py`)이
+  `weather_forecast` 를 채우던 단기예보 API(`KMA_API_SERVICE_KEY`)를 좌표 → 격자로 바꿔 조회하고, 10분간 캐시한다.
+  특보는 기상청 API허브(`KMA_APIHUB_AUTH_KEY`). 포털 키는 "인코딩" 키를 그대로 넣는다 (다시 인코딩하면 미등록 키 오류).
 - **벡터 검색(RAG) 없음.** 지금은 `pg_trgm` 부분일치 + 키워드 83,558건으로 찾는다.
   의미 검색이 필요해지면 `db-pg/04_vector.sql` 을 적용하고 tool 을 하나 더 만든다.
 - **웹 UI 는 `web/` 에 있다.** 장소 카드·지도 임베드·대화 목록은 아직 없다 — `web/README.md` 참고.
