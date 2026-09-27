@@ -1,0 +1,11 @@
+# gcloud run deploy --source 로 올리는 파일에서 뺀다. 비밀(.env)과 빌드 산출물은 절대 올리지 않는다.
+.gcloudignore
+.git
+node_modules/
+.mastra/
+web/
+scripts/
+.env
+.env.*
+!.env.example
+*.log
